@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sahabat Galilea</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-deep: #0a0a12;
+    --bg-card: #111122;
+    --bg-card-hover: #181830;
+    --gold: #c9a84c;
+    --gold-light: #e8c97a;
+    --gold-dim: #7a5f28;
+    --purple: #4a2d6e;
+    --purple-light: #7b52a8;
+    --purple-glow: rgba(122, 82, 168, 0.3);
+    --blue-deep: #0d1b3e;
+    --blue-mid: #1e3a6e;
+    --blue-accent: #4a7fc1;
+    --text-primary: #f0e8d5;
+    --text-secondary: #a89878;
+    --text-muted: #5a5068;
+    --border: rgba(201, 168, 76, 0.15);
+    --border-hover: rgba(201, 168, 76, 0.4);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg-deep);
+    color: var(--text-primary);
+    font-family: 'Crimson Pro', Georgia, serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Starfield background */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 10% 15%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 25% 40%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 40% 10%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 55% 60%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 70% 25%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 85% 80%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 15% 70%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 90% 45%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 60% 85%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 35% 90%, rgba(255,255,255,0.2) 0%, transparent 100%),
+      radial-gradient(2px 2px at 80% 15%, rgba(201,168,76,0.3) 0%, transparent 100%),
+      radial-gradient(2px 2px at 45% 50%, rgba(122,82,168,0.2) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to bottom, rgba(10,10,18,0.95) 0%, transparent 100%);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(201, 168, 76, 0.08);
+  }
+
+  .nav-logo {
+    font-family: 'Cinzel', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--purple-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-decoration: none;
+  }
+
+  .nav-cross {
+    font-size: 1.4rem;
+    color: var(--gold-dim);
+    margin-right: 0.5rem;
+  }
+
+  .nav-search {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 0.4rem 1rem;
+    transition: all 0.3s;
+  }
+
+  .nav-search:focus-within {
+    border-color: var(--gold-dim);
+    background: rgba(255,255,255,0.07);
+  }
+
+  .nav-search input {
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+    font-family: 'Crimson Pro', serif;
+    font-size: 1rem;
+    width: 180px;
+  }
+
+  .nav-search input::placeholder { color: var(--text-muted); }
+  .nav-search svg { color: var(--text-muted); flex-shrink: 0; }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    min-height: 85vh;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 3rem 5rem;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 20% 50%, rgba(74,45,110,0.5) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 80% at 80% 30%, rgba(13,27,62,0.7) 0%, transparent 60%),
+      radial-gradient(ellipse 100% 50% at 50% 100%, rgba(10,10,18,1) 0%, transparent 50%),
+      linear-gradient(135deg, #0d1b3e 0%, #1a0a2e 40%, #0a0a12 100%);
+  }
+
+  .hero-glow {
+    position: absolute;
+    width: 500px; height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
+    top: 10%; left: 5%;
+    animation: pulse-glow 6s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.1); }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    animation: fadeInUp 1s ease forwards;
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    width: 40px; height: 1px;
+    background: var(--gold);
+    display: inline-block;
+  }
+
+  .hero-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #fff 0%, var(--gold-light) 50%, var(--purple-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-desc {
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    max-width: 500px;
+    font-style: italic;
+  }
+
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dim));
+    color: #1a1008;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.9rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s;
+    box-shadow: 0 4px 20px rgba(201,168,76,0.3);
+  }
+
+  .hero-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(201,168,76,0.5);
+  }
+
+  /* MAIN CONTENT */
+  main {
+    position: relative;
+    z-index: 1;
+    padding: 0 2rem 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  /* FILTER */
+  .filter-section {
+    margin-bottom: 3rem;
+    padding-top: 1rem;
+  }
+
+  .filter-title {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .filter-tabs {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .filter-tab {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    font-family: 'Crimson Pro', serif;
+    font-size: 0.95rem;
+    padding: 0.45rem 1.2rem;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all 0.3s;
+    letter-spacing: 0.03em;
+  }
+
+  .filter-tab:hover {
+    border-color: var(--gold-dim);
+    color: var(--gold-light);
+  }
+
+  .filter-tab.active {
+    background: linear-gradient(135deg, rgba(201,168,76,0.15), rgba(122,82,168,0.15));
+    border-color: var(--gold);
+    color: var(--gold-light);
+  }
+
+  /* SECTION */
+  .section {
+    margin-bottom: 4rem;
+    animation: fadeInUp 0.6s ease forwards;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: 0.05em;
+  }
+
+  .section-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, var(--border), transparent);
+  }
+
+  /* CARDS GRID */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    text-decoration: none;
+    display: block;
+  }
+
+  .card:hover {
+    transform: translateY(-6px) scale(1.01);
+    border-color: var(--border-hover);
+    background: var(--bg-card-hover);
+    box-shadow:
+      0 20px 60px rgba(0,0,0,0.6),
+      0 0 30px rgba(201,168,76,0.08),
+      inset 0 1px 0 rgba(201,168,76,0.1);
+  }
+
+  .card-thumb {
+    width: 100%;
+    aspect-ratio: 16/9;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-thumb-bg {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    position: relative;
+  }
+
+  .card-thumb-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 40%, rgba(10,10,18,0.9) 100%);
+  }
+
+  .card-play {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .card:hover .card-play { opacity: 1; }
+
+  .card-play-btn {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: rgba(201,168,76,0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a1008;
+    font-size: 1rem;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  .card-category {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 0.4rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .card-desc {
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-style: italic;
+  }
+
+  /* FEATURED ROW (first category) */
+  .featured-card {
+    grid-column: span 2;
+  }
+
+  .featured-card .card-thumb {
+    aspect-ratio: 21/9;
+  }
+
+  .featured-card .card-thumb-bg {
+    font-size: 4rem;
+  }
+
+  .featured-card .card-title {
+    font-size: 1.2rem;
+  }
+
+  /* FOOTER */
+  footer {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 3rem 2rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .footer-logo {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    background: linear-gradient(135deg, var(--gold-light), var(--purple-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-verse {
+    font-style: italic;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    max-width: 400px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+
+  /* HIDDEN */
+  .hidden { display: none !important; }
+
+  /* SCROLL BAR */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg-deep); }
+  ::-webkit-scrollbar-thumb { background: var(--purple); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--purple-light); }
+
+  /* NO RESULT */
+  .no-result {
+    text-align: center;
+    padding: 4rem;
+    color: var(--text-muted);
+    font-style: italic;
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 600px) {
+    nav { padding: 1rem; }
+    .hero { padding: 0 1.5rem 4rem; min-height: 70vh; }
+    main { padding: 0 1rem 3rem; }
+    .cards-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1rem; }
+    .featured-card { grid-column: span 1; }
+    .nav-search { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">✦ Sahabat Galilea</a>
+  <div class="nav-search">
+    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+    </svg>
+    <input type="text" id="searchInput" placeholder="Cari artikel..." oninput="handleSearch()">
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Kontemplasi Firman Kristus</div>
+    <h1 class="hero-title">Sahabat<br>Galilea</h1>
+    <p class="hero-desc">Perjalanan merenungkan kebenaran Firman Kristus — dari mengenal hati Bapa, memahami jati diri, hingga mengasihi sesama.</p>
+    <a href="#articles" class="hero-cta">
+      <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      Mulai Membaca
+    </a>
+  </div>
+</section>
+
+<!-- MAIN -->
+<main id="articles">
+
+  <!-- FILTER -->
+  <div class="filter-section">
+    <div class="filter-title">Jelajahi Kategori</div>
+    <div class="filter-tabs">
+      <button class="filter-tab active" onclick="filterBy('all', this)">Semua</button>
+      <button class="filter-tab" onclick="filterBy('trending', this)">🔥 Trending</button>
+      <button class="filter-tab" onclick="filterBy('1', this)">Mengenal Hati Bapa</button>
+      <button class="filter-tab" onclick="filterBy('2', this)">Memahami Jati Diri</button>
+      <button class="filter-tab" onclick="filterBy('3', this)">Siapakah Sesamaku</button>
+      <button class="filter-tab" onclick="filterBy('4', this)">Kids</button>
+    </div>
+  </div>
+
+  <!-- DYNAMIC SECTIONS -->
+  <div id="sectionsContainer"></div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">✦ Sahabat Galilea</div>
+  <p class="footer-verse">"Karena itu pergilah, jadikanlah semua bangsa murid-Ku..."<br>— Matius 28:19</p>
+</footer>
+
+<script>
+const ARTICLES = [
+  { id:1,  judul:"Rahasia Kunci Daud", desc:"Menggali makna tersembunyi di balik 'kunci Daud' — otoritas rohani yang membuka dan menutup pintu takdir sesuai kehendak Bapa.", kategori:[1,2,3], trending:true, emoji:"🗝️", link:"https://gamma.app/docs/Rahasia-Kunci-Daud-19vyzw4qzdptuqh" },
+  { id:2,  judul:"Lidah, Lintah & Api Neraka", desc:"Lidah yang tak terkendali bukan sekadar masalah kata-kata — ia adalah api yang mampu membakar seluruh jalan hidupmu.", kategori:[1,2,3], trending:false, emoji:"🔥", link:"https://gamma.app/docs/Lidah-Lintah-dan-Api-Neraka-czzju3s05f40tmi" },
+  { id:3,  judul:"Daud Mengalahkan Goliat: Kisah di Balik Kemenangan", desc:"Di balik lemparan batu Daud tersimpan iman yang telah teruji jauh sebelum medan perang — sebuah pola kemenangan yang bisa kamu ikuti.", kategori:[1,2], trending:true, emoji:"⚔️", link:"https://gamma.app/docs/Daud-Mengalahkan-Goliat-Kisah-di-Balik-Kemenangan-savbpczi2biklhe" },
+  { id:4,  judul:"Memenangkan Si Bungsu Benyamin", desc:"Kisah Benyamin menyimpan rahasia tentang bagaimana Bapa memenangkan hati yang paling rentan dan paling dikasihi.", kategori:[1,2,3], trending:true, emoji:"🕊️", link:"https://gamma.app/docs/Memenangkan-Si-Bungsu-Benyamin-y0r25oumkn7s33t" },
+  { id:5,  judul:"Rahasia Profetis Yakub: Dari Padang ke Sumur, Dari Sumur ke Domba", desc:"Perjalanan Yakub bukan sekadar kisah cinta — ia adalah peta rohani tentang proses pembentukan karakter oleh tangan Bapa.", kategori:[1,2,3], trending:false, emoji:"🌿", link:"https://gamma.app/docs/Rahasia-Profetis-Yakub-Dari-Padang-ke-Sumur-dari-Sumur-ke-Domba-8anmadpxvjyuo14" },
+  { id:6,  judul:"Panggilan Judah: Menuntun Keledai kepada Pokok Anggur yang Benar", desc:"Judah dipanggil bukan untuk berkuasa, melainkan untuk menuntun — sebuah gambaran kepemimpinan yang lahir dari ketundukan.", kategori:[1,2,3], trending:true, emoji:"🍇", link:"https://gamma.app/docs/Panggilan-Judah-Menuntun-Keledai-kepada-Pokok-Anggur-yang-Benar-2bhuul5vhwbvmms" },
+  { id:7,  judul:"Rahasia Kerajaan Surga", desc:"Kerajaan Surga bukan tempat tujuan semata — ia adalah realitas yang bisa hidup dan bekerja di tengah keseharianmu sekarang.", kategori:[1,2], trending:true, emoji:"👑", link:"https://gamma.app/docs/Rahasia-Kerajaan-Surga-pz4bag57mwtq8uu" },
+  { id:8,  judul:"Makna Pentakosta", desc:"Lebih dari sekadar hari lahirnya gereja, Pentakosta adalah undangan Bapa untuk bersatu dalam api yang memurnikan dan memenuhi.", kategori:[1,2,3], trending:false, emoji:"🕯️", link:"https://gamma.app/docs/Makna-Pentakosta-dhxr4edj762e2fr" },
+  { id:9,  judul:"Minyak Dan Anggur", desc:"Dua simbol kelimpahan ilahi yang berbicara tentang urapan dan sukacita — keduanya adalah tanda kehadiran Bapa yang nyata.", kategori:[1,2,3], trending:false, emoji:"🫒", link:"https://gamma.app/docs/Minyak-dan-Anggur-g6uhvptu5rptrhf" },
+  { id:10, judul:"Kuda Putih, Kuda Merah, Kuda Hitam", desc:"Tiga kuda dalam kitab Wahyu bukan sekadar gambaran akhir zaman — mereka adalah cermin kondisi jiwa dan bangsa di setiap generasi.", kategori:[2,3], trending:false, emoji:"🐎", link:"https://gamma.app/docs/Kuda-Putih-Kuda-Merah-Kuda-Hitam-ljpmvgb5jq23rz7" },
+  { id:11, judul:"Hati Bapa", desc:"Sebuah kontemplasi tentang kasih Bapa yang melampaui logika manusia — hadir, setia, dan selalu rindu untuk dipahami anak-anak-Nya.", kategori:[1], trending:false, emoji:"❤️", link:"https://gamma.app/docs/Hati-Bapa-0gskgv7d1qpo4me" },
+  { id:12, judul:"Niat Baik Saja Tidak Cukup", desc:"Niat yang tulus tanpa hikmat bisa membawa kehancuran — inilah pelajaran penting tentang cara Tuhan menilai tindakan kita.", kategori:[2,3], trending:false, emoji:"💡", link:"https://gamma.app/docs/Niat-Baik-Saja-Tidak-Cukup-gc681hdkt7sayh5" },
+  { id:13, judul:"The Divine Who Over The Human How", desc:"Ketika manusia sibuk bertanya 'bagaimana caranya', Tuhan lebih dulu menjawab 'siapakah Aku bagimu' — sebuah pergeseran perspektif yang mengubah segalanya.", kategori:[1,2], trending:true, emoji:"✨", link:"https://gamma.app/docs/The-Divine-Who-Over-the-Human-How-kps9v91r29n8tig" },
+  { id:14, judul:"Hikmat Bintang-Bintang & Keadilan yang Diguncangkan", desc:"Langit berbicara tentang keadilan ilahi yang tidak bisa dibungkam — sebuah renungan tentang hikmat yang melampaui pemahaman manusia.", kategori:[1,2], trending:false, emoji:"⭐", link:"https://gamma.app/docs/Ayub-9-Hikmat-Bintang-Bintang-dan-Keadilan-yang-Diguncangkan-6713proqrcvyywm" },
+  { id:15, judul:"Lautan Kaca Bercampur Api", desc:"Di hadapan takhta Tuhan terdapat lautan kaca bercampur api — gambaran tentang kemuliaan yang hanya bisa dimasuki melalui pemurnian.", kategori:[1,2,3], trending:true, emoji:"🌊", link:"https://gamma.app/docs/Lautan-Kaca-Bercampur-Api-vtxv5sw9sfd6o2c" },
+  { id:16, judul:"Perbuatan-Perbuatan Besar Allah", desc:"Menelusuri jejak tangan Tuhan dalam sejarah umat manusia — dan bagaimana perbuatan besar-Nya masih terus berlanjut hingga hari ini.", kategori:[1], trending:false, emoji:"🌍", link:"https://gamma.app/docs/Perbuatan-Perbuatan-Besar-Allah-1e7p9nd9kkl1hhr" },
+  { id:17, judul:"Padang Gurun Raja-Raja", desc:"Padang gurun bukan hukuman — ia adalah ruang pembentukan di mana Tuhan mencetak raja-raja sejati yang siap memerintah dengan hikmat.", kategori:[2], trending:false, emoji:"🏜️", link:"https://gamma.app/docs/Padang-Gurun-Raja-Raja-2mqktx1sankk8od" },
+  { id:18, judul:"Kuasai Lidahmu, Kuasai Hidupmu", desc:"Lidah adalah kemudi terkecil yang menentukan arah kapal kehidupanmu — dan menguasainya adalah tanda kedewasaan rohani yang sejati.", kategori:[2], trending:false, emoji:"🗣️", link:"https://gamma.app/docs/Kuasai-Lidahmu-Kuasai-Hidupmu-6w33sngjfnifoqc" },
+  { id:19, judul:"Orang Samaria yang Baik Hati", desc:"Di balik perumpamaan yang familiar ini tersimpan pesan mengejutkan tentang siapa sebenarnya 'sesama' kita dan bagaimana cara Bapa memandang belas kasihan.", kategori:[1,2,3], trending:false, emoji:"🤝", link:"https://gamma.app/docs/Orang-Samaria-yang-Baik-Hati-6epd1ozjy8pyv49" },
+  { id:20, judul:"Kusta Rohani: Bahaya Dusta & Hati Bercabang", desc:"Kusta bukan hanya penyakit fisik — ia adalah gambaran kondisi rohani yang lahir dari dusta dan hati yang tidak utuh di hadapan Tuhan.", kategori:[2,3], trending:false, emoji:"⚠️", link:"https://gamma.app/docs/Kusta-Rohani-Bahaya-Dusta-Hati-Bercabang-81op9k8jj8gh708" },
+  { id:21, judul:"Kuasa Lidah: Kemudi Kehidupan", desc:"Kata-kata yang kamu ucapkan hari ini sedang membentuk realita esok hari — sebuah renungan tentang kuasa luar biasa yang ada di ujung lidahmu.", kategori:[2], trending:false, emoji:"💬", link:"https://gamma.app/docs/Kuasa-Lidah-Kemudi-Kehidupan-7s20kvp9qn6xkxk" },
+  { id:22, judul:"Bangsa, Bukan Agama", desc:"Tuhan tidak membangun agama — Ia membangun bangsa. Sebuah kontemplasi tentang identitas kolektif umat Tuhan yang melampaui sekat-sekat institusi.", kategori:[2,3], trending:true, emoji:"🌏", link:"https://gamma.app/docs/Bangsa-Bukan-Agama-qfqlvwmoqe33s5m" },
+  { id:23, judul:"Jika Tuan Mau, Tuan Dapat Mentahirkan Aku", desc:"Sebuah seruan iman yang penuh kerendahan hati — dan respons Yesus yang mengungkapkan hati Bapa terhadap mereka yang merasa tidak layak.", kategori:[1,2], trending:false, emoji:"🙏", link:"https://gamma.app/docs/Jika-Tuan-Mau-Tuan-Dapat-Mentahirkan-Aku-ij9o7gbrkpf9hve" },
+  { id:24, judul:"Passover Wings: Memahami Hati Tuhan yang Melindungi", desc:"Di balik sayap Passover tersimpan gambaran perlindungan Bapa yang menyelimuti umat-Nya — sebuah cinta yang rela menanggung akibat demi menyelamatkan.", kategori:[1,2], trending:false, emoji:"🦅", link:"https://gamma.app/docs/Passover-Wings-Memahami-Hati-Tuhan-yang-Melindungi-6qi5bnisvm96y5s" },
+  { id:25, judul:"Jika Tuan Mau: Ketika Yesus Lewat, Kita yang Harus Bergerak", desc:"Yesus selalu melewati jalanmu — pertanyaannya adalah apakah kamu cukup bergerak untuk menjangkau-Nya sebelum kesempatan itu berlalu.", kategori:[1,2], trending:false, emoji:"👣", link:"https://gamma.app/docs/Jika-Tuan-Mau-Ketika-Yesus-Lewat-Kita-yang-Harus-Bergerak-ek1lylvyu9ogfoh" },
+  { id:26, judul:"Pattern Recognition: Membaca Pola Tuhan Dalam Alkitab", desc:"Alkitab penuh dengan pola-pola ilahi yang berulang — dan mereka yang belajar mengenalinya akan menemukan hikmat untuk membaca zaman.", kategori:[1,2], trending:false, emoji:"🔍", link:"https://gamma.app/docs/Pattern-Recognition-Membaca-Pola-Tuhan-dalam-Alkitab-1xezg4rwqqzrkrf" },
+  { id:27, judul:"Pilatus Pikir, Tuhan Bekerja", desc:"Di balik keputusan Pilatus yang tampak politis, tangan Tuhan sedang menggerakkan rencana keselamatan terbesar dalam sejarah manusia.", kategori:[2], trending:false, emoji:"⚖️", link:"https://gamma.app/docs/Pilatus-Pikir-Tuhan-Bekerja-qhb7x44ucuyuk0f" },
+  { id:28, judul:"Koyak Jubah Sendiri", desc:"Jubah dalam Alkitab bukan sekadar pakaian — ia adalah simbol kedaulatan Allah yang mengungkapkan bagaimana manusia sering tanpa sadar menghancurkan berkat yang telah Tuhan siapkan.", kategori:[2], trending:false, emoji:"👘", link:"https://gamma.app/docs/Koyak-Jubah-Sendiri-j7p059y1wa6yhpr" },
+  { id:29, judul:"Azazel & Barabas: Rahasia Pendamaian yang Tersembunyi", desc:"Dua kambing pada hari Pendamaian dan satu penjahat yang dibebaskan — keduanya menyingkapkan misteri penebusan yang telah dirancang sejak kekekalan.", kategori:[1,2], trending:false, emoji:"🐑", link:"https://gamma.app/docs/Azazel-Barabas-Rahasia-Pendamaian-yang-Tersembunyi-bc9ri4ji2bm5mjt" },
+  { id:30, judul:"Hisop, Darah & Pintu: Pola Penyediaan Tuhan yang Sempurna", desc:"Dari Mesir hingga Golgota, pola hisop dan darah terus berulang — sebuah tanda bahwa penyediaan Tuhan selalu sempurna dan tepat waktu.", kategori:[1,2], trending:false, emoji:"🚪", link:"https://gamma.app/docs/Hisop-Darah-dan-Pintu-Pola-Penyediaan-Tuhan-yang-Sempurna-iyoclzqi2lpdl9f" },
+  { id:31, judul:"Ketika Tuhan Mengoreksi Sahabat, Bukan Ayub", desc:"Elihu, seorang pemuda yang menunggu dengan sabar, mengajarkan kita bahwa kerendahan hati dan keberanian berbicara benar tentang Allah adalah hikmat yang mengubah hidup.", kategori:[1,2,3], trending:false, emoji:"📖", link:"https://gamma.app/docs/Ayub-427-Ketika-Tuhan-Mengoreksi-Sahabat-Bukan-Ayub-gqypsz6n26kse7z" },
+  { id:32, judul:"Karakter Elihu: Teladan Pengendalian Diri", desc:"Elihu berbicara terakhir bukan karena ia lemah — melainkan karena ia tahu kapan waktu yang tepat untuk berkata-kata, sebuah hikmat yang langka.", kategori:[2,3], trending:false, emoji:"🧘", link:"https://gamma.app/docs/Karakter-Elihu-Teladan-Pengendalian-Diri-dari-Ayub-321-5-vte3aklw9eclc01" },
+  { id:33, judul:"Thankfulness Regardless", desc:"Bersyukur bukan karena keadaan baik — melainkan karena Tuhan tetap baik meskipun keadaan tidak baik. Inilah pondasi syukur yang sejati.", kategori:[2], trending:false, emoji:"🌸", link:"https://gamma.app/docs/Untitled-kgwfci9cg2brm13" },
+  { id:34, judul:"Kenali Dirimu, Kenali Negerimu", desc:"Sebuah perjalanan menemukan identitas diri yang terhubung dengan panggilan atas negerimu — khusus untuk generasi muda yang sedang bertumbuh.", kategori:[4], trending:false, emoji:"🗺️", link:"https://gamma.app/docs/Kenali-Dirimu-Kenali-Negerimu-e4e1p600hx9rn7w" },
+  { id:35, judul:"Kenali Dirimu Lewat Apa yang Kamu Catat", desc:"Apa yang kamu tulis mencerminkan siapa kamu sebenarnya — sebuah eksplorasi identitas diri melalui kebiasaan mencatat yang sederhana namun mengungkapkan.", kategori:[4], trending:false, emoji:"📝", link:"https://gamma.app/docs/Kenali-Dirimu-Lewat-Apa-yang-Kamu-Catat-54t60lu8z96vkim" },
+  { id:36, judul:"Kamu Belum Tahu Siapa Dirimu - Sampai Kamu Mencatat", desc:"Mencatat bukan sekadar kebiasaan produktif — ia adalah perjalanan menemukan diri yang sesungguhnya, satu tulisan dalam satu waktu.", kategori:[4], trending:false, emoji:"✍️", link:"https://gamma.app/docs/Kamu-Belum-Tahu-Siapa-Dirimu-Sampai-Kamu-Mencatat-m7dxkklz23dx9vt" },
+];
+
+const CATEGORY_NAMES = {
+  1: "Mengenal Hati Bapa",
+  2: "Memahami Jati Diri",
+  3: "Siapakah Sesamaku",
+  4: "Kids"
+};
+
+const CATEGORY_COLORS = {
+  1: "linear-gradient(135deg, #1a0a2e, #2d1454)",
+  2: "linear-gradient(135deg, #0d1b3e, #1a3060)",
+  3: "linear-gradient(135deg, #0a1e1a, #0d3828)",
+  4: "linear-gradient(135deg, #1e0a2e, #3d1460)",
+  trending: "linear-gradient(135deg, #2e1a0a, #6e3010)"
+};
+
+let currentFilter = 'all';
+
+function getCategoryLabel(article) {
+  if (article.kategori.length === 0) return '';
+  const names = article.kategori.map(k => CATEGORY_NAMES[k]).filter(Boolean);
+  return names[0] || '';
+}
+
+function getCardColor(article) {
+  if (article.trending) return CATEGORY_COLORS.trending;
+  return CATEGORY_COLORS[article.kategori[0]] || CATEGORY_COLORS[1];
+}
+
+function createCard(article, featured = false) {
+  const color = getCardColor(article);
+  const catLabel = getCategoryLabel(article);
+  return `
+    <a class="card${featured ? ' featured-card' : ''}" href="${article.link}" target="_blank" rel="noopener">
+      <div class="card-thumb">
+        <div class="card-thumb-bg" style="background: ${color}">
+          <span>${article.emoji}</span>
+          <div class="card-thumb-overlay"></div>
+        </div>
+        <div class="card-play">
+          <div class="card-play-btn">▶</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-category">${catLabel}</div>
+        <div class="card-title">${article.judul}</div>
+        <div class="card-desc">${article.desc}</div>
+      </div>
+    </a>
+  `;
+}
+
+function renderSections(articles) {
+  const container = document.getElementById('sectionsContainer');
+
+  if (articles.length === 0) {
+    container.innerHTML = '<div class="no-result">Tidak ada artikel ditemukan.</div>';
+    return;
+  }
+
+  if (currentFilter !== 'all' && currentFilter !== 'trending') {
+    container.innerHTML = `
+      <div class="section">
+        <div class="section-header">
+          <span class="section-title">${CATEGORY_NAMES[currentFilter] || ''}</span>
+          <div class="section-line"></div>
+        </div>
+        <div class="cards-grid">${articles.map((a,i) => createCard(a, i===0)).join('')}</div>
+      </div>
+    `;
+    return;
+  }
+
+  if (currentFilter === 'trending') {
+    container.innerHTML = `
+      <div class="section">
+        <div class="section-header">
+          <span class="section-title">🔥 Trending</span>
+          <div class="section-line"></div>
+        </div>
+        <div class="cards-grid">${articles.map((a,i) => createCard(a, i===0)).join('')}</div>
+      </div>
+    `;
+    return;
+  }
+
+  // ALL — group by category
+  const trending = articles.filter(a => a.trending);
+  const byCategory = {};
+  [1,2,3,4].forEach(k => {
+    byCategory[k] = articles.filter(a => a.kategori.includes(k));
+  });
+
+  let html = '';
+
+  if (trending.length) {
+    html += `
+      <div class="section">
+        <div class="section-header">
+          <span class="section-title">🔥 Trending</span>
+          <div class="section-line"></div>
+        </div>
+        <div class="cards-grid">${trending.map((a,i) => createCard(a, i===0)).join('')}</div>
+      </div>
+    `;
+  }
+
+  [1,2,3,4].forEach(k => {
+    const list = byCategory[k];
+    if (list.length) {
+      html += `
+        <div class="section">
+          <div class="section-header">
+            <span class="section-title">${CATEGORY_NAMES[k]}</span>
+            <div class="section-line"></div>
+          </div>
+          <div class="cards-grid">${list.map((a,i) => createCard(a, i===0)).join('')}</div>
+        </div>
+      `;
+    }
+  });
+
+  container.innerHTML = html;
+}
+
+function filterBy(filter, btn) {
+  currentFilter = filter;
+  document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('searchInput').value = '';
+
+  let filtered;
+  if (filter === 'all') filtered = ARTICLES;
+  else if (filter === 'trending') filtered = ARTICLES.filter(a => a.trending);
+  else filtered = ARTICLES.filter(a => a.kategori.includes(parseInt(filter)));
+
+  renderSections(filtered);
+}
+
+function handleSearch() {
+  const q = document.getElementById('searchInput').value.toLowerCase().trim();
+  if (!q) {
+    filterBy(currentFilter, document.querySelector('.filter-tab.active'));
+    return;
+  }
+  const filtered = ARTICLES.filter(a =>
+    a.judul.toLowerCase().includes(q) || a.desc.toLowerCase().includes(q)
+  );
+  const container = document.getElementById('sectionsContainer');
+  if (filtered.length === 0) {
+    container.innerHTML = '<div class="no-result">Tidak ada artikel ditemukan untuk pencarian tersebut.</div>';
+  } else {
+    container.innerHTML = `
+      <div class="section">
+        <div class="section-header">
+          <span class="section-title">Hasil Pencarian</span>
+          <div class="section-line"></div>
+        </div>
+        <div class="cards-grid">${filtered.map(a => createCard(a)).join('')}</div>
+      </div>
+    `;
+  }
+}
+
+// INIT
+renderSections(ARTICLES);
+</script>
+</body>
+</html>
