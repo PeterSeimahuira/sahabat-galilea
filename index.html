@@ -503,6 +503,507 @@
     .featured-card { flex: 0 0 200px; }
     .nav-search { display: none; }
   }
+
+  /* MODAL */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    background: rgba(0,0,0,0.95);
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .modal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .modal-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    background: rgba(10,10,18,0.98);
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+    z-index: 1000;
+  }
+
+  .modal-title {
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+    flex: 1;
+    margin: 0 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .modal-logo {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+
+  .modal-close {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.2s;
+  }
+
+  .modal-close:hover {
+    background: rgba(201,168,76,0.15);
+    border-color: var(--gold-dim);
+    color: var(--gold-light);
+  }
+
+  .modal-iframe {
+    flex: 1;
+    width: 100%;
+    border: none;
+    background: #fff;
+  }
+
+  .modal-blocked {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .modal-blocked-icon { font-size: 3rem; }
+
+  .modal-blocked h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    color: var(--gold-light);
+  }
+
+  .modal-blocked p {
+    color: var(--text-secondary);
+    font-style: italic;
+    max-width: 320px;
+    line-height: 1.8;
+  }
+
+  .modal-open-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dim));
+    color: #1a1008;
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+
+  .modal-open-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(201,168,76,0.4);
+  }
+
+  /* ARTICLE PAGE — Light Mode */
+  .article-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 998;
+    background: #f5f0e8;
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .article-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .article-topbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1.25rem;
+    background: rgba(245,240,232,0.97);
+    border-bottom: 1px solid rgba(201,168,76,0.25);
+    z-index: 10;
+    backdrop-filter: blur(10px);
+  }
+
+  .article-topbar-logo {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    color: var(--gold-dim);
+  }
+
+  .article-topbar-close {
+    background: rgba(201,168,76,0.12);
+    border: 1px solid rgba(201,168,76,0.3);
+    color: #5a3e1b;
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    flex-shrink: 0;
+  }
+
+  .article-topbar-close:hover {
+    background: rgba(201,168,76,0.3);
+    color: #3a2008;
+  }
+
+  .article-hero {
+    position: relative;
+    min-height: 40vh;
+    display: flex;
+    align-items: flex-end;
+    padding: 2rem 1.5rem;
+    overflow: hidden;
+  }
+
+  .article-hero-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #2d1254 0%, #1a3060 50%, #0f0f2a 100%);
+  }
+
+  .article-hero-glow {
+    position: absolute;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,168,76,0.18) 0%, transparent 70%);
+    top: -50px; left: -50px;
+    animation: pulse-glow 6s ease-in-out infinite;
+  }
+
+  .article-hero-emoji {
+    position: absolute;
+    top: 2rem; right: 2rem;
+    font-size: 5rem;
+    opacity: 0.2;
+  }
+
+  .article-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+  }
+
+  .article-hero-eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    color: var(--gold-light);
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .article-hero-eyebrow::before {
+    content: '';
+    width: 30px; height: 1px;
+    background: var(--gold-light);
+    display: inline-block;
+  }
+
+  .article-hero-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.6rem, 5vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.2;
+    background: linear-gradient(135deg, #fff 0%, var(--gold-light) 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+  }
+
+  .article-hero-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .article-tag {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    color: #e8d5ff;
+    border: 1px solid rgba(200,180,255,0.35);
+    padding: 0.25rem 0.65rem;
+    border-radius: 20px;
+    background: rgba(150,100,220,0.2);
+  }
+
+  .article-body {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 5rem;
+  }
+
+  .article-intro {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #6a5a48;
+    line-height: 1.9;
+    margin-bottom: 2rem;
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    background: rgba(201,168,76,0.06);
+  }
+
+  .article-verse {
+    border-left: 3px solid var(--gold);
+    padding: 1rem 1.25rem;
+    margin: 0 0 2.5rem;
+    background: rgba(201,168,76,0.08);
+    border-radius: 0 8px 8px 0;
+  }
+
+  .article-verse p {
+    font-style: italic;
+    font-size: 1.05rem;
+    color: #7a5010;
+    line-height: 1.8;
+  }
+
+  .article-verse cite {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--gold-dim);
+    font-style: normal;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.05em;
+  }
+
+  .article-section {
+    margin-bottom: 3rem;
+  }
+
+  .article-section h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #3a1a6e;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(201,168,76,0.25);
+  }
+
+  .article-section h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #5a2d8e;
+    margin: 1.5rem 0 0.75rem;
+  }
+
+  .article-section p {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: #3a3028;
+    margin-bottom: 1.25rem;
+  }
+
+  .article-quote {
+    border-left: 3px solid #7b52a8;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+    background: rgba(122,82,168,0.08);
+    border-radius: 0 8px 8px 0;
+  }
+
+  .article-quote p {
+    font-style: italic;
+    color: #4a2d6e;
+    font-size: 1rem;
+    margin: 0;
+    line-height: 1.8;
+  }
+
+  .article-compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .article-compare-box {
+    background: #fff;
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 10px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  }
+
+  .article-compare-box h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+
+  .article-compare-box ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .article-compare-box ul li {
+    font-size: 0.9rem;
+    color: #5a4a38;
+    padding: 0.25rem 0;
+    padding-left: 1rem;
+    position: relative;
+    line-height: 1.5;
+  }
+
+  .article-compare-box ul li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 0.5rem;
+    top: 0.4rem;
+  }
+
+  .article-steps {
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .article-step {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    background: #fff;
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 10px;
+    padding: 1.1rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  }
+
+  .article-step-num {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--gold-dim);
+    flex-shrink: 0;
+    min-width: 2rem;
+    text-align: center;
+  }
+
+  .article-step-content h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    color: #3a1a6e;
+    margin-bottom: 0.25rem;
+    letter-spacing: 0.04em;
+  }
+
+  .article-step-content p {
+    font-size: 0.9rem;
+    color: #6a5a48;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .article-highlight {
+    background: linear-gradient(135deg, rgba(201,168,76,0.1), rgba(122,82,168,0.08));
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(201,168,76,0.08);
+  }
+
+  .article-highlight p {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    color: #4a2d0e;
+    line-height: 1.9;
+    margin: 0;
+  }
+
+  .article-divider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 2.5rem 0;
+    color: var(--gold);
+    font-size: 0.8rem;
+  }
+
+  .article-divider::before, .article-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(201,168,76,0.25);
+  }
+
+  .article-closing {
+    background: linear-gradient(135deg, rgba(74,45,110,0.08), rgba(13,27,62,0.06));
+    border: 1px solid rgba(122,82,168,0.2);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-top: 3rem;
+    text-align: center;
+    box-shadow: 0 4px 24px rgba(74,45,110,0.08);
+  }
+
+  .article-closing-verse {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #4a2d6e;
+    line-height: 1.9;
+    margin-bottom: 0.5rem;
+  }
+
+  .article-closing-ref {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: var(--gold-dim);
+  }
 </style>
 </head>
 <body>
@@ -632,7 +1133,7 @@ function createCard(article, featured = false) {
   const color = getCardColor(article);
   const catLabel = getCategoryLabel(article);
   return `
-    <a class="card${featured ? ' featured-card' : ''}" href="${article.link}" target="_blank" rel="noopener">
+    <a class="card${featured ? ' featured-card' : ''}" href="javascript:void(0)" onclick="openArticle(${article.id})">
       <div class="card-thumb">
         <div class="card-thumb-bg" style="background: ${color}">
           <span>${article.emoji}</span>
@@ -765,6 +1266,645 @@ function handleSearch() {
 
 // INIT
 renderSections(ARTICLES);
+
+function openModal(link, title) {
+  const modal = document.getElementById('articleModal');
+  const iframe = document.getElementById('modalIframe');
+  const modalTitle = document.getElementById('modalTitle');
+
+  modalTitle.textContent = typeof title === 'string' ? title : '';
+  iframe.src = link;
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  const modal = document.getElementById('articleModal');
+  const iframe = document.getElementById('modalIframe');
+  modal.classList.remove('active');
+  document.body.style.overflow = '';
+  setTimeout(() => { iframe.src = ''; }, 300);
+}
+
+// Close modal on ESC key
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModal();
+});
+
+function openArticle(id) {
+  const inAppArticles = [1, 2, 3];
+  if (inAppArticles.includes(id)) {
+    // Hide all article contents first
+    document.querySelectorAll('.article-content').forEach(el => el.style.display = 'none');
+    // Show the selected one
+    const target = document.getElementById('article-' + id);
+    if (target) target.style.display = 'block';
+    // Show overlay and scroll to top
+    const page = document.getElementById('articlePage');
+    page.classList.add('active');
+    page.scrollTop = 0;
+    document.body.style.overflow = 'hidden';
+  } else {
+    // Other articles still open Gamma link
+    const article = ARTICLES.find(a => a.id === id);
+    if (article) window.open(article.link, '_blank');
+  }
+}
+
+function closeArticle() {
+  const page = document.getElementById('articlePage');
+  page.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeArticle();
+});
 </script>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="articleModal">
+  <div class="modal-topbar">
+    <span class="modal-logo">✦ Sahabat Galilea</span>
+    <span class="modal-title" id="modalTitle"></span>
+    <button class="modal-close" onclick="closeModal()">✕</button>
+  </div>
+  <iframe class="modal-iframe" id="modalIframe" src="" allowfullscreen></iframe>
+</div>
+
+<!-- ARTICLE PAGE -->
+<div class="article-overlay" id="articlePage">
+  <div class="article-topbar">
+    <span class="article-topbar-logo">✦ Sahabat Galilea</span>
+    <button class="article-topbar-close" onclick="closeArticle()">✕</button>
+  </div>
+
+  <!-- ARTICLE SELECTOR (hidden, controlled by JS) -->
+  <div id="article-1" class="article-content">
+    <div class="article-hero">
+      <div class="article-hero-bg"></div>
+      <div class="article-hero-glow"></div>
+      <span class="article-hero-emoji">🗝️</span>
+      <div class="article-hero-content">
+        <div class="article-hero-eyebrow">Mengenal Hati Bapa</div>
+        <h1 class="article-hero-title">Rahasia Kunci Daud</h1>
+        <div class="article-hero-tags">
+          <span class="article-tag">Hati yang Menang</span>
+          <span class="article-tag">Pengampunan</span>
+          <span class="article-tag">Kasih Bapa</span>
+        </div>
+      </div>
+    </div>
+    <div class="article-body">
+      <div class="article-verse">
+        <p>"Biarkan anak-anak itu datang kepada-Ku, jangan menghalang-halangi mereka, sebab orang-orang yang seperti itulah yang empunya Kerajaan Allah."</p>
+        <cite>— Markus 10:14-15</cite>
+      </div>
+      <p class="article-intro">Sebuah perjalanan menemukan hati yang sembuh, cinta yang kuat, dan pengampunan yang membebaskan — karena terlebih dahulu kita mengenal dan menerima Kasih Bapa.</p>
+
+      <div class="article-section">
+        <h2>Dua Wajah Hati: Anak Kecil dan Orang Dewasa</h2>
+        <p>Anak kecil di seluruh dunia punya satu kesamaan yang mengagumkan: mereka ceria dan cepat melupakan kesedihan. Seorang anak yang menangis karena jatuh, dalam hitungan menit sudah berlari lagi dan tertawa kencang. Tidak ada dendam yang disimpan. Tidak ada luka yang dirawat dalam hati. Setiap hari adalah hari baru yang penuh kemungkinan.</p>
+        <p>Namun sesuatu terjadi ketika kita tumbuh dewasa. Banyak orang berubah — dari pribadi yang penuh keceriaan menjadi sosok yang apatis dan kehilangan gairah hidup. Dunia mengajarkan kita untuk berjaga-jaga, untuk tidak mudah percaya, untuk menyimpan catatan tentang siapa yang pernah menyakiti kita. Lama-kelamaan, hati kita membangun tembok demi tembok, dan di balik tembok itulah luka-luka bersembunyi.</p>
+        <p>Yesus tidak memanggil kita untuk menjadi kekanak-kanakan dalam pikiran, tetapi untuk memiliki hati seperti anak kecil — yang terbuka, percaya, dan tidak mengikat diri pada luka masa lalu. Inilah pintu masuk pertama menuju Kerajaan Allah: kesediaan untuk kembali menjadi sederhana di hadapan Tuhan.</p>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>Hati Anak Kecil</h4>
+            <ul><li>Ceria dan bersukacita</li><li>Cepat melupakan kesedihan</li><li>Terbuka dan percaya penuh</li><li>Mudah memaafkan</li></ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>Hati yang Terluka</h4>
+            <ul><li>Apatis, kehilangan gairah</li><li>Menyimpan dendam</li><li>Menutup diri, berjaga-jaga</li><li>Kehilangan keceriaan dan harapan</li></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Emosi yang Tak Bisa Kita Kendalikan — dan Satu yang Bisa</h2>
+        <p>Dalam setiap relasi, konflik adalah sesuatu yang pasti terjadi. Tidak ada hubungan yang sepenuhnya bebas dari gesekan — bahkan dalam persahabatan yang paling indah sekalipun, akan selalu ada momen ketika dua hati berbeda arah. Dan ketika konflik datang, pengalaman buruk membuat hati kita sedih, terluka, dan merana.</p>
+        <p>Ada sebuah kebenaran yang perlu kita terima dengan jujur: emosi muncul tanpa dapat kita kendalikan. Sedih, patah semangat, kuatir, marah — semua perasaan itu hadir seketika, seperti refleks tubuh yang tidak bisa kita tahan. Saat emosi yang kuat menguasai diri kita, pikiran kita menjadi tumpul. Kita kehilangan kemampuan untuk berpikir jernih dan membuat keputusan yang bijak.</p>
+        <p>Tetapi ada satu hal yang bisa kita kendalikan: pikiran kita. Dan pikiran kita, pada akhirnya, menentukan bagaimana perasaan kita berkembang dan ke mana arahnya. Ini bukan berarti kita menekan emosi — melainkan kita memilih dengan sadar bagaimana kita merespons apa yang kita rasakan.</p>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>Tidak Bisa Dikendalikan</h4>
+            <ul><li>Emosi yang muncul tiba-tiba</li><li>Perasaan sedih, marah, takut</li><li>Reaksi pertama hati kita</li><li>Tindakan orang lain terhadap kita</li></ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>Bisa Dikendalikan</h4>
+            <ul><li>Pikiran yang kita pilih direnungkan</li><li>Respons setelah emosi pertama</li><li>Kepada siapa kita bawa beban hati</li><li>Langkah kita menuju pemulihan</li></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Pengalaman Baru yang Mengubah Pikiran</h2>
+        <p>Bagaimana cara mengubah pikiran kita? Jawabannya tidak sesederhana "berpikir positif" atau "bersyukur lebih banyak." Ada satu mekanisme yang jauh lebih dalam dan jauh lebih nyata: menciptakan pengalaman baru. Pengalaman baru mengubah pikiran kita — bukan hanya di permukaan, tetapi hingga ke lapisan terdalam cara kita melihat diri sendiri, orang lain, dan Tuhan.</p>
+        <p>Pengalaman buruk menimbulkan luka batin. Luka batin itu seperti bekas luka yang tidak pernah benar-benar sembuh — setiap kali ada sesuatu yang menyentuhnya, rasa sakitnya muncul kembali seolah-olah itu baru terjadi kemarin. Dan luka batin tidak bisa disembuhkan hanya dengan waktu, dengan pikiran positif, atau dengan tekad yang kuat.</p>
+        <p>Satu-satunya yang dapat menyembuhkan luka batin adalah pengalaman bersama Yesus. Bukan sekadar pengetahuan tentang Yesus, bukan hanya doktrin atau hafalan ayat — melainkan perjumpaan yang nyata, personal, dan mengubahkan dengan Dia yang adalah Sang Penyembuh hati yang terluka. Di dalam hadirat-Nya, hal-hal yang bertahun-tahun tersimpan dalam kegelapan bisa akhirnya dibawa ke dalam terang dan disembuhkan.</p>
+        <div class="article-quote"><p>"Pengalaman bersama Yesus akan menyembuhkan luka di batin kita. Saat batin kita sembuh, kita menjadi pribadi yang bisa memahami sudut pandang orang lain."</p></div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Bagian Kita dan Bagian Tuhan</h2>
+        <p>Saat berkonflik, seringkali kita menuntut pihak yang lain untuk berubah terlebih dahulu. Kita menunggu permintaan maaf yang tidak datang. Kita menahan diri untuk pulih sampai orang itu "layak" menerima pengampunan kita. Namun pola pikir ini justru membuat kita semakin terbelenggu dalam luka kita sendiri.</p>
+        <p>Ada sebuah prinsip indah yang Tuhan tanamkan dalam Amsal 16:7: <em>"Jikalau TUHAN berkenan kepada jalan seseorang, maka musuh orang itu pun didamaikan-Nya dengan dia."</em> Artinya, ada bagian Tuhan dan ada bagian kita dalam setiap proses pemulihan. Dan keduanya tidak bisa saling menggantikan.</p>
+        <div class="article-compare">
+          <div class="article-compare-box"><h4>Bagian Kita</h4><ul><li>Datang kepada Yesus</li><li>Serahkan masalah kita</li><li>Lepaskan kontrol</li><li>Percaya Tuhan bekerja</li></ul></div>
+          <div class="article-compare-box"><h4>Bagian Tuhan</h4><ul><li>Menyembuhkan luka</li><li>Memulihkan situasi</li><li>Mendamaikan hubungan</li><li>Bekerja melampaui pikiran kita</li></ul></div>
+        </div>
+        <p>Bagian kita adalah yang paling sederhana namun juga yang paling berat untuk dilakukan: datang kepada Yesus dan menyerahkan masalah kita. Bukan memperbaiki dulu, bukan membuktikan diri dulu — cukup datang, sebagaimana seorang anak kecil yang berlari ke pelukan ayahnya.</p>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Ciri Akhir Zaman: Kasih yang Mendingin</h2>
+        <p>Yesus sendiri telah memperingatkan kita tentang keadaan dunia di akhir zaman. Dalam Matius 24:10-12, Ia berfirman bahwa akan ada banyak orang yang tersandung, mengkhianati satu sama lain, dan karena makin kuasanya kedurhakaan, kasih banyak orang akan menjadi dingin. Dalam Lukas 21:26, Ia juga menyebut bahwa manusia akan mati ketakutan karena apa yang akan menimpa bumi.</p>
+        <p>Kita hidup di zaman di mana tanda-tanda ini semakin nyata. Ketakutan meraja di mana-mana — ketakutan akan masa depan, ketakutan akan kehilangan, ketakutan akan orang lain. Kasih menjadi komoditas langka. Hubungan-hubungan yang dulu hangat kini menjadi transaksional dan dingin.</p>
+        <p>Namun justru di tengah zaman seperti inilah, panggilan untuk hidup dengan hati yang hangat dan penuh kasih menjadi semakin relevan dan semakin mendesak. Kita dipanggil bukan untuk menjadi seperti dunia, melainkan untuk menjadi terang di tengah kegelapan — dan terang itu dimulai dari hati kita sendiri yang dipulihkan oleh Tuhan.</p>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Hukum yang Terutama: Urutan Kasih yang Benar</h2>
+        <p>Dalam Markus 12:28-34, jawaban Yesus mengandung urutan yang sangat penting dan seringkali kita lewatkan. Yesus merangkum sepuluh hukum dalam tiga hubungan kasih — dan urutannya bukan kebetulan.</p>
+        <div class="article-steps">
+          <div class="article-step"><div class="article-step-num">1</div><div class="article-step-content"><h4>Mengasihi Allah (Hukum 1–3)</h4><p>Dasar segala kasih: mengenal dan menerima kasih Bapa adalah sumber utama yang mengisi jiwa kita.</p></div></div>
+          <div class="article-step"><div class="article-step-num">2</div><div class="article-step-content"><h4>Mengasihi Diri Sendiri (Hukum 4)</h4><p>Fondasi relasi yang sehat: menerima diri sebagai gambar Bapa, layak dikasihi dan dipulihkan.</p></div></div>
+          <div class="article-step"><div class="article-step-num">3</div><div class="article-step-content"><h4>Mengasihi Sesama (Hukum 5–10)</h4><p>Buah dari kasih yang sudah mengalir: kita bisa mengasihi orang lain karena hati kita sudah penuh.</p></div></div>
+        </div>
+        <p>Banyak dari kita berusaha keras mengasihi orang lain, tetapi lupa bahwa kita tidak bisa memberikan apa yang tidak kita miliki. Jika kita belum benar-benar menerima kasih Bapa, kita akan terus mencoba mengasihi sesama dari tangki yang kosong.</p>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Mengapa Tuhan Mengizinkan Jiwa Terluka?</h2>
+        <p>Ini adalah pertanyaan yang jujur — dan Tuhan tidak takut dengan pertanyaan-pertanyaan jujur kita. Jawabannya tersembunyi dalam sebuah paradoks yang indah: cinta pasti menimbulkan luka. Tidak ada cinta yang sejati tanpa kerentanan, dan tidak ada kerentanan tanpa risiko terluka.</p>
+        <p>Seorang ibu yang mencintai anaknya pasti pernah merasakan patah hati karena anaknya. Seorang sahabat yang setia pasti pernah dikhianati. Luka bukan tanda bahwa cinta kita salah — luka adalah bukti bahwa cinta kita nyata.</p>
+        <p>Dan inilah tujuan Tuhan yang ajaib: pulih dari luka membuat cinta semakin kuat. Seperti <em>kintsugi</em> — seni Jepang memperbaiki pecahan keramik dengan emas — retakan yang dipulihkan oleh Tuhan tidak menjadi kelemahan, melainkan tempat di mana kemuliaan-Nya bersinar paling terang.</p>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Luka Jiwa yang Tersembunyi</h2>
+        <p>Ada satu karakteristik luka jiwa yang sangat berbahaya: ia pandai bersembunyi. Galatia 5:14-15 mengingatkan kita bahwa jika kita tidak saling mengasihi, kita akan saling menggigit dan memakan satu sama lain hingga habis.</p>
+        <p>Kepahitan bisa bersembunyi di dalam ibadah. Seseorang bisa memuji Tuhan dengan lantang, melayani dengan giat — sementara di dalam hatinya tersimpan kepahitan yang dalam. Ibadah lahiriah tidak selalu mencerminkan kondisi hati yang sesungguhnya.</p>
+        <p>Namun kepahitan tidak mungkin bersembunyi selamanya. Saat kita tersinggung — itulah saat manifestasinya. Dan pada akhirnya, tanpa kita sadari, Tuhan disalahkan: "Mengapa Tuhan membiarkan ini terjadi?"</p>
+        <div class="article-quote"><p>Lukas 18:7-8 — "Tidakkah Allah akan membenarkan orang-orang pilihan-Nya yang siang malam berseru kepada-Nya?... Akan tetapi, jika Anak Manusia itu datang, adakah Ia mendapati iman di bumi?"</p></div>
+        <p>Pertanyaan Yesus itu menggema hingga hari ini: adakah iman di bumi? Iman yang sejati bukan hanya kepercayaan intelektual — tetapi kepercayaan yang lahir dari hati yang sudah dipulihkan.</p>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Kunci Daud: Mazmur 55 — Saat Dikhianati</h2>
+        <p>Mazmur 55 adalah salah satu mazmur paling jujur yang pernah ditulis. Daud tidak menyembunyikan kondisi hatinya — ia menuangkan semuanya ke hadapan Tuhan. Dan dalam teks ini tersembunyi pola hati yang menjadi Kunci Daud.</p>
+        <div class="article-steps">
+          <div class="article-step"><div class="article-step-num">①</div><div class="article-step-content"><h4>Jujur — Ayat 5-8</h4><p>Daud jujur tentang rasa takutnya yang melumpuhkan. Ia ingin terbang seperti merpati mencari tempat aman. Kejujuran di hadapan Tuhan bukan tanda kelemahan — itu tanda kepercayaan.</p></div></div>
+          <div class="article-step"><div class="article-step-num">②</div><div class="article-step-content"><h4>S E L A — Berhenti, Dengar, Renungkan</h4><p>Kata "Sela" adalah undangan untuk berhenti, mendengar suara Tuhan, dan merenungkan apa yang baru saja diucapkan. Momen jeda yang mengubah segalanya.</p></div></div>
+          <div class="article-step"><div class="article-step-num">③</div><div class="article-step-content"><h4>Pengakuan Pengkhianatan — Ayat 13-15</h4><p>Daud mengakui bahwa yang mengkhianatinya bukan musuh dari luar, melainkan seorang sahabat dekat. Pengkhianatan dari orang terdekat adalah luka yang paling dalam.</p></div></div>
+          <div class="article-step"><div class="article-step-num">④</div><div class="article-step-content"><h4>Self-Talk — Ayat 17-20</h4><p>Daud mulai berbicara kepada dirinya sendiri tentang siapa Tuhan — pergeseran perspektif yang krusial dari masalah menuju kesetiaan Tuhan.</p></div></div>
+          <div class="article-step"><div class="article-step-num">⑤</div><div class="article-step-content"><h4>S E L A — Berhenti, Berubah</h4><p>Sela kedua yang lebih dalam: bukan hanya berhenti untuk mendengar, tetapi membiarkan Roh Tuhan mengubah hati kita dari dalam.</p></div></div>
+          <div class="article-step"><div class="article-step-num">⑥</div><div class="article-step-content"><h4>Serahkan dan Percaya — Ayat 23-24</h4><p>"Serahkanlah kuatirmu kepada TUHAN, maka Ia akan memelihara engkau." Daud sampai pada titik penyerahan total — bukan karena situasinya berubah, tetapi karena hatinya berubah.</p></div></div>
+        </div>
+        <p>Ketika kita berjalan dalam pola ini, sesuatu yang ajaib terjadi: kita tidak lagi menuntut orang yang menyakiti kita untuk berubah terlebih dahulu. Hati kita sembuh dari dalam — dan dari hati yang sembuh itulah, pengampunan mengalir secara alami sebagai ekspresi kasih, bukan sebagai kewajiban agama.</p>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Rahasia Kunci Daud: Mengampuni adalah Mengasihi</h2>
+        <p>Semua jalan ini bermuara pada satu kebenaran yang menjadi inti dari segalanya.</p>
+        <div class="article-highlight"><p>Mengampuni adalah Kasih. Menyadari identitas gambar diri kita di mata Bapa, memampukan kita untuk mengasihi diri sendiri, lalu mengasihi orang lain. Inilah Rahasia Kunci Daud.</p></div>
+        <p>Pengampunan yang sejati tidak bisa dipaksakan. Pengampunan yang lahir dari keterpaksaan hanyalah pengampunan di bibir, sementara hati tetap menyimpan luka. Tetapi pengampunan yang lahir dari kesadaran bahwa kita sendiri adalah orang yang sudah diampuni dan sangat dikasihi Bapa — itulah pengampunan yang membebaskan.</p>
+        <p>Saat kita benar-benar menyadari identitas kita sebagai anak-anak yang dikasihi Bapa — bukan karena prestasi kita, bukan karena kita layak, tetapi murni karena kasih Bapa yang tak bersyarat — sesuatu berubah di dalam diri kita. Kita tidak lagi mencari validasi dari manusia. Dan dari kepenuhan itulah, kita mampu mengasihi diri sendiri dengan benar, dan mengalirkan kasih kepada orang lain — bahkan kepada mereka yang pernah menyakiti kita.</p>
+        <div class="article-steps">
+          <div class="article-step"><div class="article-step-num">❤️</div><div class="article-step-content"><h4>Terima Kasih Bapa</h4><p>Fondasi segala sesuatu: mengenal dan menerima kasih Bapa yang tak bersyarat kepada kita.</p></div></div>
+          <div class="article-step"><div class="article-step-num">🪞</div><div class="article-step-content"><h4>Kenali Identitasmu</h4><p>Kamu adalah gambar Bapa — dibuat untuk dikasihi, berharga, dan layak dipulihkan sepenuhnya.</p></div></div>
+          <div class="article-step"><div class="article-step-num">🌿</div><div class="article-step-content"><h4>Kasihi Dirimu Sendiri</h4><p>Dari identitas yang benar, kamu bisa menerima dirimu — bukan dalam kesombongan, tapi dalam kebenaran.</p></div></div>
+          <div class="article-step"><div class="article-step-num">🤝</div><div class="article-step-content"><h4>Kasihi Orang Lain</h4><p>Dari tangki yang penuh, kasih mengalir keluar — bahkan kepada mereka yang pernah melukaimu.</p></div></div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Sebuah Undangan: Datanglah Seperti Anak Kecil</h2>
+        <p>Kita kembali ke tempat di mana kita mulai. Perjalanan ini adalah lingkaran yang indah: untuk masuk ke Kerajaan Allah, kita harus datang seperti anak kecil. Dan untuk menjadi seperti anak kecil kembali, kita membutuhkan hati yang sudah disembuhkan, yang sudah dibebaskan dari beban luka dan kepahitan yang bertahun-tahun disimpan.</p>
+        <p>Ini bukan sebuah tuntutan yang berat. Ini adalah undangan yang penuh kasih dari Bapa yang sudah lebih dulu merindukan kita. Ia tidak menunggu kita sempurna. Ia menunggu kita datang — sebagaimana adanya, dengan segala luka dan kepahitan kita.</p>
+        <p>Rahasia Kunci Daud adalah tentang keberanian untuk datang kepada Yesus, menyerahkan luka kita, dan membiarkan Kasih Bapa mengubah kita dari dalam — sehingga pengampunan bukan lagi beban yang harus kita pikul, melainkan kasih yang secara alami mengalir dari hati yang sudah penuh.</p>
+        <div class="article-steps">
+          <div class="article-step"><div class="article-step-num">🙏</div><div class="article-step-content"><h4>Datanglah dengan Jujur</h4><p>Bawa seluruh luka, ketakutan, dan kepahitanmu kepada Yesus. Kejujuran adalah langkah pertama menuju kebebasan.</p></div></div>
+          <div class="article-step"><div class="article-step-num">🤫</div><div class="article-step-content"><h4>Berhentilah dan Dengarlah</h4><p>Praktikkan Sela — ciptakan ruang hening di mana suara Bapa bisa menjangkau hatimu yang paling dalam.</p></div></div>
+          <div class="article-step"><div class="article-step-num">💛</div><div class="article-step-content"><h4>Terima Kasih Bapa Untukmu</h4><p>Izinkan dirimu untuk benar-benar percaya bahwa kamu adalah anak yang dikasihi — bukan karena prestasimu, tetapi karena anugerah-Nya.</p></div></div>
+          <div class="article-step"><div class="article-step-num">🕊️</div><div class="article-step-content"><h4>Serahkan dan Percaya</h4><p>Lepaskan beban yang bukan milikmu untuk ditanggung. Berikan kepada Tuhan bagian-Nya, dan jalani bagianmu dengan ringan.</p></div></div>
+        </div>
+      </div>
+
+      <div class="article-closing">
+        <p class="article-closing-verse">"Biarkan anak-anak itu datang kepada-Ku... sebab orang-orang yang seperti itulah yang empunya Kerajaan Allah."</p>
+        <p class="article-closing-ref">— Markus 10:14</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ARTICLE 2 -->
+  <div id="article-2" class="article-content" style="display:none">
+    <div class="article-hero">
+      <div class="article-hero-bg" style="background: linear-gradient(135deg, #2e0a0a 0%, #1a1a0a 50%, #0a0a12 100%);"></div>
+      <div class="article-hero-glow"></div>
+      <span class="article-hero-emoji">🔥</span>
+      <div class="article-hero-content">
+        <div class="article-hero-eyebrow">Memahami Jati Diri</div>
+        <h1 class="article-hero-title">Lidah, Lintah &amp; Api Neraka</h1>
+        <div class="article-hero-tags">
+          <span class="article-tag">Renungan Rohani</span>
+          <span class="article-tag">Amsal · Yakobus · Kisah Para Rasul</span>
+        </div>
+      </div>
+    </div>
+    <div class="article-body">
+      <div class="article-verse">
+        <p>"Si lintah mempunyai dua anak perempuan: 'Untukku!' dan 'Untukku!' Ada tiga hal yang tak akan kenyang, ada empat hal yang tak pernah berkata: 'Cukup!'"</p>
+        <cite>— Amsal 30:15-16</cite>
+      </div>
+      <p class="article-intro">Sebuah perenungan rohani berdasarkan Amsal 30:15-16, Yakobus 3:6-8, dan Kisah Rasul 2 — tentang bahaya jiwa yang tidak pernah puas, lidah yang menjadi senjata neraka, dan bagaimana Api Roh Kudus mampu membalikkan semuanya menuju kehidupan yang berkemenangan.</p>
+
+      <div class="article-section">
+        <h2>Amsal 30:15-16 — Gambaran yang Mengejutkan</h2>
+        <p>Agur bin Yake, penulis Amsal 30, menggunakan gambaran yang sangat tajam dan tidak biasa: seekor lintah dengan dua anak perempuan yang hanya tahu satu kata — "Untukku!" Gambaran ini bukan sekadar metafora puitis. Ini adalah cermin yang diarahkan langsung kepada hati manusia yang berdosa.</p>
+        <p>Lintah adalah binatang yang hidup dengan cara menempel pada inangnya, menghisap darah tanpa memberikan apapun sebagai imbalan. Ia tidak pernah bekerja untuk mendapatkan makanan. Ia menumpang. Ia merugikan. Dan ia tidak pernah merasa cukup. Dua anak perempuannya — yang dalam teks Ibrani digambarkan sebagai dua teriakan serakah — hanyalah perluasan dari watak induknya: selalu meminta, tidak pernah puas, tidak pernah berkata "cukup."</p>
+        <p>Firman Tuhan kemudian menyebutkan empat hal yang senada dengan watak lintah itu: dunia orang mati yang terus menelan jiwa-jiwa, rahim yang mandul yang merindukan keturunan tanpa henti, bumi yang selalu membutuhkan air, dan api yang tidak pernah berkata cukup. Keempat hal ini bukan sekadar fenomena alam — mereka adalah gambaran tentang jiwa yang hidup di luar kasih karunia Allah.</p>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Empat Kutukan Ketidakpuasan</h2>
+        <p>Ketidakpuasan bukan hanya kelemahan karakter. Dalam terang firman Tuhan, ia adalah pintu masuk bagi kutuk yang nyata. Amsal 30 menggambarkan empat bentuk kutukan yang lahir dari jiwa yang tidak pernah merasa cukup.</p>
+        <div class="article-steps">
+          <div class="article-step"><div class="article-step-num">☠️</div><div class="article-step-content"><h4>Kutuk Dunia Orang Mati</h4><p>Sheol — tempat orang mati — selalu lapar dan terus menelan. Jiwa yang hidup dalam keserakahan sedang berjalan menuju kekosongan yang abadi, tidak pernah menemukan kepuasan sejati.</p></div></div>
+          <div class="article-step"><div class="article-step-num">🌑</div><div class="article-step-content"><h4>Kutuk Rahim Mandul</h4><p>Kemandulan rohani adalah buah dari hati yang tidak pernah puas. Orang yang selalu ingin lebih tidak akan pernah menghasilkan buah yang bertahan — pelayanan kosong, relasi kering, hidup tanpa warisan kekal.</p></div></div>
+          <div class="article-step"><div class="article-step-num">🌵</div><div class="article-step-content"><h4>Kutuk Bumi yang Haus</h4><p>Bumi yang tidak pernah puas air adalah gambaran jiwa yang terus mencari kepuasan dari sumber-sumber duniawi — kekayaan, ketenaran, pengakuan — namun tak pernah terpuaskan secara sejati.</p></div></div>
+          <div class="article-step"><div class="article-step-num">🔥</div><div class="article-step-content"><h4>Kutuk Api yang Melahap</h4><p>Api yang tidak pernah berkata "cukup" adalah gambaran paling mengerikan — karena api ini, menurut Yakobus, adalah api neraka yang telah menyalakan lidah manusia sejak kejatuhan Adam.</p></div></div>
+        </div>
+        <p>Keempat kutukan ini tidak datang dari luar sebagai hukuman yang sewenang-wenang. Mereka adalah konsekuensi alami dari jiwa yang memilih untuk hidup dalam nafsu dan ketidakpuasan. Dan kita perlu bertanya dengan jujur: apakah salah satu dari keempat kutukan ini sedang bekerja dalam hidup kita?</p>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Dosa yang Terlihat vs. Pembunuh yang Tersembunyi</h2>
+        <p>Di banyak gereja, standar pertobatan dan kekudusan sering kali diukur dari hal-hal yang mudah terlihat secara lahiriah. Merokok, misalnya, menjadi simbol ketidakkudusan yang sering disorot dari mimbar. Dan memang benar — merokok merusak tubuh yang adalah bait Roh Kudus.</p>
+        <p>Namun ada ironi yang dalam dan menyedihkan: sementara merokok dikecam keras, Diabetes Melitus — yang secara medis jauh lebih mematikan dalam jangka panjang — hampir tidak pernah disebut. Persekutuan makan bersama dipenuhi dengan hidangan tinggi gula, tinggi lemak, dan tinggi kalori, tanpa ada satu pun seruan untuk menahan diri.</p>
+        <p>Ini bukan tentang legalisme makanan. Ini tentang pertanyaan yang lebih dalam: mengapa begitu mudah kita menghakimi dosa yang terlihat di luar, namun begitu buta terhadap keserakahan yang bekerja dari dalam? Karena akar dari keduanya sama — hati yang tidak pernah merasa cukup.</p>
+        <p>Namun di antara semua "pembunuh tersembunyi" itu, ada satu yang paling berbahaya, paling mematikan, dan paling sering tidak terdeteksi bahkan di dalam gereja yang paling rohani sekalipun.</p>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Pembunuh Tertinggi yang Tidak Terdeteksi</h2>
+        <div class="article-verse">
+          <p>"Lidah pun adalah api; ia merupakan suatu dunia kejahatan dan mengambil tempat di antara anggota-anggota tubuh kita sebagai sesuatu yang dapat menodai seluruh tubuh dan menyalakan roda kehidupan kita, sedang ia sendiri dinyalakan oleh api neraka."</p>
+          <cite>— Yakobus 3:6</cite>
+        </div>
+        <p>Yakobus menggunakan bahasa yang sangat keras dan tidak main-main. Ia tidak berkata lidah itu "bisa berbahaya" atau "kadang-kadang menyebabkan masalah." Ia berkata: lidah adalah api. Ia adalah dunia kejahatan. Ia dapat menodai seluruh tubuh. Dan sumber nyala apinya? Api neraka sendiri.</p>
+        <p>Ini adalah pernyataan teologis yang revolusioner. Yakobus menghubungkan langsung antara ucapan-ucapan yang keluar dari mulut kita dengan kuasa kegelapan yang paling dalam. Setiap kata sia-sia, setiap gosip, setiap tuduhan, setiap keluhan yang tidak berkesudahan, setiap kritikan pahit — semuanya adalah nyala api neraka yang sedang bekerja melalui anggota tubuh kita yang paling kecil namun paling kuat.</p>
+        <p>Dan dalam Yakobus 3:8, ia menambahkan sesuatu yang lebih menggetarkan: "tidak seorang pun yang berkuasa menjinakkan lidah." Dengan kekuatan manusia semata, mustahil. Lidah adalah sesuatu yang buas, tak terkuasai, dan penuh racun yang mematikan.</p>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>Mengapa Lidah Begitu Berbahaya</h4>
+            <ul>
+              <li>Kecil fisik, namun memegang kuasa hidup dan mati</li>
+              <li>Dampaknya tidak terlihat namun menghancurkan</li>
+              <li>Beroperasi 24 jam tanpa henti</li>
+              <li>Dinyalakan langsung oleh api neraka</li>
+              <li>Tidak ada manusia yang sanggup menjinakkannya</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>Sumber dari Hati yang Tidak Cukup</h4>
+            <ul>
+              <li>Gosip lahir dari hati yang tidak puas</li>
+              <li>Keluhan lahir dari hati yang tidak percaya Allah</li>
+              <li>Tuduhan lahir dari hati yang penuh kepahitan</li>
+              <li>Kata kasar lahir dari amarah keinginan tak terpenuhi</li>
+              <li>Pujian palsu lahir dari keserakahan pengakuan</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Semua Bersumber dari Hati yang Tidak Pernah Cukup</h2>
+        <p>Mengapa lidah begitu sulit dikendalikan? Karena lidah hanyalah saluran — bukan sumbernya. Firman Tuhan mengajarkan dengan sangat jelas bahwa dari kelimpahan hati mulut berbicara (Lukas 6:45). Lidah hanya mengungkapkan apa yang sudah ada di dalam hati. Dan hati yang tidak pernah merasa cukup akan selalu menghasilkan lidah yang tidak pernah bisa diam dari perkara-perkara yang merusak.</p>
+        <div class="article-steps">
+          <div class="article-step"><div class="article-step-num">1</div><div class="article-step-content"><h4>Hati yang Tidak Puas</h4><p>Selalu membandingkan, selalu merasa kurang, selalu ingin lebih dari apa yang Allah berikan saat ini.</p></div></div>
+          <div class="article-step"><div class="article-step-num">2</div><div class="article-step-content"><h4>Pikiran yang Terkontaminasi</h4><p>Memproses setiap situasi melalui filter keserakahan, kecemburuan, dan ketidakpercayaan kepada Allah.</p></div></div>
+          <div class="article-step"><div class="article-step-num">3</div><div class="article-step-content"><h4>Lidah yang Menyala</h4><p>Mengeluarkan kata-kata yang menodai, merusak, menghancurkan — api neraka yang bekerja melalui percakapan sehari-hari.</p></div></div>
+          <div class="article-step"><div class="article-step-num">4</div><div class="article-step-content"><h4>Kehidupan yang Terbakar</h4><p>Relasi hancur, pelayanan kosong, kesaksian ternoda, "roda kehidupan" terbakar habis oleh api yang kita sendiri nyalakan.</p></div></div>
+        </div>
+        <p>Siklus ini hanya bisa diputus dari sumbernya — bukan dengan disiplin lidah semata, bukan dengan komitmen diri untuk "berbicara lebih baik," tetapi dengan perubahan fundamental pada hati yang hanya bisa dikerjakan oleh Roh Kudus.</p>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Membalikkan Semuanya: Lidah Api yang Berbeda</h2>
+        <div class="article-verse">
+          <p>"Maka tampaklah kepada mereka lidah-lidah seperti nyala api yang bertebaran dan hinggap pada mereka masing-masing. Maka penuhlah mereka dengan Roh Kudus, lalu mereka mulai berkata-kata dalam bahasa-bahasa lain."</p>
+          <cite>— Kisah Rasul 2:3-4</cite>
+        </div>
+        <p>Ada dua jenis api yang disebutkan dalam Alkitab berkaitan dengan lidah. Yang pertama adalah api neraka yang Yakobus peringatkan — api yang menyalakan lidah untuk menghancurkan, menodai, dan meracuni. Yang kedua adalah Api Roh Kudus yang turun pada hari Pentakosta — api yang hinggap seperti lidah-lidah nyala di atas kepala setiap orang percaya.</p>
+        <p>Perhatikan gambaran yang luar biasa dalam Kisah Rasul 2:3 — Api Roh Kudus pun berbentuk seperti lidah. Ini bukan kebetulan. Allah secara sengaja menggunakan gambaran "lidah api" untuk menunjukkan bahwa Ia datang untuk mengklaim kembali, membaptis, dan mengubahkan tepat bagian yang paling berbahaya dari tubuh manusia.</p>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>🔥 Api Neraka pada Lidah</h4>
+            <ul><li>Menodai seluruh tubuh</li><li>Menghancurkan relasi</li><li>Menyebarkan racun</li><li>Bersumber dari hati yang tidak puas</li><li>Tidak dapat dijinakkan manusia</li></ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>🕊️ Api Roh Kudus pada Lidah</h4>
+            <ul><li>Memulihkan dan membangun</li><li>Menceritakan perbuatan besar Allah</li><li>Mengalirkan kasih karunia</li><li>Bersumber dari hati yang diperbaharui</li><li>Dikerjakan oleh kuasa Roh</li></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Kisah Rasul 2 — Tiga Tanda Lidah yang Diperbaharui</h2>
+        <p>Hari Pentakosta bukan hanya peristiwa sejarah yang kita kenang setiap tahun. Ia adalah cetak biru — blueprint — tentang bagaimana Allah mengubah jiwa yang tidak puas dan lidah yang merusak menjadi saluran berkat dan pemulihan.</p>
+        <div class="article-steps">
+          <div class="article-step"><div class="article-step-num">1</div><div class="article-step-content"><h4>Menceritakan Perbuatan Besar Allah (Kisah Rasul 2:11)</h4><p>Hal pertama yang diucapkan oleh orang-orang yang dipenuhi Roh Kudus adalah "perbuatan-perbuatan besar yang dilakukan Allah." Bukan keluhan. Bukan gosip. Lidah yang diperbaharui secara alami bergerak ke arah mengagungkan Allah.</p></div></div>
+          <div class="article-step"><div class="article-step-num">2</div><div class="article-step-content"><h4>Mengubah Pikiran Orang Lain (Kisah Rasul 2:14-39)</h4><p>Petrus berdiri dan berbicara — dan pada hari itu tiga ribu jiwa bertobat. Petrus adalah orang yang sama yang pernah menyangkal Yesus dengan sumpah dan kutuk. Kini, lidah yang sama itu, dinyalakan oleh Roh Kudus, mengubah ribuan hati.</p></div></div>
+          <div class="article-step"><div class="article-step-num">3</div><div class="article-step-content"><h4>Mengizinkan Roh Mengubah Pola Hidup (Kisah Rasul 2:41-46)</h4><p>Buah dari khotbah Petrus bukan hanya pertobatan individual — tetapi lahirnya komunitas yang hidup berbagi, bertekun dalam pengajaran, berdoa bersama, dan saling memperhatikan. Tanda paling konkret dari jiwa yang telah belajar berkata "cukup."</p></div></div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Mengizinkan Api Roh Kudus Mengubahkan Kita</h2>
+        <p>Pesan utama dari seluruh renungan ini bukanlah tentang disiplin diri yang lebih keras. Bukan tentang berkomitmen untuk mengurangi gosip, atau memutuskan untuk lebih banyak berkata hal yang positif. Semua upaya itu baik, tetapi tidak menyentuh akar persoalannya.</p>
+        <p>Akar persoalannya adalah hati yang tidak pernah merasa cukup — dan satu-satunya yang dapat mengubah hati itu adalah Allah sendiri. Yakobus berkata tidak ada manusia yang berkuasa menjinakkan lidah. Tetapi ia tidak berkata Allah tidak berkuasa melakukannya. Justru sebaliknya — itulah mengapa Roh Kudus datang. Itulah mengapa Api itu turun.</p>
+        <div class="article-steps">
+          <div class="article-step"><div class="article-step-num">01</div><div class="article-step-content"><h4>Sadari dan Akui</h4><p>Akui secara jujur di hadapan Allah bahwa ada "watak lintah" dalam diri kita — ketidakpuasan, keserakahan kata, lidah yang tidak terkendali. Tidak ada pemulihan tanpa pengakuan yang jujur.</p></div></div>
+          <div class="article-step"><div class="article-step-num">02</div><div class="article-step-content"><h4>Undang Api Roh Kudus</h4><p>Bukan sekadar meminta bantuan Allah untuk "berbicara lebih baik," tetapi undang Roh Kudus untuk mengisi, menguasai, dan menyalakan hati kita dengan Api-Nya yang kudus — mengklaim kembali lidah dari cengkeraman api neraka.</p></div></div>
+          <div class="article-step"><div class="article-step-num">03</div><div class="article-step-content"><h4>Tekuni Komunitas yang Membangun</h4><p>Seperti jemaat mula-mula dalam Kisah Rasul 2:41-46, tempatkan diri dalam komunitas yang saling menguatkan, bertekun dalam firman, dan hidup dalam kepuasan yang bersumber dari Allah.</p></div></div>
+          <div class="article-step"><div class="article-step-num">04</div><div class="article-step-content"><h4>Latih Lidah untuk Berkata "Cukup"</h4><p>Secara praktis dan disengaja, latih diri untuk mengucapkan syukur sebelum keluhan, pujian sebelum kritik, berkat sebelum kutuk — sebagai respons atas hati yang sedang diperbaharui Roh Kudus setiap harinya.</p></div></div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Penutup: Dari Lintah Menjadi Sumber Berkat</h2>
+        <p>Firman Tuhan dalam Amsal 30 membuka cermin yang mengejutkan — bahwa di dalam setiap kita ada potensi untuk menjadi seperti lintah, hidup dengan teriakan "Untukku! Untukku!" tanpa pernah puas, tanpa pernah berterima kasih, tanpa pernah berkata cukup. Dan Yakobus menunjukkan bahwa jiwa yang tidak puas itu akan selalu mencari pelampiasan melalui lidah.</p>
+        <p>Tetapi Kisah Rasul 2 memberikan kabar yang paling indah: Allah tidak meninggalkan kita dalam kondisi itu. Ia mengutus Api-Nya sendiri — bukan api neraka yang membakar dan menghancurkan, tetapi Api Roh Kudus yang memurnikan, memenuhi, dan mengubahkan. Api yang menyentuh lidah bukan untuk menghancurkan, melainkan untuk menguduskan dan menjadikan kita saluran berkat bagi dunia.</p>
+        <div class="article-highlight"><p>Menyadari bahayanya kuasa api neraka yang menggerakkan lidah, mengizinkan Api Roh Kudus mengubahkan pola pikir dan cara hidup berkemenangan.</p></div>
+        <p>Jiwa yang telah disentuh Api Roh Kudus tidak perlu lagi menghisap kebahagiaan orang lain seperti lintah. Ia telah menemukan sumber yang tidak pernah kering — kelimpahan dari Allah sendiri. Dan dari kelimpahan itulah, lidah yang dulu dinyalakan neraka kini menyerukan kemuliaan Allah, membangun yang lemah, dan mengundang yang hilang untuk pulang.</p>
+        <div class="article-steps">
+          <div class="article-step"><div class="article-step-num">🙌</div><div class="article-step-content"><h4>Bukan Lagi "Untukku!"</h4><p>Hidup yang dipimpin Roh Kudus bergerak dari keserakahan menuju kemurahhatian — dari "apa yang kudapat" menuju "apa yang bisa kuberi."</p></div></div>
+          <div class="article-step"><div class="article-step-num">🔥</div><div class="article-step-content"><h4>Lidah yang Disucikan</h4><p>Api Roh Kudus mengklaim kembali apa yang api neraka curi — dan menjadikan lidah kita instrumen pemulihan dan kemuliaan Allah.</p></div></div>
+          <div class="article-step"><div class="article-step-num">👑</div><div class="article-step-content"><h4>Kehidupan yang Berkemenangan</h4><p>Kepuasan sejati dalam Allah adalah fondasi dari kehidupan yang berkemenangan — bukan kemenangan atas orang lain, tetapi kemenangan atas diri sendiri dan kuasa kegelapan.</p></div></div>
+        </div>
+      </div>
+
+      <div class="article-closing">
+        <p class="article-closing-verse">"Menyadari bahayanya kuasa api neraka yang menggerakkan lidah memproduksi kata-kata sia-sia, mengizinkan Api Roh Kudus mengubahkan pola pikir dan cara hidup berkemenangan."</p>
+        <p class="article-closing-ref">— Amsal 30:15-16 · Yakobus 3:6-8 · Kisah Rasul 2</p>
+      </div>
+    </div>
+  
+  <!-- ARTICLE 3 -->
+  <div id="article-3" class="article-content" style="display:none">
+    <div class="article-hero">
+      <div class="article-hero-bg" style="background: linear-gradient(135deg, #0a1e3e 0%, #1a2a0a 50%, #0a0a12 100%);"></div>
+      <div class="article-hero-glow"></div>
+      <span class="article-hero-emoji">⚔️</span>
+      <div class="article-hero-content">
+        <div class="article-hero-eyebrow">Mengenal Hati Bapa · Memahami Jati Diri</div>
+        <h1 class="article-hero-title">Daud Mengalahkan Goliat: Kisah di Balik Kemenangan</h1>
+        <div class="article-hero-tags">
+          <span class="article-tag">1 Samuel 17</span>
+          <span class="article-tag">Pemulihan Pondok Daud</span>
+        </div>
+      </div>
+    </div>
+    <div class="article-body">
+      <div class="article-verse">
+        <p>"Berbahagialah orang yang Kaupilih dan yang Kauperkenankan diam di pelataran-Mu! Kiranya kami menjadi kenyang dengan kebaikan rumah-Mu, dengan kekudusan bait-Mu."</p>
+        <cite>— Mazmur 65:5</cite>
+      </div>
+      <p class="article-intro">Lebih dari sekadar kisah seorang bocah mengalahkan raksasa, kisah Daud dan Goliat adalah peta rohani tentang bagaimana seorang yang tinggal dalam Hadirat Kasih Allah mampu berdiri teguh di tengah raksasa ketakutan, penolakan, dan keputusasaan — relevan bagi kita di akhir zaman, saat Pemulihan Pondok Daud sedang Tuhan genapi.</p>
+
+      <div class="article-section">
+        <h2>Bagaimana Respons Daud Sampai ke Telinga Raja Saul</h2>
+        <p>Kisah ini sering dibaca terlalu cepat. Namun bila kita memperlambat langkah dan merenungkan 1 Samuel 17:25-30, kita akan menemukan sebuah pola yang luar biasa — sebuah pola yang membedakan seorang yang hidup dalam iman dari mereka yang hidup dalam ketakutan.</p>
+        <div class="article-steps">
+          <div class="article-step"><div class="article-step-num">1</div><div class="article-step-content"><h4>3x Daud Mendengar</h4><p>Tentang upah yang dijanjikan raja bagi siapa yang mengalahkan Goliat. Daud tidak hanya mendengar sekali — ia mendengar tiga kali. Pendengarannya bukan karena serakah, tetapi karena ia sedang membangun iman melalui firman yang diucapkan berulang. "Iman timbul dari pendengaran."</p></div></div>
+          <div class="article-step"><div class="article-step-num">2</div><div class="article-step-content"><h4>2x Daud Bertanya</h4><p>Daud bertanya kepada orang-orang di sekitarnya untuk mengkonfirmasi apa yang ia dengar. Ini bukan keragu-raguan — ini adalah cara Daud membangun fondasi keyakinan. Ia tidak bergerak dari emosi sesaat, tetapi dari konfirmasi yang kokoh.</p></div></div>
+          <div class="article-step"><div class="article-step-num">3</div><div class="article-step-content"><h4>1 Tindakan yang Mengubah Sejarah</h4><p>Ketika iman telah cukup dibangun melalui pendengaran dan konfirmasi, Daud melangkah maju. Satu tindakan iman yang lahir dari proses pendengaran yang tekun — itulah yang menggerakkan langit dan bumi.</p></div></div>
+        </div>
+        <div class="article-quote"><p>Bagaimana kita merespons Firman Tuhan hari ini? Apakah kita mendengar sekali lalu melupakan, atau seperti Daud — mendengar, mengkonfirmasi, dan bertindak?</p></div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Saul vs Daud: Dua Respons di Hadapan Raksasa yang Sama</h2>
+        <p>Goliat berdiri empat puluh hari berseru-seru. Setiap orang melihat raksasa yang sama, mendengar tantangan yang sama. Namun respons Saul dan Daud berbeda seperti siang dan malam. Perbedaan ini bukan soal fisik, bukan soal pengalaman perang — ini soal kondisi hati di hadapan Allah.</p>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>Raja Saul</h4>
+            <ul>
+              <li>Pembangkangan terhadap perintah Tuhan</li>
+              <li>Kuatir akan ancaman dan opini manusia</li>
+              <li>Takut yang melumpuhkan, bukan takut akan Tuhan</li>
+              <li>Putus asa yang membekukan tindakan iman</li>
+              <li>Mencari berkat Tuhan tanpa Tuhan sendiri</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>Gembala Daud</h4>
+            <ul>
+              <li>Penundukan hati kepada kehendak Allah</li>
+              <li>Iman yang kokoh di tengah ancaman nyata</li>
+              <li>Kasih yang mengusir ketakutan (1 Yoh 4:18)</li>
+              <li>Pengharapan yang membara karena mengenal Allah</li>
+              <li>Mencari hadirat Tuhan di atas segalanya</li>
+            </ul>
+          </div>
+        </div>
+        <p>Kisah kejatuhan Saul terdokumentasi dengan jelas dalam 1 Samuel 13, 14, 15, dan 16. Setiap babak adalah satu langkah lebih jauh dari hadirat Tuhan — dimulai dari mempersembahkan korban bakaran yang bukan haknya (pasal 13), membuat sumpah gegabah (pasal 14), tidak melaksanakan perintah Tuhan sepenuhnya (pasal 15), hingga Tuhan menyesal telah mengangkat Saul menjadi raja (pasal 15:11). Saul kehilangan kerajaannya bukan karena kurang berbakat — tetapi karena kehilangan hati yang tunduk.</p>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Bagaimana Allah Memilih Daud: Kisah 1 Samuel 16–17</h2>
+        <p>Allah tidak melihat seperti manusia melihat. Ketika Samuel pergi ke rumah Isai untuk mengurapi raja yang baru, matanya tertuju pada Eliab yang gagah dan tinggi. Namun Tuhan berkata kepada Samuel: <em>"Janganlah pandang parasnya atau perawakan tubuhnya... manusia melihat apa yang di depan mata, tetapi Tuhan melihat hati"</em> (1 Samuel 16:7).</p>
+        <div class="article-steps">
+          <div class="article-step"><div class="article-step-num">👑</div><div class="article-step-content"><h4>Pengurapan yang Tidak Terduga</h4><p>Daud adalah anak bungsu — yang paling terakhir dipertimbangkan. Namun justru dialah yang dipilih Tuhan. Allah sering memilih yang dunia anggap terakhir untuk menjadi yang pertama dalam rencana-Nya.</p></div></div>
+          <div class="article-step"><div class="article-step-num">🌿</div><div class="article-step-content"><h4>Dibentuk di Tempat Tersembunyi</h4><p>Padang gembala adalah tempat Daud belajar mengenal Allah. Di sanalah ia bertempur melawan singa dan beruang, memuji Tuhan sendirian, dan membangun keintiman yang nantinya menjadi fondasi kemenangan atas Goliat.</p></div></div>
+          <div class="article-step"><div class="article-step-num">🦁</div><div class="article-step-content"><h4>Iman yang Telah Teruji</h4><p>Daud datang ke medan perang bukan sebagai pejuang yang belum berpengalaman. Ia telah dilatih Allah di balik layar. Goliat hanyalah singa dan beruang berikutnya — dan Tuhan yang sama setia melepaskannya.</p></div></div>
+        </div>
+        <div class="article-quote"><p>Refleksi: Di mana "padang gembala"-mu hari ini? Tempat-tempat pembentukan yang terasa tersembunyi dan tidak dihargai justru adalah universitas kerajaan Allah bagimu.</p></div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Tinggal dalam Hadirat Kasih Allah, Bukan dalam Ketakutan</h2>
+        <p>Daud membuat satu keputusan yang mengubah segalanya: ia tidak mau tinggal dalam ketakutan, tetapi memilih tinggal dalam Hadirat Kasih Allah. Ini bukan romantisme rohani — ini adalah keputusan strategis berdasarkan pemahaman mendalam tentang siapa Allah itu.</p>
+        <p>Firman Tuhan dalam 1 Yohanes 4:18-20 berkata dengan tegas: <em>"Di dalam kasih tidak ada ketakutan; kasih yang sempurna melenyapkan ketakutan."</em> Ketakutan bukan sekadar emosi — ketakutan adalah sebuah "tempat tinggal" rohani. Dan kita memiliki pilihan: tinggal dalam ketakutan, atau tinggal dalam Kasih Allah.</p>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>Ketakutan Membawa Perhambaan</h4>
+            <ul>
+              <li>1 Yohanes 4:18 — Ketakutan mengandung hukuman</li>
+              <li>Hidup dalam penjara yang tidak terlihat</li>
+              <li>Terus bereaksi terhadap ancaman</li>
+              <li>Tidak mampu merespons dengan iman</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>Kasih Membawa Kemerdekaan</h4>
+            <ul>
+              <li>Kasih Tuhan kepada kita yang melenyapkan takut</li>
+              <li>Ketakutan kehilangan cengkeramannya</li>
+              <li>Bebas merespons dengan iman yang teguh</li>
+              <li>Bernaung dalam Kasih Allah yang kekal</li>
+            </ul>
+          </div>
+        </div>
+        <p>Di tengah tekanan zaman akhir ini, kita pun dihadapkan pada pilihan yang sama. Apakah kita akan membiarkan berita-berita mengisi hati kita dengan ketakutan, ataukah kita akan memilih untuk tinggal, berdiam, dan bernaung dalam Kasih Allah yang kekal?</p>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Belajar dari Daud: Menang dari Luka Penolakan</h2>
+        <p>Sebelum Daud naik ke puncak kemenangan atas Goliat, ia terlebih dahulu harus menanggung luka penolakan dari saudaranya sendiri. Eliab, kakak sulungnya, memarahinya dan merendahkannya di hadapan semua orang: <em>"Mengapa engkau pergi ke sini... Aku tahu keangkuhanmu dan kejahatan hatimu"</em> (1 Samuel 17:28). Penolakan dari orang terdekat — itulah luka yang paling dalam.</p>
+        <h3 style="margin-top:1.5rem;margin-bottom:0.75rem;color:#3a1a6e;font-family:'Cinzel',serif;">Roh Sudah Lahir Baru — Tapi Bagaimana dengan Jiwa?</h3>
+        <p>Inilah pertanyaan krusial yang sering terlewatkan. Ketika seseorang bertobat dan menerima Yesus, rohnya langsung diperbarui. Namun jiwa — pikiran, kehendak, emosi — masih membutuhkan proses pemulihan yang berkelanjutan.</p>
+        <p>Yakobus 1:19-21 memberikan kunci: <em>"Hendaklah setiap orang cepat untuk mendengar, tetapi lambat untuk berkata-kata, dan juga lambat untuk marah... terimalah dengan lemah lembut firman yang tertanam di dalam hatimu, yang berkuasa menyelamatkan jiwamu."</em></p>
+        <div class="article-steps">
+          <div class="article-step"><div class="article-step-num">💔</div><div class="article-step-content"><h4>Mengapa Tuhan Mengizinkan Luka?</h4><p>Cinta pasti menimbulkan luka. Jika kita tidak pernah mengasihi, kita tidak akan pernah terluka. Namun tanpa kasih, kita tidak pernah hidup sepenuhnya.</p></div></div>
+          <div class="article-step"><div class="article-step-num">🔥</div><div class="article-step-content"><h4>Pulih dari Luka Membuat Cinta Semakin Kuat</h4><p>Luka yang diproses bersama Tuhan tidak melemahkan kapasitas kita untuk mengasihi — justru memperluas dan memperdalam kapasitas itu. Daud yang pernah ditolak menjadi raja yang memiliki kasih paling luar biasa dalam sejarah Israel.</p></div></div>
+          <div class="article-step"><div class="article-step-num">🙏</div><div class="article-step-content"><h4>Tuhan Mengizinkan Agar Kita Berlari kepada-Nya</h4><p>Tuhan mengizinkan luka bukan karena Ia tidak peduli — tetapi karena Ia sangat peduli. Ia mengizinkan kita merasakan luka agar kita berlari kepada satu-satunya sumber kesembuhan sejati: Hadirat-Nya sendiri.</p></div></div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Kunci Daud: Menyelaraskan Kesehatan Emosi dan Rohani</h2>
+        <p>Mazmur 3 adalah salah satu mazmur yang paling jujur dalam seluruh Alkitab. Ditulis ketika Daud melarikan diri dari Absalom, anaknya sendiri — ini adalah momen paling gelap dalam kehidupan seorang raja. Namun justru dalam momen itulah kita melihat kunci rahasia Daud: ia tahu bagaimana menyelaraskan kesehatan emosi dan rohaninya di hadapan Allah.</p>
+        <div class="article-steps">
+          <div class="article-step"><div class="article-step-num">①</div><div class="article-step-content"><h4>Tumpahkan Emosi</h4><p>Jangan sembunyikan apa yang kamu rasakan dari Allah. Ia sudah tahu. Datanglah dengan jujur sepenuhnya — seperti Daud yang menuangkan ketakutan dan kesedihannya tanpa filter.</p></div></div>
+          <div class="article-step"><div class="article-step-num">②</div><div class="article-step-content"><h4>S·E·L·A·H — Berhenti dan Dengar</h4><p>Berhenti. Dengarkan. Renungkan. Beri ruang bagi Roh Kudus untuk berbicara ke dalam situasimu. Sela bukan kemalasan — itu keberanian untuk diam di hadapan Tuhan.</p></div></div>
+          <div class="article-step"><div class="article-step-num">③</div><div class="article-step-content"><h4>Bicara kepada Diri Sendiri</h4><p>Ingatkan jiwamu akan kebenaran. <em>"Mengapa kau gelisah, hai jiwaku? Berharaplah kepada Allah!"</em> (Mazmur 42:5). Self-talk rohani adalah senjata yang Daud gunakan secara konsisten.</p></div></div>
+          <div class="article-step"><div class="article-step-num">④</div><div class="article-step-content"><h4>Berubah! Iman! Menang!</h4><p>Biarkan proses ini mengubah perspektifmu. Iman bangkit bukan dari keadaan yang berubah, tapi dari hati yang bertemu Allah. Di sinilah kemenangan sejati dimulai.</p></div></div>
+          <div class="article-step"><div class="article-step-num">⑤</div><div class="article-step-content"><h4>Ekspresikan Kasih</h4><p>Kesehatan emosi yang sejati selalu mengalir keluar dalam kasih kepada sesama. Ini adalah buah alami dari hati yang telah dipulihkan — bukan syarat, melainkan respons.</p></div></div>
+        </div>
+        <p>Daud tidak pernah memisahkan emosi dari iman. Ia membawa seluruh dirinya — termasuk ketakutan, kesedihan, dan kemarahannya — ke hadapan Allah. Dan dari sana ia keluar sebagai pemenang.</p>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Realita Kehidupan Rohani: Kerajaan Terang vs Kerajaan Gelap</h2>
+        <p>Kisah Daud dan Goliat bukan hanya kisah manusia — ini adalah penampakan di panggung bumi dari pertempuran kosmis yang lebih besar. Di balik setiap Goliat yang kita hadapi, ada pertempuran di dunia rohani antara Kingdom of Heaven dan Kingdom of Darkness. Memahami realita ini bukan untuk menakut-nakuti kita, melainkan untuk mempersiapkan kita.</p>
+        <div class="article-steps">
+          <div class="article-step"><div class="article-step-num">1</div><div class="article-step-content"><h4>Hari 1: Terang Dijadikan</h4><p>Kejadian 1:1 — "Jadilah terang!" Allah melihat bahwa terang itu baik. Inilah deklarasi pertama: terang selalu baik di mata Allah.</p></div></div>
+          <div class="article-step"><div class="article-step-num">2</div><div class="article-step-content"><h4>Hari 2: Keheningan yang Berbicara</h4><p>Satu-satunya hari di mana Allah tidak berkata "itu baik." Cakrawala dijadikan — medan pertempuran antara dimensi rohani ditegakkan. Mengapa diam? Karena inilah arena perang.</p></div></div>
+          <div class="article-step"><div class="article-step-num">3</div><div class="article-step-content"><h4>Hari 3–6: Baik, Baik, Baik</h4><p>Lima hari berturut-turut Allah berkata "baik." Namun ingat — hari kedua tidak terlupakan. Medan pertempuran tetap ada, dan setiap ciptaan yang "baik" itu ditempatkan di tengah arena yang membutuhkan penjagaan rohani.</p></div></div>
+          <div class="article-step"><div class="article-step-num">4</div><div class="article-step-content"><h4>Tidak Baik (Kejadian 2:18)</h4><p>"Tidak baik kalau manusia itu seorang diri saja." Tuhan sendiri yang berinisiatif — keluarga adalah solusi Allah untuk mengalahkan Kingdom of Darkness.</p></div></div>
+        </div>
+        <div class="article-quote"><p>1 Tesalonika 5:8 — "Kita, yang adalah anak-anak siang, haruslah sadar, berbajuzirahkan iman dan kasih, dan berketopongkan pengharapan keselamatan." Iman, Kasih, Pengharapan — inilah senjata anak-anak terang di medan cakrawala.</p></div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Kehadiran Allah: Dari Kemah Musa hingga Pemulihan Pondok Daud</h2>
+        <p>Sepanjang sejarah penebusan, Allah selalu mencari cara untuk hadir di tengah umat-Nya. Bukan sekadar hadir dari kejauhan — tetapi hadir secara intim, dekat, dan nyata.</p>
+        <div class="article-steps">
+          <div class="article-step"><div class="article-step-num">1</div><div class="article-step-content"><h4>Kemah Musa (Perjanjian Lama Awal)</h4><p>Hadirat Allah di balik tirai yang tebal. Hanya imam besar yang boleh masuk, setahun sekali. Indah, namun terbatas — karena umat masih dalam perjalanan menuju pemahaman yang lebih penuh tentang kasih Allah.</p></div></div>
+          <div class="article-step"><div class="article-step-num">2</div><div class="article-step-content"><h4>Kemah Daud (Revolusi Penyembahan)</h4><p>Daud mendirikan kemah di mana tabut perjanjian bisa diakses siang dan malam. Para penyembah masuk hadirat Allah tanpa tirai. Ini adalah bayangan Perjanjian Baru — penyembahan yang bebas, intim, dan terus-menerus.</p></div></div>
+          <div class="article-step"><div class="article-step-num">3</div><div class="article-step-content"><h4>Bait Salomo (Kemegahan Fisik)</h4><p>Hadirat Allah memenuhi bait yang megah secara fisik. Namun kemegahan fisik tidak menjamin kesetiaan hati. Bait itu akhirnya dihancurkan bukan karena Allah meninggalkan umat-Nya — tetapi karena umat meninggalkan Allah.</p></div></div>
+          <div class="article-step"><div class="article-step-num">4</div><div class="article-step-content"><h4>Dipulihkannya Pondok Daud (Kisah Rasul 15:13-18)</h4><p>Nubuatan yang sedang digenapi di zaman kita. Yakobus mengutip Amos 9: "Kemudian Aku akan kembali dan membangun kembali pondok Daud yang telah roboh." Ini adalah pemulihan pola penyembahan yang intim dan hadirat Allah yang dapat diakses oleh semua bangsa.</p></div></div>
+        </div>
+        <p>Puncak dari semua ini adalah pemulihan yang dimulai dari unit terkecil namun paling fundamental: keluarga (Kejadian 2:18, Kisah Para Rasul 4:32-37). Gereja mula-mula yang hidup dalam kuasa hadirat Allah dimulai dari rumah-rumah yang penuh kasih, pengorbanan, dan persekutuan yang tulus.</p>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Jantung Kemah Daud: Hati yang Bertobat dan Korban Pujian</h2>
+        <p>Di pusat segalanya ada satu hal yang tidak bisa digantikan: hati yang bertobat yang mengalir dalam korban pujian. Mazmur 51 adalah manifesto rohani dari seseorang yang telah bertemu dengan kasih Allah yang meremukkan sekaligus memulihkan.</p>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>Mazmur 51:1-16 — Hati yang Bertobat</h4>
+            <ul>
+              <li>"Kasihanilah aku, ya Allah, menurut kasih setia-Mu"</li>
+              <li>"Jadikanlah hatiku tahir, ya Allah"</li>
+              <li>Pertobatan sejati = orientasi ulang seluruh hidup ke arah Allah</li>
+              <li>Jiwa kembali ke rumahnya</li>
+              <li>Fondasi dari segala penyembahan yang sejati</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>Mazmur 51:17-19 — Sacrifice of Praise</h4>
+            <ul>
+              <li>"Korban sembelihan kepada Allah ialah jiwa yang hancur"</li>
+              <li>"Hati yang patah dan remuk tidak akan Kaupandang hina"</li>
+              <li>Bukan prestasi atau program gereja</li>
+              <li>Pujian yang lahir dari kedalaman jiwa</li>
+              <li>Pujian yang "mahal" dari pengalaman nyata bersama Allah</li>
+            </ul>
+          </div>
+        </div>
+        <div class="article-quote"><p>Ada masa Perjanjian Lama, ada saatnya Perjanjian Baru. Tuhan tidak memanggil kita kembali ke ritual lama — Ia memanggil kita masuk ke dalam kelimpahan hubungan yang baru dan hidup dengan Dia.</p></div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Panggilan di Akhir Zaman: Jadilah Bagian dari Pemulihan Pondok Daud</h2>
+        <p>Apa yang Tuhan rindukan di akhir zaman ini bukanlah lebih banyak program, lebih banyak acara, atau lebih banyak pengetahuan teologi. Yang Tuhan rindukan adalah sebuah umat yang — seperti Daud — memilih untuk tidak tinggal dalam ketakutan, tetapi memilih tinggal dalam Hadirat Kasih Allah, dan dari sana mengalirkan pemulihan ke keluarga, gereja, dan bangsa.</p>
+        <div class="article-highlight"><p>Pemulihan Pondok Daud dimulai hari ini, dari hidupmu, dari rumahmu, dari keputusanmu untuk membangun kembali mezbah keluarga dengan hati yang bertobat dan bibir yang penuh pujian dan pengucapan syukur. Ini adalah musim baru. Ini adalah cara baru. Dan Tuhan sendiri yang memimpinnya.</p></div>
+        <div class="article-steps">
+          <div class="article-step"><div class="article-step-num">🏠</div><div class="article-step-content"><h4>Bangun Kembali Mezbah Keluargamu</h4><p>Mulailah dengan hal sederhana: doa bersama keluarga, membaca firman, dan memuji Tuhan bersama. Setiap keluarga yang melakukan ini adalah batu hidup dalam pembangunan Pondok Daud.</p></div></div>
+          <div class="article-step"><div class="article-step-num">🙏</div><div class="article-step-content"><h4>Proses Luka dengan Jujur di Hadapan Tuhan</h4><p>Jangan bawa topeng ke hadapan Allah. Seperti Daud dalam Mazmur 3 dan 51, bawa seluruh dirimu — termasuk luka, kekecewaan, dan ketakutanmu — dan biarkan kasih-Nya yang bekerja.</p></div></div>
+          <div class="article-step"><div class="article-step-num">⚔️</div><div class="article-step-content"><h4>Hiduplah dalam Iman, Kasih, dan Pengharapan</h4><p>Inilah baju zirah anak-anak terang (1 Tesalonika 5:8). Iman mengalahkan kekuatiran. Kasih mengusir ketakutan. Pengharapan menggantikan keputusasaan. Ini adalah realita rohani yang tersedia bagimu sekarang.</p></div></div>
+          <div class="article-step"><div class="article-step-num">🎵</div><div class="article-step-content"><h4>Jadilah Penyembah yang Sejati Sepanjang Hari</h4><p>Pemulihan Pondok Daud bukan hanya soal ibadah hari Minggu. Ini adalah gaya hidup — di dapur, di tempat kerja, di tengah keluarga — di mana hadirat Allah selalu disambut dan dihormati.</p></div></div>
+        </div>
+      </div>
+
+      <div class="article-closing">
+        <p class="article-closing-verse">"Berbahagialah orang yang Kaupilih dan yang Kauperkenankan diam di pelataran-Mu! Kiranya kami menjadi kenyang dengan kebaikan rumah-Mu, dengan kekudusan bait-Mu."</p>
+        <p class="article-closing-ref">— Mazmur 65:5</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
 </body>
 </html>
