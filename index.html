@@ -644,8 +644,7 @@
     z-index: 998;
     box-sizing: border-box;
     overflow-x: hidden;
-    /* Explicitly allow pinch-zoom on Android Chrome */
-    touch-action: pan-x pan-y pinch-zoom;
+    touch-action: pan-y pinch-zoom;
   }
   .article-overlay.active {
     display: block;
@@ -664,6 +663,31 @@
     border-bottom: 1px solid rgba(201,168,76,0.25);
     z-index: 10;
     backdrop-filter: blur(10px);
+  }
+
+  .article-font-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .article-font-btn {
+    background: rgba(201,168,76,0.15);
+    border: 1px solid rgba(201,168,76,0.4);
+    color: #7c5c2e;
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.3rem 0.55rem;
+    border-radius: 6px;
+    cursor: pointer;
+    line-height: 1;
+    transition: background 0.2s;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .article-font-btn:active {
+    background: rgba(201,168,76,0.35);
   }
 
   .article-topbar-logo {
@@ -711,7 +735,7 @@
 
   .article-hero-glow {
     position: absolute;
-    width: 300px; height: 300px;
+    max-width: 300px; width: 100%; height: 300px;
     border-radius: 50%;
     background: radial-gradient(circle, rgba(201,168,76,0.18) 0%, transparent 70%);
     top: -50px; left: -50px;
@@ -782,11 +806,12 @@
   .article-body {
     max-width: 720px;
     margin: 0 auto;
-    padding: 1.5rem 1rem 5rem;
+    padding: 1.5rem 4% 5rem;
     font-size: clamp(15px, 4vw, 18px);
     line-height: 1.85;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    overflow-x: hidden;
     box-sizing: border-box;
     width: 100%;
   }
@@ -795,6 +820,39 @@
       padding: 2.5rem 1.5rem 5rem;
     }
   }
+  /* ===== REFLOW ON ZOOM: no horizontal scroll ===== */
+  .article-overlay *,
+  .article-content *,
+  .article-body * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  .article-body img,
+  .article-body table {
+    max-width: 100%;
+    height: auto;
+  }
+  .article-compare {
+    /* Already handled with @media above */
+  }
+  .article-step {
+    min-width: 0;
+  }
+  .article-step-content {
+    min-width: 0;
+    flex: 1;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+  .article-verse,
+  .article-highlight,
+  .article-quote,
+  .article-closing {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+  /* ===== END REFLOW ===== */
 
   .article-intro {
     font-size: 1.05em;
@@ -882,6 +940,8 @@
     grid-template-columns: 1fr;
     gap: 1rem;
     margin: 1.5rem 0;
+    width: 100%;
+    max-width: 100%;
   }
   @media (min-width: 600px) {
     .article-compare {
@@ -1351,6 +1411,37 @@ function closeArticle() {
   window.scrollTo(0, 0);
 }
 
+// Font size control for article reading
+let articleFontSize = 16;
+const FONT_MIN = 12;
+const FONT_MAX = 28;
+const FONT_STEP = 2;
+
+function changeFontSize(direction) {
+  articleFontSize = Math.min(FONT_MAX, Math.max(FONT_MIN, articleFontSize + (direction * FONT_STEP)));
+  applyArticleFontSize();
+  // Save preference
+  try { localStorage.setItem('sg_fontsize', articleFontSize); } catch(e) {}
+}
+
+function applyArticleFontSize() {
+  const bodies = document.querySelectorAll('.article-body');
+  bodies.forEach(el => {
+    el.style.fontSize = articleFontSize + 'px';
+  });
+}
+
+// Load saved font size on page load
+(function() {
+  try {
+    const saved = localStorage.getItem('sg_fontsize');
+    if (saved) {
+      articleFontSize = parseInt(saved);
+      applyArticleFontSize();
+    }
+  } catch(e) {}
+})();
+
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeArticle();
 });
@@ -1372,7 +1463,11 @@ document.addEventListener('keydown', e => {
 <div class="article-overlay" id="articlePage">
   <div class="article-topbar">
     <span class="article-topbar-logo">✦ Sahabat Galilea</span>
-    <button class="article-topbar-close" onclick="closeArticle()">✕</button>
+    <div class="article-font-controls">
+      <button class="article-font-btn" onclick="changeFontSize(-1)" title="Perkecil teks">A−</button>
+      <button class="article-font-btn" onclick="changeFontSize(1)" title="Perbesar teks">A+</button>
+      <button class="article-topbar-close" onclick="closeArticle()">✕</button>
+    </div>
   </div>
 
   <!-- ARTICLE SELECTOR (hidden, controlled by JS) -->
