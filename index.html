@@ -2,10 +2,17 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, user-scalable=yes">
 <title>Sahabat Galilea</title>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
 <style>
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    font-size: 16px;
+    /* Enable smooth zoom on Android Chrome */
+    touch-action: manipulation;
+  }
   :root {
     --bg-deep: #0a0a12;
     --bg-card: #111122;
@@ -629,21 +636,22 @@
 
   /* ARTICLE PAGE — Light Mode */
   .article-overlay {
-    position: fixed;
-    inset: 0;
-    z-index: 998;
+    display: none;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
     background: #f5f0e8;
-    overflow-y: auto;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.4s ease;
-    -webkit-overflow-scrolling: touch;
+    z-index: 998;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    /* Explicitly allow pinch-zoom on Android Chrome */
+    touch-action: pan-x pan-y pinch-zoom;
+  }
+  .article-overlay.active {
+    display: block;
   }
 
-  .article-overlay.active {
-    opacity: 1;
-    pointer-events: all;
-  }
+  
 
   .article-topbar {
     position: sticky;
@@ -691,7 +699,9 @@
     align-items: flex-end;
     padding: 2rem 1.5rem;
     overflow: hidden;
-  }
+    box-sizing: border-box;
+  width: 100%;
+}
 
   .article-hero-bg {
     position: absolute;
@@ -772,13 +782,22 @@
   .article-body {
     max-width: 720px;
     margin: 0 auto;
-    padding: 2.5rem 1.5rem 5rem;
-    font-size: clamp(1rem, 2.5vw, 1.15rem);
+    padding: 1.5rem 1rem 5rem;
+    font-size: clamp(15px, 4vw, 18px);
     line-height: 1.85;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  @media (min-width: 480px) {
+    .article-body {
+      padding: 2.5rem 1.5rem 5rem;
+    }
   }
 
   .article-intro {
-    font-size: 1.1rem;
+    font-size: 1.05em;
     font-style: italic;
     color: #6a5a48;
     line-height: 1.9;
@@ -798,7 +817,7 @@
 
   .article-verse p {
     font-style: italic;
-    font-size: clamp(1rem, 2.6vw, 1.1rem);
+    font-size: 1.05em;
     color: #7a5010;
     line-height: 1.8;
   }
@@ -853,16 +872,21 @@
   .article-quote p {
     font-style: italic;
     color: #4a2d6e;
-    font-size: clamp(1rem, 2.6vw, 1.1rem);
+    font-size: 1.05em;
     margin: 0;
     line-height: 1.8;
   }
 
   .article-compare {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 1rem;
     margin: 1.5rem 0;
+  }
+  @media (min-width: 600px) {
+    .article-compare {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   .article-compare-box {
@@ -871,17 +895,24 @@
     border-radius: 10px;
     padding: 1.25rem;
     box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    box-sizing: border-box;
+    min-width: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   .article-compare-box h4 {
     font-family: 'Cinzel', serif;
-    font-size: clamp(0.85rem, 2.4vw, 0.95rem);
+    font-size: 0.9em;
     letter-spacing: 0.15em;
     color: var(--gold-dim);
     text-transform: uppercase;
     margin-bottom: 0.75rem;
   }
 
+  .article-compare-box li {
+    font-size: 0.9em;
+  }
   .article-compare-box ul {
     list-style: none;
     padding: 0;
@@ -921,6 +952,7 @@
     border-radius: 10px;
     padding: 1.1rem;
     box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    flex-wrap: nowrap;
   }
 
   .article-step-num {
@@ -935,14 +967,14 @@
 
   .article-step-content h4 {
     font-family: 'Cinzel', serif;
-    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    font-size: 0.95em;
     color: #3a1a6e;
     margin-bottom: 0.25rem;
     letter-spacing: 0.04em;
   }
 
   .article-step-content p {
-    font-size: clamp(0.9rem, 2.4vw, 1rem);
+    font-size: 0.95em;
     color: #6a5a48;
     margin: 0;
     line-height: 1.6;
@@ -960,7 +992,7 @@
 
   .article-highlight p {
     font-family: 'Cinzel', serif;
-    font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+    font-size: 1em;
     color: #4a2d0e;
     line-height: 1.9;
     margin: 0;
@@ -994,7 +1026,7 @@
 
   .article-closing-verse {
     font-style: italic;
-    font-size: clamp(1rem, 2.8vw, 1.15rem);
+    font-size: 1.05em;
     color: #4a2d6e;
     line-height: 1.9;
     margin-bottom: 0.5rem;
@@ -1009,6 +1041,8 @@
 </style>
 </head>
 <body>
+<div id="mainContent">
+
 
 <!-- NAV -->
 <nav>
@@ -1277,14 +1311,12 @@ function openModal(link, title) {
   modalTitle.textContent = typeof title === 'string' ? title : '';
   iframe.src = link;
   modal.classList.add('active');
-  document.body.style.overflow = 'hidden';
 }
 
 function closeModal() {
   const modal = document.getElementById('articleModal');
   const iframe = document.getElementById('modalIframe');
   modal.classList.remove('active');
-  document.body.style.overflow = '';
   setTimeout(() => { iframe.src = ''; }, 300);
 }
 
@@ -1301,13 +1333,12 @@ function openArticle(id) {
     // Show the selected one
     const target = document.getElementById('article-' + id);
     if (target) target.style.display = 'block';
-    // Show overlay and scroll to top
+    // Hide main content, show article overlay
+    document.getElementById('mainContent').style.display = 'none';
     const page = document.getElementById('articlePage');
     page.classList.add('active');
-    page.scrollTop = 0;
-    document.body.style.overflow = 'hidden';
+    window.scrollTo(0, 0);
   } else {
-    // Other articles still open Gamma link
     const article = ARTICLES.find(a => a.id === id);
     if (article) window.open(article.link, '_blank');
   }
@@ -1316,7 +1347,8 @@ function openArticle(id) {
 function closeArticle() {
   const page = document.getElementById('articlePage');
   page.classList.remove('active');
-  document.body.style.overflow = '';
+  document.getElementById('mainContent').style.display = '';
+  window.scrollTo(0, 0);
 }
 
 document.addEventListener('keydown', e => {
@@ -1325,6 +1357,8 @@ document.addEventListener('keydown', e => {
 </script>
 
 <!-- MODAL -->
+
+</div><!-- end mainContent -->
 <div class="modal-overlay" id="articleModal">
   <div class="modal-topbar">
     <span class="modal-logo">✦ Sahabat Galilea</span>
