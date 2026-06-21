@@ -1442,6 +1442,7 @@ const ARTICLES = [
   { id:132, judul:"Teratur Terjamin", desc:"Perkataan terakhir Daud: Allah menegakkan perjanjian kekal, teratur dalam segala-galanya, terjamin. Allah Gunung Batu Israel — kokoh dan tidak berubah, berbeda dari kepala batu yang keras hati. Keselamatan dan kesukaan adalah benih yang Tuhan tumbuhkan. Si jahat hanya takut satu hal: firman Kerajaan Allah yang benar-benar dimengerti.", kategori:[2], trending:false, emoji:"🪨", link:"" },
   { id:133, judul:"Bulir Butir", desc:"Suniemi — bukan sekadar paham di kepala: olah, cerna, menyatu. Jebakan terbesar: kita urus mekanisme pertumbuhan benih yang sudah jadi tanggung jawab Tuhan. Tugas kita: jaga tanah (batu di hati, onak duri, tanah tipis). Daud suniemi di padang gurun. Saul punya teori tapi tidak punya akar.", kategori:[2], trending:false, emoji:"🌾", link:"" },
   { id:134, judul:"Marah Takut Menyimpang", desc:"Diurapi dan ditegakkan adalah dua hal yang berbeda — di antaranya terbentang proses panjang. Uza: 80 tahun bersama tabut, tidak ada berkat. Obed-Edom: 3 bulan, seisi rumah diberkati. Daud marah → takut → menyimpang → belajar dari 1 Tawarikh 15. Karakter domba tidak pernah hilang meski sudah jadi raja.", kategori:[2], trending:false, emoji:"📦", link:"" },
+  { id:135, judul:"Lahir Nikodemus", desc:"Nikodemus — pemimpin agama terpelajar — datang kepada Yesus di tengah malam. Yesus: 'Jika seorang tidak dilahirkan dari air dan Roh, ia tidak dapat masuk Kerajaan Allah.' Kontras: komunikasi ular (manipulasi) vs komunikasi Yesus (kasih yang menyelamatkan). Agamawi tahu banyak tentang Yesus tapi tidak kenal Yesus. Bukti: Nikodemus muncul lagi di salib.", kategori:[7], trending:false, emoji:"🌙", link:"" },
 ];
 
 const CATEGORY_NAMES = {
@@ -1609,6 +1610,7 @@ const ARTICLE_COLORS = {
   132: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
   133: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
   134: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
+  135: "linear-gradient(135deg,#181008,#2c1e08,#38280a)",
 };
 
 function getCardColor(article) {
@@ -1749,7 +1751,8 @@ const SVG_DESIGNS = {
   131: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M15,55 Q30,48 45,55 Q60,48 75,55 Q88,48 95,55" stroke="#a855f7" stroke-width="0.7"/><path d="M15,62 Q30,57 45,62 Q60,57 75,62 Q88,57 95,62" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><path d="M15,69 Q30,65 45,69 Q60,65 75,69 Q88,65 95,69" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/><ellipse cx="50" cy="35" rx="12" ry="8" stroke="#a855f7" stroke-width="0.6" opacity="0.6"/><circle cx="38" cy="32" r="4" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/></svg>`,
   132: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M30,75 L25,55 L35,40 L50,35 L65,40 L75,55 L70,75 Z" stroke="#a855f7" stroke-width="0.7"/><path d="M35,55 L45,48 L55,52 L65,48" stroke="#a855f7" stroke-width="0.4" opacity="0.5"/><circle cx="50" cy="22" r="6" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><path d="M50,28 L50,35" stroke="#a855f7" stroke-width="0.4" opacity="0.5"/><path d="M20,80 L80,80" stroke="#a855f7" stroke-width="0.4" opacity="0.3"/></svg>`,
   133: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,85 L50,45" stroke="#a855f7" stroke-width="0.7"/><ellipse cx="50" cy="40" rx="10" ry="6" stroke="#a855f7" stroke-width="0.5" opacity="0.7"/><path d="M38,50 Q44,42 50,45 Q56,42 62,50" stroke="#a855f7" stroke-width="0.4" opacity="0.6"/><path d="M30,60 Q40,48 50,52 Q60,48 70,60" stroke="#a855f7" stroke-width="0.4" opacity="0.5"/><circle cx="50" cy="25" r="5" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M50,30 L50,38" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/><path d="M35,85 L65,85" stroke="#a855f7" stroke-width="0.4" opacity="0.3"/></svg>`,
-  134: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><rect x="30" y="35" width="40" height="28" rx="2" stroke="#a855f7" stroke-width="0.7"/><path d="M30,43 L70,43" stroke="#a855f7" stroke-width="0.4" opacity="0.5"/><path d="M50,35 L50,63" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/><path d="M20,35 Q30,25 50,22 Q70,25 80,35" stroke="#a855f7" stroke-width="0.6" opacity="0.6"/><path d="M38,63 L38,72 M62,63 L62,72" stroke="#a855f7" stroke-width="0.5" opacity="0.4"/><circle cx="50" cy="22" r="4" fill="#a855f7" opacity="0.2"/></svg>`
+  134: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><rect x="30" y="35" width="40" height="28" rx="2" stroke="#a855f7" stroke-width="0.7"/><path d="M30,43 L70,43" stroke="#a855f7" stroke-width="0.4" opacity="0.5"/><path d="M50,35 L50,63" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/><path d="M20,35 Q30,25 50,22 Q70,25 80,35" stroke="#a855f7" stroke-width="0.6" opacity="0.6"/><path d="M38,63 L38,72 M62,63 L62,72" stroke="#a855f7" stroke-width="0.5" opacity="0.4"/><circle cx="50" cy="22" r="4" fill="#a855f7" opacity="0.2"/></svg>`,
+  135: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><circle cx="50" cy="50" r="28" stroke="#c9a84c" stroke-width="0.7"/><path d="M50,22 L50,30 M50,70 L50,78" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/><path d="M28,35 L35,40 M65,60 L72,65" stroke="#c9a84c" stroke-width="0.5" opacity="0.4"/><path d="M28,65 L35,60 M65,40 L72,35" stroke="#c9a84c" stroke-width="0.5" opacity="0.4"/><circle cx="50" cy="50" r="10" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/><path d="M44,50 L48,54 L58,44" stroke="#c9a84c" stroke-width="0.8"/></svg>`
 };
 
 
@@ -1915,7 +1918,7 @@ document.addEventListener('keydown', e => {
 });
 
 function openArticle(id) {
-  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134];
+  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135];
   if (inAppArticles.includes(id)) {
     document.querySelectorAll('.article-content').forEach(el => el.style.display = 'none');
     const target = document.getElementById('article-' + id);
@@ -35927,6 +35930,182 @@ document.addEventListener('keydown', e => {
       <div class="article-closing">
         <p class="article-closing-verse">"Marah → Takut → Menyimpang. Bukan perjalanan kemenangan — melainkan perjalanan seorang domba yang jujur mengakui ia tidak mengerti. Tuhan tidak pernah berubah. Yang berubah adalah bagaimana kita memandang kekudusan-Nya — dengan rasa takut yang kudus, atau dengan kebiasaan yang melahirkan pengabaian."</p>
         <p class="article-closing-ref">— 2 Samuel 5:11–12 · 2 Samuel 6:1–12 · 1 Tawarikh 15:11–13</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ARTICLE 135 -->
+  <div id="article-135" class="article-content" style="display:none">
+    <div class="article-hero">
+      <div class="article-hero-bg" style="background:linear-gradient(135deg,#181008,#2c1e08,#38280a);"></div>
+      <div class="article-hero-glow"></div>
+      <span class="article-hero-emoji">🌙</span>
+      <div class="article-hero-content">
+        <div class="article-hero-eyebrow">Kerajaan, Bukan Agama · Yohanes 3:1–21</div>
+        <h1 class="article-hero-title">Lahir Nikodemus</h1>
+        <div class="article-hero-tags">
+          <span class="article-tag">Yohanes 3:1–21</span>
+          <span class="article-tag">Kejadian 3:1–5</span>
+          <span class="article-tag">Matius 4:1–10</span>
+        </div>
+      </div>
+    </div>
+    <div class="article-body">
+      <div class="article-verse">
+        <p>"Karena begitu besar kasih Allah akan dunia ini, sehingga Ia telah mengaruniakan Anak-Nya yang tunggal, supaya setiap orang yang percaya kepada-Nya tidak binasa, melainkan beroleh hidup yang kekal."</p>
+        <cite>— Yohanes 3:16</cite>
+      </div>
+      <p class="article-intro">Sebuah perjalanan mengenal Yesus — bukan melalui data dan statistik, melainkan melalui hati yang sungguh dan pengalaman hidup bersama-Nya. Pagi ini kita belajar dari seorang pemimpin agama Yahudi yang datang kepada Yesus di tengah malam, dan apa yang Yesus ungkapkan kepadanya mengubah segalanya.</p>
+
+      <div class="article-section">
+        <h2>Yesus dan Pertanyaan: Sebuah Pola yang Mengejutkan</h2>
+        <p>Yesus bukan hanya pengajar yang memberi jawaban — Ia adalah pribadi yang dengan penuh kasih mengajukan pertanyaan untuk menuntun hati manusia ke tempat yang benar.</p>
+        <div class="article-highlight">
+          <p>Ada godaan yang sangat nyata: kita mempelajari Yesus melalui data, statistik, dan analisa teologis — lalu mengira kita sudah mengenal-Nya. Firman yang dianalisa dengan pengertian manusia semata, ujungnya hanyalah menyesatkan. Itulah teologia agamawi.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Komunikasi Ular: Manipulasi Berbalut Pertanyaan</h2>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>🐍 Motif Ular &amp; Iblis</h4>
+            <ul>
+              <li>Kejadian 3:1 — "Tentulah Allah berfirman... bukan?" Memutarbalikkan firman untuk menabur keraguan</li>
+              <li>Matius 4:3 — "Jika Engkau Anak Allah, perintahkan batu ini menjadi roti" — menggunakan ayat sebagai jebakan</li>
+              <li>Motif 100% manipulasi — mencuri, membunuh, membinasakan</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>✦ Motif Yesus Bertanya</h4>
+            <ul>
+              <li>Supaya hati si penanya tersentuh dan menemukan kebenaran</li>
+              <li>Supaya hubungan yang rusak dipulihkan</li>
+              <li>Supaya orang bisa diselamatkan dan hidup dalam kelimpahan (Yoh 10:10)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="article-quote">
+          <p>"Pencuri datang hanya untuk mencuri, membunuh, dan membinasakan. Aku datang, supaya mereka mempunyai hidup, dan mempunyainya dalam segala kelimpahan." — Yohanes 10:10</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Nikodemus: Datang Malam-Malam kepada Yesus</h2>
+        <p>Nikodemus adalah seorang Farisi, pemimpin agama Yahudi — yang terbaik dari yang terbaik. Hafal Taurat, menguasai hukum, disegani banyak orang. Namun ia datang kepada Yesus diam-diam, di waktu malam.</p>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">🌙</div>
+            <div class="article-step-content">
+              <h4>Datang di Waktu Malam</h4>
+              <p>Mungkin karena takut dinilai rekan-rekannya. Namun Yesus tidak menghakimi — Ia menyambut dengan kebenaran yang penuh kasih.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">📚</div>
+            <div class="article-step-content">
+              <h4>Pemimpin Agama Yahudi</h4>
+              <p>Ia tahu banyak tentang Allah, tetapi belum mengenal Allah secara pribadi. Pengetahuan bisa membutakan kita dari pengalaman yang sejati.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🙇</div>
+            <div class="article-step-content">
+              <h4>Hati yang Masih Terbuka</h4>
+              <p>Di balik semua kepintarannya, Nikodemus masih punya kerendahan hati untuk datang dan bertanya. Itulah yang Yesus lihat.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Percakapan yang Mengubah Segalanya</h2>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">💬</div>
+            <div class="article-step-content">
+              <h4>Nikodemus berkata (ayat 2)</h4>
+              <p>"Rabi, kami tahu bahwa Engkau datang sebagai guru yang diutus Allah." — Berbicara di tataran duniawi, menggunakan IQ dan analisa.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">✦</div>
+            <div class="article-step-content">
+              <h4>Yesus menjawab (ayat 3)</h4>
+              <p>"Jika seorang tidak dilahirkan kembali, ia tidak dapat melihat Kerajaan Allah." — Yesus bukan sekadar Rabi. Ia yang punya Kerajaan Allah.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">❓</div>
+            <div class="article-step-content">
+              <h4>Nikodemus bingung (ayat 4)</h4>
+              <p>"Bagaimana mungkin seorang dilahirkan kalau ia sudah tua?" — Ia berpikir secara jasmani karena belum lahir dari Roh.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">💧</div>
+            <div class="article-step-content">
+              <h4>Yesus menjelaskan (ayat 5–8)</h4>
+              <p>"Jika seorang tidak dilahirkan dari air dan Roh, ia tidak dapat masuk ke dalam Kerajaan Allah." Air = Firman. Roh = Roh Kudus. Inilah kunci masuk Kerajaan Allah.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">💡</div>
+            <div class="article-step-content">
+              <h4>Yesus menegur dengan kasih (ayat 10)</h4>
+              <p>"Engkau adalah pengajar Israel, dan engkau tidak mengerti hal-hal itu?" — Bukan untuk mempermalukan, tetapi untuk membuka mata hati.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Ular Tembaga dan Salib: Kasih yang Diwartakan</h2>
+        <div class="article-verse">
+          <p>"Sama seperti Musa meninggikan ular di padang gurun, demikian juga Anak Manusia harus ditinggikan, supaya setiap orang yang percaya kepada-Nya beroleh hidup yang kekal."</p>
+          <cite>— Yohanes 3:14–15</cite>
+        </div>
+        <div class="article-highlight">
+          <p>Dalam satu percakapan singkat di malam hari, Yesus sudah memberitahu Nikodemus tentang salib. Nikodemus mungkin belum sepenuhnya mengerti malam itu — tetapi kata-kata itu tertanam dalam. Buktinya: ketika Yesus disalibkan, Nikodemus datang membawa campuran mur dan gaharu, kira-kira lima puluh kati, untuk mempersiapkan jenazah Yesus (Yohanes 19:39).</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Agamawi vs. Mengalami Yesus</h2>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>⚠️ Agamawi</h4>
+            <ul>
+              <li>Hafal hukum, hafal aturan, analisa data</li>
+              <li>Tahu banyak tentang Yesus, tetapi tidak kenal Yesus secara pribadi</li>
+              <li>Seperti Nikodemus sebelum pertemuan malam itu — pintar, terpelajar, namun tidak dapat masuk Kerajaan Allah</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>✦ Mengalami Yesus</h4>
+            <ul>
+              <li>Belajar Firman dengan hati yang sungguh</li>
+              <li>Membiarkan Roh Kudus mengajar dan memimpin</li>
+              <li>Seperti Petrus dan Yohanes yang "tidak terpelajar" namun membuat mahkamah agama terheran-heran</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-closing">
+        <p class="article-closing-verse">"Tidak ada jalan pintas melalui pengetahuan agama. Tidak ada gelar teologi yang bisa menggantikan kelahiran baru dari air — Firman Allah — dan dari Roh Kudus. Roh Kudus adalah guru yang Yesus janjikan dan kirimkan. Terimalah kelahiran dari air dan Roh — dan pintu Kerajaan Allah terbuka bagimu."</p>
+        <p class="article-closing-ref">— Yohanes 3:1–21 · Kejadian 3:1–5 · Matius 4:1–10</p>
       </div>
     </div>
   </div>
