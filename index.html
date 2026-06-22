@@ -1443,6 +1443,7 @@ const ARTICLES = [
   { id:133, judul:"Bulir Butir", desc:"Suniemi — bukan sekadar paham di kepala: olah, cerna, menyatu. Jebakan terbesar: kita urus mekanisme pertumbuhan benih yang sudah jadi tanggung jawab Tuhan. Tugas kita: jaga tanah (batu di hati, onak duri, tanah tipis). Daud suniemi di padang gurun. Saul punya teori tapi tidak punya akar.", kategori:[2], trending:false, emoji:"🌾", link:"" },
   { id:134, judul:"Marah Takut Menyimpang", desc:"Diurapi dan ditegakkan adalah dua hal yang berbeda — di antaranya terbentang proses panjang. Uza: 80 tahun bersama tabut, tidak ada berkat. Obed-Edom: 3 bulan, seisi rumah diberkati. Daud marah → takut → menyimpang → belajar dari 1 Tawarikh 15. Karakter domba tidak pernah hilang meski sudah jadi raja.", kategori:[2], trending:false, emoji:"📦", link:"" },
   { id:135, judul:"Lahir Nikodemus", desc:"Nikodemus — pemimpin agama terpelajar — datang kepada Yesus di tengah malam. Yesus: 'Jika seorang tidak dilahirkan dari air dan Roh, ia tidak dapat masuk Kerajaan Allah.' Kontras: komunikasi ular (manipulasi) vs komunikasi Yesus (kasih yang menyelamatkan). Agamawi tahu banyak tentang Yesus tapi tidak kenal Yesus. Bukti: Nikodemus muncul lagi di salib.", kategori:[7], trending:false, emoji:"🌙", link:"" },
+  { id:136, judul:"Paling Hina", desc:"Paulus: semua CV cemerlang (disunat hari ke-8, Farisi, tidak bercacat) disebut SAMPAH karena Kristus. Tiga pengakuan 20 tahun: paling hina di antara rasul (55 M) → paling hina di antara orang kudus (60 M) → paling berdosa di antara semua manusia (63–65 M). Paradoks kedewasaan: semakin kenal Kristus, semakin rendah hati.", kategori:[2], trending:false, emoji:"🙇", link:"" },
 ];
 
 const CATEGORY_NAMES = {
@@ -1611,6 +1612,7 @@ const ARTICLE_COLORS = {
   133: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
   134: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
   135: "linear-gradient(135deg,#181008,#2c1e08,#38280a)",
+  136: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
 };
 
 function getCardColor(article) {
@@ -1752,7 +1754,8 @@ const SVG_DESIGNS = {
   132: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M30,75 L25,55 L35,40 L50,35 L65,40 L75,55 L70,75 Z" stroke="#a855f7" stroke-width="0.7"/><path d="M35,55 L45,48 L55,52 L65,48" stroke="#a855f7" stroke-width="0.4" opacity="0.5"/><circle cx="50" cy="22" r="6" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><path d="M50,28 L50,35" stroke="#a855f7" stroke-width="0.4" opacity="0.5"/><path d="M20,80 L80,80" stroke="#a855f7" stroke-width="0.4" opacity="0.3"/></svg>`,
   133: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,85 L50,45" stroke="#a855f7" stroke-width="0.7"/><ellipse cx="50" cy="40" rx="10" ry="6" stroke="#a855f7" stroke-width="0.5" opacity="0.7"/><path d="M38,50 Q44,42 50,45 Q56,42 62,50" stroke="#a855f7" stroke-width="0.4" opacity="0.6"/><path d="M30,60 Q40,48 50,52 Q60,48 70,60" stroke="#a855f7" stroke-width="0.4" opacity="0.5"/><circle cx="50" cy="25" r="5" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M50,30 L50,38" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/><path d="M35,85 L65,85" stroke="#a855f7" stroke-width="0.4" opacity="0.3"/></svg>`,
   134: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><rect x="30" y="35" width="40" height="28" rx="2" stroke="#a855f7" stroke-width="0.7"/><path d="M30,43 L70,43" stroke="#a855f7" stroke-width="0.4" opacity="0.5"/><path d="M50,35 L50,63" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/><path d="M20,35 Q30,25 50,22 Q70,25 80,35" stroke="#a855f7" stroke-width="0.6" opacity="0.6"/><path d="M38,63 L38,72 M62,63 L62,72" stroke="#a855f7" stroke-width="0.5" opacity="0.4"/><circle cx="50" cy="22" r="4" fill="#a855f7" opacity="0.2"/></svg>`,
-  135: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><circle cx="50" cy="50" r="28" stroke="#c9a84c" stroke-width="0.7"/><path d="M50,22 L50,30 M50,70 L50,78" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/><path d="M28,35 L35,40 M65,60 L72,65" stroke="#c9a84c" stroke-width="0.5" opacity="0.4"/><path d="M28,65 L35,60 M65,40 L72,35" stroke="#c9a84c" stroke-width="0.5" opacity="0.4"/><circle cx="50" cy="50" r="10" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/><path d="M44,50 L48,54 L58,44" stroke="#c9a84c" stroke-width="0.8"/></svg>`
+  135: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><circle cx="50" cy="50" r="28" stroke="#c9a84c" stroke-width="0.7"/><path d="M50,22 L50,30 M50,70 L50,78" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/><path d="M28,35 L35,40 M65,60 L72,65" stroke="#c9a84c" stroke-width="0.5" opacity="0.4"/><path d="M28,65 L35,60 M65,40 L72,35" stroke="#c9a84c" stroke-width="0.5" opacity="0.4"/><circle cx="50" cy="50" r="10" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/><path d="M44,50 L48,54 L58,44" stroke="#c9a84c" stroke-width="0.8"/></svg>`,
+  136: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,20 L50,80" stroke="#c9a84c" stroke-width="0.5" opacity="0.3"/><circle cx="50" cy="28" r="7" stroke="#c9a84c" stroke-width="0.7"/><circle cx="50" cy="50" r="7" stroke="#c9a84c" stroke-width="0.6" opacity="0.7"/><circle cx="50" cy="72" r="7" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/><path d="M43,28 L30,28 M43,50 L30,50 M43,72 L30,72" stroke="#c9a84c" stroke-width="0.4" opacity="0.4"/><path d="M30,28 L30,72" stroke="#c9a84c" stroke-width="0.4" opacity="0.3"/></svg>`
 };
 
 
@@ -1918,7 +1921,7 @@ document.addEventListener('keydown', e => {
 });
 
 function openArticle(id) {
-  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135];
+  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136];
   if (inAppArticles.includes(id)) {
     document.querySelectorAll('.article-content').forEach(el => el.style.display = 'none');
     const target = document.getElementById('article-' + id);
@@ -36106,6 +36109,197 @@ document.addEventListener('keydown', e => {
       <div class="article-closing">
         <p class="article-closing-verse">"Tidak ada jalan pintas melalui pengetahuan agama. Tidak ada gelar teologi yang bisa menggantikan kelahiran baru dari air — Firman Allah — dan dari Roh Kudus. Roh Kudus adalah guru yang Yesus janjikan dan kirimkan. Terimalah kelahiran dari air dan Roh — dan pintu Kerajaan Allah terbuka bagimu."</p>
         <p class="article-closing-ref">— Yohanes 3:1–21 · Kejadian 3:1–5 · Matius 4:1–10</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ARTICLE 136 -->
+  <div id="article-136" class="article-content" style="display:none">
+    <div class="article-hero">
+      <div class="article-hero-bg" style="background:linear-gradient(135deg,#1a0a28,#2a1040,#361452);"></div>
+      <div class="article-hero-glow"></div>
+      <span class="article-hero-emoji">🙇</span>
+      <div class="article-hero-content">
+        <div class="article-hero-eyebrow">Memahami Jati Diri · Filipi 3 · 1 Korintus 15 · Efesus 3</div>
+        <h1 class="article-hero-title">Paling Hina</h1>
+        <div class="article-hero-tags">
+          <span class="article-tag">Filipi 3:1–11</span>
+          <span class="article-tag">1 Korintus 15:9</span>
+          <span class="article-tag">1 Timotius 1:15</span>
+        </div>
+      </div>
+    </div>
+    <div class="article-body">
+      <div class="article-verse">
+        <p>"Di antara semua orang berdosa, akulah yang paling berdosa."</p>
+        <cite>— 1 Timotius 1:15</cite>
+      </div>
+      <p class="article-intro">Sebuah perjalanan rohani Rasul Paulus — dari kebanggaan tertinggi menuju kerendahan yang paling dalam. Semakin ia mengenal Kristus, semakin ia mengenal dirinya sendiri. Inilah tanda kedewasaan sejati: bukan bertambah sombong, melainkan bertambah rendah hati, penuh hikmat, dan penuh otoritas.</p>
+
+      <div class="article-section">
+        <h2>Waspada: Ancaman dari Dalam</h2>
+        <p>Paulus membuka Filipi 3 bukan dengan nyanyian pujian — ia membuka dengan peringatan keras. Ada penyusup-penyusup rohani yang menyamar sebagai pelayan Tuhan di dalam jemaat.</p>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">🐕</div>
+            <div class="article-step-content">
+              <h4>Anjing-Anjing</h4>
+              <p>Mereka yang agresif, destruktif, dan mencabik kawanan domba dari dalam.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">⚒️</div>
+            <div class="article-step-content">
+              <h4>Pekerja-Pekerja Jahat</h4>
+              <p>Terlihat rajin dan aktif, namun agenda mereka adalah kepentingan sendiri.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">✂️</div>
+            <div class="article-step-content">
+              <h4>Penyunat-Penyunat Palsu</h4>
+              <p>Menggunakan hukum Taurat sebagai alat manipulasi, bukan kebenaran Allah.</p>
+            </div>
+          </div>
+        </div>
+        <div class="article-highlight">
+          <p>Strategi kerajaan kegelapan bukan selalu datang dari luar — justru paling berbahaya ketika sudah masuk ke dalam tubuh Kristus.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Curriculum Vitae yang Sempurna — Lalu Disebut Sampah</h2>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">1</div>
+            <div class="article-step-content">
+              <h4>Disunat Hari ke-8</h4>
+              <p>Dedikasi sejak lahir. Tidak ada kompromi sejak awal.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">2</div>
+            <div class="article-step-content">
+              <h4>Dari Suku Benyamin</h4>
+              <p>Garis keturunan murni — orang Ibrani asli, tanpa campuran.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">3</div>
+            <div class="article-step-content">
+              <h4>Orang Farisi</h4>
+              <p>Pendirian terhadap hukum Taurat: paling ketat, paling disiplin.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">4</div>
+            <div class="article-step-content">
+              <h4>Tidak Bercacat</h4>
+              <p>Tentang kebenaran dalam mentaati hukum Taurat — sempurna menurut ukuran manusia.</p>
+            </div>
+          </div>
+        </div>
+        <div class="article-highlight">
+          <p>"Tetapi apa yang dahulu merupakan keuntungan bagiku, sekarang kuanggap rugi karena Kristus... bahkan kuanggap sampah, supaya aku memperoleh Kristus." (Filipi 3:7–8)</p>
+        </div>
+        <div class="article-quote">
+          <p>Intim bergaul dengan Kristus membuat kita melihat semua pencapaian kita dengan mata yang berbeda — bukan untuk dibuang, tapi untuk tidak disembah.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Tongkat dan Gada: Dua Wajah Seorang Gembala</h2>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>🪶 Tongkat untuk Domba</h4>
+            <ul>
+              <li>Kepada jemaat, Paulus menyebut dirinya hamba Kristus, budak Kristus, tahanan Kristus</li>
+              <li>Setiap keputusannya dibatasi oleh agenda Kristus</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>🔨 Gada untuk Musuh</h4>
+            <ul>
+              <li>Kepada pengajar sesat: "Dari Paulus, seorang rasul — bukan karena manusia, melainkan oleh Yesus Kristus"</li>
+              <li>Bukan sombong — menempatkan otoritas yang benar</li>
+            </ul>
+          </div>
+        </div>
+        <div class="article-quote">
+          <p>Kegagalan menempatkan diri dengan benar bukan kerendahan hati — itu adalah kelemahan yang membuka celah bagi kerajaan kegelapan untuk bergerak bebas di dalam tubuh Kristus.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Tiga Pengakuan yang Mengubah Segalanya</h2>
+        <p>Perhatikan pergerakan Paulus selama hampir 20 tahun pelayanannya:</p>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">1</div>
+            <div class="article-step-content">
+              <h4>1 Korintus 15:9 — Tahun 55 M</h4>
+              <p>"Aku adalah yang paling hina dari semua rasul. Bahkan tidak layak disebut rasul." → Paling hina di antara para rasul.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">2</div>
+            <div class="article-step-content">
+              <h4>Efesus 3:8 — Tahun 60 M</h4>
+              <p>"Kepadaku yang paling hina di antara segala orang kudus telah dianugerahkan kasih karunia ini." → Paling hina di antara seluruh jemaat.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">3</div>
+            <div class="article-step-content">
+              <h4>1 Timotius 1:15 — Tahun 63–65 M</h4>
+              <p>"Di antara semua orang berdosa, akulah yang paling berdosa." — Chief of sinners. → Paling hina di antara seluruh umat manusia.</p>
+            </div>
+          </div>
+        </div>
+        <div class="article-highlight">
+          <p>Semakin Paulus berjalan bersama Kristus, semakin dalam surat-suratnya, semakin luas pewahyuannya — paradoksnya, semakin rendah pula ia memandang dirinya. Ini bukan depresi rohani. Ini adalah tanda kedewasaan yang sejati.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>"Paling Hina" — Identitas yang Membebaskan</h2>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">📖</div>
+            <div class="article-step-content">
+              <h4>Semakin Dalam Firman</h4>
+              <p>Surat-surat Paulus semakin dahsyat seiring waktu — pewahyuan yang dalam, teologi yang luar biasa. Tapi bersamaan dengan itu, pengakuannya tentang dirinya sendiri semakin rendah.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">❤️</div>
+            <div class="article-step-content">
+              <h4>Semakin Kenal Kristus</h4>
+              <p>Intim bergaul dengan Kristus membuat kita makin serupa seperti Kristus. Bukan makin merasa hebat — tapi makin takjub dengan kasih karunia yang melampaui akal.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🙇</div>
+            <div class="article-step-content">
+              <h4>Semakin Rendah Hati</h4>
+              <p>Chief of sinners. Pemimpin orang-orang berdosa. Itulah cara Paulus memandang dirinya sesaat sebelum dipenggal. Bukan kelemahan — itu puncak kematangan rohani.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-closing">
+        <p class="article-closing-verse">"Sudahkah kita punya identitas itu di dalam kita? Semakin bertambah usia, semakin bertumbuh kedewasaan — cirinya kita semakin rendah hati, semakin berhikmat, semakin penuh otoritas."</p>
+        <p class="article-closing-ref">— Filipi 3:1–11 · 1 Korintus 15:9 · Efesus 3:8 · 1 Timotius 1:15</p>
       </div>
     </div>
   </div>
