@@ -1444,6 +1444,7 @@ const ARTICLES = [
   { id:134, judul:"Marah Takut Menyimpang", desc:"Diurapi dan ditegakkan adalah dua hal yang berbeda — di antaranya terbentang proses panjang. Uza: 80 tahun bersama tabut, tidak ada berkat. Obed-Edom: 3 bulan, seisi rumah diberkati. Daud marah → takut → menyimpang → belajar dari 1 Tawarikh 15. Karakter domba tidak pernah hilang meski sudah jadi raja.", kategori:[2], trending:false, emoji:"📦", link:"" },
   { id:135, judul:"Lahir Nikodemus", desc:"Nikodemus — pemimpin agama terpelajar — datang kepada Yesus di tengah malam. Yesus: 'Jika seorang tidak dilahirkan dari air dan Roh, ia tidak dapat masuk Kerajaan Allah.' Kontras: komunikasi ular (manipulasi) vs komunikasi Yesus (kasih yang menyelamatkan). Agamawi tahu banyak tentang Yesus tapi tidak kenal Yesus. Bukti: Nikodemus muncul lagi di salib.", kategori:[7], trending:false, emoji:"🌙", link:"" },
   { id:136, judul:"Paling Hina", desc:"Paulus: semua CV cemerlang (disunat hari ke-8, Farisi, tidak bercacat) disebut SAMPAH karena Kristus. Tiga pengakuan 20 tahun: paling hina di antara rasul (55 M) → paling hina di antara orang kudus (60 M) → paling berdosa di antara semua manusia (63–65 M). Paradoks kedewasaan: semakin kenal Kristus, semakin rendah hati.", kategori:[2], trending:false, emoji:"🙇", link:"" },
+  { id:137, judul:"Hujat Korban", desc:"Dari Kejadian sampai Wahyu: mezbah dan korban. Lampu rumah Allah yang dipadamkan — seiring padamnya lampu, padamlah firman Tuhan. Tiga tanda Imam Eli yang kehilangan penglihatan rohani. Hofni dan Pinehas mengambil daging sebelum waktunya — memandang rendah korban sama dengan menghujat Allah. Mezbah adalah portal: portal ke mana ditentukan oleh korban apa yang ditaruh.", kategori:[7], trending:false, emoji:"🔥", link:"" },
 ];
 
 const CATEGORY_NAMES = {
@@ -1613,6 +1614,7 @@ const ARTICLE_COLORS = {
   134: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
   135: "linear-gradient(135deg,#181008,#2c1e08,#38280a)",
   136: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
+  137: "linear-gradient(135deg,#181008,#2c1e08,#38280a)",
 };
 
 function getCardColor(article) {
@@ -1755,7 +1757,8 @@ const SVG_DESIGNS = {
   133: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,85 L50,45" stroke="#a855f7" stroke-width="0.7"/><ellipse cx="50" cy="40" rx="10" ry="6" stroke="#a855f7" stroke-width="0.5" opacity="0.7"/><path d="M38,50 Q44,42 50,45 Q56,42 62,50" stroke="#a855f7" stroke-width="0.4" opacity="0.6"/><path d="M30,60 Q40,48 50,52 Q60,48 70,60" stroke="#a855f7" stroke-width="0.4" opacity="0.5"/><circle cx="50" cy="25" r="5" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M50,30 L50,38" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/><path d="M35,85 L65,85" stroke="#a855f7" stroke-width="0.4" opacity="0.3"/></svg>`,
   134: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><rect x="30" y="35" width="40" height="28" rx="2" stroke="#a855f7" stroke-width="0.7"/><path d="M30,43 L70,43" stroke="#a855f7" stroke-width="0.4" opacity="0.5"/><path d="M50,35 L50,63" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/><path d="M20,35 Q30,25 50,22 Q70,25 80,35" stroke="#a855f7" stroke-width="0.6" opacity="0.6"/><path d="M38,63 L38,72 M62,63 L62,72" stroke="#a855f7" stroke-width="0.5" opacity="0.4"/><circle cx="50" cy="22" r="4" fill="#a855f7" opacity="0.2"/></svg>`,
   135: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><circle cx="50" cy="50" r="28" stroke="#c9a84c" stroke-width="0.7"/><path d="M50,22 L50,30 M50,70 L50,78" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/><path d="M28,35 L35,40 M65,60 L72,65" stroke="#c9a84c" stroke-width="0.5" opacity="0.4"/><path d="M28,65 L35,60 M65,40 L72,35" stroke="#c9a84c" stroke-width="0.5" opacity="0.4"/><circle cx="50" cy="50" r="10" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/><path d="M44,50 L48,54 L58,44" stroke="#c9a84c" stroke-width="0.8"/></svg>`,
-  136: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,20 L50,80" stroke="#c9a84c" stroke-width="0.5" opacity="0.3"/><circle cx="50" cy="28" r="7" stroke="#c9a84c" stroke-width="0.7"/><circle cx="50" cy="50" r="7" stroke="#c9a84c" stroke-width="0.6" opacity="0.7"/><circle cx="50" cy="72" r="7" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/><path d="M43,28 L30,28 M43,50 L30,50 M43,72 L30,72" stroke="#c9a84c" stroke-width="0.4" opacity="0.4"/><path d="M30,28 L30,72" stroke="#c9a84c" stroke-width="0.4" opacity="0.3"/></svg>`
+  136: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,20 L50,80" stroke="#c9a84c" stroke-width="0.5" opacity="0.3"/><circle cx="50" cy="28" r="7" stroke="#c9a84c" stroke-width="0.7"/><circle cx="50" cy="50" r="7" stroke="#c9a84c" stroke-width="0.6" opacity="0.7"/><circle cx="50" cy="72" r="7" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/><path d="M43,28 L30,28 M43,50 L30,50 M43,72 L30,72" stroke="#c9a84c" stroke-width="0.4" opacity="0.4"/><path d="M30,28 L30,72" stroke="#c9a84c" stroke-width="0.4" opacity="0.3"/></svg>`,
+  137: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,20 Q58,32 55,45 Q65,35 62,50 Q72,40 70,56 Q80,46 76,62 Q70,78 50,85 Q30,78 24,62 Q20,46 30,56 Q28,40 38,50 Q35,35 45,45 Q42,32 50,20Z" stroke="#c9a84c" stroke-width="0.7"/><rect x="38" y="75" width="24" height="12" rx="1" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/><circle cx="50" cy="55" r="6" fill="#c9a84c" opacity="0.15"/></svg>`
 };
 
 
@@ -1921,7 +1924,7 @@ document.addEventListener('keydown', e => {
 });
 
 function openArticle(id) {
-  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136];
+  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137];
   if (inAppArticles.includes(id)) {
     document.querySelectorAll('.article-content').forEach(el => el.style.display = 'none');
     const target = document.getElementById('article-' + id);
@@ -36300,6 +36303,267 @@ document.addEventListener('keydown', e => {
       <div class="article-closing">
         <p class="article-closing-verse">"Sudahkah kita punya identitas itu di dalam kita? Semakin bertambah usia, semakin bertumbuh kedewasaan — cirinya kita semakin rendah hati, semakin berhikmat, semakin penuh otoritas."</p>
         <p class="article-closing-ref">— Filipi 3:1–11 · 1 Korintus 15:9 · Efesus 3:8 · 1 Timotius 1:15</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ARTICLE 137 -->
+  <div id="article-137" class="article-content" style="display:none">
+    <div class="article-hero">
+      <div class="article-hero-bg" style="background:linear-gradient(135deg,#181008,#2c1e08,#38280a);"></div>
+      <div class="article-hero-glow"></div>
+      <span class="article-hero-emoji">🔥</span>
+      <div class="article-hero-content">
+        <div class="article-hero-eyebrow">Kerajaan, Bukan Agama · 1 Samuel · Keluaran · Lukas · 1 Raja-raja</div>
+        <h1 class="article-hero-title">Hujat Korban</h1>
+        <div class="article-hero-tags">
+          <span class="article-tag">1 Samuel 2–3</span>
+          <span class="article-tag">Keluaran 27:20</span>
+          <span class="article-tag">1 Raja-raja 18</span>
+        </div>
+      </div>
+    </div>
+    <div class="article-body">
+      <div class="article-verse">
+        <p>"Sangat besarlah dosa kedua orang muda itu di hadapan Tuhan, sebab mereka memandang rendah korban untuk Tuhan."</p>
+        <cite>— 1 Samuel 2:17</cite>
+      </div>
+      <p class="article-intro">Dari Kejadian sampai Wahyu, ada satu konsistensi yang tak pernah berubah: mezbah dan korban. Namun begitu banyak anak-anak Tuhan yang tidak masuk ke dalam kedalaman pengertian ini — apa itu mezbah sejati, apa itu korban yang sejati, dan apa itu ibadah yang sejati.</p>
+
+      <div class="article-section">
+        <h2>Kain dan Habel: Motif di Balik Korban</h2>
+        <p>Pada awal sejarah manusia, dua saudara membawa korban kepada Tuhan. Korban Habel diterima. Korban Kain tidak diindahkan. Mengapa? Bukan semata-mata apa yang dibawa — tetapi mengapa dibawa dan bagaimana hati di baliknya.</p>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>✦ Korban Habel</h4>
+            <ul>
+              <li>Diterima oleh Tuhan</li>
+              <li>Dibawa dengan dedikasi, ketulusan hati, dan penghormatan yang benar</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>⚠️ Korban Kain</h4>
+            <ul>
+              <li>Tidak diindahkan</li>
+              <li>Bukan karena jenis bawaannya semata, tetapi karena motif di baliknya tidak benar</li>
+            </ul>
+          </div>
+        </div>
+        <div class="article-highlight">
+          <p>Tuhan menilai motif kita. Itulah yang menentukan apakah korban kita diindahkan atau tidak. Jangan terjebak dalam rutinitas tanpa kedalaman.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Lampu Rumah Allah yang Dipadamkan</h2>
+        <p>Di 1 Samuel 3, Firman Tuhan mencatat sesuatu yang menggelisahkan: "Pada masa itu firman Tuhan jarang; penglihatan-penglihatan pun tidak sering." Ini bukan kebetulan. Ini adalah hubungan sebab-akibat.</p>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>📜 Keluaran 27:20 — Ketetapan Tuhan</h4>
+            <ul>
+              <li>Tuhan perintahkan semua orang Israel aktif membawa minyak zaitun tumbuk yang murni</li>
+              <li>Supaya lampu di rumah Tuhan tidak pernah padam — ini ketetapan, bukan pilihan</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>⚠️ 1 Samuel 3 — Realita yang Menyedihkan</h4>
+            <ul>
+              <li>Setiap malam, lampu rumah Allah dipadamkan</li>
+              <li>Tidak ada yang peduli menjaganya tetap menyala</li>
+              <li>Seiring padamnya lampu, padamlah pula firman Tuhan dan penglihatan-penglihatan</li>
+            </ul>
+          </div>
+        </div>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">1</div>
+            <div class="article-step-content">
+              <h4>Korban tidak sungguh-sungguh</h4>
+              <p>Lampu dipadamkan. Tidak ada dedikasi nyata kepada Tuhan. Rutinitas agama berjalan, tetapi hati tidak hadir.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">2</div>
+            <div class="article-step-content">
+              <h4>Firman Tuhan menjadi jarang</h4>
+              <p>Penglihatan-penglihatan tidak sering. Tuhan tidak berhenti bicara — tetapi tidak ada yang siap mendengar dengan hati yang bersih.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">3</div>
+            <div class="article-step-content">
+              <h4>Kekristenan dianggap tidak relevan</h4>
+              <p>Semua dirasionalisasi. Teknologi dan logika menggantikan iman. Disimpulkan: "Kekristenan sudah ketinggalan zaman." Cara kerjanya terbalik — bukannya iman yang gagal, melainkan kita yang sudah lama memadamkan lampunya sendiri.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Imam Eli: Mata yang Kabur, Hati yang Jauh</h2>
+        <p>Firman Tuhan mencatat: "Eli yang matanya mulai kabur dan tidak dapat melihat dengan baik." Ini bukan sekadar kondisi fisik. Ini gambaran kondisi rohani seorang pemimpin yang sudah begitu lama melayani — namun kehilangan kejelasan penglihatan rohaninya.</p>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">⚠️</div>
+            <div class="article-step-content">
+              <h4>Tanda #1: Salah Membaca Umat</h4>
+              <p>Hana sedang berdoa dengan penuh kesungguhan dan air mata. Imam Eli menyangka ia mabuk. Pemimpin yang penglihatannya kabur tidak bisa lagi membedakan orang yang sedang menangis di hadapan Tuhan dari orang yang mabuk.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">⚠️</div>
+            <div class="article-step-content">
+              <h4>Tanda #2: Tidak Mengenali Suara Tuhan</h4>
+              <p>Tiga kali Tuhan memanggil Samuel. Tiga kali Samuel berlari ke Eli. Baru pada kali ketiga Eli menyadari bahwa Tuhan yang bicara. Rutinitas ada, tapi kepekaan rohani sudah lama meredup.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">⚠️</div>
+            <div class="article-step-content">
+              <h4>Tanda #3: Mandatnya Tidak Berjalan</h4>
+              <p>Puluhan tahun menjadi hakim. Tetapi fungsinya sebagai pengantara antara Tuhan dan umat tidak berjalan. Duduk di kursi otoritas, tanpa relasi yang hidup dengan Tuhan.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Tuhan Tetap Bicara — Bahkan kepada Anak Kecil</h2>
+        <div class="article-verse">
+          <p>"Ketahuilah, Aku akan melakukan sesuatu di Israel, sehingga setiap orang yang mendengarnya akan bising kedua telinganya."</p>
+          <cite>— 1 Samuel 3:11</cite>
+        </div>
+        <div class="article-highlight">
+          <p>Di tengah kegelapan rohani yang paling gelap sekali pun, Tuhan tidak diam. Tidak ada pemimpin yang layak untuk dipakai? Tidak ada masalah bagi Tuhan. Ia memanggil Samuel — seorang anak kecil — dan berbicara kepadanya dengan suara yang audible, jelas, nyata.</p>
+        </div>
+        <div class="article-quote">
+          <p>Tuhan mencari satu hal: "Berbicaralah, sebab hamba-Mu ini mendengar." Itu saja yang Tuhan cari — hati yang terbuka, yang mau mendengar dan taat.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Dosa Hofni dan Pinehas: Memandang Rendah Korban</h2>
+        <p>1 Samuel 2:12–17 mencatat kejahatan anak-anak Imam Eli dengan sangat detail. Mereka adalah orang-orang dursila yang tidak mengindahkan Tuhan — dibuktikan bukan dari kata-kata mereka, tetapi dari cara mereka memperlakukan korban.</p>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">🍖</div>
+            <div class="article-step-content">
+              <h4>Mengambil Sebelum Waktunya</h4>
+              <p>Sebelum lemak korban dibakar untuk Tuhan — bagian yang menjadi hak Tuhan terlebih dahulu — bujang imam sudah datang dan meminta dagingnya. Tuhan didahulukan dalam teori, tidak dalam praktik.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">👊</div>
+            <div class="article-step-content">
+              <h4>Mengancam dengan Kekerasan</h4>
+              <p>Ketika umat protes dan mengingatkan prosedur yang benar, jawaban mereka: "Sekarang juga harus kau berikan, kalau tidak aku akan ambil dengan kekerasan." Kekuatan dipakai untuk merampas yang seharusnya menjadi milik Tuhan.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">⚠️</div>
+            <div class="article-step-content">
+              <h4>Memandang Rendah Korban Tuhan</h4>
+              <p>Itulah kesimpulan Firman Tuhan: "Sangat besarlah dosa kedua orang muda itu di hadapan Tuhan, sebab mereka memandang rendah korban untuk Tuhan." Inilah inti kejahatan mereka.</p>
+            </div>
+          </div>
+        </div>
+        <div class="article-highlight">
+          <p>"Dosa keluarga Eli tak akan dihapuskan dengan korban sembelihan atau dengan korban sajian untuk selamanya." (1 Samuel 3:14) — Tuhan bersumpah. Dosanya tidak terhapuskan, karena mereka menjadikan korban sebagai alat kejahatan itu sendiri.</p>
+        </div>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">1</div>
+            <div class="article-step-content">
+              <h4>Kejahatan Rohani Paling Serius</h4>
+              <p>Menghujat Allah bukan hanya dengan kata-kata. Memandang rendah korban — memperlakukannya dengan sembarangan, memanipulasinya untuk kepentingan diri — itulah hujat.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">2</div>
+            <div class="article-step-content">
+              <h4>Relevansi Hari Ini</h4>
+              <p>Uang persepuluhan dan korban jemaat yang dipakai untuk memperkaya diri pemimpin, bukan untuk pekerjaan Kerajaan Allah — di mata Tuhan, ini sama dengan Hofni dan Pinehas yang mengambil daging mentah dengan paksa.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">3</div>
+            <div class="article-step-content">
+              <h4>Konsekuensi yang Kekal</h4>
+              <p>Tuhan sudah memperingatkan. Ada kesempatan untuk berubah. Tetapi Eli tidak memarahi anak-anaknya. Hasilnya: Hofni dan Pinehas mati pada hari yang sama, dan Tabut Allah dirampas musuh.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Mezbah dan Korban: Pintu Penghubung Dua Alam</h2>
+        <p>Ada dua realitas yang beroperasi secara bersamaan. Lukas 24:39 menegaskan: "Hantu tidak ada daging dan tulangnya." Kerajaan kegelapan tidak punya tubuh fisik — mereka butuh media. Mezbah dan korban adalah portal. Pertanyaannya: portal ke alam mana yang kita buka?</p>
+        <div class="article-highlight">
+          <p>Abraham, Ishak, Yakub — ke mana pun mereka pergi, mereka membangun mezbah dan menaruh korban. Itulah mengapa Tuhan dengan bangga menyebut diri-Nya: "Allah Abraham, Allah Ishak, Allah Israel." Mereka terus mencari hati Tuhan melalui mezbah dan korban.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Mezbah Elia: Contoh Mezbah yang Benar</h2>
+        <div class="article-verse">
+          <p>"Ya Tuhan, Allah Abraham, Allah Ishak, dan Allah Israel — pada hari ini biarlah diketahui bahwa Engkaulah Allah di Israel."</p>
+          <cite>— 1 Raja-raja 18:36</cite>
+        </div>
+        <p>Di hadapan 450 imam Baal, Elia tidak datang dengan keangkuhan. Ia membangun kembali mezbah yang sudah diruntuhkan. Lalu ia menaruh korban. Dan api Tuhan turun. Otoritas itu mengalir dari mezbah yang dibangun dengan benar dan korban yang dipersembahkan dengan sungguh.</p>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Kesimpulan: Jangan Biarkan Lampumu Padam</h2>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">01</div>
+            <div class="article-step-content">
+              <h4>Periksa Motifmu</h4>
+              <p>Seperti Kain dan Habel — bukan hanya apa yang dibawa, tetapi mengapa dibawa. Tuhan menilai hati di balik setiap persembahan.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">02</div>
+            <div class="article-step-content">
+              <h4>Jaga Lampumu Tetap Menyala</h4>
+              <p>Jangan biarkan rutinitas memadamkan api rohanimu. Lampu yang padam berbicara tentang hati yang sudah jauh dari Tuhan — dan firman pun menjadi jarang.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">03</div>
+            <div class="article-step-content">
+              <h4>Hormati Korban dan Mezbah</h4>
+              <p>Memandang rendah korban adalah menghujat Allah. Perlakukan mezbah dan korban — dan segala bentuknya hari ini — dengan kekudusan yang Tuhan tuntut.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">04</div>
+            <div class="article-step-content">
+              <h4>Jadilah Mediator yang Setia</h4>
+              <p>Tuhan mencari mereka yang mau mendedikasikan hidupnya menjadi portal Kerajaan Allah di bumi. Bangunlah mezbah. Taruhkan korban yang sejati. Jadilah Samuel yang menjawab: "Berbicaralah, hamba-Mu ini mendengar."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-closing">
+        <p class="article-closing-verse">"Mezbah dan korban bukan ritual keagamaan — itu adalah pintu gerbang. Apa yang kamu taruh di atas mezbahmu menentukan alam mana yang terhubung denganmu."</p>
+        <p class="article-closing-ref">— 1 Samuel 2–3 · Keluaran 27:20 · 1 Raja-raja 18</p>
       </div>
     </div>
   </div>
