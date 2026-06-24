@@ -1445,6 +1445,7 @@ const ARTICLES = [
   { id:135, judul:"Lahir Nikodemus", desc:"Nikodemus — pemimpin agama terpelajar — datang kepada Yesus di tengah malam. Yesus: 'Jika seorang tidak dilahirkan dari air dan Roh, ia tidak dapat masuk Kerajaan Allah.' Kontras: komunikasi ular (manipulasi) vs komunikasi Yesus (kasih yang menyelamatkan). Agamawi tahu banyak tentang Yesus tapi tidak kenal Yesus. Bukti: Nikodemus muncul lagi di salib.", kategori:[7], trending:false, emoji:"🌙", link:"" },
   { id:136, judul:"Paling Hina", desc:"Paulus: semua CV cemerlang (disunat hari ke-8, Farisi, tidak bercacat) disebut SAMPAH karena Kristus. Tiga pengakuan 20 tahun: paling hina di antara rasul (55 M) → paling hina di antara orang kudus (60 M) → paling berdosa di antara semua manusia (63–65 M). Paradoks kedewasaan: semakin kenal Kristus, semakin rendah hati.", kategori:[2], trending:false, emoji:"🙇", link:"" },
   { id:137, judul:"Hujat Korban", desc:"Dari Kejadian sampai Wahyu: mezbah dan korban. Lampu rumah Allah yang dipadamkan — seiring padamnya lampu, padamlah firman Tuhan. Tiga tanda Imam Eli yang kehilangan penglihatan rohani. Hofni dan Pinehas mengambil daging sebelum waktunya — memandang rendah korban sama dengan menghujat Allah. Mezbah adalah portal: portal ke mana ditentukan oleh korban apa yang ditaruh.", kategori:[7], trending:false, emoji:"🔥", link:"" },
+  { id:138, judul:"Daging Tulang", desc:"Yesus bangkit dengan daging dan tulang — bisa dilihat, diraba, makan ikan goreng, tapi bisa menembus tembok. Dua dimensi yang Allah pisahkan: mezbah dan korban adalah penghubungnya. Izebel: bunuh nabi, runtuhkan mezbah, bangun mezbah berhala. Yesus adalah mezbah sekaligus korban yang sempurna. Roma 12:1: tubuhmu adalah persembahan hidup — ibadah yang sejati.", kategori:[7], trending:false, emoji:"✋", link:"" },
 ];
 
 const CATEGORY_NAMES = {
@@ -1615,6 +1616,7 @@ const ARTICLE_COLORS = {
   135: "linear-gradient(135deg,#181008,#2c1e08,#38280a)",
   136: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
   137: "linear-gradient(135deg,#181008,#2c1e08,#38280a)",
+  138: "linear-gradient(135deg,#181008,#2c1e08,#38280a)",
 };
 
 function getCardColor(article) {
@@ -1758,7 +1760,8 @@ const SVG_DESIGNS = {
   134: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><rect x="30" y="35" width="40" height="28" rx="2" stroke="#a855f7" stroke-width="0.7"/><path d="M30,43 L70,43" stroke="#a855f7" stroke-width="0.4" opacity="0.5"/><path d="M50,35 L50,63" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/><path d="M20,35 Q30,25 50,22 Q70,25 80,35" stroke="#a855f7" stroke-width="0.6" opacity="0.6"/><path d="M38,63 L38,72 M62,63 L62,72" stroke="#a855f7" stroke-width="0.5" opacity="0.4"/><circle cx="50" cy="22" r="4" fill="#a855f7" opacity="0.2"/></svg>`,
   135: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><circle cx="50" cy="50" r="28" stroke="#c9a84c" stroke-width="0.7"/><path d="M50,22 L50,30 M50,70 L50,78" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/><path d="M28,35 L35,40 M65,60 L72,65" stroke="#c9a84c" stroke-width="0.5" opacity="0.4"/><path d="M28,65 L35,60 M65,40 L72,35" stroke="#c9a84c" stroke-width="0.5" opacity="0.4"/><circle cx="50" cy="50" r="10" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/><path d="M44,50 L48,54 L58,44" stroke="#c9a84c" stroke-width="0.8"/></svg>`,
   136: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,20 L50,80" stroke="#c9a84c" stroke-width="0.5" opacity="0.3"/><circle cx="50" cy="28" r="7" stroke="#c9a84c" stroke-width="0.7"/><circle cx="50" cy="50" r="7" stroke="#c9a84c" stroke-width="0.6" opacity="0.7"/><circle cx="50" cy="72" r="7" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/><path d="M43,28 L30,28 M43,50 L30,50 M43,72 L30,72" stroke="#c9a84c" stroke-width="0.4" opacity="0.4"/><path d="M30,28 L30,72" stroke="#c9a84c" stroke-width="0.4" opacity="0.3"/></svg>`,
-  137: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,20 Q58,32 55,45 Q65,35 62,50 Q72,40 70,56 Q80,46 76,62 Q70,78 50,85 Q30,78 24,62 Q20,46 30,56 Q28,40 38,50 Q35,35 45,45 Q42,32 50,20Z" stroke="#c9a84c" stroke-width="0.7"/><rect x="38" y="75" width="24" height="12" rx="1" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/><circle cx="50" cy="55" r="6" fill="#c9a84c" opacity="0.15"/></svg>`
+  137: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,20 Q58,32 55,45 Q65,35 62,50 Q72,40 70,56 Q80,46 76,62 Q70,78 50,85 Q30,78 24,62 Q20,46 30,56 Q28,40 38,50 Q35,35 45,45 Q42,32 50,20Z" stroke="#c9a84c" stroke-width="0.7"/><rect x="38" y="75" width="24" height="12" rx="1" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/><circle cx="50" cy="55" r="6" fill="#c9a84c" opacity="0.15"/></svg>`,
+  138: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M35,30 Q50,20 65,30 Q72,45 65,60 Q50,70 35,60 Q28,45 35,30Z" stroke="#c9a84c" stroke-width="0.7"/><path d="M38,35 Q50,28 62,35 Q67,45 62,55 Q50,62 38,55 Q33,45 38,35Z" stroke="#c9a84c" stroke-width="0.4" opacity="0.5"/><line x1="50" y1="70" x2="50" y2="82" stroke="#c9a84c" stroke-width="0.6"/><line x1="42" y1="82" x2="58" y2="82" stroke="#c9a84c" stroke-width="0.5"/><circle cx="50" cy="45" r="5" fill="#c9a84c" opacity="0.2"/></svg>`
 };
 
 
@@ -1924,7 +1927,7 @@ document.addEventListener('keydown', e => {
 });
 
 function openArticle(id) {
-  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137];
+  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138];
   if (inAppArticles.includes(id)) {
     document.querySelectorAll('.article-content').forEach(el => el.style.display = 'none');
     const target = document.getElementById('article-' + id);
@@ -36564,6 +36567,221 @@ document.addEventListener('keydown', e => {
       <div class="article-closing">
         <p class="article-closing-verse">"Mezbah dan korban bukan ritual keagamaan — itu adalah pintu gerbang. Apa yang kamu taruh di atas mezbahmu menentukan alam mana yang terhubung denganmu."</p>
         <p class="article-closing-ref">— 1 Samuel 2–3 · Keluaran 27:20 · 1 Raja-raja 18</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ARTICLE 138 -->
+  <div id="article-138" class="article-content" style="display:none">
+    <div class="article-hero">
+      <div class="article-hero-bg" style="background:linear-gradient(135deg,#181008,#2c1e08,#38280a);"></div>
+      <div class="article-hero-glow"></div>
+      <span class="article-hero-emoji">✋</span>
+      <div class="article-hero-content">
+        <div class="article-hero-eyebrow">Kerajaan, Bukan Agama · Lukas 24 · Kisah Para Rasul 2 · Roma 12</div>
+        <h1 class="article-hero-title">Daging Tulang</h1>
+        <div class="article-hero-tags">
+          <span class="article-tag">Lukas 24:36–42</span>
+          <span class="article-tag">Roma 12:1</span>
+          <span class="article-tag">Mazmur 50</span>
+        </div>
+      </div>
+    </div>
+    <div class="article-body">
+      <div class="article-verse">
+        <p>"Demi kemurahan Allah aku menasihatkan kamu, supaya kamu mempersembahkan tubuhmu sebagai persembahan yang hidup, yang kudus, dan yang berkenan kepada Allah. Itu adalah ibadahmu yang sejati."</p>
+        <cite>— Roma 12:1</cite>
+      </div>
+      <p class="article-intro">Sebuah perjalanan reflektif memahami mengapa Yesus bangkit dengan tubuh jasmani-Nya — dan apa artinya bagi kehidupan ibadah kita hari ini.</p>
+
+      <div class="article-section">
+        <h2>Tiba-Tiba Yesus Berdiri di Tengah Mereka</h2>
+        <div class="article-verse">
+          <p>"Dan sementara mereka bercakap-cakap tentang hal-hal itu, Yesus tiba-tiba berdiri di tengah-tengah mereka dan berkata kepada mereka: Damai sejahtera bagi kamu."</p>
+          <cite>— Lukas 24:36</cite>
+        </div>
+        <p>Murid-murid terkejut, takut, dan menyangka bahwa mereka melihat hantu. Reaksi alami mereka sangat masuk akal — Yesus baru saja disalib dan dikubur. Namun Yesus segera meluruskan pemahaman mereka dengan cara yang paling langsung.</p>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">👁️</div>
+            <div class="article-step-content">
+              <h4>Bisa Dilihat</h4>
+              <p>Yesus memperlihatkan tangan dan kaki-Nya kepada murid-murid secara langsung dan terbuka.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">✋</div>
+            <div class="article-step-content">
+              <h4>Bisa Diraba</h4>
+              <p>"Rabalah Aku dan lihatlah." Tubuh-Nya bukan ilusi — nyata secara fisik dan dapat disentuh.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🐟</div>
+            <div class="article-step-content">
+              <h4>Bisa Makan</h4>
+              <p>Yesus memakan sepotong ikan goreng di depan mata mereka — bukti tubuh-Nya mencerna makanan secara biologis.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">✨</div>
+            <div class="article-step-content">
+              <h4>Tapi Melampaui Fisik</h4>
+              <p>Yesus bisa menembus tembok, muncul dan menghilang tiba-tiba — tubuh yang sama sekali berbeda dari tubuh biasa. Tubuh yang belum pernah ada sebelumnya.</p>
+            </div>
+          </div>
+        </div>
+        <div class="article-highlight">
+          <p>Kebangkitan Yesus bukan sekadar hidup kembali seperti semula. Roh Kudus membangkitkan dan mengubahkan tubuh jasmani Yesus menjadi sesuatu yang benar-benar baru — tubuh kekal yang menjembatani dua dimensi: jasmani dan roh.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Dua Dimensi yang Dipisahkan Allah</h2>
+        <p>Sejak penciptaan, Allah memisahkan dimensi roh dan dimensi fisik. Pembatasan ini penting — ini adalah perlindungan bagi manusia.</p>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>🌍 Dimensi Fisik — Manusia</h4>
+            <ul>
+              <li>Manusia hidup dan bergerak dalam alam jasmani</li>
+              <li>Kerajaan kegelapan tidak bisa sembarangan menerobos masuk</li>
+              <li>Ada batas yang Allah tetapkan sebagai perlindungan</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>✨ Dimensi Roh — Surgawi</h4>
+            <ul>
+              <li>Kerajaan surga dan kerajaan kegelapan bergerak di dimensi roh</li>
+              <li>Tidak bisa langsung beroperasi bebas di dunia jasmani tanpa "pintu masuk"</li>
+              <li>Mezbah dan korban adalah penghubung antara dua dimensi ini</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Strategi Kerajaan Kegelapan: Runtuhkan Mezbahnya</h2>
+        <p>Kisah Elia dan Izebel membuka pola yang konsisten tentang bagaimana kerajaan kegelapan beroperasi.</p>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">⚔️</div>
+            <div class="article-step-content">
+              <h4>Bunuh Para Nabi</h4>
+              <p>Obaja menyembunyikan seratus nabi Tuhan dalam dua gua (50-50) agar tidak dibunuh. Upaya sistematis memusnahkan penyembah yang sejati.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🪨</div>
+            <div class="article-step-content">
+              <h4>Runtuhkan Mezbahnya</h4>
+              <p>Izebel secara aktif meruntuhkan mezbah-mezbah Tuhan di Israel. Tanpa mezbah, tidak ada korban. Tanpa korban, portal antara umat dan Tuhan terputus.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🗿</div>
+            <div class="article-step-content">
+              <h4>Bangun Mezbah Berhala</h4>
+              <p>Sambil meruntuhkan mezbah Tuhan, kerajaan kegelapan mendorong berdirinya mezbah-mezbah berhala — mengundang roh penjaga yang berbeda masuk ke kehidupan bangsa Israel.</p>
+            </div>
+          </div>
+        </div>
+        <div class="article-quote">
+          <p>Pola ini identik di kisah Elia, Haman, dan Ester: hancurkan akses umat kepada Tuhan, lalu isi kekosongan itu dengan penyembahan kegelapan.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Yesus: Mezbah Sekaligus Korban yang Sempurna</h2>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>📜 Perjanjian Lama</h4>
+            <ul>
+              <li>Allah membutuhkan manusia untuk membangun mezbah dari batu</li>
+              <li>Korban hewan harus diulang terus-menerus</li>
+              <li>Ketika umat berpaling, mezbah hancur — akses kepada Tuhan terputus</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>✦ Perjanjian Baru</h4>
+            <ul>
+              <li>Yesus menjadi mezbah yang hidup — permanen, kekal, dan sempurna</li>
+              <li>Tubuh dan darah-Nya adalah korban yang tidak perlu diulang lagi</li>
+              <li>Beroperasi di bumi melalui Roh Kudus — menjembatani dua dimensi secara permanen</li>
+            </ul>
+          </div>
+        </div>
+        <div class="article-highlight">
+          <p>Yesus bukan hanya membawa korban — Ia sendiri adalah mezbah-Nya dan sekaligus korban-Nya. Inilah yang belum pernah ada sepanjang sejarah keselamatan.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Jemaat Mula-Mula Meneladani Yesus</h2>
+        <p>Kisah Para Rasul 2:42–47 mencatat: mereka bertekun dalam pengajaran, persekutuan, memecahkan roti, dan berdoa — bukan membangun mezbah batu lagi. Ketika jemaat berkumpul dalam kesatuan, mereka mengaktifkan mezbah yang hidup.</p>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">1</div>
+            <div class="article-step-content">
+              <h4>Matikan Kedagingan</h4>
+              <p>Ketika dorongan daging muncul — amarah, kepahitan, tipu daya — kita memilih taat kepada suara Roh Kudus. Mematikan kedagingan bukan pasif, melainkan aktif mengizinkan Roh Kudus memimpin.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">2</div>
+            <div class="article-step-content">
+              <h4>Naikkan Syukur</h4>
+              <p>Persembahkan syukur sebagai korban kepada Allah. Berseru kepada Tuhan dalam kesesakan adalah ibadah yang nyata.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">3</div>
+            <div class="article-step-content">
+              <h4>Jujur Jalannya</h4>
+              <p>Mazmur 50:23 berkata: "Siapa yang jujur jalannya, keselamatan yang dari Allah akan Kuperlihatkan kepadanya."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Pelajaran dari Mazmur 50: Korban yang Allah Inginkan</h2>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>⚠️ Yang Allah Tolak</h4>
+            <ul>
+              <li>Allah tidak membutuhkan lembu atau kambing jantan kita</li>
+              <li>Korban yang dilakukan secara mekanis, tanpa hati yang sungguh-sungguh</li>
+              <li>Orang yang rajin mempelajari firman, tetapi membenci teguran dan mengata-ngatai saudaranya</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>✦ Yang Allah Minta</h4>
+            <ul>
+              <li>Persembahkanlah syukur sebagai korban</li>
+              <li>Bayarlah nazarmu. Berserulah kepada Tuhan dalam kesesakan</li>
+              <li>Hidup yang dipersembahkan, bukan ritual yang dilakukan</li>
+            </ul>
+          </div>
+        </div>
+        <div class="article-highlight">
+          <p>Korban yang Allah inginkan bukan yang paling gemuk atau paling sempurna bentuknya — melainkan hati yang sungguh-sungguh, hidup yang jujur, dan ucapan syukur yang tulus.</p>
+        </div>
+      </div>
+
+      <div class="article-closing">
+        <p class="article-closing-verse">"Siapa yang mempersembahkan syukur sebagai korban, ia memuliakan Aku. Siapa yang jujur jalannya, keselamatan yang dari Allah akan Kuperlihatkan kepadanya." (Mazmur 50:23) Yesus bangkit dengan daging dan tulang-Nya — bukan hanya untuk membuktikan bahwa Ia hidup, tetapi sebagai fondasi dari seluruh sistem mezbah dan korban yang baru: kekal, permanen, dan sempurna.</p>
+        <p class="article-closing-ref">— Lukas 24:36–42 · Kisah Para Rasul 2 · Roma 12:1 · Mazmur 50</p>
       </div>
     </div>
   </div>
