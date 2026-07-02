@@ -1452,6 +1452,7 @@ const ARTICLES = [
   { id:142, judul:"Tipu Diri", desc:"Jebakan paling halus: merasa rohani padahal tidak berfungsi. Galatia 6: hukum yang tidak bisa dipermainkan — apa yang kamu tabur, kamu tuai. Janda Sarfat bukan orang Israel, tapi Elia diutus kepadanya karena hatinya jujur. Tidak ada yang instan — setia menabur kebaikan, waktu menuai pasti tiba.", kategori:[2], trending:false, emoji:"🌱", link:"" },
   { id:143, judul:"Unjur Badan", desc:"Elia mengunjurkan badannya di atas anak yang mati — muka bertemu muka, tangan bertemu tangan. Bukan karena ada aturan, tapi karena ia mengasihi. Agama mendakwa. Kerajaan surga memulihkan. Tiga kali Elia mengunjurkan = tiga kali Yesus bertanya kepada Petrus: pola kasih yang sama. Tuhan tidak mencari yang sempurna — tapi yang mau unjur badan.", kategori:[2], trending:false, emoji:"🙌", link:"" },
   { id:144, judul:"Sunem Sujud", desc:"Perempuan Sunem membuat kamar kecil berdinding batu dengan empat perabot — ekspresi kasih yang terencana. Anaknya mati; ia tidak panik, langsung berkemas ke Karmel. 'Aku tidak akan meninggalkan engkau.' Elisa meniarap di atas anak itu — anak bersin tujuh kali. Presisi Tuhan: Gehazi bercerita kepada Raja tepat saat perempuan Sunem datang mengadukan tanahnya.", kategori:[2], trending:false, emoji:"🙏", link:"" },
+  { id:145, judul:"Dungu Dekat", desc:"Tuhan sendiri menyebut si kaya bodoh — bukan karena kaya, tapi karena semua hartanya untuk dirinya sendiri. Tamak tidak kenal miskin atau kaya: riset MBG membuktikan Lukas 12. Mazmur 73: aku dungu dan tidak mengerti, seperti hewan — tapi aku tetap di dekat-Mu. Empat langkah Tuhan bagi yang dungu: pegang → nasihati → tuntun → angkat. Amsal 30: terpaksa kaya karena berkat Tuhan yang mengejar.", kategori:[2], trending:false, emoji:"🤏", link:"" },
 ];
 
 const CATEGORY_NAMES = {
@@ -1629,6 +1630,7 @@ const ARTICLE_COLORS = {
   142: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
   143: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
   144: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
+  145: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
 };
 
 function getCardColor(article) {
@@ -1779,7 +1781,8 @@ const SVG_DESIGNS = {
   141: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><ellipse cx="50" cy="58" rx="20" ry="12" stroke="#c9a84c" stroke-width="0.7"/><path d="M30,58 L30,50 Q30,40 42,36 Q50,33 58,36 Q70,40 70,50 L70,58" stroke="#c9a84c" stroke-width="0.6"/><path d="M42,36 Q44,28 50,26 Q56,28 58,36" stroke="#c9a84c" stroke-width="0.5" opacity="0.6"/><path d="M45,26 L42,20 M55,26 L58,20" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/><circle cx="44" cy="48" r="3" fill="#c9a84c" opacity="0.2"/><circle cx="56" cy="48" r="3" fill="#c9a84c" opacity="0.2"/></svg>`,
   142: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><circle cx="50" cy="72" r="6" stroke="#a855f7" stroke-width="0.6"/><path d="M50,66 L50,50" stroke="#a855f7" stroke-width="0.5"/><path d="M50,50 Q42,44 36,36 M50,50 Q58,44 64,36" stroke="#a855f7" stroke-width="0.5" opacity="0.7"/><path d="M36,36 Q30,28 34,20 M64,36 Q70,28 66,20" stroke="#a855f7" stroke-width="0.4" opacity="0.5"/><path d="M34,20 Q38,14 44,16 M66,20 Q62,14 56,16" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/><path d="M44,16 Q50,12 56,16" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/></svg>`,
   143: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M20,40 Q20,30 30,28 Q40,26 50,30 Q60,26 70,28 Q80,30 80,40" stroke="#a855f7" stroke-width="0.6"/><path d="M20,60 Q20,70 30,72 Q40,74 50,70 Q60,74 70,72 Q80,70 80,60" stroke="#a855f7" stroke-width="0.6"/><path d="M20,40 L20,60 M80,40 L80,60" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M35,50 Q50,42 65,50 Q50,58 35,50Z" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><circle cx="50" cy="50" r="5" fill="#a855f7" opacity="0.2"/></svg>`,
-  144: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,80 Q30,80 22,65 Q15,50 25,38 Q35,25 50,25 Q65,25 75,38 Q85,50 78,65 Q70,80 50,80Z" stroke="#a855f7" stroke-width="0.7"/><path d="M50,80 L50,88 M35,75 L28,82 M65,75 L72,82" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M35,50 Q50,42 65,50 Q50,58 35,50Z" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><circle cx="50" cy="50" r="6" fill="#a855f7" opacity="0.2"/></svg>`
+  144: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,80 Q30,80 22,65 Q15,50 25,38 Q35,25 50,25 Q65,25 75,38 Q85,50 78,65 Q70,80 50,80Z" stroke="#a855f7" stroke-width="0.7"/><path d="M50,80 L50,88 M35,75 L28,82 M65,75 L72,82" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M35,50 Q50,42 65,50 Q50,58 35,50Z" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><circle cx="50" cy="50" r="6" fill="#a855f7" opacity="0.2"/></svg>`,
+  145: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><circle cx="50" cy="38" r="16" stroke="#a855f7" stroke-width="0.7"/><path d="M42,32 Q50,28 58,32 Q60,38 56,43 Q50,47 44,43 Q40,38 42,32Z" stroke="#a855f7" stroke-width="0.4" opacity="0.6"/><path d="M50,54 L50,72" stroke="#a855f7" stroke-width="0.6"/><path d="M36,62 L50,54 L64,62" stroke="#a855f7" stroke-width="0.5"/><path d="M36,72 L50,72 L64,72" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M28,38 Q38,30 50,38 Q62,30 72,38" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/></svg>`
 };
 
 
@@ -1945,7 +1948,7 @@ document.addEventListener('keydown', e => {
 });
 
 function openArticle(id) {
-  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144];
+  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145];
   if (inAppArticles.includes(id)) {
     document.querySelectorAll('.article-content').forEach(el => el.style.display = 'none');
     const target = document.getElementById('article-' + id);
@@ -38103,6 +38106,225 @@ document.addEventListener('keydown', e => {
       <div class="article-closing">
         <p class="article-closing-verse">"Semakin kita punya attitude dan manner yang benar, semakin Tuhan kerja dalam hidup kita. 30 kali lipat. 60 kali lipat. 100 kali lipat. Tergantung dari hati kita — seberapa kita bisa percaya dan berserah kepada Tuhan dengan respons yang benar."</p>
         <p class="article-closing-ref">— 2 Raja-Raja 4:8–37 · 2 Raja-Raja 8:1–6</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ARTICLE 145 -->
+  <div id="article-145" class="article-content" style="display:none">
+    <div class="article-hero">
+      <div class="article-hero-bg" style="background:linear-gradient(135deg,#1a0a28,#2a1040,#361452);"></div>
+      <div class="article-hero-glow"></div>
+      <span class="article-hero-emoji">🤏</span>
+      <div class="article-hero-content">
+        <div class="article-hero-eyebrow">Memahami Jati Diri · Lukas 12 · Mazmur 73 · Amsal 30</div>
+        <h1 class="article-hero-title">Dungu Dekat</h1>
+        <div class="article-hero-tags">
+          <span class="article-tag">Lukas 12:13–21</span>
+          <span class="article-tag">Mazmur 73:21–28</span>
+          <span class="article-tag">Amsal 30:7–9</span>
+        </div>
+      </div>
+    </div>
+    <div class="article-body">
+      <div class="article-verse">
+        <p>"Tetapi aku, aku suka dekat pada Allah. Aku menaruh tempat perlindunganku pada Tuhan Allah, supaya dapat menceritakan segala pekerjaan-Nya."</p>
+        <cite>— Mazmur 73:28</cite>
+      </div>
+      <p class="article-intro">Tentang orang yang mengaku bodoh, tapi tetap memilih tinggal dekat Tuhan — dan bagaimana Tuhan yang kemudian mengangkat mereka.</p>
+
+      <div class="article-section">
+        <h2>Seorang Datang kepada Yesus</h2>
+        <p>Ada seorang dari orang banyak yang datang kepada Yesus dengan keluhan yang sangat manusiawi: "Guru, katakanlah kepada saudaraku supaya ia berbagi warisan dengan aku." Yesus tidak langsung menjawab permintaannya. Yesus justru membalik pertanyaan itu ke akarnya.</p>
+        <div class="article-verse">
+          <p>"Berjaga-jagalah dan waspadalah terhadap segala ketamakan. Sebab walaupun seorang berlimpah-limpah hartanya, hidupnya tidaklah tergantung daripada kekayaannya itu."</p>
+          <cite>— Lukas 12:15</cite>
+        </div>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">⚠️</div>
+            <div class="article-step-content">
+              <h4>Rasa Kurang</h4>
+              <p>Dia merasa tidak mendapat cukup, padahal belum tentu begitu kenyataannya.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">⚠️</div>
+            <div class="article-step-content">
+              <h4>Rasa Berhak</h4>
+              <p>Dia merasa dialah yang paling layak, yang paling patut mendapat lebih.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">⚠️</div>
+            <div class="article-step-content">
+              <h4>Rasa Tidak Adil</h4>
+              <p>Hatinya pahit, jengkel, dan marah melihat orang lain dapat apa yang dia rasa miliknya. Ketiga perasaan ini — bukan jumlah harta — itulah yang Yesus sebut sebagai ketamakan.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Kisah Orang Kaya yang Bodoh</h2>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>🏚️ Apa yang Dia Lakukan</h4>
+            <ul>
+              <li>Tanahnya berlimpah hasilnya. Lumbungnya tidak muat.</li>
+              <li>Membangun lumbung yang lebih besar.</li>
+              <li>Berkata kepada jiwanya: "Beristirahatlah, makanlah, minumlah, dan bersenang-senanglah."</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>⚡ Apa yang Tuhan Katakan</h4>
+            <ul>
+              <li>"Hai engkau orang bodoh."</li>
+              <li>"Pada malam ini juga jiwamu akan diambil daripadamu."</li>
+              <li>"Dan apa yang telah kau sediakan, untuk siapakah itu nanti?"</li>
+            </ul>
+          </div>
+        </div>
+        <div class="article-highlight">
+          <p>Tuhan sendiri yang menyebutnya bodoh. Bukan karena dia kaya — tapi karena semua hartanya hanya untuk dirinya sendiri. Tidak kaya di hadapan Allah = bodoh menurut Allah.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Orang Miskin pun Bisa Tamak</h2>
+        <div class="article-highlight">
+          <p>Ada penelitian di Indonesia tentang program Makan Bergizi Gratis (MBG). Dari semua penerima manfaat yang disurvei, kelompok yang paling tidak puas, paling resisten — justru mereka yang paling miskin. Alasannya? "Anggaran ini harusnya semua untuk saya. Kenapa orang yang tidak perlu ikut dapat juga?" Sama persis dengan orang yang datang kepada Yesus. Firman Tuhan ditulis ribuan tahun lalu. Survei itu membuktikannya hari ini. Tamak tidak kenal miskin atau kaya. Tamak tinggal di dalam hati.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Mazmur 73: Dungu, Tapi Tetap Dekat</h2>
+        <p>Pemazmur menggambarkan dirinya dengan jujur — dengan keberanian yang luar biasa untuk mengakui kelemahannya sendiri.</p>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">😓</div>
+            <div class="article-step-content">
+              <h4>"Ketika hatiku merasa pahit..."</h4>
+              <p>Dia tidak berpura-pura baik-baik saja. Hatinya getir. Jengkel. Sakit. Seperti buah pinggangnya menusuk-nusuk.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🐄</div>
+            <div class="article-step-content">
+              <h4>"Aku dungu dan tidak mengerti..."</h4>
+              <p>Dia mengakui bahwa dia tidak paham apa yang sedang terjadi. Seperti hewan — tidak bisa berpikir seperti manusia berpikir.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">✦</div>
+            <div class="article-step-content">
+              <h4>"Tetapi aku tetap di dekat-Mu..."</h4>
+              <p>Di sinilah bedanya. Walau pahit, walau bingung, walau tidak mengerti — dia tidak pergi. Dia tetap tinggal dekat Tuhan. Ini pilihan yang terlihat sederhana tapi luar biasa beratnya.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Proses Tuhan bagi yang Dungu Namun Tetap Dekat</h2>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">🤝</div>
+            <div class="article-step-content">
+              <h4>Tuhan Pegang</h4>
+              <p>"Engkau memegang tangan kananku." Tuhan tidak melepas. Tuhan genggam tangan kita erat-erat, bahkan saat kita tidak menyadarinya.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">📖</div>
+            <div class="article-step-content">
+              <h4>Tuhan Nasihati</h4>
+              <p>"Dengan nasihat-Mu Engkau menuntun aku." Firman Tuhan mulai masuk dan menata hati yang dulunya kacau dan pahit.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🚶</div>
+            <div class="article-step-content">
+              <h4>Tuhan Tuntun</h4>
+              <p>Dituntun artinya Tuhan berjalan, kita mengikuti. Pelan-pelan. Bukan ditarik paksa. Kita mulai mengerti sedikit demi sedikit.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">⬆️</div>
+            <div class="article-step-content">
+              <h4>Tuhan Angkat ke Kemuliaan</h4>
+              <p>"Kemudian Engkau mengangkat aku ke dalam kemuliaan." Yang tadinya di bawah, yang tadinya dungu — Tuhan bawa naik. Karena nature-Nya Tuhan memang di atas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Lebih Baik Kita yang Bilang Dungu</h2>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>⚠️ Yang Pergi dari Yesus</h4>
+            <ul>
+              <li>Si miskin yang minta warisan — tersinggung, pergi</li>
+              <li>Si pemuda kaya yang ditegur Yesus — sedih, pergi juga</li>
+              <li>Keduanya tamak. Keduanya binasa.</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>✦ Yang Tetap Dekat Tuhan</h4>
+            <ul>
+              <li>Pemazmur yang mengakui dungu-nya — Tuhan pegang, Tuhan tuntun, Tuhan angkat</li>
+              <li>Janda Sarfat yang memberi dari kekurangannya — tepung tidak habis, minyak tidak habis</li>
+              <li>Empat orang kusta yang tahu purpose-nya — mereka bersaksi ke kota</li>
+            </ul>
+          </div>
+        </div>
+        <div class="article-verse">
+          <p>"Sebab sesungguhnya siapa yang jauh dari-Mu akan binasa. Tetapi aku, aku suka dekat pada Allah."</p>
+          <cite>— Mazmur 73:27–28</cite>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Amsal 30: Jangan Kejar Kaya</h2>
+        <p>Penulis Amsal berdoa dengan cara yang unik: "Jangan berikan kepadaku kemiskinan atau kekayaan. Biarkan aku menikmati makanan yang jadi bagianku."</p>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>⚠️ Kalau Terlalu Kenyang</h4>
+            <ul>
+              <li>"Supaya aku tidak menyangkal-Mu dan berkata, siapa Tuhan itu?"</li>
+              <li>Kekayaan bisa membuat kita merasa tidak butuh Tuhan</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>⚠️ Kalau Terlalu Miskin</h4>
+            <ul>
+              <li>"Supaya aku tidak mencuri dan mencemarkan nama Allah-ku."</li>
+              <li>Kekurangan yang parah bisa membawa kita ke jalan yang salah</li>
+            </ul>
+          </div>
+        </div>
+        <div class="article-highlight">
+          <p>Bukan berarti kita tidak boleh kaya. Abraham, Ishak, Yakub — mereka kaya sekali. Tapi kekayaan itu bukan yang mereka kejar. Kekayaan datang mengejar mereka, karena mereka setia melakukan bagian mereka. Terpaksa kaya — karena berkat Tuhan yang memeluk mereka erat-erat.</p>
+        </div>
+      </div>
+
+      <div class="article-closing">
+        <p class="article-closing-verse">"Kita tidak perlu pura-pura mengerti. Kita boleh jujur berkata: Saya dungu. Saya tidak mengerti. Saya seperti hewan. Tapi satu hal jangan dilakukan: jangan pergi dari Tuhan. Dungu — tapi tetap dekat."</p>
+        <p class="article-closing-ref">— Lukas 12:13–21 · Mazmur 73:21–28 · Amsal 30:7–9</p>
       </div>
     </div>
   </div>
