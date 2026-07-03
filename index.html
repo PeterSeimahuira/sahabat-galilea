@@ -1453,6 +1453,7 @@ const ARTICLES = [
   { id:143, judul:"Unjur Badan", desc:"Elia mengunjurkan badannya di atas anak yang mati — muka bertemu muka, tangan bertemu tangan. Bukan karena ada aturan, tapi karena ia mengasihi. Agama mendakwa. Kerajaan surga memulihkan. Tiga kali Elia mengunjurkan = tiga kali Yesus bertanya kepada Petrus: pola kasih yang sama. Tuhan tidak mencari yang sempurna — tapi yang mau unjur badan.", kategori:[2], trending:false, emoji:"🙌", link:"" },
   { id:144, judul:"Sunem Sujud", desc:"Perempuan Sunem membuat kamar kecil berdinding batu dengan empat perabot — ekspresi kasih yang terencana. Anaknya mati; ia tidak panik, langsung berkemas ke Karmel. 'Aku tidak akan meninggalkan engkau.' Elisa meniarap di atas anak itu — anak bersin tujuh kali. Presisi Tuhan: Gehazi bercerita kepada Raja tepat saat perempuan Sunem datang mengadukan tanahnya.", kategori:[2], trending:false, emoji:"🙏", link:"" },
   { id:145, judul:"Dungu Dekat", desc:"Tuhan sendiri menyebut si kaya bodoh — bukan karena kaya, tapi karena semua hartanya untuk dirinya sendiri. Tamak tidak kenal miskin atau kaya: riset MBG membuktikan Lukas 12. Mazmur 73: aku dungu dan tidak mengerti, seperti hewan — tapi aku tetap di dekat-Mu. Empat langkah Tuhan bagi yang dungu: pegang → nasihati → tuntun → angkat. Amsal 30: terpaksa kaya karena berkat Tuhan yang mengejar.", kategori:[2], trending:false, emoji:"🤏", link:"" },
+  { id:146, judul:"Lakukan Ajarkan", desc:"Menggenapi bukan hafal atau paham — melainkan melakukan dan mengajarkan dengan utuh. Dua posisi di Kerajaan Surga: yang mengurangi Firman duduk paling rendah, yang menggenapi duduk paling tinggi. Wahyu 22: jangan tambahkan, jangan kurangi. Lebih benar dari Farisi bukan soal penampilan tapi soal sangkal diri. Engkau tidak jauh dari Kerajaan Allah — tinggal satu langkah: lakukan.", kategori:[7], trending:false, emoji:"📖", link:"" },
 ];
 
 const CATEGORY_NAMES = {
@@ -1631,6 +1632,7 @@ const ARTICLE_COLORS = {
   143: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
   144: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
   145: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
+  146: "linear-gradient(135deg,#181008,#2c1e08,#38280a)",
 };
 
 function getCardColor(article) {
@@ -1782,7 +1784,8 @@ const SVG_DESIGNS = {
   142: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><circle cx="50" cy="72" r="6" stroke="#a855f7" stroke-width="0.6"/><path d="M50,66 L50,50" stroke="#a855f7" stroke-width="0.5"/><path d="M50,50 Q42,44 36,36 M50,50 Q58,44 64,36" stroke="#a855f7" stroke-width="0.5" opacity="0.7"/><path d="M36,36 Q30,28 34,20 M64,36 Q70,28 66,20" stroke="#a855f7" stroke-width="0.4" opacity="0.5"/><path d="M34,20 Q38,14 44,16 M66,20 Q62,14 56,16" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/><path d="M44,16 Q50,12 56,16" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/></svg>`,
   143: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M20,40 Q20,30 30,28 Q40,26 50,30 Q60,26 70,28 Q80,30 80,40" stroke="#a855f7" stroke-width="0.6"/><path d="M20,60 Q20,70 30,72 Q40,74 50,70 Q60,74 70,72 Q80,70 80,60" stroke="#a855f7" stroke-width="0.6"/><path d="M20,40 L20,60 M80,40 L80,60" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M35,50 Q50,42 65,50 Q50,58 35,50Z" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><circle cx="50" cy="50" r="5" fill="#a855f7" opacity="0.2"/></svg>`,
   144: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,80 Q30,80 22,65 Q15,50 25,38 Q35,25 50,25 Q65,25 75,38 Q85,50 78,65 Q70,80 50,80Z" stroke="#a855f7" stroke-width="0.7"/><path d="M50,80 L50,88 M35,75 L28,82 M65,75 L72,82" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M35,50 Q50,42 65,50 Q50,58 35,50Z" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><circle cx="50" cy="50" r="6" fill="#a855f7" opacity="0.2"/></svg>`,
-  145: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><circle cx="50" cy="38" r="16" stroke="#a855f7" stroke-width="0.7"/><path d="M42,32 Q50,28 58,32 Q60,38 56,43 Q50,47 44,43 Q40,38 42,32Z" stroke="#a855f7" stroke-width="0.4" opacity="0.6"/><path d="M50,54 L50,72" stroke="#a855f7" stroke-width="0.6"/><path d="M36,62 L50,54 L64,62" stroke="#a855f7" stroke-width="0.5"/><path d="M36,72 L50,72 L64,72" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M28,38 Q38,30 50,38 Q62,30 72,38" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/></svg>`
+  145: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><circle cx="50" cy="38" r="16" stroke="#a855f7" stroke-width="0.7"/><path d="M42,32 Q50,28 58,32 Q60,38 56,43 Q50,47 44,43 Q40,38 42,32Z" stroke="#a855f7" stroke-width="0.4" opacity="0.6"/><path d="M50,54 L50,72" stroke="#a855f7" stroke-width="0.6"/><path d="M36,62 L50,54 L64,62" stroke="#a855f7" stroke-width="0.5"/><path d="M36,72 L50,72 L64,72" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M28,38 Q38,30 50,38 Q62,30 72,38" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/></svg>`,
+  146: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M20,25 L80,25 L80,75 L20,75 Z" stroke="#c9a84c" stroke-width="0.7"/><path d="M25,35 L75,35" stroke="#c9a84c" stroke-width="0.4" opacity="0.6"/><path d="M25,45 L60,45" stroke="#c9a84c" stroke-width="0.4" opacity="0.5"/><path d="M25,55 L65,55" stroke="#c9a84c" stroke-width="0.4" opacity="0.5"/><path d="M25,65 L50,65" stroke="#c9a84c" stroke-width="0.4" opacity="0.4"/><path d="M50,15 L50,25" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/><circle cx="50" cy="12" r="5" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/></svg>`
 };
 
 
@@ -1948,7 +1951,7 @@ document.addEventListener('keydown', e => {
 });
 
 function openArticle(id) {
-  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145];
+  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146];
   if (inAppArticles.includes(id)) {
     document.querySelectorAll('.article-content').forEach(el => el.style.display = 'none');
     const target = document.getElementById('article-' + id);
@@ -38325,6 +38328,217 @@ document.addEventListener('keydown', e => {
       <div class="article-closing">
         <p class="article-closing-verse">"Kita tidak perlu pura-pura mengerti. Kita boleh jujur berkata: Saya dungu. Saya tidak mengerti. Saya seperti hewan. Tapi satu hal jangan dilakukan: jangan pergi dari Tuhan. Dungu — tapi tetap dekat."</p>
         <p class="article-closing-ref">— Lukas 12:13–21 · Mazmur 73:21–28 · Amsal 30:7–9</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ARTICLE 146 -->
+  <div id="article-146" class="article-content" style="display:none">
+    <div class="article-hero">
+      <div class="article-hero-bg" style="background:linear-gradient(135deg,#181008,#2c1e08,#38280a);"></div>
+      <div class="article-hero-glow"></div>
+      <span class="article-hero-emoji">📖</span>
+      <div class="article-hero-content">
+        <div class="article-hero-eyebrow">Kerajaan, Bukan Agama · Matius 5 · Wahyu 22 · Markus 12</div>
+        <h1 class="article-hero-title">Lakukan Ajarkan</h1>
+        <div class="article-hero-tags">
+          <span class="article-tag">Matius 5:17–20</span>
+          <span class="article-tag">Wahyu 22:18–19</span>
+          <span class="article-tag">Markus 12:28–34</span>
+        </div>
+      </div>
+    </div>
+    <div class="article-body">
+      <div class="article-verse">
+        <p>"Janganlah kamu menyangka bahwa Aku datang untuk meniadakan hukum Taurat atau kitab para nabi. Aku datang bukan untuk meniadakannya, melainkan untuk menggenapkannya."</p>
+        <cite>— Matius 5:17</cite>
+      </div>
+      <p class="article-intro">Sebuah renungan mendalam dari Matius 5:17–20 — tentang bagaimana menggenapi Firman Tuhan bukan sekadar memahaminya, melainkan melakukannya dengan sepenuh hati dan mengajarkannya kepada orang lain. Inilah kunci posisi kita di dalam Kerajaan Surga, hari ini, di sini, di bumi ini.</p>
+
+      <div class="article-section">
+        <h2>Yesus Datang untuk Menggenapi</h2>
+        <p>Menggenapi bukan sekadar membaca atau menghafalkan. Menggenapi berarti memahami mengapa hukum itu dibuat, lalu melakukannya sebagaimana yang Tuhan kehendaki sejak semula — utuh, penuh, tanpa dikurangi satu titik pun.</p>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>❌ Bukan Menggenapi</h4>
+            <ul>
+              <li>Orang munafik yang memurungkan wajah saat berpuasa</li>
+              <li>Sengaja menunjukkan kesalehan kepada manusia</li>
+              <li>"Mereka mengubah air mukanya supaya orang melihat bahwa mereka sedang berpuasa." (Matius 6:16)</li>
+              <li>Mereka sudah mendapat upah mereka — selesai di situ</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>✅ Menggenapi dengan Benar</h4>
+            <ul>
+              <li>Berpuasa dengan minyaki kepala dan cuci muka</li>
+              <li>Hanya diketahui Bapa yang ada di tempat tersembunyi</li>
+              <li>"Apabila engkau berpuasa, minyakilah kepalamu dan cucilah mukamu." (Matius 6:17)</li>
+              <li>Bapa yang melihat yang tersembunyi akan membalasnya</li>
+            </ul>
+          </div>
+        </div>
+        <div class="article-highlight">
+          <p>Menggenapi hukum adalah mengerti mengapa hukum itu dibuat, lalu melakukannya seperti seharusnya dari awal.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Dua Posisi di Dalam Kerajaan Surga</h2>
+        <p>Matius 5:19 memperlihatkan dengan jelas bahwa ada posisi di dalam Kerajaan Surga — bukan semuanya sama. Posisi kita ditentukan oleh bagaimana kita memperlakukan Firman Tuhan.</p>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>⬇️ Tempat Paling Rendah</h4>
+            <ul>
+              <li>Siapa yang meniadakan salah satu perintah — sekalipun yang paling kecil</li>
+              <li>Dan mengajarkannya demikian kepada orang lain</li>
+              <li>Kebenaran yang dikurangi sedikit saja bukan lagi the whole truth</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>⬆️ Tempat yang Tinggi</h4>
+            <ul>
+              <li>Siapa yang melakukan segala perintah hukum Taurat</li>
+              <li>Dan mengajarkannya dengan utuh — tanpa dikurangi, tanpa ditambahkan</li>
+              <li>Melakukan dan mengajarkan itulah yang Yesus maksudkan dengan menggenapi</li>
+            </ul>
+          </div>
+        </div>
+        <div class="article-quote">
+          <p>Kerajaan Surga bukan hanya tentang nanti setelah meninggal — ini bisa kita alami sekarang, di sini, dalam perjalanan iman kita hari ini.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Peringatan Keras: Jangan Kurangi, Jangan Tambahkan</h2>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>⚠️ Jika Menambahkan</h4>
+            <ul>
+              <li>Allah akan menambahkan kepadanya malapetaka-malapetaka yang tertulis di dalam kitab ini</li>
+              <li>Penghakiman berbalik menimpa mereka</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>⚠️ Jika Mengurangkan</h4>
+            <ul>
+              <li>Allah akan mengambil bagiannya dari pohon kehidupan dan dari kota kudus</li>
+              <li>Apa yang seharusnya didapat — diambil, karena kita meniadakan</li>
+            </ul>
+          </div>
+        </div>
+        <div class="article-highlight">
+          <p>Prinsip ini berlaku bagi semua — termasuk para pengajar dan hamba Tuhan yang menerjemahkan Firman dengan bebas, semaunya sendiri. Justru merekalah yang paling berpotensi duduk di tempat paling rendah, karena mereka mengajarkan — namun dengan Firman yang sudah dikurangi.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Lebih Benar dari Ahli Taurat dan Orang Farisi</h2>
+        <div class="article-verse">
+          <p>"Jika hidup keagamaanmu tidak lebih benar daripada hidup keagamaan ahli-ahli Taurat dan orang-orang Farisi, sesungguhnya kamu tidak akan masuk ke dalam kerajaan surga."</p>
+          <cite>— Matius 5:20</cite>
+        </div>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>⚠️ Masalah Inti Orang Farisi</h4>
+            <ul>
+              <li>Selalu merasa paling benar dan paling saleh</li>
+              <li>Manipulasi melalui agama demi kepentingan sendiri</li>
+              <li>Mengajar untuk menguasai, bukan untuk membebaskan</li>
+              <li>Hamba uang yang menyamar sebagai hamba Tuhan</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>✦ Cara Yesus: Sangkal Diri</h4>
+            <ul>
+              <li>Sangkal diri, pikul salib, ikut Yesus — setiap hari</li>
+              <li>Makin ikut Tuhan, makin sadar kekurangan sendiri</li>
+              <li>Seperti Paulus: "Di antara semua orang berdosa, aku yang paling berdosa"</li>
+              <li>Kerendahan hati adalah tanda pertumbuhan sejati</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Hukum yang Terutama: Kasih yang Segenap</h2>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">❤️</div>
+            <div class="article-step-content">
+              <h4>Segenap Hati</h4>
+              <p>Komitmen inti kepada Tuhan — seperti Petrus berkata "Tuhan, aku mengasihi-Mu." Fondasi dari segalanya, tapi belum cukup sendirian.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">😢</div>
+            <div class="article-step-content">
+              <h4>Segenap Jiwa</h4>
+              <p>Emosi dan perasaan yang jujur — marah, lelah, kecewa — namun tetap memilih untuk mengasihi di atas semua itu. Bukan menekan, tapi mengatasi.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🧠</div>
+            <div class="article-step-content">
+              <h4>Segenap Akal Budi</h4>
+              <p>Kewarasan dan hikmat yang kita gunakan — menyelesaikan konflik, bukan mengabaikannya. Roh Kudus mengingatkan saat kita hampir abai.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">💪</div>
+            <div class="article-step-content">
+              <h4>Segenap Kekuatan</h4>
+              <p>Melakukan dengan sungguh-sungguh, bukan setengah hati. Ketika mampu tapi memilih malas — itulah bukti kekuatan belum sepenuhnya diberikan.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>"Engkau Tidak Jauh dari Kerajaan Allah"</h2>
+        <div class="article-verse">
+          <p>"Yesus berkata kepadanya, 'Engkau tidak jauh dari Kerajaan Allah.'"</p>
+          <cite>— Markus 12:34</cite>
+        </div>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">✦</div>
+            <div class="article-step-content">
+              <h4>Pengertian Sudah Ada</h4>
+              <p>Ahli Taurat ini mengerti inti dari hukum Tuhan — kasih kepada Allah dan sesama. Pengertiannya benar dan bijaksana.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🚶</div>
+            <div class="article-step-content">
+              <h4>Tinggal Satu Langkah: Lakukan</h4>
+              <p>"Tidak jauh" bukan berarti sudah masuk. Dia dekat, tapi belum di dalam. Satu langkah tersisa: melakukan apa yang sudah dimengerti.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🏆</div>
+            <div class="article-step-content">
+              <h4>Mengerti + Melakukan = Masuk</h4>
+              <p>Jangan berhenti di pemahaman. Lakukan the whole truth-nya. Saat dilakukan dengan setia, kamu masuk — dan provision Kerajaan pun terbuka.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-closing">
+        <p class="article-closing-verse">"LAKUKAN. AJARKAN. Menggenapi bukan berarti sempurna seketika. Namanya sangkal diri, pikul salib, ikut Yesus — setiap hari. Makin sadar kekurangan, makin bertumbuh. Yang penting: jangan setengah-setengah. Jangan kurangi, jangan tambahkan. Lakukan the whole truth-nya. Tuhan akan dudukkan kita di tempat yang tinggi dalam Kerajaan Surga — bukan nanti saja, tetapi hari ini, di sini."</p>
+        <p class="article-closing-ref">— Matius 5:17–20 · Matius 6:16–18 · Wahyu 22:18–19 · Markus 12:28–34</p>
       </div>
     </div>
   </div>
