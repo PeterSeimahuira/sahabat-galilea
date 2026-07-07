@@ -1457,6 +1457,7 @@ const ARTICLES = [
   { id:147, judul:"Terburu-buru Terbit", desc:"Matahari terburu-buru terbit bukan karena panik — tapi karena tunduk pada hukum Tuhan yang pasti. Tiga tahap: Discovering Purpose (menemukan bukan menciptakan), Provision (sudah ada kita yang belum lihat), Prosperity (tabur setia tuai kelimpahan). Hevel = kabut bisa jadi embun di Bukit Hermon. Jangkarkan di atas matahari, bukan di bawah.", kategori:[7], trending:false, emoji:"🌅", link:"" },
   { id:148, judul:"Punya Diberi", desc:"'Mempunyai' bukan soal harta — melainkan pendengaran hati yang mau mendengar dan melakukan Firman. Perumpamaan mina: hamba ketiga menyimpan di sapu tangan, minanya diambil dan diberikan ke yang sudah punya 10. Ciri hamba menyimpan vs menanam. Kerajaan Allah bukan nanti — Lukas 11:20: sudah datang sekarang. Dengar satu, lakukan satu.", kategori:[7], trending:false, emoji:"🌱", link:"" },
   { id:149, judul:"Benci Esau", desc:"'Aku membenci Esau' bukan kutuk aktif — Tuhan cukup membiarkan Esau berjalan sendiri tanpa campur tangan ilahi. Yakub digembleng: 14 tahun kerja, upah diganti 10 kali, tidak pernah protes. Esau pilih istri sendiri, pindah tanpa panggilan, kaya dari warisan bukan proses. Tuhan hanya punya stok blessing — yang dibiarkan berjalan sendiri itulah yang menghasilkan sunyi sepi.", kategori:[7], trending:false, emoji:"🏔️", link:"" },
+  { id:150, judul:"Terpeleset Tergelincir", desc:"Asaf nyaris tergelincir karena cemburu melihat orang fasik mujur. Marah itu batu di hati — benih Firman tidak bisa berakar di atasnya. Racun yang kita minum sendiri: kita yang marah, kita yang rusak. Ilusi sosial media: yang ditampilkan vs yang disembunyikan. Titik balik: SAMPAI aku masuk ke Tempat Kudus. Hidup kita adalah mezbah.", kategori:[7], trending:false, emoji:"⚖️", link:"" },
 ];
 
 const CATEGORY_NAMES = {
@@ -1639,6 +1640,7 @@ const ARTICLE_COLORS = {
   147: "linear-gradient(135deg,#181008,#2c1e08,#38280a)",
   148: "linear-gradient(135deg,#181008,#2c1e08,#38280a)",
   149: "linear-gradient(135deg,#181008,#2c1e08,#38280a)",
+  150: "linear-gradient(135deg,#181008,#2c1e08,#38280a)",
 };
 
 function getCardColor(article) {
@@ -1794,7 +1796,8 @@ const SVG_DESIGNS = {
   146: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M20,25 L80,25 L80,75 L20,75 Z" stroke="#c9a84c" stroke-width="0.7"/><path d="M25,35 L75,35" stroke="#c9a84c" stroke-width="0.4" opacity="0.6"/><path d="M25,45 L60,45" stroke="#c9a84c" stroke-width="0.4" opacity="0.5"/><path d="M25,55 L65,55" stroke="#c9a84c" stroke-width="0.4" opacity="0.5"/><path d="M25,65 L50,65" stroke="#c9a84c" stroke-width="0.4" opacity="0.4"/><path d="M50,15 L50,25" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/><circle cx="50" cy="12" r="5" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/></svg>`,
   147: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><semicircle/><path d="M10,60 Q50,20 90,60" stroke="#c9a84c" stroke-width="0.7"/><circle cx="50" cy="38" r="12" stroke="#c9a84c" stroke-width="0.6"/><path d="M50,26 L50,18" stroke="#c9a84c" stroke-width="0.5" opacity="0.6"/><path d="M30,60 Q50,50 70,60 Q50,70 30,60Z" stroke="#c9a84c" stroke-width="0.4" opacity="0.5"/><path d="M15,70 L85,70" stroke="#c9a84c" stroke-width="0.4" opacity="0.4"/><path d="M20,78 L80,78" stroke="#c9a84c" stroke-width="0.3" opacity="0.3"/></svg>`,
   148: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><circle cx="50" cy="72" r="6" stroke="#c9a84c" stroke-width="0.6"/><path d="M50,66 L50,52" stroke="#c9a84c" stroke-width="0.5"/><path d="M50,52 Q40,44 32,32 M50,52 Q60,44 68,32" stroke="#c9a84c" stroke-width="0.5" opacity="0.7"/><path d="M32,32 Q28,22 36,18 M68,32 Q72,22 64,18" stroke="#c9a84c" stroke-width="0.4" opacity="0.5"/><path d="M36,18 Q50,14 64,18" stroke="#c9a84c" stroke-width="0.5" opacity="0.6"/><path d="M30,78 L70,78" stroke="#c9a84c" stroke-width="0.4" opacity="0.4"/><circle cx="50" cy="14" r="4" fill="#c9a84c" opacity="0.2"/></svg>`,
-  149: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M10,75 L30,40 L50,55 L70,25 L90,75 Z" stroke="#c9a84c" stroke-width="0.7"/><path d="M30,40 L50,55 L70,25" stroke="#c9a84c" stroke-width="0.4" opacity="0.5"/><path d="M10,75 L90,75" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/><circle cx="70" cy="25" r="4" fill="#c9a84c" opacity="0.2"/><path d="M30,75 L30,60 M60,75 L60,50" stroke="#c9a84c" stroke-width="0.4" opacity="0.4"/></svg>`
+  149: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M10,75 L30,40 L50,55 L70,25 L90,75 Z" stroke="#c9a84c" stroke-width="0.7"/><path d="M30,40 L50,55 L70,25" stroke="#c9a84c" stroke-width="0.4" opacity="0.5"/><path d="M10,75 L90,75" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/><circle cx="70" cy="25" r="4" fill="#c9a84c" opacity="0.2"/><path d="M30,75 L30,60 M60,75 L60,50" stroke="#c9a84c" stroke-width="0.4" opacity="0.4"/></svg>`,
+  150: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M30,70 Q40,55 50,60 Q60,65 70,45" stroke="#c9a84c" stroke-width="0.7"/><circle cx="30" cy="70" r="4" fill="#c9a84c" opacity="0.3"/><circle cx="70" cy="45" r="4" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/><path d="M20,78 L80,78" stroke="#c9a84c" stroke-width="0.5" opacity="0.4"/><path d="M45,25 L50,15 L55,25" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/><path d="M50,15 L50,60" stroke="#c9a84c" stroke-width="0.3" opacity="0.3"/></svg>`
 };
 
 
@@ -1960,7 +1963,7 @@ document.addEventListener('keydown', e => {
 });
 
 function openArticle(id) {
-  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149];
+  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150];
   if (inAppArticles.includes(id)) {
     document.querySelectorAll('.article-content').forEach(el => el.style.display = 'none');
     const target = document.getElementById('article-' + id);
@@ -39196,6 +39199,217 @@ document.addEventListener('keydown', e => {
       <div class="article-closing">
         <p class="article-closing-verse">"Kasih Tuhan kepada Yakub berarti digembleng, diproses, dibentuk — bukan dimanjakan. 'Kebencian' Tuhan kepada Esau berarti dibiarkan berjalan sendiri tanpa campur tangan ilahi. Pilihlah untuk menjadi Yakub. Biarlah Tuhan berperkara dengan hidupmu hari ini."</p>
         <p class="article-closing-ref">— Roma 9:6–18 · Maleakhi 1:2–3 · Kejadian 36:6–8</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ARTICLE 150 -->
+  <div id="article-150" class="article-content" style="display:none">
+    <div class="article-hero">
+      <div class="article-hero-bg" style="background:linear-gradient(135deg,#181008,#2c1e08,#38280a);"></div>
+      <div class="article-hero-glow"></div>
+      <span class="article-hero-emoji">⚖️</span>
+      <div class="article-hero-content">
+        <div class="article-hero-eyebrow">Kerajaan, Bukan Agama · Mazmur 73</div>
+        <h1 class="article-hero-title">Terpeleset Tergelincir</h1>
+        <div class="article-hero-tags">
+          <span class="article-tag">Mazmur 73</span>
+          <span class="article-tag">Tempat Kudus</span>
+          <span class="article-tag">Dimensi Roh</span>
+        </div>
+      </div>
+    </div>
+    <div class="article-body">
+      <div class="article-verse">
+        <p>"Tetapi aku, aku suka dekat pada Allah. Aku menaruh tempat perlindunganku pada Tuhan Allah."</p>
+        <cite>— Mazmur 73:28</cite>
+      </div>
+      <p class="article-intro">Sebuah perjalanan rohani berdasarkan Mazmur 73 — ketika hati kita bergejolak melihat orang fasik mujur, dan bagaimana Asaf menemukan jawabannya bukan di luar, melainkan jauh di dalam Tempat Kudus Allah.</p>
+
+      <div class="article-section">
+        <h2>Jawaban Ada di Ayat Pertama</h2>
+        <div class="article-verse">
+          <p>"Sesungguhnya Allah itu baik bagi mereka yang tulus hatinya, bagi mereka yang bersih hatinya."</p>
+          <cite>— Mazmur 73:1</cite>
+        </div>
+        <p>Asaf memulai dengan kesimpulan yang seharusnya menjadi fondasi segalanya. Namun ironisnya, perjalanan mazmur ini justru membuktikan betapa sulitnya memegang keyakinan itu ketika mata kita mulai melirik ke kiri dan ke kanan.</p>
+        <div class="article-highlight">
+          <p>Jika hati kita mudah terbakar melihat kemujuran orang lain, itu adalah sinyal. Bukan tentang orang yang kita lihat — melainkan tentang kondisi hati kita sendiri. Hati yang tidak sepenuhnya tulus, tidak sepenuhnya bersih, adalah tanah yang mudah goyah.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Sedikit Lagi Kakiku Terpeleset</h2>
+        <p>Asaf hampir jatuh. Nyaris tergelincir. Dan ia tahu persis mengapa — karena ia cemburu kepada para pembual. Cemburu kepada mereka yang mujur bukan karena kerja keras dan kejujuran, melainkan karena tipu daya.</p>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">💪</div>
+            <div class="article-step-content">
+              <h4>Mereka Tidak Sakit</h4>
+              <p>Sehat, gemuk, tidak mengalami kesusahan manusia. Tidak kena tulah seperti orang lain.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">👑</div>
+            <div class="article-step-content">
+              <h4>Mereka Sombong</h4>
+              <p>Berkalungkan kecongkakan, berpakaian kekerasan. Hati meluap-luap dengan sangkaan. Menyindir dan mengata-ngatai dengan jahat.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">☁️</div>
+            <div class="article-step-content">
+              <h4>Mereka Menantang Langit</h4>
+              <p>"Bagaimana Allah tahu hal itu? Adakah pengetahuan pada Yang Mahatinggi?" — dan langit tetap diam.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Racun yang Kita Minum Sendiri</h2>
+        <p>Inilah paradoks yang menyakitkan: kita yang marah, kita yang minum racun, namun kita berharap mereka yang gagal. Kita jengkel melihat orang fasik berhasil — dan dalam kemarahan itu, justru kita sendiri yang dirusak dari dalam.</p>
+        <div class="article-highlight">
+          <p>Marah itu batu. Batu di dalam hati kita. Dan benih Firman Tuhan tidak bisa berakar di atas batu.</p>
+        </div>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>⚠️ Yang Terjadi dalam Diri Kita</h4>
+            <ul>
+              <li>Kita marah — energi dan waktu habis mengamati yang kita benci</li>
+              <li>Kita minum racun — kemarahan merusak hati kita sendiri, bukan mereka</li>
+              <li>Kita berharap keliru — padahal kita sendiri yang menghancurkan tanah hati kita</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>✦ Medan Pertempuran yang Benar</h4>
+            <ul>
+              <li>Kerajaan Allah itu dimensinya rohani — bukan lahiriah</li>
+              <li>Kita terus bertarung di arena yang salah: arena fisik</li>
+              <li>Seperti tentara Israel 40 hari kocar-kacir menghadapi Goliat — sampai Daud tiba</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Benih yang Berakar dalam Gelap</h2>
+        <p>Ketika benih itu berakar, tidak ada yang bisa melihatnya. Terjadi di dalam tanah — gelap, kotor, sunyi, tidak ada penonton. Begitu pula cara Firman Tuhan berakar dalam hati kita.</p>
+        <div class="article-highlight">
+          <p>Sementara kita pusing dengan mobil bagus, baju bagus, liburan mewah orang lain — Tuhan sedang bekerja dalam hati kita. Prosesnya tidak kelihatan. Tidak ada sorotan. Tidak ada like dan komentar. Namun di situlah pertumbuhan sejati berlangsung — di kedalaman dimensi roh yang tidak bisa difoto dan diunggah.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Ilusi Sosial Media dan Dunia Tipu-Tipu</h2>
+        <p>Banyak yang kita lihat di layar adalah ilusi — private jet yang ternyata mock-up, Lambo yang ternyata sewaan. Problemnya bukan sosial media itu sendiri, melainkan apa yang terjadi dalam hati kita saat kita menontonnya.</p>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>📱 Yang Ditampilkan</h4>
+            <ul>
+              <li>Rumah mewah, mobil mahal</li>
+              <li>Liburan ke luar negeri</li>
+              <li>Bisnis yang booming</li>
+              <li>Wajah selalu bahagia</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>🚪 Yang Disembunyikan</h4>
+            <ul>
+              <li>Pertengkaran di balik pintu</li>
+              <li>Hutang yang menumpuk</li>
+              <li>Kekosongan di dalam hati</li>
+              <li>Fondasi roh yang rapuh</li>
+            </ul>
+          </div>
+        </div>
+        <div class="article-quote">
+          <p>Kita mengikuti akun yang paling kita benci. Kita mengamati orang yang paling membuat kita iri. Dan dengan setiap klik, kita menyiram benih kedengkian dalam hati kita sendiri.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Sampai Aku Masuk ke Tempat Kudus</h2>
+        <p>Inilah titik balik Mazmur 73. Satu kata yang mengubah segalanya: "sampai." Sampai aku masuk ke dalam Tempat Kudus Allah. Di sanalah mata Asaf terbuka.</p>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">1</div>
+            <div class="article-step-content">
+              <h4>Gejolak Hati</h4>
+              <p>Cemburu, marah, iri. "Sia-sia aku mempertahankan hati yang bersih."</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">2</div>
+            <div class="article-step-content">
+              <h4>Pergumulan</h4>
+              <p>"Hal itu menjadi kesulitan di mataku." Tidak mengerti, nyaris tergelincir.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">3</div>
+            <div class="article-step-content">
+              <h4>Masuk Hadirat</h4>
+              <p>Masuk ke Tempat Kudus. Di sana segala sesuatu menjadi jelas dan nyata.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">4</div>
+            <div class="article-step-content">
+              <h4>Mata Terbuka</h4>
+              <p>"Di tempat-tempat licin Kau taruh mereka." Tanpa fondasi, mereka hancur sendiri.</p>
+            </div>
+          </div>
+        </div>
+        <div class="article-highlight">
+          <p>Perubahannya bukan datang dari argumen, bukan dari penjelasan teologis — melainkan dari masuk ke dalam hadirat Allah sendiri.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Hidup Kita Adalah Mezbah</h2>
+        <p>Ketika kita mengerti bahwa hidup kita adalah mezbah, dan seluruh fokus kita — segenap hati, jiwa, akal budi, dan kekuatan — adalah korban yang kita persembahkan, maka pandangan kita berubah total.</p>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">🪨</div>
+            <div class="article-step-content">
+              <h4>Hidup = Mezbah</h4>
+              <p>Setiap hari, setiap langkah, adalah persembahan kepada Tuhan yang melihat dan menilai.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🔥</div>
+            <div class="article-step-content">
+              <h4>Fokus = Korban</h4>
+              <p>Segenap hati, jiwa, akal budi, kekuatan — itulah korban kita. Bukan pencapaian lahiriah.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🚪</div>
+            <div class="article-step-content">
+              <h4>Mezbah = Pintu</h4>
+              <p>Mezbah yang dijaga benar adalah pintu masuk ke dimensi rohani, ke habitat sejati kita.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-closing">
+        <p class="article-closing-verse">"Pertempuran kita akan dimenangkan bukan dengan berteriak melawan orang fasik, bukan dengan membuktikan siapa yang lebih baik — melainkan dengan setia menjaga mezbah, dan membiarkan Tuhan yang bekerja dalam kedalaman roh kita. Kompetisi yang benar bukan dengan orang lain, melainkan dengan diri sendiri kemarin."</p>
+        <p class="article-closing-ref">— Mazmur 73</p>
       </div>
     </div>
   </div>
