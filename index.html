@@ -1459,6 +1459,7 @@ const ARTICLES = [
   { id:149, judul:"Benci Esau", desc:"'Aku membenci Esau' bukan kutuk aktif — Tuhan cukup membiarkan Esau berjalan sendiri tanpa campur tangan ilahi. Yakub digembleng: 14 tahun kerja, upah diganti 10 kali, tidak pernah protes. Esau pilih istri sendiri, pindah tanpa panggilan, kaya dari warisan bukan proses. Tuhan hanya punya stok blessing — yang dibiarkan berjalan sendiri itulah yang menghasilkan sunyi sepi.", kategori:[7], trending:false, emoji:"🏔️", link:"" },
   { id:150, judul:"Terpeleset Tergelincir", desc:"Asaf nyaris tergelincir karena cemburu melihat orang fasik mujur. Marah itu batu di hati — benih Firman tidak bisa berakar di atasnya. Racun yang kita minum sendiri: kita yang marah, kita yang rusak. Ilusi sosial media: yang ditampilkan vs yang disembunyikan. Titik balik: SAMPAI aku masuk ke Tempat Kudus. Hidup kita adalah mezbah.", kategori:[7], trending:false, emoji:"⚖️", link:"" },
   { id:151, judul:"Curah Hati", desc:"Ayat 1 vs ayat 6 Mazmur 62: dari pernyataan iman menjadi harapan yang teruji. Musuh terberat bukan dari luar, tapi dari ring pertama — yang memberkati dengan mulut, mengutuki dalam hati. Cara dunia: curhat di medsos. Cara Firman: curahkan kepada Tuhan. Kisah tikus: yang pernah diselamatkan bertahan 60 jam, yang belum pernah menyerah 15 menit.", kategori:[7], trending:false, emoji:"🗣️", link:"" },
+  { id:152, judul:"Neraca Angin", desc:"Semua yang dunia anggap berharga, di atas neraca Tuhan lebih ringan daripada angin. Tekél — Belsyazar ditimbang, terlalu ringan. Kuda hitam Wahyu 6: jangan rusakkan minyak dan anggur di tengah krisis. Minyak = Roh Kudus, Anggur = buah kehidupan. Yusuf tidak panik saat krisis karena minyaknya penuh bahkan di penjara. Neraca mengukur seberapa dalam hidup kita menyentuh orang lain.", kategori:[2], trending:false, emoji:"⚖️", link:"" },
 ];
 
 const CATEGORY_NAMES = {
@@ -1643,6 +1644,7 @@ const ARTICLE_COLORS = {
   149: "linear-gradient(135deg,#181008,#2c1e08,#38280a)",
   150: "linear-gradient(135deg,#181008,#2c1e08,#38280a)",
   151: "linear-gradient(135deg,#181008,#2c1e08,#38280a)",
+  152: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
 };
 
 function getCardColor(article) {
@@ -1800,7 +1802,8 @@ const SVG_DESIGNS = {
   148: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><circle cx="50" cy="72" r="6" stroke="#c9a84c" stroke-width="0.6"/><path d="M50,66 L50,52" stroke="#c9a84c" stroke-width="0.5"/><path d="M50,52 Q40,44 32,32 M50,52 Q60,44 68,32" stroke="#c9a84c" stroke-width="0.5" opacity="0.7"/><path d="M32,32 Q28,22 36,18 M68,32 Q72,22 64,18" stroke="#c9a84c" stroke-width="0.4" opacity="0.5"/><path d="M36,18 Q50,14 64,18" stroke="#c9a84c" stroke-width="0.5" opacity="0.6"/><path d="M30,78 L70,78" stroke="#c9a84c" stroke-width="0.4" opacity="0.4"/><circle cx="50" cy="14" r="4" fill="#c9a84c" opacity="0.2"/></svg>`,
   149: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M10,75 L30,40 L50,55 L70,25 L90,75 Z" stroke="#c9a84c" stroke-width="0.7"/><path d="M30,40 L50,55 L70,25" stroke="#c9a84c" stroke-width="0.4" opacity="0.5"/><path d="M10,75 L90,75" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/><circle cx="70" cy="25" r="4" fill="#c9a84c" opacity="0.2"/><path d="M30,75 L30,60 M60,75 L60,50" stroke="#c9a84c" stroke-width="0.4" opacity="0.4"/></svg>`,
   150: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M30,70 Q40,55 50,60 Q60,65 70,45" stroke="#c9a84c" stroke-width="0.7"/><circle cx="30" cy="70" r="4" fill="#c9a84c" opacity="0.3"/><circle cx="70" cy="45" r="4" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/><path d="M20,78 L80,78" stroke="#c9a84c" stroke-width="0.5" opacity="0.4"/><path d="M45,25 L50,15 L55,25" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/><path d="M50,15 L50,60" stroke="#c9a84c" stroke-width="0.3" opacity="0.3"/></svg>`,
-  151: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M35,68 Q28,60 30,50 Q32,38 45,32 Q58,26 68,35 Q78,44 72,55 Q66,66 55,65" stroke="#c9a84c" stroke-width="0.7"/><path d="M55,65 L50,75 L60,72 Z" stroke="#c9a84c" stroke-width="0.5" fill="none" opacity="0.5"/><circle cx="42" cy="44" r="2" fill="#c9a84c" opacity="0.3"/><circle cx="55" cy="42" r="2" fill="#c9a84c" opacity="0.3"/></svg>`
+  151: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M35,68 Q28,60 30,50 Q32,38 45,32 Q58,26 68,35 Q78,44 72,55 Q66,66 55,65" stroke="#c9a84c" stroke-width="0.7"/><path d="M55,65 L50,75 L60,72 Z" stroke="#c9a84c" stroke-width="0.5" fill="none" opacity="0.5"/><circle cx="42" cy="44" r="2" fill="#c9a84c" opacity="0.3"/><circle cx="55" cy="42" r="2" fill="#c9a84c" opacity="0.3"/></svg>`,
+  152: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,25 L50,45" stroke="#a855f7" stroke-width="0.6"/><path d="M25,42 L75,42" stroke="#a855f7" stroke-width="0.7"/><path d="M25,42 L18,58 L32,58 Z" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><path d="M75,42 L68,58 L82,58 Z" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><circle cx="50" cy="22" r="4" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M40,75 L60,75" stroke="#a855f7" stroke-width="0.5" opacity="0.4"/><path d="M50,45 L50,75" stroke="#a855f7" stroke-width="0.4" opacity="0.3"/></svg>`
 };
 
 
@@ -1966,7 +1969,7 @@ document.addEventListener('keydown', e => {
 });
 
 function openArticle(id) {
-  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151];
+  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152];
   if (inAppArticles.includes(id)) {
     document.querySelectorAll('.article-content').forEach(el => el.style.display = 'none');
     const target = document.getElementById('article-' + id);
@@ -39682,6 +39685,171 @@ document.addEventListener('keydown', e => {
       <div class="article-closing">
         <p class="article-closing-verse">"Pada Allah ada keselamatanku dan kemuliaanku. Gunung batu kekuatanku, tempat perlindunganku ialah Allah. Dari perjalanan dapat pengalaman. Dari pengalaman dapat pembelajaran. Dari pembelajaran dapat pengenalan. Dan pengenalan membawa kita — akhirnya — mempercayai Tuhan sepenuhnya. Hanya Dia. Setiap waktu."</p>
         <p class="article-closing-ref">— Mazmur 62 · Mazmur 73</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ARTICLE 152 -->
+  <div id="article-152" class="article-content" style="display:none">
+    <div class="article-hero">
+      <div class="article-hero-bg" style="background:linear-gradient(135deg,#1a0a28,#2a1040,#361452);"></div>
+      <div class="article-hero-glow"></div>
+      <span class="article-hero-emoji">⚖️</span>
+      <div class="article-hero-content">
+        <div class="article-hero-eyebrow">Memahami Jati Diri · Mazmur 62 · Daniel 5 · Wahyu 6</div>
+        <h1 class="article-hero-title">Neraca Angin</h1>
+        <div class="article-hero-tags">
+          <span class="article-tag">Mazmur 62:9–10</span>
+          <span class="article-tag">Daniel 5:24–27</span>
+          <span class="article-tag">Wahyu 6:5–6</span>
+        </div>
+      </div>
+    </div>
+    <div class="article-body">
+      <div class="article-verse">
+        <p>"Hanya angin saja orang-orang yang hina, suatu dusta saja orang-orang yang mulia; pada neraca mereka naik ke atas, mereka sekalian lebih ringan daripada angin."</p>
+        <cite>— Mazmur 62:10</cite>
+      </div>
+      <p class="article-intro">Sebuah renungan dari Mazmur 62:9–10, Daniel 5:24–27, dan Wahyu 6:5–6 — tentang timbangan Tuhan yang mengukur hidup kita jauh melampaui kemuliaan dunia ini. Saat semua yang dunia anggap berharga diletakkan di atas neraca Tuhan, apa yang tersisa? Lebih ringan daripada angin.</p>
+
+      <div class="article-section">
+        <h2>Percayalah Setiap Waktu</h2>
+        <div class="article-verse">
+          <p>"Percayalah kepada-Nya setiap waktu, hai umat; curahkanlah isi hatimu di hadapan-Nya; Allah ialah tempat perlindungan kita."</p>
+          <cite>— Mazmur 62:9</cite>
+        </div>
+        <p>Kata setiap waktu bukan hanya saat kita senang. Setiap waktu berarti di tengah kebingungan, di tengah rasa tidak mengerti, di tengah malam yang panjang ketika langit terasa diam.</p>
+        <div class="article-highlight">
+          <p>Ada perbedaan yang dalam antara orang yang mengeluh ke kiri dan ke kanan — membiarkan hatinya panas karena melihat orang lain — dengan orang yang datang kepada Tuhan dan berkata dengan jujur: "Tuhan, saya tidak mengerti. Tolong ajar saya." Yang pertama menguras, yang kedua memulihkan.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Gambaran Neraca di Pasar</h2>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>⚖️ Neraca Dua Sisi</h4>
+            <ul>
+              <li>Di satu sisi, batu ukuran — 100 gram, 500 gram, hingga satu kilogram</li>
+              <li>Di sisi lainnya, barang yang akan dibeli</li>
+              <li>Hanya seimbang ketika kedua sisi memiliki bobot yang tepat sama</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>✦ Neraca Tuhan</h4>
+            <ul>
+              <li>Standar, rencana, dan kehendak-Nya adalah batu penimbang-Nya</li>
+              <li>Di sisi lain, hidup kita diletakkan</li>
+              <li>Lebih ringan daripada angin — ini bukan hukuman, ini diagnosa</li>
+            </ul>
+          </div>
+        </div>
+        <div class="article-highlight">
+          <p>Neraca itu tidak akan pernah seimbang selama yang kita kumpulkan hanya harta, kehormatan, dan kekuasaan — tanpa minyak, tanpa anggur, tanpa keintiman dengan Tuhan.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Tekél — Didapati Terlalu Ringan</h2>
+        <p>Raja Belsyazar dari Babel adalah gambaran paling dramatis dari neraca yang tidak seimbang. Dalam satu malam pesta yang megah, muncul sebuah tangan yang menuliskan: Mené, Mené, Tekél, Ufarsin.</p>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">📜</div>
+            <div class="article-step-content">
+              <h4>Mené</h4>
+              <p>Masa pemerintahanmu telah dihitung oleh Allah dan telah diakhiri.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">⚖️</div>
+            <div class="article-step-content">
+              <h4>Tekél</h4>
+              <p>Engkau ditimbang dengan neraca dan didapati terlalu ringan. Bukan sedikit kurang. Terlalu ringan.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">💔</div>
+            <div class="article-step-content">
+              <h4>Ufarsin</h4>
+              <p>Kerajaanmu telah dibagi dan diberikan kepada orang lain.</p>
+            </div>
+          </div>
+        </div>
+        <div class="article-highlight">
+          <p>Raja yang memiliki semua yang dunia tawarkan — kemuliaan, kekayaan, kehormatan, kekuasaan — diletakkan di atas neraca Tuhan dan hasilnya: tidak ada bobotnya sama sekali. Bahkan Iblis pun menggunakan tawaran yang sama saat mencobai Yesus: "Semua ini akan aku berikan kepada-Mu, jika Engkau sujud menyembah aku." Yesus menolaknya — karena Ia tahu semua itu, di atas neraca Tuhan, tidak lebih dari angin.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Kuda Hitam dan Timbangan di Tangannya</h2>
+        <p>Ketika Anak Domba membuka meterai ketiga, penunggang kuda hitam muncul dengan sebuah timbangan. "Secupak gandum sedinar, dan tiga cupak jelai sedinar." Ini nubuat konkret: harga pangan akan meledak naik.</p>
+        <div class="article-highlight">
+          <p>Namun ada satu kalimat penting: "Tetapi janganlah rusakkan minyak dan anggur." Di tengah krisis yang menghantam segalanya, ada sesuatu yang dilindungi. Mereka yang memilikinya akan selamat. Ini bukan tentang stok makanan — ini tentang kondisi rohani yang kita persiapkan sekarang.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Minyak dan Anggur — Persembahan Hidup Kita</h2>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">🕯️</div>
+            <div class="article-step-content">
+              <h4>Minyak — Roh dan Kehadiran</h4>
+              <p>Melambangkan Roh Kudus yang memenuhi, membarakan, dan menerangi. Tanpa minyak, pelita padam. Minyak tidak datang tiba-tiba saat krisis — ia dibangun dalam kesetiaan harian.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🍇</div>
+            <div class="article-step-content">
+              <h4>Anggur — Buah Kehidupan</h4>
+              <p>Melambangkan buah dari hidup yang tinggal di dalam pokok anggur yang benar. Kasih, sukacita, damai sejahtera, kesabaran — semua ini adalah anggur.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🪨</div>
+            <div class="article-step-content">
+              <h4>Mezbah — Hidup yang Diserahkan</h4>
+              <p>Tempat di mana kita meletakkan diri kita sepenuhnya. Bukan hanya persembahan, tapi hidup kita sendiri.</p>
+            </div>
+          </div>
+        </div>
+        <div class="article-quote">
+          <p>Ada begitu banyak anak-anak Tuhan yang kekurangan minyak — bukan karena mereka tidak percaya, tapi karena mereka terlalu sibuk melirik ke kiri dan ke kanan. Hati yang panas karena membandingkan diri menguras minyak lebih cepat daripada yang kita sadari.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Jebakan Mata yang Melirik</h2>
+        <p>Mazmur 73 adalah cermin yang jujur. Asaf mengaku hampir saja kakinya tergelincir — bukan karena ia meninggalkan Tuhan secara terang-terangan, tapi karena ia mulai memperhatikan orang-orang fasik yang tampaknya hidup enak.</p>
+        <div class="article-highlight">
+          <p>Inilah kondisi yang bisa menghancurkan minyak kita — iri hati yang tersembunyi, komentar yang tidak berhenti mengalir, hati yang panas karena membandingkan porsi. Tapi Asaf menemukan kunci pemulihannya — ia masuk ke tempat kudus Allah. Di sanalah pengertiannya terbuka.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Seperti Yusuf — Saat Krisis Menggeser Kekayaan</h2>
+        <p>Ketika tujuh tahun kelaparan melanda Mesir, seluruh harta rakyat mengalir masuk ke istana Firaun. Bukan karena Firaun licik — tapi karena Tuhan sudah menyiapkan Yusuf, seorang yang mengerti isi hati Tuhan, yang hidupnya adalah mezbah, yang minyaknya penuh bahkan di tengah penjara.</p>
+        <div class="article-highlight">
+          <p>Yusuf tidak panik. Yusuf tidak iri pada saudara-saudaranya. Yusuf tidak sibuk mengomel tentang ketidakadilan. Ia memusatkan perhatiannya kepada Tuhan, dan Tuhan memberikan pengertian tentang apa yang akan terjadi — jauh sebelum krisis itu tiba. Bisnis hanya alat. Uang hanya alat. Yang Tuhan cari adalah hati yang sepenuhnya milik-Nya — itulah yang membuat neraca kita seimbang.</p>
+        </div>
+      </div>
+
+      <div class="article-closing">
+        <p class="article-closing-verse">"Minyak dan anggur lah yang Bapa inginkan — saat hidup kita menyentuh orang lain. Bukan kemuliaan yang dilihat dunia. Tapi kehidupan yang mengalir, yang memberi, yang memancarkan terang karena ia tinggal dekat dengan sumber terang itu sendiri. Hidup yang bukan lebih ringan dari angin — tapi hidup yang memiliki bobot kekal di hadapan Tuhan."</p>
+        <p class="article-closing-ref">— Mazmur 62:9–10 · Daniel 5:24–27 · Wahyu 6:5–6</p>
       </div>
     </div>
   </div>
