@@ -1462,6 +1462,7 @@ const ARTICLES = [
   { id:152, judul:"Neraca Angin", desc:"Semua yang dunia anggap berharga, di atas neraca Tuhan lebih ringan daripada angin. Tekél — Belsyazar ditimbang, terlalu ringan. Kuda hitam Wahyu 6: jangan rusakkan minyak dan anggur di tengah krisis. Minyak = Roh Kudus, Anggur = buah kehidupan. Yusuf tidak panik saat krisis karena minyaknya penuh bahkan di penjara. Neraca mengukur seberapa dalam hidup kita menyentuh orang lain.", kategori:[2], trending:false, emoji:"⚖️", link:"" },
   { id:153, judul:"Pipit Layang", desc:"Burung pipit dihargai setengah duit, tapi Bapa tetap perhatikan. Lukas 12:6: yang bonus (nol harganya) pun tidak dilupakan Allah. Mazmur 84: burung pipit dapat rumah, layang-layang dapat sarang — di mezbah Tuhan, bukan istana. Mezbah dan bejana adalah ritme harian: sangkal diri, basuh Firman, tinggal dalam hadirat. Kesaksian Hawila: fokus melayani mengalahkan fokus untung.", kategori:[2], trending:false, emoji:"🐦", link:"" },
   { id:154, judul:"Jiwa Hancur", desc:"Korban sembelihan kepada Allah ialah jiwa yang hancur, bukan domba. Jiwa hancur = stop membela diri, stop menyalahkan orang lain, sadar sepenuhnya 'saya yang salah'. Adam menyalahkan Hawa dan Tuhan sekaligus — potret jiwa belum hancur. Hutang darah hanya bisa dibayar darah — Yesus yang membayar. Urutan tak terbalik: jiwa hancur, dibebaskan, baru sorak-sorai.", kategori:[2], trending:false, emoji:"💔", link:"" },
+  { id:155, judul:"Terbakar Seluruhnya", desc:"Daud dipilih bukan karena bakat, tapi karena hati. Ketika pemimpin jatuh, bangsa ikut terjatuh — tembok Yerusalem runtuh bukan dari luar tapi dari dalam. Dosa yang terlihat vs dosa yang disembunyikan rapat-rapat. Ahitofel dan Yoab hancur karena kemarahan yang tidak dibawa kepada Tuhan. Korban terbakar seluruhnya: tidak ada sisa, tidak ada yang disembunyikan.", kategori:[2], trending:false, emoji:"🔥", link:"" },
 ];
 
 const CATEGORY_NAMES = {
@@ -1649,6 +1650,7 @@ const ARTICLE_COLORS = {
   152: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
   153: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
   154: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
+  155: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
 };
 
 function getCardColor(article) {
@@ -1809,7 +1811,8 @@ const SVG_DESIGNS = {
   151: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M35,68 Q28,60 30,50 Q32,38 45,32 Q58,26 68,35 Q78,44 72,55 Q66,66 55,65" stroke="#c9a84c" stroke-width="0.7"/><path d="M55,65 L50,75 L60,72 Z" stroke="#c9a84c" stroke-width="0.5" fill="none" opacity="0.5"/><circle cx="42" cy="44" r="2" fill="#c9a84c" opacity="0.3"/><circle cx="55" cy="42" r="2" fill="#c9a84c" opacity="0.3"/></svg>`,
   152: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,25 L50,45" stroke="#a855f7" stroke-width="0.6"/><path d="M25,42 L75,42" stroke="#a855f7" stroke-width="0.7"/><path d="M25,42 L18,58 L32,58 Z" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><path d="M75,42 L68,58 L82,58 Z" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><circle cx="50" cy="22" r="4" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M40,75 L60,75" stroke="#a855f7" stroke-width="0.5" opacity="0.4"/><path d="M50,45 L50,75" stroke="#a855f7" stroke-width="0.4" opacity="0.3"/></svg>`,
   153: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M30,50 Q40,40 50,45 Q45,35 55,32 Q65,35 62,45 Q72,40 78,50 Q68,52 62,48 Q65,58 55,58 Q50,52 50,45 Q45,52 35,52 Q32,50 30,50Z" stroke="#a855f7" stroke-width="0.6"/><rect x="35" y="70" width="30" height="15" rx="1" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><circle cx="60" cy="42" r="1.5" fill="#a855f7" opacity="0.4"/></svg>`,
-  154: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,25 Q35,35 32,50 Q30,65 40,75 L50,85 L60,75 Q70,65 68,50 Q65,35 50,25Z" stroke="#a855f7" stroke-width="0.7"/><path d="M50,40 L44,55 L52,55 L46,72" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><path d="M35,50 L65,50" stroke="#a855f7" stroke-width="0.3" opacity="0.3"/></svg>`
+  154: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,25 Q35,35 32,50 Q30,65 40,75 L50,85 L60,75 Q70,65 68,50 Q65,35 50,25Z" stroke="#a855f7" stroke-width="0.7"/><path d="M50,40 L44,55 L52,55 L46,72" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><path d="M35,50 L65,50" stroke="#a855f7" stroke-width="0.3" opacity="0.3"/></svg>`,
+  155: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,80 Q35,72 32,58 Q30,48 38,42 Q40,50 44,48 Q42,38 50,32 Q52,42 58,40 Q56,30 62,25 Q68,35 65,45 Q70,42 70,50 Q72,60 62,68 Q68,66 68,72 Q62,80 50,80Z" stroke="#a855f7" stroke-width="0.7"/></svg>`
 };
 
 
@@ -1975,7 +1978,7 @@ document.addEventListener('keydown', e => {
 });
 
 function openArticle(id) {
-  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154];
+  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155];
   if (inAppArticles.includes(id)) {
     document.querySelectorAll('.article-content').forEach(el => el.style.display = 'none');
     const target = document.getElementById('article-' + id);
@@ -40239,6 +40242,225 @@ document.addEventListener('keydown', e => {
       <div class="article-closing">
         <p class="article-closing-verse">"Jiwa hancur. Stop berdalih. Stop membela diri. Stop merasa benar sendiri. Sadar semua hanya karena Darah Yesus. Itulah korban yang sejati. Itulah menggenapi hukum Taurat. Itulah jubah pesta yang membawa kita masuk ke dalam perjamuan Bapa."</p>
         <p class="article-closing-ref">— Mazmur 84 · Mazmur 51</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ARTICLE 155 -->
+  <div id="article-155" class="article-content" style="display:none">
+    <div class="article-hero">
+      <div class="article-hero-bg" style="background:linear-gradient(135deg,#1a0a28,#2a1040,#361452);"></div>
+      <div class="article-hero-glow"></div>
+      <span class="article-hero-emoji">🔥</span>
+      <div class="article-hero-content">
+        <div class="article-hero-eyebrow">Memahami Jati Diri · Mazmur 51:16–21</div>
+        <h1 class="article-hero-title">Terbakar Seluruhnya</h1>
+        <div class="article-hero-tags">
+          <span class="article-tag">Mazmur 51:16–21</span>
+          <span class="article-tag">Rahasia Tersembunyi</span>
+          <span class="article-tag">Pertobatan Sejati</span>
+        </div>
+      </div>
+    </div>
+    <div class="article-body">
+      <div class="article-verse">
+        <p>"Lepaskanlah aku dari hutang darah, ya Allah, Allah keselamatanku, maka lidahku akan bersorak-sorai memberitakan keadilan-Mu."</p>
+        <cite>— Mazmur 51:16–17</cite>
+      </div>
+      <p class="article-intro">Sebuah renungan mendalam dari Mazmur 51:16–21 — tentang jiwa yang hancur, hati yang patah, dan api pertobatan yang membakar segalanya hingga tidak ada lagi yang tersembunyi di hadapan Tuhan. Ini bukan tentang ritual. Ini tentang ketulusan yang menyeluruh.</p>
+
+      <div class="article-section">
+        <h2>Firman yang Mengguncang</h2>
+        <p>Mazmur 51 bukan sekadar nyanyian. Ini adalah jeritan jiwa seorang raja yang telah jatuh ke dalam dosa terdalam — dosa yang dirancang dengan sengaja, disembunyikan dengan rapi, dan dilindungi oleh kekuasaan. Daud menulis ini dalam keheningan yang paling sunyi, setelah Nabi Nathan membuka rahasia yang paling gelap dalam hidupnya.</p>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">⚠️</div>
+            <div class="article-step-content">
+              <h4>Korban yang Ditolak</h4>
+              <p>Korban yang datang bersama manipulasi, penyangkalan, dan hati yang masih menutup-nutupi dosa. Tuhan tidak berkenan.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">✦</div>
+            <div class="article-step-content">
+              <h4>Korban yang Diterima</h4>
+              <p>Jiwa yang hancur. Hati yang patah dan remuk. Itulah satu-satunya korban yang tidak akan Tuhan pandang hina.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🔥</div>
+            <div class="article-step-content">
+              <h4>Korban Terbakar Seluruhnya</h4>
+              <p>Tidak ada yang disimpan. Tidak ada bagian yang tersembunyi. Seluruhnya dipersembahkan — termasuk rahasia yang paling dalam.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Daud: Dari yang Tidak Dipandang</h2>
+        <p>Ketika Samuel datang ke Bethlehem untuk mengurapi raja baru, tujuh anak laki-laki Isai dipanggil. Daud? Tidak dipanggil. Bahkan oleh bapaknya sendiri, Daud dianggap tidak ada hitungannya. Namun Samuel menunggu. Baru Daud dipanggil — dan Tuhan berfirman tegas: "Ini dia. Urapi dia."</p>
+        <div class="article-highlight">
+          <p>Ini bukan kisah tentang bakat. Ini adalah kisah tentang satu hal yang Tuhan lihat: hati. Daud punya hati untuk bangsanya. Prinsip Daud berlaku sampai hari ini: siapa pun kita — paling kecil, paling tidak dipandang — jika kita setia dalam hadirat Tuhan, Tuhan akan mengangkat kita sejauh hati kita mau mengikuti-Nya.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Seberapa Jauh Hatimu?</h2>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">👨‍👩‍👧</div>
+            <div class="article-step-content">
+              <h4>Hati untuk Keluarga</h4>
+              <p>Rindu melihat keluarga dipulihkan. Berdoa tanpa henti. Tuhan akan bawa kita punya kapasitas untuk memenangkan mereka satu per satu.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🏙️</div>
+            <div class="article-step-content">
+              <h4>Hati untuk Kota</h4>
+              <p>Pemimpin rohani membentuk suasana rohani kotanya. Sejauh hati kita untuk kota, sejauh itulah dampak yang Tuhan percayakan.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🇮🇩</div>
+            <div class="article-step-content">
+              <h4>Hati untuk Bangsa</h4>
+              <p>Indonesia Timur — negeri yang limpah, masyarakat yang baik, namun kerap dianaktirikan. Hati yang sungguh-sungguh di sini adalah benih perubahan yang luar biasa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Ketika Pemimpin Jatuh, Bangsa Ikut Terjatuh</h2>
+        <p>Saat Daud jatuh — membunuh Uria, mengambil Batsyeba — bukan hanya Daud yang menanggung akibatnya. Seluruh bangsa Israel masuk dalam bahaya rohani. Di Kejadian 3, yang Tuhan kejar bukan Hawa — meskipun Hawa yang memakan buah lebih dulu. Yang Tuhan kejar adalah Adam, karena Adam yang menerima mandat.</p>
+        <div class="article-highlight">
+          <p>Apa jawaban Adam ketika Tuhan meminta pertanggungjawaban? "Perempuan yang Kauberikan di sisiku ini, dia yang memberiku buah itu." Tidak ada jiwa yang hancur. Hanya pembelaan diri, pengalihan tanggung jawab, dan penyalahan kepada orang lain — bahkan menyiratkan menyalahkan Tuhan sendiri.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Tembok-Tembok yang Runtuh</h2>
+        <p>Setelah jiwa yang betul-betul hancur, Daud berdoa: "Lakukanlah kebaikan kepada Sion. Bangunkanlah tembok-tembok Yerusalem." Tembok itu dalam bahaya bukan karena musuh dari luar, tapi karena pemimpinnya sendiri telah jatuh dalam dosa yang disembunyikan dengan rapi.</p>
+        <div class="article-highlight">
+          <p>Prinsip ini berlaku di semua level. Seorang suami yang jatuh dalam dosa yang disembunyikan — istri dan anak masuk dalam bahaya rohani. Seorang pemimpin jemaat yang menyimpan rahasia gelap — jemaat menjadi rentan. Kita bisa membaca kondisi rohani suatu kota dari pemimpin rohaninya. Tapi Daud tidak menyerah — dia datang kepada Tuhan dengan hati hancur dan berdoa bagi semua yang ada di bawah tanggung jawabnya.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Dosa yang Disembunyikan Rapat-Rapat</h2>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>Dosa yang Terlihat</h4>
+            <ul>
+              <li>Kedagingan yang kita sadari — kemarahan, ego, nafsu</li>
+              <li>Bisa kita bawa ke mezbah Tuhan dan dibakar setiap hari</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>Dosa yang Disembunyikan</h4>
+            <ul>
+              <li>Area-area gelap yang kita kunci rapat, direkayasa, dijaga dengan sengaja</li>
+              <li>Disembunyikan bahkan di tengah kehidupan rohani yang tampak dewasa</li>
+            </ul>
+          </div>
+        </div>
+        <div class="article-highlight">
+          <p>Daud tampil rohani di depan umum, rakyat memuji-mujinya. Sementara di balik itu, ada surat rahasia kepada Yoab: "Aturlah agar Uria mati di medan perang. Rekayasa sedemikian rupa sehingga kelihatan seperti gugur sebagai pahlawan." Konspirasi. Dosa yang direncanakan dengan sistematis oleh seorang raja yang dipandang rohani.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Ahitofel, Yoab, dan Akibat Rahasia yang Tersimpan</h2>
+        <p>Rahasia tidak pernah benar-benar rahasia. Yoab tahu. Ahitofel tahu — dan pengetahuan itu menghancurkan mereka berdua, bukan karena mereka lebih benar dari Daud, tapi karena mereka tidak menemukan hadirat Tuhan dan kasih karunia-Nya.</p>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">🧠</div>
+            <div class="article-step-content">
+              <h4>Ahitofel</h4>
+              <p>Penasihat Daud yang hikmatnya setara firman Tuhan, paman Batsyeba. Kemarahannya menunggu waktu yang tepat — mendukung kudeta Absalom. Di menit terakhir, nasihatnya digugurkan. Ahitofel pulang lalu menggantung diri.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">⚔️</div>
+            <div class="article-step-content">
+              <h4>Yoab</h4>
+              <p>Menerima surat rahasia dari Daud. Memegang kunci kegelapan Daud. Kemarahan itu menumpuk — akhirnya Yoab mendukung Adonia, bukan Salomo. Terjebak oleh kemarahannya sendiri.</p>
+            </div>
+          </div>
+        </div>
+        <div class="article-quote">
+          <p>Kemarahannya menghanguskan dia sendiri. Jangan kita tinggal dalam kebodohan kita. Apa yang kita pikir sedang kita lakukan kepada orang lain, pada akhirnya membakar diri kita sendiri.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Terbakar Seluruhnya: Tidak Ada Sisa</h2>
+        <p>Dalam hukum korban bakaran di Perjanjian Lama, ada korban bakaran yang terbakar seluruhnya — tidak ada satu bagian pun yang diambil untuk dimakan. Semuanya dibakar. Semuanya dipersembahkan. Tidak ada yang disimpan.</p>
+        <div class="article-highlight">
+          <p>Tuhan tahu segala sesuatunya. Tidak ada yang tersembunyi di hadapan-Nya. Dia mengirim Nabi Nathan kepada Daud — bukan untuk menghancurkan Daud, tapi untuk membebaskan Daud dari belenggu rahasia yang sedang menghancurkannya dari dalam. Pertobatan sejati bukan penghinaan — itu adalah pembebasan.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Doa Daud dan Janji yang Kembali</h2>
+        <div class="article-verse">
+          <p>"Maka engkau akan berkenan kepada korban yang benar. Korban bakaran dan korban yang terbakar seluruhnya. Maka orang akan mengorbankan lembu jantan di atas mezbah-Mu."</p>
+          <cite>— Mazmur 51:20–21</cite>
+        </div>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">1</div>
+            <div class="article-step-content">
+              <h4>Stop Beralasan</h4>
+              <p>Hentikan semua denial, pembelaan diri, penyalahan keadaan dan orang lain. Sadar: saya yang salah.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">2</div>
+            <div class="article-step-content">
+              <h4>Jiwa Hancur</h4>
+              <p>Hati yang patah dan remuk. Tidak ada yang Tuhan pandang hina.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">3</div>
+            <div class="article-step-content">
+              <h4>Terbakar Seluruhnya</h4>
+              <p>Tidak ada lagi yang disembunyikan. Rahasia-rahasia gelap diakui di hadapan Tuhan. Semuanya dibakar tanpa sisa.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">4</div>
+            <div class="article-step-content">
+              <h4>Korban yang Benar</h4>
+              <p>Tuhan berkenan. Pemulihan dimulai. Orang-orang lain pun tergerak. Dampak pertobatan sejati mengalir keluar.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-closing">
+        <p class="article-closing-verse">"Terbakar seluruhnya, Tuhan. Seluruhnya. Tidak ada lagi yang saya sembunyikan. Tidak ada lagi yang saya tutup-tutupi. Terbakar seluruhnya." — Respons jiwa yang hancur kepada Tuhan yang menunggu.</p>
+        <p class="article-closing-ref">— Mazmur 51:16–21</p>
       </div>
     </div>
   </div>
