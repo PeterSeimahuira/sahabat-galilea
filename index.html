@@ -1464,6 +1464,7 @@ const ARTICLES = [
   { id:154, judul:"Jiwa Hancur", desc:"Korban sembelihan kepada Allah ialah jiwa yang hancur, bukan domba. Jiwa hancur = stop membela diri, stop menyalahkan orang lain, sadar sepenuhnya 'saya yang salah'. Adam menyalahkan Hawa dan Tuhan sekaligus — potret jiwa belum hancur. Hutang darah hanya bisa dibayar darah — Yesus yang membayar. Urutan tak terbalik: jiwa hancur, dibebaskan, baru sorak-sorai.", kategori:[2], trending:false, emoji:"💔", link:"" },
   { id:155, judul:"Terbakar Seluruhnya", desc:"Daud dipilih bukan karena bakat, tapi karena hati. Ketika pemimpin jatuh, bangsa ikut terjatuh — tembok Yerusalem runtuh bukan dari luar tapi dari dalam. Dosa yang terlihat vs dosa yang disembunyikan rapat-rapat. Ahitofel dan Yoab hancur karena kemarahan yang tidak dibawa kepada Tuhan. Korban terbakar seluruhnya: tidak ada sisa, tidak ada yang disembunyikan.", kategori:[2], trending:false, emoji:"🔥", link:"" },
   { id:156, judul:"Hina Tuhan", desc:"Bukan jenis dosanya, tapi sikap hatinya. Daud marah pada dosa orang lain tapi buta pada dosanya sendiri — sampai Natan berkata 'Engkaulah orang itu'. Dua jenis dosa: yang mau ditegur vs yang mendatangkan maut (ngeyel, memandang murah kasih karunia). Yakub diurus Tuhan, Esau dibiarkan — ketika Tuhan diam, itu lebih menakutkan dari hukuman. Tuhan menegur karena Ia sayang.", kategori:[2], trending:false, emoji:"🪞", link:"" },
+  { id:157, judul:"Dia Saudaraku", desc:"Daud tinggal di rumah saat raja harusnya berperang — kebodohan kecil jadi besar. Ahab yang jahat justru berdiri di depan rakyatnya, dimenangkan Tuhan dua kali. Tapi setelah menang ia berkata 'Dia saudaraku' kepada BenHadad yang harusnya ditumpas — keluar dari Hukum Kasih Karunia. Yang membedakan bukan seberapa baik kita, tapi apakah kita hidup di dalam hukum-Nya.", kategori:[2], trending:false, emoji:"⚔️", link:"" },
 ];
 
 const CATEGORY_NAMES = {
@@ -1653,6 +1654,7 @@ const ARTICLE_COLORS = {
   154: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
   155: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
   156: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
+  157: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
 };
 
 function getCardColor(article) {
@@ -1815,7 +1817,8 @@ const SVG_DESIGNS = {
   153: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M30,50 Q40,40 50,45 Q45,35 55,32 Q65,35 62,45 Q72,40 78,50 Q68,52 62,48 Q65,58 55,58 Q50,52 50,45 Q45,52 35,52 Q32,50 30,50Z" stroke="#a855f7" stroke-width="0.6"/><rect x="35" y="70" width="30" height="15" rx="1" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><circle cx="60" cy="42" r="1.5" fill="#a855f7" opacity="0.4"/></svg>`,
   154: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,25 Q35,35 32,50 Q30,65 40,75 L50,85 L60,75 Q70,65 68,50 Q65,35 50,25Z" stroke="#a855f7" stroke-width="0.7"/><path d="M50,40 L44,55 L52,55 L46,72" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><path d="M35,50 L65,50" stroke="#a855f7" stroke-width="0.3" opacity="0.3"/></svg>`,
   155: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,80 Q35,72 32,58 Q30,48 38,42 Q40,50 44,48 Q42,38 50,32 Q52,42 58,40 Q56,30 62,25 Q68,35 65,45 Q70,42 70,50 Q72,60 62,68 Q68,66 68,72 Q62,80 50,80Z" stroke="#a855f7" stroke-width="0.7"/></svg>`,
-  156: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><rect x="32" y="25" width="36" height="50" rx="3" stroke="#a855f7" stroke-width="0.6"/><circle cx="50" cy="45" r="12" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M44,45 Q50,40 56,45 Q50,50 44,45Z" stroke="#a855f7" stroke-width="0.4" opacity="0.6"/><path d="M40,68 L60,68" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/></svg>`
+  156: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><rect x="32" y="25" width="36" height="50" rx="3" stroke="#a855f7" stroke-width="0.6"/><circle cx="50" cy="45" r="12" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M44,45 Q50,40 56,45 Q50,50 44,45Z" stroke="#a855f7" stroke-width="0.4" opacity="0.6"/><path d="M40,68 L60,68" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/></svg>`,
+  157: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,20 L50,55" stroke="#a855f7" stroke-width="0.7"/><path d="M35,30 L50,20 L65,30" stroke="#a855f7" stroke-width="0.6"/><path d="M38,45 L62,45" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M50,55 L42,75 M50,55 L58,75" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><circle cx="50" cy="18" r="3" fill="#a855f7" opacity="0.3"/></svg>`
 };
 
 
@@ -1981,7 +1984,7 @@ document.addEventListener('keydown', e => {
 });
 
 function openArticle(id) {
-  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156];
+  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157];
   if (inAppArticles.includes(id)) {
     document.querySelectorAll('.article-content').forEach(el => el.style.display = 'none');
     const target = document.getElementById('article-' + id);
@@ -40691,6 +40694,190 @@ document.addEventListener('keydown', e => {
       <div class="article-closing">
         <p class="article-closing-verse">"Korban sembelihan kepada Allah ialah jiwa yang hancur; hati yang patah dan remuk tidak akan Kaupandang hina, ya Allah."</p>
         <p class="article-closing-ref">— 1 Yohanes 5:16–17 · 2 Samuel 12:1–13 · Mazmur 51:19</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ARTICLE 157 -->
+  <div id="article-157" class="article-content" style="display:none">
+    <div class="article-hero">
+      <div class="article-hero-bg" style="background:linear-gradient(135deg,#1a0a28,#2a1040,#361452);"></div>
+      <div class="article-hero-glow"></div>
+      <span class="article-hero-emoji">⚔️</span>
+      <div class="article-hero-content">
+        <div class="article-hero-eyebrow">Memahami Jati Diri · 2 Samuel 11 · 1 Raja-Raja 20</div>
+        <h1 class="article-hero-title">Dia Saudaraku</h1>
+        <div class="article-hero-tags">
+          <span class="article-tag">2 Samuel 11:1–3</span>
+          <span class="article-tag">1 Raja-Raja 20:1–43</span>
+          <span class="article-tag">Hukum Kasih Karunia</span>
+        </div>
+      </div>
+    </div>
+    <div class="article-body">
+      <div class="article-verse">
+        <p>"Kuatkanlah hatimu, pertimbangkan, dan pikirkanlah apa yang harus kau perbuat."</p>
+        <cite>— 1 Raja-Raja 20:22</cite>
+      </div>
+      <p class="article-intro">Sebuah renungan dari 2 Samuel 11:1-3 dan 1 Raja-Raja 20:1-43 — tentang dua raja, dua pilihan, dan satu pertanyaan yang mengguncang jiwa: apakah kita sedang hidup di dalam Hukum Kasih Karunia?</p>
+
+      <div class="article-section">
+        <h2>Ketika Raja Tinggal di Rumah</h2>
+        <p>Pada pergantian tahun, pada waktu raja-raja biasanya maju berperang — Daud menyuruh Yoab maju, sedang Daud sendiri tinggal di Yerusalem. Di sini dimulailah sebuah kejatuhan yang tidak terjadi sekaligus. Daud tidak salah sekali — ia hanya salah satu langkah kecil. Tapi dari satu langkah kecil itu, lahirlah kebodohan demi kebodohan yang semakin besar.</p>
+        <div class="article-highlight">
+          <p>Kebodohan besar tidak datang tiba-tiba. Selalu dimulai dari satu langkah kecil yang salah, lalu satu lagi, lalu satu lagi — hingga kita tersungkur jauh.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Kebodohan Berlapis Kebodohan</h2>
+        <p>Dari tidak maju berperang, Daud baring-baring, lalu berjalan-jalan di atas sotoh istana. Dari sana ia melihat Batsyeba. Dari melihat, ia mengambil. Dari mengambil, ia membunuh. Sampailah kita di 2 Samuel 12 — "Engkau menghina Tuhan." Dari mana semua penghinaan itu? Dari satu musim yang dilewatkan dengan salah.</p>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Raja yang Jahat, Tapi Berdiri di Depan</h2>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">⚠️</div>
+            <div class="article-step-content">
+              <h4>Ahab — Raja yang Jahat</h4>
+              <p>Penyembah Baal. Suami Izebel. Dikenal sebagai salah satu raja paling jahat dalam sejarah Israel. Namun dalam satu hal — ia tidak goyah.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🛡️</div>
+            <div class="article-step-content">
+              <h4>Prinsip yang Ia Pegang</h4>
+              <p>Ketika BenHadad menuntut istri, anak-anak, emas, dan perak — Ahab menyerah. Tapi ketika pegawai-pegawainya juga akan dirampas, Ahab berkata: "Orang ini mengikhtiarkan kecelakaan kita." Ia berdiri di depan, melindungi rakyatnya.</p>
+            </div>
+          </div>
+        </div>
+        <div class="article-quote">
+          <p>Inilah Hukum Kasih Karunia yang sedang dihidupi Ahab — bukan karena ia saleh, melainkan karena ia masuk ke dalam prinsip yang Tuhan tetapkan: seorang pemimpin berdiri di depan, bukan di belakang rakyatnya.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Kemenangan yang Bukan Milik Manusia</h2>
+        <p>BenHadad datang dengan 32 raja, kuda, dan kereta — mengepung Samaria. Israel seperti dua kawanan kambing berhadapan dengan banjir tentara Aram yang membludak.</p>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">1</div>
+            <div class="article-step-content">
+              <h4>Firman Tuhan Turun</h4>
+              <p>"Pada hari ini Aku akan menyerahkan mereka ke dalam tanganmu supaya kau tahu bahwa Akulah Tuhan."</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">2</div>
+            <div class="article-step-content">
+              <h4>Ahab Maju</h4>
+              <p>232 orang muda pengiring kepala-kepala daerah maju lebih dahulu, diikuti 7.000 tentara Israel.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">3</div>
+            <div class="article-step-content">
+              <h4>Tuhan yang Berperang</h4>
+              <p>Orang Aram lari. Kuda dan kereta dimusnahkan. Kekalahan besar mendatangi musuh — bukan oleh kekuatan Ahab.</p>
+            </div>
+          </div>
+        </div>
+        <div class="article-highlight">
+          <p>Nabi tidak menyuruh Ahab merancang strategi perang — sebab dua kawanan kambing tidak bisa mengalahkan tentara Aram dengan strategi manusia. Tuhan yang memegang peperangan. Yang dituntut Tuhan hanyalah: tinggal dalam hukum-Nya.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Kemenangan Kedua yang Lebih Besar</h2>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>⚠️ Tantangan Orang Aram</h4>
+            <ul>
+              <li>"Allah mereka adalah allah gunung. Kita akan berperang di dataran — pasti kita menang."</li>
+              <li>Mereka meragukan Tuhan</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>✦ Respons Tuhan</h4>
+            <ul>
+              <li>"Oleh karena mereka berkata demikian — Aku akan menyerahkan seluruh tentara yang besar itu ke dalam tanganmu."</li>
+              <li>100.000 pejalan kaki tewas, 27.000 tertimpa tembok Afek</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>"Dia Saudaraku"</h2>
+        <p>BenHadad — musuh yang telah ditumpas Tuhan, yang telah menyebabkan ribuan orang mati, yang sudah dikhususkan Tuhan untuk ditumpas — datang menyelinap melalui pegawai-pegawainya, memohon belas kasihan. Dan Ahab berkata: "Masih hidupkah dia? Dia saudaraku."</p>
+        <div class="article-highlight">
+          <p>Di sinilah Ahab keluar dari Hukum Kasih Karunia. Ia yang tadinya lemah dan sadar ketidakberdayaannya — kini berpikir ia yang memenangkan peperangan. Kemenangan Tuhan dianggapnya sebagai prestasinya sendiri. Tuhan sudah memperingatkan setahun sebelumnya — tapi saat kemenangan datang, ia lupa dari mana kemenangan itu berasal.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Keluar dari Hukum Kasih Karunia</h2>
+        <p>Nabi Tuhan datang dengan perumpamaan — menyamar, melukai dirinya sendiri, lalu bercerita tentang seorang prajurit yang gagal menjaga tawanannya. Ahab dengan tenang berkata: "Begitu jugalah hukumanmu — engkau sendiri telah menetapkannya."</p>
+        <div class="article-highlight">
+          <p>Persis seperti Daud yang menjatuhkan vonis atas dirinya sendiri lewat kisah Natan. Firman Tuhan berbunyi keras: oleh karena engkau telah membiarkan lolos orang yang dikhususkan bagiku untuk ditumpas — nyawamu adalah ganti nyawanya, rakyatmu ganti rakyatnya. Ahab pergi ke istananya dengan kesal hati dan gusar. Ia sadar. Tapi terlambat.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Dua Raja, Satu Pelajaran</h2>
+        <div class="article-highlight">
+          <p>Daud — orang yang mengasihi Tuhan dengan sepenuh hati, jatuh dari satu kebodohan kecil ke kebodohan besar. Tapi akhirnya ia kembali ke dalam Hukum Kasih Karunia dan diselamatkan. Ahab — orang yang demikian jahatnya — memulai dari Hukum Kasih Karunia, dimenangkan dua kali oleh Tuhan, lalu keluar dari hukum itu dan binasa. Yang membedakan bukan seberapa baik kita — melainkan apakah kita hidup di dalam Hukum Kasih Karunia.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Kunci Keberhasilan Kita</h2>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">🛡️</div>
+            <div class="article-step-content">
+              <h4>Berdiri di Depan</h4>
+              <p>Seperti Ahab yang menanggung risiko sendirian demi rakyatnya — Hukum Kasih Karunia memanggil kita untuk tidak bersembunyi di belakang kepentingan diri sendiri.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🙌</div>
+            <div class="article-step-content">
+              <h4>Sadar Ketidakberdayaan</h4>
+              <p>Ahab tidak punya strategi. Ia hanya tahu ia tak berdaya. Itulah pintu masuk Kasih Karunia — saat kita berhenti menganggap kemenangan adalah hasil tangan kita sendiri.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">⚠️</div>
+            <div class="article-step-content">
+              <h4>Tetap Setelah Menang</h4>
+              <p>Bahaya terbesar bukan saat kita kalah — melainkan saat kita menang. Saat menang, ingatlah: peperangan ini milik Tuhan. Bukan milikmu.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-closing">
+        <p class="article-closing-verse">"Kuatkan hatimu. Pertimbangkan. Pikirkan apa yang harus kau perbuat. Tuhan sudah mengingatkan setahun sebelumnya. Peringatan itu adalah anugerah. Jangan sia-siakan."</p>
+        <p class="article-closing-ref">— 2 Samuel 11:1–3 · 1 Raja-Raja 20:1–43</p>
       </div>
     </div>
   </div>
