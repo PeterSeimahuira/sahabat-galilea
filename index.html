@@ -1463,6 +1463,7 @@ const ARTICLES = [
   { id:153, judul:"Pipit Layang", desc:"Burung pipit dihargai setengah duit, tapi Bapa tetap perhatikan. Lukas 12:6: yang bonus (nol harganya) pun tidak dilupakan Allah. Mazmur 84: burung pipit dapat rumah, layang-layang dapat sarang — di mezbah Tuhan, bukan istana. Mezbah dan bejana adalah ritme harian: sangkal diri, basuh Firman, tinggal dalam hadirat. Kesaksian Hawila: fokus melayani mengalahkan fokus untung.", kategori:[2], trending:false, emoji:"🐦", link:"" },
   { id:154, judul:"Jiwa Hancur", desc:"Korban sembelihan kepada Allah ialah jiwa yang hancur, bukan domba. Jiwa hancur = stop membela diri, stop menyalahkan orang lain, sadar sepenuhnya 'saya yang salah'. Adam menyalahkan Hawa dan Tuhan sekaligus — potret jiwa belum hancur. Hutang darah hanya bisa dibayar darah — Yesus yang membayar. Urutan tak terbalik: jiwa hancur, dibebaskan, baru sorak-sorai.", kategori:[2], trending:false, emoji:"💔", link:"" },
   { id:155, judul:"Terbakar Seluruhnya", desc:"Daud dipilih bukan karena bakat, tapi karena hati. Ketika pemimpin jatuh, bangsa ikut terjatuh — tembok Yerusalem runtuh bukan dari luar tapi dari dalam. Dosa yang terlihat vs dosa yang disembunyikan rapat-rapat. Ahitofel dan Yoab hancur karena kemarahan yang tidak dibawa kepada Tuhan. Korban terbakar seluruhnya: tidak ada sisa, tidak ada yang disembunyikan.", kategori:[2], trending:false, emoji:"🔥", link:"" },
+  { id:156, judul:"Hina Tuhan", desc:"Bukan jenis dosanya, tapi sikap hatinya. Daud marah pada dosa orang lain tapi buta pada dosanya sendiri — sampai Natan berkata 'Engkaulah orang itu'. Dua jenis dosa: yang mau ditegur vs yang mendatangkan maut (ngeyel, memandang murah kasih karunia). Yakub diurus Tuhan, Esau dibiarkan — ketika Tuhan diam, itu lebih menakutkan dari hukuman. Tuhan menegur karena Ia sayang.", kategori:[2], trending:false, emoji:"🪞", link:"" },
 ];
 
 const CATEGORY_NAMES = {
@@ -1651,6 +1652,7 @@ const ARTICLE_COLORS = {
   153: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
   154: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
   155: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
+  156: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
 };
 
 function getCardColor(article) {
@@ -1812,7 +1814,8 @@ const SVG_DESIGNS = {
   152: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,25 L50,45" stroke="#a855f7" stroke-width="0.6"/><path d="M25,42 L75,42" stroke="#a855f7" stroke-width="0.7"/><path d="M25,42 L18,58 L32,58 Z" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><path d="M75,42 L68,58 L82,58 Z" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><circle cx="50" cy="22" r="4" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M40,75 L60,75" stroke="#a855f7" stroke-width="0.5" opacity="0.4"/><path d="M50,45 L50,75" stroke="#a855f7" stroke-width="0.4" opacity="0.3"/></svg>`,
   153: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M30,50 Q40,40 50,45 Q45,35 55,32 Q65,35 62,45 Q72,40 78,50 Q68,52 62,48 Q65,58 55,58 Q50,52 50,45 Q45,52 35,52 Q32,50 30,50Z" stroke="#a855f7" stroke-width="0.6"/><rect x="35" y="70" width="30" height="15" rx="1" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><circle cx="60" cy="42" r="1.5" fill="#a855f7" opacity="0.4"/></svg>`,
   154: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,25 Q35,35 32,50 Q30,65 40,75 L50,85 L60,75 Q70,65 68,50 Q65,35 50,25Z" stroke="#a855f7" stroke-width="0.7"/><path d="M50,40 L44,55 L52,55 L46,72" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><path d="M35,50 L65,50" stroke="#a855f7" stroke-width="0.3" opacity="0.3"/></svg>`,
-  155: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,80 Q35,72 32,58 Q30,48 38,42 Q40,50 44,48 Q42,38 50,32 Q52,42 58,40 Q56,30 62,25 Q68,35 65,45 Q70,42 70,50 Q72,60 62,68 Q68,66 68,72 Q62,80 50,80Z" stroke="#a855f7" stroke-width="0.7"/></svg>`
+  155: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,80 Q35,72 32,58 Q30,48 38,42 Q40,50 44,48 Q42,38 50,32 Q52,42 58,40 Q56,30 62,25 Q68,35 65,45 Q70,42 70,50 Q72,60 62,68 Q68,66 68,72 Q62,80 50,80Z" stroke="#a855f7" stroke-width="0.7"/></svg>`,
+  156: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><rect x="32" y="25" width="36" height="50" rx="3" stroke="#a855f7" stroke-width="0.6"/><circle cx="50" cy="45" r="12" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M44,45 Q50,40 56,45 Q50,50 44,45Z" stroke="#a855f7" stroke-width="0.4" opacity="0.6"/><path d="M40,68 L60,68" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/></svg>`
 };
 
 
@@ -1978,7 +1981,7 @@ document.addEventListener('keydown', e => {
 });
 
 function openArticle(id) {
-  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155];
+  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156];
   if (inAppArticles.includes(id)) {
     document.querySelectorAll('.article-content').forEach(el => el.style.display = 'none');
     const target = document.getElementById('article-' + id);
@@ -40461,6 +40464,233 @@ document.addEventListener('keydown', e => {
       <div class="article-closing">
         <p class="article-closing-verse">"Terbakar seluruhnya, Tuhan. Seluruhnya. Tidak ada lagi yang saya sembunyikan. Tidak ada lagi yang saya tutup-tutupi. Terbakar seluruhnya." — Respons jiwa yang hancur kepada Tuhan yang menunggu.</p>
         <p class="article-closing-ref">— Mazmur 51:16–21</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ARTICLE 156 -->
+  <div id="article-156" class="article-content" style="display:none">
+    <div class="article-hero">
+      <div class="article-hero-bg" style="background:linear-gradient(135deg,#1a0a28,#2a1040,#361452);"></div>
+      <div class="article-hero-glow"></div>
+      <span class="article-hero-emoji">🪞</span>
+      <div class="article-hero-content">
+        <div class="article-hero-eyebrow">Memahami Jati Diri · 1 Yohanes 5 · 2 Samuel 12</div>
+        <h1 class="article-hero-title">Hina Tuhan</h1>
+        <div class="article-hero-tags">
+          <span class="article-tag">1 Yohanes 5:16–17</span>
+          <span class="article-tag">2 Samuel 12:1–13</span>
+          <span class="article-tag">Mazmur 51:19</span>
+        </div>
+      </div>
+    </div>
+    <div class="article-body">
+      <div class="article-verse">
+        <p>"Engkaulah orang itu. Mengapa engkau menghina Tuhan dengan melakukan apa yang jahat di mata-Nya?"</p>
+        <cite>— 2 Samuel 12:7,9</cite>
+      </div>
+      <p class="article-intro">Sebuah renungan mendalam dari 1 Yohanes 5:16-17 dan 2 Samuel 12:1-13 — tentang dua jenis dosa, sikap hati kita di hadapan Tuhan, dan apa artinya benar-benar menghina Dia yang telah memberikan segalanya bagi kita.</p>
+
+      <div class="article-section">
+        <h2>Firman yang Membuka Mata</h2>
+        <div class="article-verse">
+          <p>"Kalau ada seorang melihat saudaranya berbuat dosa, yaitu dosa yang tidak mendatangkan maut, hendaklah ia berdoa kepada Allah dan Allah akan memberikan hidup kepadanya... Ada dosa yang mendatangkan maut. Tentang itu tidak kukatakan bahwa ia harus berdoa."</p>
+          <cite>— 1 Yohanes 5:16–17</cite>
+        </div>
+        <div class="article-highlight">
+          <p>Firman Tuhan membuka sesuatu yang serius: tidak semua dosa sama di hadapan Tuhan. Bukan karena jenisnya berbeda, tetapi karena sikap hati kita ketika kita melakukannya dan ketika kita ditegur.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Kisah Natan dan Daud</h2>
+        <p>Tuhan mengutus nabi Natan kepada Daud — bukan dengan tuduhan langsung, tetapi dengan sebuah perumpamaan. Ada orang kaya dengan banyak ternak, dan orang miskin yang hanya memiliki seekor anak domba betina kecil yang ia sayangi seperti anaknya sendiri.</p>
+        <div class="article-highlight">
+          <p>Ketika si kaya mengambil anak domba si miskin untuk menjamu tamunya, Daud sangat marah: "Demi Tuhan yang hidup, orang yang melakukan itu harus dihukum mati!" Hati nurani Daud masih bisa membedakan yang benar dan yang salah — tetapi nuraninya buta terhadap dosanya sendiri.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>"Engkaulah Orang Itu"</h2>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>Perkataan Natan</h4>
+            <ul>
+              <li>"Engkaulah orang itu."</li>
+              <li>"Mengapa engkau menghina Tuhan dengan melakukan apa yang jahat di mata-Nya?"</li>
+              <li>"Uria orang Het itu kaubiarkan ditewaskan dengan pedang."</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>Respons Daud</h4>
+            <ul>
+              <li>Begitu ditegur, Daud langsung sadar</li>
+              <li>Tidak membela diri. Tidak menyerang balik.</li>
+              <li>"Aku sudah berdosa kepada Tuhan." Natan: "Tuhan telah menjauhkan dosamu itu."</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Dua Jenis Dosa yang Harus Kita Pahami</h2>
+        <p>Bukan tentang jenis perbuatannya — membunuh, mencuri, berdusta. Perbedaannya ada pada sikap hati kita ketika ditegur dan dihadapkan pada kebenaran.</p>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>✦ Dosa yang Tidak Mendatangkan Maut</h4>
+            <ul>
+              <li>Saat ditegur — baik melalui firman, sesama, atau keadaan — hati kita sadar dan bertobat</li>
+              <li>Kita mau dibilangi</li>
+              <li>Nurani kita masih hidup dan merespons kasih karunia Tuhan</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>⚠️ Dosa yang Mendatangkan Maut</h4>
+            <ul>
+              <li>Dengan sepenuhnya sadar, kita sengaja menyembunyikan kebenaran</li>
+              <li>Memandang murah kasih karunia Tuhan</li>
+              <li>Dikasih tahu, kita ngeyel. Kita pakai ayat untuk membenarkan diri</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Bukan Dosanya — Tapi Sikap Hatinya</h2>
+        <div class="article-highlight">
+          <p>Daud melakukan dosa yang sangat berat — perzinahan dan pembunuhan. Secara hukum, nyawa ganti nyawa. Namun karena ia mau bertobat saat ditegur, Tuhan berkata: "Engkau tidak akan mati." Ini bukan berarti tanpa konsekuensi — ada akibat yang harus ia tanggung. Tetapi Tuhan masih mau berperkara dengan Daud karena Daud mau.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Yakub dan Esau: Ketika Tuhan Mendiamkan</h2>
+        <p>Firman Tuhan berkata: "Yakub Kucintai, tetapi Esau Kubenci." Ini bukan berarti Tuhan menimpakan malapetaka kepada Esau. Sebaliknya — Tuhan tidak mau lagi berperkara dengan Esau.</p>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>✦ Yakub — Diurus Tuhan</h4>
+            <ul>
+              <li>Hidupnya tidak mudah. Penuh pergulatan dan proses yang menyakitkan.</li>
+              <li>Tuhan terus berperkara, meluruskan, dan membentuknya</li>
+              <li>Ini tanda kasih Tuhan yang aktif</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>⚠️ Esau — Dibiarkan Tuhan</h4>
+            <ul>
+              <li>Esau tidak bisa lagi dibilangi</li>
+              <li>Tuhan tidak memaksanya</li>
+              <li>Ketika seseorang sudah tidak mau dikasih tahu, Tuhan diam — jauh lebih menakutkan dari hukuman sekalipun</li>
+            </ul>
+          </div>
+        </div>
+        <div class="article-quote">
+          <p>Jika dalam hidup kita terasa sepi dari suara Tuhan — hati-hati. Jangan-jangan kita terlalu sering mengeraskan hati, sampai Tuhan memilih untuk diam.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Menghina Tuhan: Apa Artinya Sebenarnya?</h2>
+        <p>Tuhan sudah memberikan segalanya kepada Daud — tahta, keluarga, perlindungan dari Saul, bangsa Israel dan Yehuda. Dan Tuhan bahkan berkata: "Seandainya itu belum cukup, tentu kutambah lagi ini dan itu kepadamu."</p>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">🎭</div>
+            <div class="article-step-content">
+              <h4>Memanipulasi Kebenaran</h4>
+              <p>Saat kita sengaja memanipulasi kebenaran dan bersembunyi dalam aktivitas rohani — hadir ibadah, pakai ayat Alkitab — tetapi hati kita menyimpan dosa yang sengaja kita jaga.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🔒</div>
+            <div class="article-step-content">
+              <h4>Menyimpan Dosa Favorit</h4>
+              <p>Saat kita sengaja "menyimpan" dosa yang kita sukai — tahu itu salah, tapi memilih untuk mempertahankannya. Kita pikir kita aman karena tidak ketahuan.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">⚔️</div>
+            <div class="article-step-content">
+              <h4>Membenarkan Diri Sendiri</h4>
+              <p>Saat ditegur, bukannya bertobat — kita justru menyerang balik dan menggunakan ayat Alkitab untuk membenarkan tindakan kita. Inilah yang dimaksud memandang murah kasih karunia Tuhan.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Tuhan Berperkara karena Tuhan Sayang</h2>
+        <p>Mengapa Tuhan repot-repot mengutus Natan kepada Daud? Karena Tuhan ingin Daud selamat. Kalau Tuhan masih menegur kita, itu tanda kasih-Nya yang aktif. Yang berbahaya justru ketika Tuhan berhenti menegur — ketika tidak ada lagi suara, tidak ada lagi beban di hati.</p>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">1</div>
+            <div class="article-step-content">
+              <h4>Tuhan Menegur</h4>
+              <p>Tanda bahwa Tuhan masih mengasihi dan ingin kita kembali ke jalan yang benar.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">2</div>
+            <div class="article-step-content">
+              <h4>Kita Merespons dengan Tobat</h4>
+              <p>Saat kita sadar dan mau berubah, itulah yang Tuhan rindukan dari kita.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">3</div>
+            <div class="article-step-content">
+              <h4>Tuhan Memulihkan</h4>
+              <p>Seperti Daud: "Tuhan telah menjauhkan dosamu itu." Ada pemulihan bagi hati yang mau bertobat.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Peringatan dan Undangan bagi Kita</h2>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">🔍</div>
+            <div class="article-step-content">
+              <h4>Periksa Hati</h4>
+              <p>Apakah ada area dalam hidup saya yang sengaja saya tutupi dari Tuhan? Apakah nurani saya masih peka saat Tuhan berbicara?</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🙏</div>
+            <div class="article-step-content">
+              <h4>Minta Berperkara</h4>
+              <p>"Ya Tuhan, saya mau Tuhan berperkara dengan saya. Meskipun tidak enak, saya mau hidup saya diluruskan terus oleh-Mu."</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">💛</div>
+            <div class="article-step-content">
+              <h4>Bertobat Sekarang</h4>
+              <p>Jangan tunggu sampai Tuhan mendiamkan kita. Selagi Tuhan masih menegur, ini adalah undangan kasih-Nya. Respons sekarang juga.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-closing">
+        <p class="article-closing-verse">"Korban sembelihan kepada Allah ialah jiwa yang hancur; hati yang patah dan remuk tidak akan Kaupandang hina, ya Allah."</p>
+        <p class="article-closing-ref">— 1 Yohanes 5:16–17 · 2 Samuel 12:1–13 · Mazmur 51:19</p>
       </div>
     </div>
   </div>
