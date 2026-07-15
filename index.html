@@ -1465,6 +1465,7 @@ const ARTICLES = [
   { id:155, judul:"Terbakar Seluruhnya", desc:"Daud dipilih bukan karena bakat, tapi karena hati. Ketika pemimpin jatuh, bangsa ikut terjatuh — tembok Yerusalem runtuh bukan dari luar tapi dari dalam. Dosa yang terlihat vs dosa yang disembunyikan rapat-rapat. Ahitofel dan Yoab hancur karena kemarahan yang tidak dibawa kepada Tuhan. Korban terbakar seluruhnya: tidak ada sisa, tidak ada yang disembunyikan.", kategori:[2], trending:false, emoji:"🔥", link:"" },
   { id:156, judul:"Hina Tuhan", desc:"Bukan jenis dosanya, tapi sikap hatinya. Daud marah pada dosa orang lain tapi buta pada dosanya sendiri — sampai Natan berkata 'Engkaulah orang itu'. Dua jenis dosa: yang mau ditegur vs yang mendatangkan maut (ngeyel, memandang murah kasih karunia). Yakub diurus Tuhan, Esau dibiarkan — ketika Tuhan diam, itu lebih menakutkan dari hukuman. Tuhan menegur karena Ia sayang.", kategori:[2], trending:false, emoji:"🪞", link:"" },
   { id:157, judul:"Dia Saudaraku", desc:"Daud tinggal di rumah saat raja harusnya berperang — kebodohan kecil jadi besar. Ahab yang jahat justru berdiri di depan rakyatnya, dimenangkan Tuhan dua kali. Tapi setelah menang ia berkata 'Dia saudaraku' kepada BenHadad yang harusnya ditumpas — keluar dari Hukum Kasih Karunia. Yang membedakan bukan seberapa baik kita, tapi apakah kita hidup di dalam hukum-Nya.", kategori:[2], trending:false, emoji:"⚔️", link:"" },
+  { id:158, judul:"Kesal Gusar", desc:"Ahab: kesal hati dan gusar dua kali berturut-turut — pola karakter yang lumpuh. Kekosongan jiwanya membuka pintu bagi Izebel merekayasa kematian Nabot. Nabot mati, Ahab langsung ambil kebun anggur tanpa perenungan. Daud sebaliknya: 7 hari puasa dan menangis, lalu saat anak mati justru bangun, mandi, dan menyembah. Berdoa bukan tentang mauku — tapi diselaraskan dengan hati Bapa.", kategori:[2], trending:false, emoji:"😤", link:"" },
 ];
 
 const CATEGORY_NAMES = {
@@ -1655,6 +1656,7 @@ const ARTICLE_COLORS = {
   155: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
   156: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
   157: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
+  158: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
 };
 
 function getCardColor(article) {
@@ -1818,7 +1820,8 @@ const SVG_DESIGNS = {
   154: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,25 Q35,35 32,50 Q30,65 40,75 L50,85 L60,75 Q70,65 68,50 Q65,35 50,25Z" stroke="#a855f7" stroke-width="0.7"/><path d="M50,40 L44,55 L52,55 L46,72" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><path d="M35,50 L65,50" stroke="#a855f7" stroke-width="0.3" opacity="0.3"/></svg>`,
   155: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,80 Q35,72 32,58 Q30,48 38,42 Q40,50 44,48 Q42,38 50,32 Q52,42 58,40 Q56,30 62,25 Q68,35 65,45 Q70,42 70,50 Q72,60 62,68 Q68,66 68,72 Q62,80 50,80Z" stroke="#a855f7" stroke-width="0.7"/></svg>`,
   156: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><rect x="32" y="25" width="36" height="50" rx="3" stroke="#a855f7" stroke-width="0.6"/><circle cx="50" cy="45" r="12" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M44,45 Q50,40 56,45 Q50,50 44,45Z" stroke="#a855f7" stroke-width="0.4" opacity="0.6"/><path d="M40,68 L60,68" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/></svg>`,
-  157: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,20 L50,55" stroke="#a855f7" stroke-width="0.7"/><path d="M35,30 L50,20 L65,30" stroke="#a855f7" stroke-width="0.6"/><path d="M38,45 L62,45" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M50,55 L42,75 M50,55 L58,75" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><circle cx="50" cy="18" r="3" fill="#a855f7" opacity="0.3"/></svg>`
+  157: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,20 L50,55" stroke="#a855f7" stroke-width="0.7"/><path d="M35,30 L50,20 L65,30" stroke="#a855f7" stroke-width="0.6"/><path d="M38,45 L62,45" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M50,55 L42,75 M50,55 L58,75" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><circle cx="50" cy="18" r="3" fill="#a855f7" opacity="0.3"/></svg>`,
+  158: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><circle cx="50" cy="45" r="18" stroke="#a855f7" stroke-width="0.7"/><path d="M42,42 L46,46 M46,42 L42,46" stroke="#a855f7" stroke-width="0.6" opacity="0.6"/><path d="M54,42 L58,46 M58,42 L54,46" stroke="#a855f7" stroke-width="0.6" opacity="0.6"/><path d="M42,54 Q50,48 58,54" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M50,63 L50,78" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/></svg>`
 };
 
 
@@ -1984,7 +1987,7 @@ document.addEventListener('keydown', e => {
 });
 
 function openArticle(id) {
-  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157];
+  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158];
   if (inAppArticles.includes(id)) {
     document.querySelectorAll('.article-content').forEach(el => el.style.display = 'none');
     const target = document.getElementById('article-' + id);
@@ -40878,6 +40881,221 @@ document.addEventListener('keydown', e => {
       <div class="article-closing">
         <p class="article-closing-verse">"Kuatkan hatimu. Pertimbangkan. Pikirkan apa yang harus kau perbuat. Tuhan sudah mengingatkan setahun sebelumnya. Peringatan itu adalah anugerah. Jangan sia-siakan."</p>
         <p class="article-closing-ref">— 2 Samuel 11:1–3 · 1 Raja-Raja 20:1–43</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ARTICLE 158 -->
+  <div id="article-158" class="article-content" style="display:none">
+    <div class="article-hero">
+      <div class="article-hero-bg" style="background:linear-gradient(135deg,#1a0a28,#2a1040,#361452);"></div>
+      <div class="article-hero-glow"></div>
+      <span class="article-hero-emoji">😤</span>
+      <div class="article-hero-content">
+        <div class="article-hero-eyebrow">Memahami Jati Diri · 1 Raja-Raja 20–21 · 2 Samuel 12</div>
+        <h1 class="article-hero-title">Kesal Gusar</h1>
+        <div class="article-hero-tags">
+          <span class="article-tag">1 Raja-Raja 20:35–43</span>
+          <span class="article-tag">1 Raja-Raja 21:1–29</span>
+          <span class="article-tag">2 Samuel 12:13–25</span>
+        </div>
+      </div>
+    </div>
+    <div class="article-body">
+      <div class="article-verse">
+        <p>"Aku yang akan pergi kepadanya, tetapi dia tidak akan kembali kepadaku."</p>
+        <cite>— Daud, 2 Samuel 12:23</cite>
+      </div>
+      <p class="article-intro">Sebuah refleksi dari 1 Raja-Raja 20–21 dan 2 Samuel 12. Dua raja, dua cara merespons. Satu dipenuhi kesal hati dan gusar — yang melumpuhkan jiwa dan menutup pintu doa. Satu lagi memilih berpuasa dan menangis — yang membuka hati untuk mengenal hati Tuhan.</p>
+
+      <div class="article-section">
+        <h2>Analogi yang Berbalik: Firman Tuhan Melalui Sang Nabi</h2>
+        <p>Dalam 1 Raja-Raja 20, seorang nabi mendekati Raja Ahab dengan menyamar — kain pembalut menutupi matanya. Ia menceritakan kisah tentang seorang prajurit yang gagal menjaga tahanan. Raja Ahab langsung menjatuhkan hukuman: "Begitulah hukumanmu, kau sendiri telah menetapkannya."</p>
+        <div class="article-highlight">
+          <p>Namun ketika kain pembalut itu dibuka, Raja mengenali sang nabi. Dan sabda itu berbalik: "Oleh karena engkau telah membiarkan lolos orang yang dikhususkan bagiku untuk ditumpas, maka nyawamu adalah ganti nyawanya." Firman Tuhan tidak bisa diakali. Analogi itu adalah cermin — dan cermin itu memantul langsung ke wajah Ahab.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Kesal Hati dan Gusar: Pola yang Berulang</h2>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">1</div>
+            <div class="article-step-content">
+              <h4>Teguran Nabi</h4>
+              <p>Ahab ditegur karena membiarkan BenHadad lolos. Respons Ahab: kesal hati dan gusar, pulang ke istana.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">2</div>
+            <div class="article-step-content">
+              <h4>Kebun Anggur Nabot</h4>
+              <p>Nabot menolak menjual warisan leluhurnya. Respons Ahab: kesal hati dan gusar, berbaring, telungkup, tidak mau makan.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">3</div>
+            <div class="article-step-content">
+              <h4>Pola Karakter</h4>
+              <p>Ditulis dua kali berturut-turut. Ini bukan kebetulan. Ini adalah karakter — kekanak-kanakan, lumpuh, tak mampu bertindak dengan hikmat.</p>
+            </div>
+          </div>
+        </div>
+        <div class="article-quote">
+          <p>Kesal hati dan gusar bukan sekadar emosi sesaat — ia adalah cerminan dari jiwa yang belum bertumbuh, yang memperbudak diri pada perasaan, bukan pada hikmat Tuhan.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Izebel: Ketika Kesal Hati Membuka Ruang bagi Monster</h2>
+        <div class="article-verse">
+          <p>"Bukankah engkau sekarang yang memegang kuasa raja atas Israel? Bangunlah, makanlah, dan biarlah hatimu gembira. Aku akan memberikan kepadamu kebun anggur Nabot."</p>
+          <cite>— Izebel</cite>
+        </div>
+        <p>Ahab berbaring, telungkup, tidak mau makan. Dalam kekosongan jiwa itu, Izebel masuk mengambil alih — mengambil meterai raja, menulis surat, merekayasa sidang palsu, membayar saksi dusta.</p>
+        <div class="article-highlight">
+          <p>Nabot — seorang yang setia menjaga warisan Tuhan — direkayasa, diadili tanpa kebenaran, lalu dirajam sampai mati. Semua bermula dari satu raja yang kesal hati dan gusar, yang membiarkan dirinya lumpuh, dan dengan kelumpuhannya membuka pintu bagi kejahatan yang lebih besar.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Ahab Mendengar Nabot Mati</h2>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>⚠️ Reaksi Ahab</h4>
+            <ul>
+              <li>Segera bangun dan pergi ke kebun anggur Nabot untuk mengambilnya</li>
+              <li>Tidak ada pertanyaan. Tidak ada perenungan. Tidak ada rasa.</li>
+              <li>Tidak ada: "Bagaimana Nabot bisa mati?"</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>⚡ Apa yang Tuhan Katakan</h4>
+            <ul>
+              <li>"Di tempat anjing telah menjilat darah Nabot, di situ juga anjing akan menjilat darahmu."</li>
+              <li>Pembiaran atas kejahatan tidak pernah diam</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Daud: Cara yang Berbeda Merespons Penghakiman Tuhan</h2>
+        <p>Dalam 2 Samuel 12, Daud juga menghadapi firman penghakiman Tuhan. Natan berkata: "Pastilah anak yang lahir bagimu itu akan mati." Namun respons Daud sama sekali berbeda dari Ahab. Alih-alih kesal hati dan gusar — Daud berpuasa dan menangis. Tujuh hari ia berbaring di lantai, tidak makan, tidak tidur di tempat tidur.</p>
+        <div class="article-quote">
+          <p>Daud tidak memanipulasi Tuhan dengan puasanya. Ia hanya berkata dalam hatinya: "Siapa tahu Tuhan mengasihani aku."</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Hari Ketujuh: Anaknya Mati</h2>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">1</div>
+            <div class="article-step-content">
+              <h4>Pegawai-pegawai Daud Berbisik-bisik</h4>
+              <p>Mereka takut memberitahu Daud: "Ketika anak itu masih hidup ia tidak mengiraukan perkataan kita. Jangan-jangan Daud mencelakakan diri."</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">2</div>
+            <div class="article-step-content">
+              <h4>Daud Bertanya dan Menerima</h4>
+              <p>Daud mencermati bisik-bisik itu. Ia bertanya: "Sudah matikah anak itu?" Dijawab: "Sudah." Lalu Daud bangun dari lantai.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">3</div>
+            <div class="article-step-content">
+              <h4>Daud Mandi, Berurap, Bertukar Pakaian</h4>
+              <p>Ia masuk ke dalam rumah Tuhan. Ia sujud menyembah. Sesudah itu ia pulang, meminta roti dihidangkan, lalu ia makan.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Jawaban Daud: Kedewasaan yang Lahir dari Doa</h2>
+        <div class="article-verse">
+          <p>"Selagi anak itu hidup, aku berpuasa dan menangis, karena pikirku: siapa tahu Tuhan mengasihani aku sehingga anak itu tetap hidup. Tetapi sekarang ia sudah mati. Mengapa aku harus berpuasa? Dapatkah aku mengembalikannya lagi?"</p>
+          <cite>— Daud, 2 Samuel 12:22–23</cite>
+        </div>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>⚠️ Ahab</h4>
+            <ul>
+              <li>Nabot mati → langsung ambil kebun anggur</li>
+              <li>Tidak ada perenungan, tidak ada rasa, tidak ada doa</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>✦ Daud</h4>
+            <ul>
+              <li>Anak mati → bangun, mandi, masuk rumah Tuhan, sujud menyembah</li>
+              <li>Lalu kembali ke kehidupan</li>
+            </ul>
+          </div>
+        </div>
+        <div class="article-quote">
+          <p>Daud berdoa bukan untuk memaksa Tuhan mengubah keputusan-Nya. Daud berdoa untuk menyelaraskan hatinya dengan hati Tuhan. Ketika jawabannya tidak sesuai harapan, Daud tetap dapat berdiri dan menyembah.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Salomo: Kasih Karunia yang Terus Mengalir</h2>
+        <p>Sesudah anaknya mati, Daud menghibur hati Batsyeba. Batsyeba mengandung lagi. Lahirlah Salomo. Dengan perantaraan Nabi Natan, Tuhan menyuruh menamakan anak itu Jedidiah — artinya: yang dikasihi Tuhan.</p>
+        <div class="article-highlight">
+          <p>Dari puasa, tangis, penerimaan, dan penyembahan — lahirlah berkat. Hidup berjalan terus. Bahkan Ahab pun — ketika ia akhirnya merendahkan diri, mengoyakkan pakaian, mengenakan kain kabung, dan berpuasa — Tuhan melihatnya: "Oleh karena ia telah merendahkan diri di hadapan-Ku, maka Aku tidak akan mendatangkan malapetaka dalam zamannya." Hukum kasih karunia itu nyata dan terus berlaku.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Berdoa Bukan Tentang Mauku</h2>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">😤</div>
+            <div class="article-step-content">
+              <h4>Kesal Hati &amp; Gusar</h4>
+              <p>Menutup jiwa. Melumpuhkan. Membiarkan ruang bagi kejahatan. Tidak bisa berdoa karena dipenuhi kebenaran diri sendiri.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">😢</div>
+            <div class="article-step-content">
+              <h4>Berpuasa &amp; Menangis</h4>
+              <p>Merendahkan diri. Membuka hati. Mencari hati Tuhan. Berdoa dalam sikap yang terus mau tahu: "Siapa tahu Tuhan mengasihani aku."</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🙏</div>
+            <div class="article-step-content">
+              <h4>Bangun &amp; Menyembah</h4>
+              <p>Dari berpuasa dan menangis, Daud dapat bangun dan makan — semua karena doa dan penyembahan yang menyelaraskan hatinya dengan hati Bapa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-closing">
+        <p class="article-closing-verse">"Berdoa bukan tentang maunya saya. Berdoa adalah saya terus diselaraskan dengan hati Bapa — sehingga apa pun jawaban-Nya, saya dapat berdiri, menyembah, dan melanjutkan hidup di dalam kasih karunia-Nya."</p>
+        <p class="article-closing-ref">— 1 Raja-Raja 20:35–43 · 21:1–29 · 2 Samuel 12:13–25</p>
       </div>
     </div>
   </div>
