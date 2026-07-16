@@ -1466,6 +1466,7 @@ const ARTICLES = [
   { id:156, judul:"Hina Tuhan", desc:"Bukan jenis dosanya, tapi sikap hatinya. Daud marah pada dosa orang lain tapi buta pada dosanya sendiri — sampai Natan berkata 'Engkaulah orang itu'. Dua jenis dosa: yang mau ditegur vs yang mendatangkan maut (ngeyel, memandang murah kasih karunia). Yakub diurus Tuhan, Esau dibiarkan — ketika Tuhan diam, itu lebih menakutkan dari hukuman. Tuhan menegur karena Ia sayang.", kategori:[2], trending:false, emoji:"🪞", link:"" },
   { id:157, judul:"Dia Saudaraku", desc:"Daud tinggal di rumah saat raja harusnya berperang — kebodohan kecil jadi besar. Ahab yang jahat justru berdiri di depan rakyatnya, dimenangkan Tuhan dua kali. Tapi setelah menang ia berkata 'Dia saudaraku' kepada BenHadad yang harusnya ditumpas — keluar dari Hukum Kasih Karunia. Yang membedakan bukan seberapa baik kita, tapi apakah kita hidup di dalam hukum-Nya.", kategori:[2], trending:false, emoji:"⚔️", link:"" },
   { id:158, judul:"Kesal Gusar", desc:"Ahab: kesal hati dan gusar dua kali berturut-turut — pola karakter yang lumpuh. Kekosongan jiwanya membuka pintu bagi Izebel merekayasa kematian Nabot. Nabot mati, Ahab langsung ambil kebun anggur tanpa perenungan. Daud sebaliknya: 7 hari puasa dan menangis, lalu saat anak mati justru bangun, mandi, dan menyembah. Berdoa bukan tentang mauku — tapi diselaraskan dengan hati Bapa.", kategori:[2], trending:false, emoji:"😤", link:"" },
+  { id:159, judul:"Menyendiri Meledak", desc:"Amsal 18:1 membuka pola Ahab: orang yang menyendiri mencari keinginannya sendiri, amarahnya meledak. Dua kali berturut-turut Ahab lari saat tidak sepakat — pola, bukan kebetulan. Besi menajamkan besi vs lari dan menyendiri. Bisa menyendiri di tengah keramaian gereja sekalipun. Berdoa bukan memaksakan agenda, tapi menyelaraskan hati dengan hati Bapa.", kategori:[2], trending:false, emoji:"💥", link:"" },
 ];
 
 const CATEGORY_NAMES = {
@@ -1657,6 +1658,7 @@ const ARTICLE_COLORS = {
   156: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
   157: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
   158: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
+  159: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
 };
 
 function getCardColor(article) {
@@ -1821,7 +1823,8 @@ const SVG_DESIGNS = {
   155: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,80 Q35,72 32,58 Q30,48 38,42 Q40,50 44,48 Q42,38 50,32 Q52,42 58,40 Q56,30 62,25 Q68,35 65,45 Q70,42 70,50 Q72,60 62,68 Q68,66 68,72 Q62,80 50,80Z" stroke="#a855f7" stroke-width="0.7"/></svg>`,
   156: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><rect x="32" y="25" width="36" height="50" rx="3" stroke="#a855f7" stroke-width="0.6"/><circle cx="50" cy="45" r="12" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M44,45 Q50,40 56,45 Q50,50 44,45Z" stroke="#a855f7" stroke-width="0.4" opacity="0.6"/><path d="M40,68 L60,68" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/></svg>`,
   157: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,20 L50,55" stroke="#a855f7" stroke-width="0.7"/><path d="M35,30 L50,20 L65,30" stroke="#a855f7" stroke-width="0.6"/><path d="M38,45 L62,45" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M50,55 L42,75 M50,55 L58,75" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><circle cx="50" cy="18" r="3" fill="#a855f7" opacity="0.3"/></svg>`,
-  158: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><circle cx="50" cy="45" r="18" stroke="#a855f7" stroke-width="0.7"/><path d="M42,42 L46,46 M46,42 L42,46" stroke="#a855f7" stroke-width="0.6" opacity="0.6"/><path d="M54,42 L58,46 M58,42 L54,46" stroke="#a855f7" stroke-width="0.6" opacity="0.6"/><path d="M42,54 Q50,48 58,54" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M50,63 L50,78" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/></svg>`
+  158: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><circle cx="50" cy="45" r="18" stroke="#a855f7" stroke-width="0.7"/><path d="M42,42 L46,46 M46,42 L42,46" stroke="#a855f7" stroke-width="0.6" opacity="0.6"/><path d="M54,42 L58,46 M58,42 L54,46" stroke="#a855f7" stroke-width="0.6" opacity="0.6"/><path d="M42,54 Q50,48 58,54" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M50,63 L50,78" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/></svg>`,
+  159: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><rect x="30" y="30" width="40" height="40" rx="2" stroke="#a855f7" stroke-width="0.7"/><path d="M50,42 L50,58" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><path d="M50,50 L58,42 M50,50 L42,42 M50,50 L58,58 M50,50 L42,58" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/><circle cx="50" cy="20" r="3" fill="#a855f7" opacity="0.3"/></svg>`
 };
 
 
@@ -1987,7 +1990,7 @@ document.addEventListener('keydown', e => {
 });
 
 function openArticle(id) {
-  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158];
+  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159];
   if (inAppArticles.includes(id)) {
     document.querySelectorAll('.article-content').forEach(el => el.style.display = 'none');
     const target = document.getElementById('article-' + id);
@@ -41096,6 +41099,267 @@ document.addEventListener('keydown', e => {
       <div class="article-closing">
         <p class="article-closing-verse">"Berdoa bukan tentang maunya saya. Berdoa adalah saya terus diselaraskan dengan hati Bapa — sehingga apa pun jawaban-Nya, saya dapat berdiri, menyembah, dan melanjutkan hidup di dalam kasih karunia-Nya."</p>
         <p class="article-closing-ref">— 1 Raja-Raja 20:35–43 · 21:1–29 · 2 Samuel 12:13–25</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ARTICLE 159 -->
+  <div id="article-159" class="article-content" style="display:none">
+    <div class="article-hero">
+      <div class="article-hero-bg" style="background:linear-gradient(135deg,#1a0a28,#2a1040,#361452);"></div>
+      <div class="article-hero-glow"></div>
+      <span class="article-hero-emoji">💥</span>
+      <div class="article-hero-content">
+        <div class="article-hero-eyebrow">Memahami Jati Diri · 1 Raja-Raja 20–21 · Amsal 18</div>
+        <h1 class="article-hero-title">Menyendiri Meledak</h1>
+        <div class="article-hero-tags">
+          <span class="article-tag">1 Raja-Raja 20:43</span>
+          <span class="article-tag">1 Raja-Raja 21:4</span>
+          <span class="article-tag">Amsal 18:1–2</span>
+        </div>
+      </div>
+    </div>
+    <div class="article-body">
+      <div class="article-verse">
+        <p>"Orang yang menyendiri mencari keinginannya sendiri; amarahnya meledak terhadap setiap pertimbangan."</p>
+        <cite>— Amsal 18:1</cite>
+      </div>
+      <p class="article-intro">Dari mana datangnya kesal hati dan gusar? Sebuah refleksi mendalam tentang pola tersembunyi dalam diri manusia — bagaimana kebiasaan menyendiri, memaksakan kehendak, dan akhirnya meledak dalam amarah, menjadi karakter yang melekat. Dipelajari dari kisah Raja Ahab dan terang Amsal 18:1-2.</p>
+
+      <div class="article-section">
+        <h2>Pola yang Terulang: Kesal Hati dan Gusar</h2>
+        <div class="article-verse">
+          <p>"Lalu raja Israel pergi ke istananya dengan kesal hati dan gusar. Maka sampailah ia di Samaria."</p>
+          <cite>— 1 Raja-Raja 20:43</cite>
+        </div>
+        <p>Perhatikan dengan seksama: ini bukan kejadian sekali. Ini pola. Dua peristiwa berbeda, dua orang berbeda, dua waktu berbeda — namun satu pola yang konsisten.</p>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>1 Raja-Raja 20:43</h4>
+            <ul>
+              <li>Ditegur nabi → kesal hati dan gusar → pulang ke Samaria</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>1 Raja-Raja 21:4</h4>
+            <ul>
+              <li>Ditolak Nabot → kesal hati dan gusar → masuk kamar, berbaring, tidak mau makan</li>
+            </ul>
+          </div>
+        </div>
+        <div class="article-quote">
+          <p>Bukan kebetulan. Inilah yang disebut karakter. Bukan sekadar emosi sesaat, melainkan habit yang sudah tertanam dalam.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Detail yang Berbicara: Ahab di 1 Raja-Raja 21</h2>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">🚪</div>
+            <div class="article-step-content">
+              <h4>Masuk ke dalam Istananya</h4>
+              <p>Meninggalkan tempat pertemuan, pergi ke zona amannya sendiri.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🛏️</div>
+            <div class="article-step-content">
+              <h4>Berbaring di Tempat Tidurnya</h4>
+              <p>Bukan istirahat — ini penarikan diri yang disengaja dari seluruh dunia.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🙈</div>
+            <div class="article-step-content">
+              <h4>Menelungkupkan Mukanya</h4>
+              <p>Secara harfiah menutup pandangannya. Tidak mau melihat apapun, siapapun.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🚫</div>
+            <div class="article-step-content">
+              <h4>Tidak Mau Makan</h4>
+              <p>Isolasi total — jiwa, pikiran, perasaan, dan tubuh. Semuanya tertutup rapat.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Kunci Jawabannya: Amsal 18:1</h2>
+        <div class="article-verse">
+          <p>"Orang yang menyendiri mencari keinginannya sendiri; amarahnya meledak terhadap setiap pertimbangan."</p>
+          <cite>— Amsal 18:1</cite>
+        </div>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">1</div>
+            <div class="article-step-content">
+              <h4>Menyendiri → Mencari Keinginan Sendiri</h4>
+              <p>Ahab tidak pergi untuk merenung atau bertumbuh. Ia pergi untuk tidak harus berhadapan dengan realita yang berbeda dari keinginannya.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">2</div>
+            <div class="article-step-content">
+              <h4>Amarah → Meledak Terhadap Setiap Pertimbangan</h4>
+              <p>Karena ia tidak pernah belajar dari perbedaan pendapat, setiap pertimbangan orang lain terasa seperti ancaman. Dan ancaman itu memicu ledakan amarah.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Akar Masalahnya: Ketemu Masalah, Pergi</h2>
+        <p>Perhatikan bahwa kedua kali Ahab mengalami kesal hati dan gusar, itu terjadi saat ia sedang bertemu dengan orang. Begitu komunikasi tidak sesuai keinginannya, pola ini langsung muncul tanpa terkecuali. Ia tidak pernah belajar untuk duduk bersama masalah dan menyelesaikannya.</p>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Besi Menajamkan Besi</h2>
+        <p>Firman Tuhan mengajarkan: "Besi menajamkan besi, manusia menajamkan sesamanya." Tuhan merancang pertumbuhan kita justru terjadi dalam relasi, bukan saat melarikan diri darinya.</p>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>✦ Cara Tuhan: Tetap &amp; Hadapi</h4>
+            <ul>
+              <li>Bertemu masalah bersama orang</li>
+              <li>Besi menajamkan besi</li>
+              <li>Karakter dibentuk, kedewasaan bertumbuh</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>⚠️ Cara Ahab: Lari &amp; Menyendiri</h4>
+            <ul>
+              <li>Bertemu masalah → tinggalkan pembicaraan</li>
+              <li>Menyendiri → mencari keinginan sendiri</li>
+              <li>Amarah meledak</li>
+            </ul>
+          </div>
+        </div>
+        <div class="article-highlight">
+          <p>Ahab memilih jalur sebaliknya. Setiap kali ada gesekan, ia tidak membiarkan gesekan itu menajamkannya. Ia melarikan diri. Akibatnya, ia tidak pernah bertumbuh. Karakternya stagnan. Bahkan memburuk.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Menyendiri di Tengah Keramaian</h2>
+        <div class="article-highlight">
+          <p>Inilah yang paling mengejutkan: menyendiri bukan hanya soal fisik. Seseorang bisa hadir di tengah jemaat, duduk di antara banyak orang, seolah-olah beribadah — namun dalam rohnya, dalam jiwanya, ia sedang menyendiri dan mencari keinginannya sendiri.</p>
+        </div>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">👤</div>
+            <div class="article-step-content">
+              <h4>Hadir Secara Fisik</h4>
+              <p>Duduk bersama jemaat, hadir dalam ibadah, tampak ikut serta dalam komunitas.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🚪</div>
+            <div class="article-step-content">
+              <h4>Menyendiri Dalam Jiwa</h4>
+              <p>Tidak membuka hati, tidak mau disentuh firman, tidak tertarik kepada orang baru di sekitarnya.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🎯</div>
+            <div class="article-step-content">
+              <h4>Mencari Keinginan Sendiri</h4>
+              <p>Datang bukan untuk mencari kehendak Tuhan, melainkan untuk memenuhi agendanya sendiri — dan mudah kecewa bila tidak terpenuhi.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Proses yang Bertahap: Dari Kebiasaan Menjadi Karakter</h2>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">1</div>
+            <div class="article-step-content">
+              <h4>Tinggalkan Pembicaraan</h4>
+              <p>Langkah pertama: pergi saat tidak sepakat.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">2</div>
+            <div class="article-step-content">
+              <h4>Pulang ke Zona Aman</h4>
+              <p>Menjadikan rumah atau kamar sebagai tempat persembunyian.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">3</div>
+            <div class="article-step-content">
+              <h4>Isolasi Total</h4>
+              <p>Berbaring, menelungkupkan muka, tidak mau makan — isolasi jiwa, roh, dan tubuh.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">4</div>
+            <div class="article-step-content">
+              <h4>Amarah yang Mengeras</h4>
+              <p>Amarah meledak terhadap setiap pertimbangan — menjadi karakter permanen.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Berdoa Bukan Tentang Agenda Kita</h2>
+        <p>Berdoa bukan tentang memaksakan apa yang kita mau agar menjadi kenyataan. Berdoa adalah hati kita diselaraskan dengan hati Bapa. Ketika hati kita selaras dengan hati Tuhan, kita tidak lagi hancur saat keinginan kita tidak terpenuhi — karena kita percaya Bapa tahu yang terbaik.</p>
+        <div class="article-highlight">
+          <p>Ahab tidak pernah sampai di pemahaman ini. Ia berdoa dengan agenda. Begitu agenda itu gagal, ia hancur dan marah. Namun kita dipanggil untuk berbeda: bukan agar maunya kita yang jadi, melainkan agar maunya Tuhan yang jadi — dan percaya bahwa itulah yang terbaik.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Refleksi: Dari Mana Datangnya Kesal Hati dan Gusar?</h2>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">🔍</div>
+            <div class="article-step-content">
+              <h4>Kenali Polanya</h4>
+              <p>Apakah kamu cenderung pergi saat tidak sepakat? Itulah awal dari pola Ahab.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🤝</div>
+            <div class="article-step-content">
+              <h4>Tetaplah &amp; Hadapi</h4>
+              <p>Biarkan besi menajamkan besi. Bertahanlah dalam percakapan yang tidak nyaman.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">❤️</div>
+            <div class="article-step-content">
+              <h4>Selaraskan Hatimu</h4>
+              <p>Berdoa bukan untuk memaksakan kehendak, tetapi untuk menyelaraskan hati dengan hati Bapa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-closing">
+        <p class="article-closing-verse">"Kesal hati dan gusar bukan datang tiba-tiba. Ia lahir dari kebiasaan memaksakan kehendak sendiri, lari dari perbedaan, dan menolak untuk diproses bersama orang lain. Menyendiri Meledak — atau Bertahan dan Bertumbuh. Pilihanmu dimulai hari ini."</p>
+        <p class="article-closing-ref">— 1 Raja-Raja 20:43 · 21:4 · Amsal 18:1–2</p>
       </div>
     </div>
   </div>
