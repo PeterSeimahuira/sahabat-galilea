@@ -1467,6 +1467,7 @@ const ARTICLES = [
   { id:157, judul:"Dia Saudaraku", desc:"Daud tinggal di rumah saat raja harusnya berperang — kebodohan kecil jadi besar. Ahab yang jahat justru berdiri di depan rakyatnya, dimenangkan Tuhan dua kali. Tapi setelah menang ia berkata 'Dia saudaraku' kepada BenHadad yang harusnya ditumpas — keluar dari Hukum Kasih Karunia. Yang membedakan bukan seberapa baik kita, tapi apakah kita hidup di dalam hukum-Nya.", kategori:[2], trending:false, emoji:"⚔️", link:"" },
   { id:158, judul:"Kesal Gusar", desc:"Ahab: kesal hati dan gusar dua kali berturut-turut — pola karakter yang lumpuh. Kekosongan jiwanya membuka pintu bagi Izebel merekayasa kematian Nabot. Nabot mati, Ahab langsung ambil kebun anggur tanpa perenungan. Daud sebaliknya: 7 hari puasa dan menangis, lalu saat anak mati justru bangun, mandi, dan menyembah. Berdoa bukan tentang mauku — tapi diselaraskan dengan hati Bapa.", kategori:[2], trending:false, emoji:"😤", link:"" },
   { id:159, judul:"Menyendiri Meledak", desc:"Amsal 18:1 membuka pola Ahab: orang yang menyendiri mencari keinginannya sendiri, amarahnya meledak. Dua kali berturut-turut Ahab lari saat tidak sepakat — pola, bukan kebetulan. Besi menajamkan besi vs lari dan menyendiri. Bisa menyendiri di tengah keramaian gereja sekalipun. Berdoa bukan memaksakan agenda, tapi menyelaraskan hati dengan hati Bapa.", kategori:[2], trending:false, emoji:"💥", link:"" },
+  { id:160, judul:"Wajar Bersahabat", desc:"Kelimpahan membawa tantangan rohani lebih dalam — pergaulan melebar, godaan mengandalkan diri sendiri membesar. Yosafat spontan setuju perang dengan Ahab tanpa berpikir. Setengah kebenaran sama dengan penyesatan. Menyamar sebagai raja hampir membuat Yosafat mati. Sewajarnyakah bersahabat dengan yang membenci Tuhan? Yosafat bangkit dengan sistem keadilan hal Ketuhanan dan hal Kerajaan.", kategori:[2], trending:false, emoji:"🤝", link:"" },
 ];
 
 const CATEGORY_NAMES = {
@@ -1659,6 +1660,7 @@ const ARTICLE_COLORS = {
   157: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
   158: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
   159: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
+  160: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
 };
 
 function getCardColor(article) {
@@ -1824,7 +1826,8 @@ const SVG_DESIGNS = {
   156: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><rect x="32" y="25" width="36" height="50" rx="3" stroke="#a855f7" stroke-width="0.6"/><circle cx="50" cy="45" r="12" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M44,45 Q50,40 56,45 Q50,50 44,45Z" stroke="#a855f7" stroke-width="0.4" opacity="0.6"/><path d="M40,68 L60,68" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/></svg>`,
   157: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,20 L50,55" stroke="#a855f7" stroke-width="0.7"/><path d="M35,30 L50,20 L65,30" stroke="#a855f7" stroke-width="0.6"/><path d="M38,45 L62,45" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M50,55 L42,75 M50,55 L58,75" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><circle cx="50" cy="18" r="3" fill="#a855f7" opacity="0.3"/></svg>`,
   158: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><circle cx="50" cy="45" r="18" stroke="#a855f7" stroke-width="0.7"/><path d="M42,42 L46,46 M46,42 L42,46" stroke="#a855f7" stroke-width="0.6" opacity="0.6"/><path d="M54,42 L58,46 M58,42 L54,46" stroke="#a855f7" stroke-width="0.6" opacity="0.6"/><path d="M42,54 Q50,48 58,54" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M50,63 L50,78" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/></svg>`,
-  159: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><rect x="30" y="30" width="40" height="40" rx="2" stroke="#a855f7" stroke-width="0.7"/><path d="M50,42 L50,58" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><path d="M50,50 L58,42 M50,50 L42,42 M50,50 L58,58 M50,50 L42,58" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/><circle cx="50" cy="20" r="3" fill="#a855f7" opacity="0.3"/></svg>`
+  159: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><rect x="30" y="30" width="40" height="40" rx="2" stroke="#a855f7" stroke-width="0.7"/><path d="M50,42 L50,58" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><path d="M50,50 L58,42 M50,50 L42,42 M50,50 L58,58 M50,50 L42,58" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/><circle cx="50" cy="20" r="3" fill="#a855f7" opacity="0.3"/></svg>`,
+  160: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><circle cx="38" cy="42" r="10" stroke="#a855f7" stroke-width="0.6"/><circle cx="62" cy="42" r="10" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><path d="M25,68 Q38,58 51,68" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M49,68 Q62,58 75,68" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M45,42 L55,42" stroke="#a855f7" stroke-width="0.4" opacity="0.4" stroke-dasharray="2,2"/></svg>`
 };
 
 
@@ -1990,7 +1993,7 @@ document.addEventListener('keydown', e => {
 });
 
 function openArticle(id) {
-  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159];
+  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160];
   if (inAppArticles.includes(id)) {
     document.querySelectorAll('.article-content').forEach(el => el.style.display = 'none');
     const target = document.getElementById('article-' + id);
@@ -41360,6 +41363,216 @@ document.addEventListener('keydown', e => {
       <div class="article-closing">
         <p class="article-closing-verse">"Kesal hati dan gusar bukan datang tiba-tiba. Ia lahir dari kebiasaan memaksakan kehendak sendiri, lari dari perbedaan, dan menolak untuk diproses bersama orang lain. Menyendiri Meledak — atau Bertahan dan Bertumbuh. Pilihanmu dimulai hari ini."</p>
         <p class="article-closing-ref">— 1 Raja-Raja 20:43 · 21:4 · Amsal 18:1–2</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ARTICLE 160 -->
+  <div id="article-160" class="article-content" style="display:none">
+    <div class="article-hero">
+      <div class="article-hero-bg" style="background:linear-gradient(135deg,#1a0a28,#2a1040,#361452);"></div>
+      <div class="article-hero-glow"></div>
+      <span class="article-hero-emoji">🤝</span>
+      <div class="article-hero-content">
+        <div class="article-hero-eyebrow">Memahami Jati Diri · 2 Tawarikh 18–19</div>
+        <h1 class="article-hero-title">Wajar Bersahabat</h1>
+        <div class="article-hero-tags">
+          <span class="article-tag">2 Tawarikh 18:1–32</span>
+          <span class="article-tag">2 Tawarikh 19:1–11</span>
+          <span class="article-tag">Pergaulan</span>
+        </div>
+      </div>
+    </div>
+    <div class="article-body">
+      <div class="article-verse">
+        <p>"Sewajarnyakah engkau menolong orang fasik dan bersahabat dengan mereka yang membenci Tuhan? Karena hal itu, Tuhan murka terhadap engkau."</p>
+        <cite>— Yehu bin Hanani, 2 Tawarikh 19:2</cite>
+      </div>
+      <p class="article-intro">Sebuah renungan dari 2 Tawarikh 18:1–32 dan 2 Tawarikh 19:1–11. Kisah Yosafat dan Ahab mengajarkan kita bahwa kelimpahan finansial membawa tantangan rohani yang lebih dalam — dan pergaulan buruk bukan hanya merusak kebiasaan baik. Nyawa kita bahkan menjadi taruhannya.</p>
+
+      <div class="article-section">
+        <h2>Ketika Kelimpahan Datang, Tantangan Berubah</h2>
+        <p>Ada perbedaan besar antara tantangan di masa kekurangan dan tantangan di masa kelimpahan. Di masa susah, kita bergantung sepenuhnya kepada Tuhan. Namun ketika Tuhan membuka jalan — memberikan keleluasaan finansial dan relasi yang lebih luas — justru di sinilah bahaya baru mengintai.</p>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>Masa Kekurangan</h4>
+            <ul>
+              <li>Iman aktif dalam setiap kebutuhan kecil</li>
+              <li>Ketergantungan pada Tuhan sangat terasa</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>Masa Kelimpahan</h4>
+            <ul>
+              <li>Pergaulan melebar</li>
+              <li>Godaan untuk mengandalkan diri sendiri semakin besar</li>
+            </ul>
+          </div>
+        </div>
+        <div class="article-quote">
+          <p>Bahaya terbesar: bersepakat dengan orang yang sedang melawan Tuhan tanpa kita sadari.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Karakter Ahab: Indah di Depan, Busuk di Dalam</h2>
+        <p>Ahab berdiri gagah demi rakyatnya saat BenHadad mengancam. Namun begitu keleluasaan datang, sifat aslinya muncul. BenHadad yang musuh tiba-tiba disebut "saudaraku." Ketika Nabot menolak menyerahkan kebun anggurnya, Ahab masuk kamar, telungkupkan mukanya, dan menolak makan.</p>
+        <div class="article-highlight">
+          <p>Sedikit kelimpahan, sedikit kuasa — dan kesombongan itu keluar dengan mudah. Itulah karakter asli Ahab: rendah hati saat terjepit, sombong saat lega. Murah hati kepada musuh yang seharusnya dihukum. Keinginan yang memimpin hidupnya, bukan firman Tuhan.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Yosafat: Kaya, Terhormat, dan Terjebak</h2>
+        <p>Ketika Yosafat kaya dan sangat terhormat, ia menjadi besan Ahab. Ahab menjamu Yosafat lalu mengajak pergi berperang. Respons pertama Yosafat: "Kita sama-sama. Aku dan engkau, rakyatmu dan rakyatku." Spontan. Tidak berpikir panjang.</p>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>✦ Langkah Benar Yosafat</h4>
+            <ul>
+              <li>Meminta agar firman Tuhan ditanyakan terlebih dahulu sebelum berangkat perang</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>⚠️ Kesalahan Fatal Yosafat</h4>
+            <ul>
+              <li>Setelah mendengar firman Tuhan melalui Mikha bin Yimla, ia tetap berangkat karena tidak enak hati kepada Ahab</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Setengah Kebenaran Sama dengan Penyesatan</h2>
+        <p>Yosafat benar bahwa Ramot-Gilead adalah kota perlindungan yang Tuhan anugerahkan kepada Israel. Itu fakta. Namun ia mengabaikan satu hal yang jauh lebih penting: Tuhan baru saja berbicara melalui Mikha bin Yimla — dengan jelas — bahwa perang ini akan membawa malapetaka.</p>
+        <div class="article-highlight">
+          <p>Menggunakan kebenaran sebagian untuk membenarkan keputusan yang salah adalah salah satu jebakan paling berbahaya dalam kehidupan rohani. Kita bisa merasa sedang berjalan di jalan yang benar, padahal kita sedang berjalan menuju kehancuran — karena kita hanya mau mendengar bagian yang enak. Tuhan sudah berbicara. Tugas kita bukan mencari pembenaran — tugas kita adalah taat.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Menyamar: Strategi yang Hampir Membunuh Yosafat</h2>
+        <p>Raja Israel berkata: "Aku akan menyamar dan masuk pertempuran, tapi engkau pakai baju kebesaran." Yosafat menyetujuinya. Raja Aram telah memerintahkan: cari hanya Raja Israel. Ketika para panglima melihat jubah kerajaan, mereka langsung mengepung Yosafat.</p>
+        <div class="article-highlight">
+          <p>Ia terjepit. Tinggal menunggu mati. Satu-satunya yang bisa ia lakukan adalah berteriak — dan Tuhan mendengar. Allah membujuk mereka untuk mundur. Pergaulan buruk bukan hanya merusak kebiasaan baik. Nyawa kita bahkan menjadi taruhannya.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Di Tengah Kebodohan Kita, Tuhan Tetap Bekerja</h2>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">🛡️</div>
+            <div class="article-step-content">
+              <h4>Tuhan Melindungi</h4>
+              <p>Allah membujuk tentara Aram untuk mundur dari Yosafat — bukan karena Yosafat layak, tetapi karena kasih karunia Tuhan tidak terbatas.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">⚡</div>
+            <div class="article-step-content">
+              <h4>Tuhan Menegur</h4>
+              <p>Yehu bin Hanani diutus untuk menegur: "Sewajarnyakah engkau menolong orang fasik dan bersahabat dengan mereka yang membenci Tuhan?"</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">✦</div>
+            <div class="article-step-content">
+              <h4>Tuhan Mengakui Kebaikan</h4>
+              <p>"Namun masih terdapat hal-hal yang baik padamu" — Tuhan adil dan tepat dalam menimbang setiap hal dalam hidup kita.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Sewajarnyakah Engkau Bersahabat dengan Orang yang Membenci Tuhan?</h2>
+        <div class="article-highlight">
+          <p>Kita sering berpikir: "Saya mengasihi dia dengan kasih Tuhan." Niat kita baik. Namun firman Tuhan mengingatkan kita bahwa ada perbedaan antara mengasihi seseorang dan bersepakat dengan kefasikannya. Ketika seseorang sedang menanggung konsekuensi dari permusuhannya dengan Tuhan, ikut masuk ke dalam situasinya bukan berarti menolong — itu berarti kita turut menanggung akibatnya.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Yosafat Bangkit: Keimamatan dan Kerajaan</h2>
+        <p>Setelah nyaris mati dan ditegur Tuhan, Yosafat tidak tenggelam dalam penyesalan. Ia bangkit dan mengerjakan panggilan yang sesungguhnya — mengadakan kunjungan dari Bersyeba sampai pegunungan Efraim, mengangkat hakim-hakim yang takut akan Allah.</p>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">⛪</div>
+            <div class="article-step-content">
+              <h4>Hal Ketuhanan</h4>
+              <p>Imam kepala Amarya ditunjuk untuk mengurus segala perkara yang berkaitan dengan Tuhan dan ibadah.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🏛️</div>
+            <div class="article-step-content">
+              <h4>Hal Kerajaan</h4>
+              <p>Zebaja bin Ismael, pemuka Yehuda, ditunjuk untuk mengurus segala perkara kehidupan bermasyarakat dan kerajaan.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">⚖️</div>
+            <div class="article-step-content">
+              <h4>Prinsip Hakim</h4>
+              <p>"Bukan untuk manusia kamu memutuskan hukum, melainkan untuk Tuhan yang ada beserta kamu."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Pelajaran untuk Kita Hari Ini</h2>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">1</div>
+            <div class="article-step-content">
+              <h4>Jangan Lengah di Tengah Kelimpahan</h4>
+              <p>Ketika Tuhan memberikan kecukupan, justru intensitas kita mencari Tuhan harus meningkat, bukan berkurang.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">2</div>
+            <div class="article-step-content">
+              <h4>Dengar dan Taati Firman Tuhan Sepenuhnya</h4>
+              <p>Jangan berhenti di setengah kebenaran. Ketika Tuhan sudah berbicara, bagian kita adalah taat.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">3</div>
+            <div class="article-step-content">
+              <h4>Jaga Pergaulan dengan Serius</h4>
+              <p>Pergaulan buruk bukan hanya merusak kebiasaan baik. Nyawa kita bahkan menjadi taruhannya.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">4</div>
+            <div class="article-step-content">
+              <h4>Kerjakan Bagianmu dengan Setia</h4>
+              <p>Kerjakan dengan setia dalam hal ketuhanan dan hal kerajaan. Tuhan yang pegang sisanya.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-closing">
+        <p class="article-closing-verse">"Bertindaklah dengan tegas. Kiranya Tuhan menyertai orang yang tulus ikhlas."</p>
+        <p class="article-closing-ref">— 2 Tawarikh 19:11</p>
       </div>
     </div>
   </div>
