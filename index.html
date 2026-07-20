@@ -1468,6 +1468,7 @@ const ARTICLES = [
   { id:158, judul:"Kesal Gusar", desc:"Ahab: kesal hati dan gusar dua kali berturut-turut — pola karakter yang lumpuh. Kekosongan jiwanya membuka pintu bagi Izebel merekayasa kematian Nabot. Nabot mati, Ahab langsung ambil kebun anggur tanpa perenungan. Daud sebaliknya: 7 hari puasa dan menangis, lalu saat anak mati justru bangun, mandi, dan menyembah. Berdoa bukan tentang mauku — tapi diselaraskan dengan hati Bapa.", kategori:[2], trending:false, emoji:"😤", link:"" },
   { id:159, judul:"Menyendiri Meledak", desc:"Amsal 18:1 membuka pola Ahab: orang yang menyendiri mencari keinginannya sendiri, amarahnya meledak. Dua kali berturut-turut Ahab lari saat tidak sepakat — pola, bukan kebetulan. Besi menajamkan besi vs lari dan menyendiri. Bisa menyendiri di tengah keramaian gereja sekalipun. Berdoa bukan memaksakan agenda, tapi menyelaraskan hati dengan hati Bapa.", kategori:[2], trending:false, emoji:"💥", link:"" },
   { id:160, judul:"Wajar Bersahabat", desc:"Kelimpahan membawa tantangan rohani lebih dalam — pergaulan melebar, godaan mengandalkan diri sendiri membesar. Yosafat spontan setuju perang dengan Ahab tanpa berpikir. Setengah kebenaran sama dengan penyesatan. Menyamar sebagai raja hampir membuat Yosafat mati. Sewajarnyakah bersahabat dengan yang membenci Tuhan? Yosafat bangkit dengan sistem keadilan hal Ketuhanan dan hal Kerajaan.", kategori:[2], trending:false, emoji:"🤝", link:"" },
+  { id:161, judul:"Bukit Korban", desc:"Yosafat raja yang benar, tapi bukit-bukit pengorbanan tidak dijauhkan — sinkritisme yang membuat hati tidak bisa menimbang jernih. Pola berulang: hampir mati di Ramot-Gilead, lalu kapal Tarsis pecah karena bersekutu dengan Ahazia. Kesialan adalah tanda kasih, bukan kutuk. Akibat lebih dalam: Yoram menikahi Atalya, salinan Izebel. Kebenaran penuh memerdekakan, setengah kebenaran menyesatkan.", kategori:[2], trending:false, emoji:"⛰️", link:"" },
 ];
 
 const CATEGORY_NAMES = {
@@ -1661,6 +1662,7 @@ const ARTICLE_COLORS = {
   158: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
   159: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
   160: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
+  161: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
 };
 
 function getCardColor(article) {
@@ -1827,7 +1829,8 @@ const SVG_DESIGNS = {
   157: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,20 L50,55" stroke="#a855f7" stroke-width="0.7"/><path d="M35,30 L50,20 L65,30" stroke="#a855f7" stroke-width="0.6"/><path d="M38,45 L62,45" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M50,55 L42,75 M50,55 L58,75" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><circle cx="50" cy="18" r="3" fill="#a855f7" opacity="0.3"/></svg>`,
   158: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><circle cx="50" cy="45" r="18" stroke="#a855f7" stroke-width="0.7"/><path d="M42,42 L46,46 M46,42 L42,46" stroke="#a855f7" stroke-width="0.6" opacity="0.6"/><path d="M54,42 L58,46 M58,42 L54,46" stroke="#a855f7" stroke-width="0.6" opacity="0.6"/><path d="M42,54 Q50,48 58,54" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M50,63 L50,78" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/></svg>`,
   159: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><rect x="30" y="30" width="40" height="40" rx="2" stroke="#a855f7" stroke-width="0.7"/><path d="M50,42 L50,58" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><path d="M50,50 L58,42 M50,50 L42,42 M50,50 L58,58 M50,50 L42,58" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/><circle cx="50" cy="20" r="3" fill="#a855f7" opacity="0.3"/></svg>`,
-  160: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><circle cx="38" cy="42" r="10" stroke="#a855f7" stroke-width="0.6"/><circle cx="62" cy="42" r="10" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><path d="M25,68 Q38,58 51,68" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M49,68 Q62,58 75,68" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M45,42 L55,42" stroke="#a855f7" stroke-width="0.4" opacity="0.4" stroke-dasharray="2,2"/></svg>`
+  160: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><circle cx="38" cy="42" r="10" stroke="#a855f7" stroke-width="0.6"/><circle cx="62" cy="42" r="10" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><path d="M25,68 Q38,58 51,68" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M49,68 Q62,58 75,68" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M45,42 L55,42" stroke="#a855f7" stroke-width="0.4" opacity="0.4" stroke-dasharray="2,2"/></svg>`,
+  161: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M20,72 L38,42 L50,58 L62,35 L80,72 Z" stroke="#a855f7" stroke-width="0.7"/><rect x="44" y="30" width="12" height="8" rx="1" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M50,30 L50,22" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/><circle cx="50" cy="20" r="2" fill="#a855f7" opacity="0.3"/></svg>`
 };
 
 
@@ -1993,7 +1996,7 @@ document.addEventListener('keydown', e => {
 });
 
 function openArticle(id) {
-  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160];
+  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161];
   if (inAppArticles.includes(id)) {
     document.querySelectorAll('.article-content').forEach(el => el.style.display = 'none');
     const target = document.getElementById('article-' + id);
@@ -41573,6 +41576,276 @@ document.addEventListener('keydown', e => {
       <div class="article-closing">
         <p class="article-closing-verse">"Bertindaklah dengan tegas. Kiranya Tuhan menyertai orang yang tulus ikhlas."</p>
         <p class="article-closing-ref">— 2 Tawarikh 19:11</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ARTICLE 161 -->
+  <div id="article-161" class="article-content" style="display:none">
+    <div class="article-hero">
+      <div class="article-hero-bg" style="background:linear-gradient(135deg,#1a0a28,#2a1040,#361452);"></div>
+      <div class="article-hero-glow"></div>
+      <span class="article-hero-emoji">⛰️</span>
+      <div class="article-hero-content">
+        <div class="article-hero-eyebrow">Memahami Jati Diri · 1 Raja-Raja 22 · 2 Tawarikh 20</div>
+        <h1 class="article-hero-title">Bukit Korban</h1>
+        <div class="article-hero-tags">
+          <span class="article-tag">1 Raja-Raja 22:41–50</span>
+          <span class="article-tag">2 Tawarikh 20:31–37</span>
+          <span class="article-tag">Sinkritisme</span>
+        </div>
+      </div>
+    </div>
+    <div class="article-body">
+      <div class="article-verse">
+        <p>"Hanya bukit-bukit pengorbanan tidak dijauhkan. Bangsa itu belum mengarahkan hatinya kepada Allah nenek moyang mereka."</p>
+        <cite>— 2 Tawarikh 20:33</cite>
+      </div>
+      <p class="article-intro">Sebuah refleksi mendalam dari 1 Raja-Raja 22:41–50 dan 2 Tawarikh 20:31–37 — tentang bagaimana satu kompromi kecil yang dibiarkan dapat mengaburkan hati, mengulang kebodohan yang sama, dan membuka pintu bagi kegelapan yang jauh lebih besar dari yang kita bayangkan.</p>
+
+      <div class="article-section">
+        <h2>Yosafat: Raja yang Melakukan yang Benar</h2>
+        <p>Yosafat anak Asa menjadi raja atas Yehuda pada usia 35 tahun, memerintah 25 tahun di Yerusalem. Firman Tuhan mencatat: ia hidup mengikuti jejak Asa ayahnya, tidak menyimpang darinya, dan melakukan apa yang benar di mata Tuhan.</p>
+        <div class="article-highlight">
+          <p>Baik 1 Raja-Raja 22 maupun 2 Tawarikh 20 mencatat kalimat yang persis sama tentang dirinya — sebuah penekanan dari Sorga bahwa Yosafat memang seorang yang benar.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Satu Kalimat yang Mengubah Segalanya</h2>
+        <div class="article-verse">
+          <p>"Hanya bukit-bukit pengorbanan tidak dijauhkan. Orang masih mempersembahkan dan membakar korban di bukit-bukit itu."</p>
+          <cite>— 1 Raja-Raja 22:44</cite>
+        </div>
+        <div class="article-highlight">
+          <p>Dua kitab, satu detail yang sama. Tuhan tidak melewatkan ini. Catatan kecil ini bukan sekadar informasi sejarah — ini adalah penjelasan mengapa seorang raja yang benar bisa berulang kali jatuh di lubang yang sama.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Apa Itu Bukit-Bukit Pengorbanan?</h2>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>Sebelum Bait Tuhan</h4>
+            <ul>
+              <li>Bukit pengorbanan adalah tempat ibadah yang wajar</li>
+              <li>Belum ada pusat ibadah resmi yang ditetapkan Tuhan</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>Setelah Bait Tuhan</h4>
+            <ul>
+              <li>Ibadah di bukit-bukit itu menjadi penyimpangan</li>
+              <li>Tuhan sudah menetapkan tempat dan cara ibadah yang benar</li>
+            </ul>
+          </div>
+        </div>
+        <div class="article-quote">
+          <p>Yang terus berlanjut bukan lagi ibadah kepada Tuhan — melainkan sinkritisme: firman Tuhan yang bercampur dengan kebiasaan nenek moyang.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Sinkritisme: Setengah Kebenaran yang Menyesatkan</h2>
+        <p>Bukit pengorbanan adalah gambaran sinkritisme — pencampuran kebenaran firman dengan tradisi dan kebiasaan yang tidak sesuai dengan kehendak Tuhan. Terasa familiar, terasa benar, sudah dilakukan sejak lama — tetapi pada akhirnya menyesatkan.</p>
+        <div class="article-highlight">
+          <p>Setengah kebenaran tidak memerdekakan. Justru sebaliknya — ia menciptakan zona abu-abu di mana hati tidak bisa menimbang dengan jernih mana yang dari Tuhan dan mana yang bukan. Kebenaran Tuhan yang penuh itu memerdekakan. Setengah kebenaran, ujungnya semata-mata kesesatan.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Pola Pertama: Hampir Mati di Ramot-Gilead</h2>
+        <p>Sebelum kisah kapal Tarsis, Yosafat sudah pernah terjerat dalam kesalahan yang sama. Ia bersekutu dengan Ahab dalam pertempuran di Ramot-Gilead, hampir tewas menggantikan nyawa Ahab. Ia ditegur keras: "Sewajarnyakah engkau menolong orang fasik dan bersahabat dengan mereka yang membenci Tuhan?"</p>
+        <div class="article-highlight">
+          <p>Teguran itu seharusnya cukup. Namun bukit-bukit pengorbanan yang tidak disingkirkan membuat hati Yosafat tidak pernah sepenuhnya jernih untuk membedakan — dan pola itu akan terulang lagi.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Kapal Tarsis: Pola yang Berulang</h2>
+        <p>Yosafat ingin melanjutkan proyek Salomo — membangun kapal-kapal Tarsis untuk berlayar ke Ofir. Awalnya ia bersepakat dengan Ahazia, anak Ahab yang fasik. Tuhan mengutus Eliezer bin Dodawa bernubuat: "Karena engkau bersekutu dengan Ahazia, maka Tuhan akan merobohkan pekerjaanmu."</p>
+        <div class="article-highlight">
+          <p>Dan benar — kapal-kapal yang sudah selesai dibangun itu pecah di Ezion-Geber. Belum sempat berlayar, sudah hancur di pelabuhan.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Membaca Dua Kitab Sekaligus: Kronologi yang Sebenarnya</h2>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">1</div>
+            <div class="article-step-content">
+              <h4>Bersepakat</h4>
+              <p>Yosafat dan Ahazia bersepakat membangun kapal Tarsis bersama.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">2</div>
+            <div class="article-step-content">
+              <h4>Ditegur Nabi</h4>
+              <p>Eliezer bin Dodawa bernubuat: "Karena kau bersekutu dengan Ahazia, Tuhan akan merobohkan pekerjaanmu."</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">3</div>
+            <div class="article-step-content">
+              <h4>Kapal Pecah</h4>
+              <p>Kapal-kapal yang sudah selesai dibangun pecah di Ezion-Geber, tidak dapat berlayar.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">4</div>
+            <div class="article-step-content">
+              <h4>Belajar</h4>
+              <p>Ahazia mengajak lagi — kali ini Yosafat menolak.</p>
+            </div>
+          </div>
+        </div>
+        <div class="article-quote">
+          <p>Yosafat belajar — tetapi baru setelah kapalnya pecah. Bukan dari awal. Itulah bedanya orang yang hatinya jernih dengan orang yang masih memiliki bukit-bukit pengorbanan yang tidak disingkirkan.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Kesialan Itu Tanda Kasih, Bukan Kutuk</h2>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>Tuhan Sayang Yakub</h4>
+            <ul>
+              <li>Tuhan campur tangan, menegur, mengurus</li>
+              <li>Karena Yakub adalah milik-Nya</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>Tuhan Diam pada Esau</h4>
+            <ul>
+              <li>Esau dibiarkan melakukan sekehendaknya</li>
+              <li>Tidak ditegur, tidak diurus — itulah arti "Esau Aku benci"</li>
+            </ul>
+          </div>
+        </div>
+        <div class="article-highlight">
+          <p>Kapal yang pecah bukan tanda Tuhan jahat — itu tanda Tuhan masih peduli dan tidak mau kita bersekutu dengan kegelapan.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Akibat yang Jauh Lebih Dalam: Yoram dan Atalya</h2>
+        <p>Karena persekutuan Yosafat dengan keluarga Ahab tidak sepenuhnya diputuskan — Yoram, anak sulungnya, menikah dengan Atalya, anak Ahab dan Izebel. Atalya adalah salinan sempurna dari Izebel dalam kerajaan Yehuda.</p>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">1</div>
+            <div class="article-step-content">
+              <h4>Bukit Pengorbanan Dibiarkan</h4>
+              <p>Yosafat tidak menyingkirkan sinkritisme dari hati bangsa.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">2</div>
+            <div class="article-step-content">
+              <h4>Hati Tidak Dapat Menimbang Jernih</h4>
+              <p>Yosafat berulang kali bersekutu dengan raja-raja fasik tanpa bisa membedakan.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">3</div>
+            <div class="article-step-content">
+              <h4>Yoram Menikahi Atalya</h4>
+              <p>Pintu terbuka bagi keturunan Ahab-Izebel masuk ke dalam kerajaan Yehuda.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">4</div>
+            <div class="article-step-content">
+              <h4>Yoram Membunuh Semua Saudaranya</h4>
+              <p>Kekerasan dan kejahatan merajalela — kerajaan Yehuda nyaris lenyap sepenuhnya.</p>
+            </div>
+          </div>
+        </div>
+        <div class="article-quote">
+          <p>Dari membiarkan satu yang kecil — satu bukit pengorbanan — iblis mendapat jalan masuk yang perlahan namun pasti merusak segalanya.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Apa Bukit Pengorbananmu Hari Ini?</h2>
+        <p>Bukit pengorbanan bukan harus sesuatu yang besar dan mencolok. Justru sebaliknya — ia seringkali sesuatu yang kecil, yang sudah biasa, yang terasa tidak berbahaya. Hidup kita adalah mezbah. Setiap kali ada sesuatu yang membuat hati kita bergeser dari Tuhan — itulah bukit pengorbanan itu.</p>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">💔</div>
+            <div class="article-step-content">
+              <h4>Hati yang Terbagi</h4>
+              <p>Ketika ada sesuatu yang lebih kita cintai dari Tuhan — apapun itu — di sanalah bukit pengorbanan berdiri.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🌫️</div>
+            <div class="article-step-content">
+              <h4>Ketidakmampuan Membedakan</h4>
+              <p>Bukit pengorbanan membuat kita tidak bisa menimbang dengan jernih mana yang dari Tuhan dan mana yang bukan.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🔄</div>
+            <div class="article-step-content">
+              <h4>Pola yang Berulang</h4>
+              <p>Kita bingung mengapa terus jatuh di tempat yang sama — jawabannya ada di bukit yang belum kita singkirkan.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Refleksi Akhir: Kebenaran Penuh yang Memerdekakan</h2>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">🔍</div>
+            <div class="article-step-content">
+              <h4>Kenali</h4>
+              <p>Apa yang menjadi bukit pengorbanan dalam hidupmu hari ini?</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🚫</div>
+            <div class="article-step-content">
+              <h4>Singkirkan</h4>
+              <p>Jangan biarkan. Jangan kompromi. Yosafat tidak menyingkirkan — dan pola terus berulang.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🪨</div>
+            <div class="article-step-content">
+              <h4>Serahkan Sepenuhnya</h4>
+              <p>Hidup kita adalah mezbah. Berikan seluruhnya kepada Tuhan — tidak setengah-setengah.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-closing">
+        <p class="article-closing-verse">"Kebenaran Tuhan yang penuh itu memerdekakan. Setengah kebenaran — ujungnya semata-mata kesesatan. Bersyukurlah ketika Tuhan menegur. Bersyukurlah ketika kapal pecah. Itu bukan tanda Tuhan jahat — itu tanda Tuhan masih sayang, masih campur tangan, masih mengurus hidup kita."</p>
+        <p class="article-closing-ref">— 1 Raja-Raja 22:41–50 · 2 Tawarikh 20:31–37</p>
       </div>
     </div>
   </div>
