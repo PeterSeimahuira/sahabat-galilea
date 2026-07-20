@@ -1469,6 +1469,7 @@ const ARTICLES = [
   { id:159, judul:"Menyendiri Meledak", desc:"Amsal 18:1 membuka pola Ahab: orang yang menyendiri mencari keinginannya sendiri, amarahnya meledak. Dua kali berturut-turut Ahab lari saat tidak sepakat — pola, bukan kebetulan. Besi menajamkan besi vs lari dan menyendiri. Bisa menyendiri di tengah keramaian gereja sekalipun. Berdoa bukan memaksakan agenda, tapi menyelaraskan hati dengan hati Bapa.", kategori:[2], trending:false, emoji:"💥", link:"" },
   { id:160, judul:"Wajar Bersahabat", desc:"Kelimpahan membawa tantangan rohani lebih dalam — pergaulan melebar, godaan mengandalkan diri sendiri membesar. Yosafat spontan setuju perang dengan Ahab tanpa berpikir. Setengah kebenaran sama dengan penyesatan. Menyamar sebagai raja hampir membuat Yosafat mati. Sewajarnyakah bersahabat dengan yang membenci Tuhan? Yosafat bangkit dengan sistem keadilan hal Ketuhanan dan hal Kerajaan.", kategori:[2], trending:false, emoji:"🤝", link:"" },
   { id:161, judul:"Bukit Korban", desc:"Yosafat raja yang benar, tapi bukit-bukit pengorbanan tidak dijauhkan — sinkritisme yang membuat hati tidak bisa menimbang jernih. Pola berulang: hampir mati di Ramot-Gilead, lalu kapal Tarsis pecah karena bersekutu dengan Ahazia. Kesialan adalah tanda kasih, bukan kutuk. Akibat lebih dalam: Yoram menikahi Atalya, salinan Izebel. Kebenaran penuh memerdekakan, setengah kebenaran menyesatkan.", kategori:[2], trending:false, emoji:"⛰️", link:"" },
+  { id:162, judul:"Terbuka Mata", desc:"Ular tidak datang dengan kekerasan — datang dengan pertanyaan wajar dan setengah kebenaran. Mata yang terbuka setelah makan buah bukan mata rohani, tapi mata kedagingan. Rangkaian kejatuhan: duduk dengan ular, melihat, menginginkan, mengambil, lalu lari dari Tuhan. Yosafat-Ahab pola yang sama. Ular hari ini datang lewat konten yang kita tonton dan obrolan yang sia-sia.", kategori:[2], trending:false, emoji:"🐍", link:"" },
 ];
 
 const CATEGORY_NAMES = {
@@ -1663,6 +1664,7 @@ const ARTICLE_COLORS = {
   159: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
   160: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
   161: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
+  162: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
 };
 
 function getCardColor(article) {
@@ -1830,7 +1832,8 @@ const SVG_DESIGNS = {
   158: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><circle cx="50" cy="45" r="18" stroke="#a855f7" stroke-width="0.7"/><path d="M42,42 L46,46 M46,42 L42,46" stroke="#a855f7" stroke-width="0.6" opacity="0.6"/><path d="M54,42 L58,46 M58,42 L54,46" stroke="#a855f7" stroke-width="0.6" opacity="0.6"/><path d="M42,54 Q50,48 58,54" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M50,63 L50,78" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/></svg>`,
   159: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><rect x="30" y="30" width="40" height="40" rx="2" stroke="#a855f7" stroke-width="0.7"/><path d="M50,42 L50,58" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><path d="M50,50 L58,42 M50,50 L42,42 M50,50 L58,58 M50,50 L42,58" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/><circle cx="50" cy="20" r="3" fill="#a855f7" opacity="0.3"/></svg>`,
   160: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><circle cx="38" cy="42" r="10" stroke="#a855f7" stroke-width="0.6"/><circle cx="62" cy="42" r="10" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><path d="M25,68 Q38,58 51,68" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M49,68 Q62,58 75,68" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M45,42 L55,42" stroke="#a855f7" stroke-width="0.4" opacity="0.4" stroke-dasharray="2,2"/></svg>`,
-  161: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M20,72 L38,42 L50,58 L62,35 L80,72 Z" stroke="#a855f7" stroke-width="0.7"/><rect x="44" y="30" width="12" height="8" rx="1" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M50,30 L50,22" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/><circle cx="50" cy="20" r="2" fill="#a855f7" opacity="0.3"/></svg>`
+  161: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M20,72 L38,42 L50,58 L62,35 L80,72 Z" stroke="#a855f7" stroke-width="0.7"/><rect x="44" y="30" width="12" height="8" rx="1" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M50,30 L50,22" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/><circle cx="50" cy="20" r="2" fill="#a855f7" opacity="0.3"/></svg>`,
+  162: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M25,60 Q35,45 30,35 Q40,42 50,32 Q45,45 60,42 Q52,52 65,55 Q55,60 65,68 Q55,65 58,75 Q48,68 45,78" stroke="#a855f7" stroke-width="0.7"/><circle cx="27" cy="58" r="2" fill="#a855f7" opacity="0.4"/><path d="M30,50 Q35,25 50,20 Q65,25 68,45" stroke="#a855f7" stroke-width="0.4" opacity="0.3" stroke-dasharray="2,3"/></svg>`
 };
 
 
@@ -1996,7 +1999,7 @@ document.addEventListener('keydown', e => {
 });
 
 function openArticle(id) {
-  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161];
+  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162];
   if (inAppArticles.includes(id)) {
     document.querySelectorAll('.article-content').forEach(el => el.style.display = 'none');
     const target = document.getElementById('article-' + id);
@@ -41846,6 +41849,265 @@ document.addEventListener('keydown', e => {
       <div class="article-closing">
         <p class="article-closing-verse">"Kebenaran Tuhan yang penuh itu memerdekakan. Setengah kebenaran — ujungnya semata-mata kesesatan. Bersyukurlah ketika Tuhan menegur. Bersyukurlah ketika kapal pecah. Itu bukan tanda Tuhan jahat — itu tanda Tuhan masih sayang, masih campur tangan, masih mengurus hidup kita."</p>
         <p class="article-closing-ref">— 1 Raja-Raja 22:41–50 · 2 Tawarikh 20:31–37</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ARTICLE 162 -->
+  <div id="article-162" class="article-content" style="display:none">
+    <div class="article-hero">
+      <div class="article-hero-bg" style="background:linear-gradient(135deg,#1a0a28,#2a1040,#361452);"></div>
+      <div class="article-hero-glow"></div>
+      <span class="article-hero-emoji">🐍</span>
+      <div class="article-hero-content">
+        <div class="article-hero-eyebrow">Memahami Jati Diri · Kejadian 3 · Galatia 5</div>
+        <h1 class="article-hero-title">Terbuka Mata</h1>
+        <div class="article-hero-tags">
+          <span class="article-tag">Kejadian 3:1–10</span>
+          <span class="article-tag">Galatia 5:16–17</span>
+          <span class="article-tag">Mata Kedagingan</span>
+        </div>
+      </div>
+    </div>
+    <div class="article-body">
+      <div class="article-verse">
+        <p>"Maka terbukalah mata mereka berdua dan mereka tahu bahwa mereka telanjang."</p>
+        <cite>— Kejadian 3:7</cite>
+      </div>
+      <p class="article-intro">Sebuah refleksi mendalam dari Kejadian 3:1–10 — tentang bagaimana mata kedagingan yang terbuka justru membutakan mata rohani kita, dan bagaimana kejatuhan manusia selalu dimulai dari hal yang tampak kecil: sebuah obrolan.</p>
+
+      <div class="article-section">
+        <h2>Ular yang Paling Cerdik</h2>
+        <p>Kejadian 3 dimulai dengan sebuah perkenalan yang mengejutkan: "Adapun ular ialah yang paling cerdik dari segala binatang di darat." Kecerdikannya bukan pada kekuatan — melainkan pada cara ia memulai percakapan.</p>
+        <div class="article-highlight">
+          <p>Ular tidak datang dengan kekerasan. Ia datang dengan pertanyaan yang terdengar wajar: "Tentulah Allah berfirman, semua pohon dalam taman ini jangan kamu makan buahnya, bukan?" Dengan menyebut kata "jangan", pikiran Hawa langsung tertuju ke sana.</p>
+        </div>
+        <div class="article-quote">
+          <p>Saat kita berhenti dan mulai membalas, ular sudah memegang kendali percakapan.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Setengah Kebenaran</h2>
+        <p>Inilah senjata paling berbahaya dari ular: bukan kebohongan total, melainkan setengah kebenaran.</p>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>Yang Ular Katakan</h4>
+            <ul>
+              <li>"Matamu akan terbuka dan kamu akan menjadi seperti Allah." — Benar. Mata mereka memang terbuka.</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>Yang Ular Sembunyikan</h4>
+            <ul>
+              <li>Mata yang terbuka adalah mata kedagingan — bukan mata rohani</li>
+              <li>Yang terbuka justru membutakan hal yang sesungguhnya penting</li>
+            </ul>
+          </div>
+        </div>
+        <div class="article-highlight">
+          <p>Setengah kebenaran selalu berakhir di penyesatan. Bukan dengan tipu muslihat kasar, tapi dengan daya tarik yang halus dan terasa masuk akal.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Mata Terbuka — Tapi Mata Apa?</h2>
+        <p>Ayat 7 berkata: mata mereka terbuka dan mereka tahu bahwa mereka telanjang. Inilah momen paling krusial — mata yang terbuka bukan mata rohani, melainkan mata kedagingan.</p>
+        <div class="article-highlight">
+          <p>Saat kedagingan yang aktif, roh yang dipadamkan. Firman Tuhan dalam Galatia 5:17 menegaskan: "Keinginan daging berlawanan dengan keinginan roh." Keduanya tidak bisa berjalan bersama — salah satu pasti mengalah.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Rangkaian Kejatuhan</h2>
+        <p>Kejatuhan manusia tidak terjadi dalam satu lompatan besar. Ia terjadi dalam urutan yang rapi, pelan-pelan, langkah demi langkah.</p>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">1</div>
+            <div class="article-step-content">
+              <h4>Duduk dengan Ular</h4>
+              <p>Hawa tidak langsung memakan buah. Ia pertama-tama berhenti dan terlibat dalam percakapan.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">2</div>
+            <div class="article-step-content">
+              <h4>Melihat &amp; Menginginkan</h4>
+              <p>"Perempuan itu melihat bahwa buah pohon itu baik untuk dimakan, sedap kelihatannya." Keinginan lahir dari pandangan yang bertahan terlalu lama.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">3</div>
+            <div class="article-step-content">
+              <h4>Mengambil &amp; Memakan</h4>
+              <p>Dari keinginan yang dibuahi, lahirlah tindakan. Ia mengambil, memakan, dan memberikan kepada suaminya.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">4</div>
+            <div class="article-step-content">
+              <h4>Mata Daging Terbuka</h4>
+              <p>Terbukalah mata mereka — sadar telanjang, menyemat daun ara, lalu bersembunyi dari Tuhan.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">5</div>
+            <div class="article-step-content">
+              <h4>Lari dari Tuhan</h4>
+              <p>Semua akibat dari mata yang terbuka bermuara pada satu hal: lari menjauh dari Tuhan.</p>
+            </div>
+          </div>
+        </div>
+        <div class="article-verse">
+          <p>"Ketika aku mendengar bahwa Engkau ada dalam taman ini, aku menjadi takut karena aku telanjang. Sebab itu aku bersembunyi."</p>
+          <cite>— Adam, Kejadian 3:10</cite>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Desain Awal yang Tuhan Kehendaki</h2>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">🚶</div>
+            <div class="article-step-content">
+              <h4>Manusia &amp; Tuhan Berjalan Bersama</h4>
+              <p>Kejadian 2:15 — Tuhan menempatkan manusia di Taman Eden. Tuhan berjalan-jalan di taman — karena Ia ingin berjalan bersama manusia.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🐑</div>
+            <div class="article-step-content">
+              <h4>Tuhan Sebagai Gembala</h4>
+              <p>Daud mengerti desain ini: "Tuhan adalah gembalaku." Tuhan memberi kita teritorial — tapi kita tetap perlu berjalan dengan-Nya.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🪨</div>
+            <div class="article-step-content">
+              <h4>Mezbah yang Benar</h4>
+              <p>Portal yang menghubungkan kita dengan kerajaan surga. Ketika kedagingan yang aktif, portal itu tertutup.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Yosafat &amp; Ahab: Pola yang Sama</h2>
+        <p>Kisah Hawa dan ular bukan sejarah kuno semata. Pola yang sama berulang dalam kehidupan Yosafat — raja yang benar, namun terus terjebak karena ia membiarkan dirinya duduk dan berbicara bersama Ahab.</p>
+        <div class="article-quote">
+          <p>Ahab adalah pribadi yang menyenangkan, charming, dan pandai berbicara. Tapi firman Tuhan sudah jelas: "Wajar kau bersahabat dengan orang yang membenci Allah?" Pergaulan yang buruk merusak kebiasaan baik — selalu, tanpa kecuali.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Dari Mana Ular Masuk Hari Ini?</h2>
+        <p>Ular tidak datang dengan jubah kegelapan yang mencolok. Ia datang melalui hal-hal yang terasa biasa, menarik, bahkan menghibur.</p>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">📱</div>
+            <div class="article-step-content">
+              <h4>Konten yang Kita Tonton</h4>
+              <p>Satu konten jadi dua, dua jadi lima. Satu jam jadi tiga jam. Algoritma menangkap ketertarikan kita dan terus menyajikan lebih banyak.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">💬</div>
+            <div class="article-step-content">
+              <h4>Obrolan yang Sia-sia</h4>
+              <p>Seperti Hawa yang berhenti merespons ular — kita berhenti, terlibat, dan mulai membahas hal-hal yang bertentangan dengan firman.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">👥</div>
+            <div class="article-step-content">
+              <h4>Lingkaran Pergaulan Beracun</h4>
+              <p>Circle pergaulan yang toxic bekerja persis seperti Ahab terhadap Yosafat — pelan-pelan menggeser fokus, mengkontaminasi pandangan.</p>
+            </div>
+          </div>
+        </div>
+        <div class="article-quote">
+          <p>Saat kita engagement dengan konten atau obrolan yang bertentangan dengan firman, kita tidak sedang netral — kita sedang duduk di bawah pohon bersama ular.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Keinginan Daging vs. Keinginan Roh</h2>
+        <div class="article-verse">
+          <p>"Hiduplah oleh Roh, maka kamu tidak akan menuruti keinginan daging. Sebab keinginan daging berlawanan dengan keinginan Roh."</p>
+          <cite>— Galatia 5:16–17</cite>
+        </div>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>⚠️ Saat Daging yang Memimpin</h4>
+            <ul>
+              <li>Mata rohani tertutup, kepekaan hilang</li>
+              <li>Hidup berpusat pada diri sendiri</li>
+              <li>Takut, gelisah, lari dari Tuhan</li>
+              <li>Portal ke kerajaan surga terputus</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>✦ Saat Roh yang Memimpin</h4>
+            <ul>
+              <li>Mata rohani terbuka, peka terhadap suara Tuhan</li>
+              <li>Hidup berpusat pada kerajaan Allah</li>
+              <li>Damai, tenang, dekat dengan Tuhan</li>
+              <li>Mezbah yang benar, komunikasi terjaga</li>
+            </ul>
+          </div>
+        </div>
+        <div class="article-highlight">
+          <p>Pagi hari saat teduh tidak cukup bila sepanjang hari kita memberi makan kedagingan. Di manapun kita menaruh keinginan kita — itulah yang akan bertumbuh dan menguasai hidup kita.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Penutup: Pilihan yang Menentukan</h2>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">1</div>
+            <div class="article-step-content">
+              <h4>Waspadai di Mana Kamu Berhenti</h4>
+              <p>Konten apa yang membuat kamu berhenti scroll? Obrolan apa yang membuat kamu terus duduk? Di situlah ular sedang menunggu.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">2</div>
+            <div class="article-step-content">
+              <h4>Jangan Biarkan Ular Jadi Penasihat</h4>
+              <p>Tuhan yang menciptakan taman. Tuhan yang memberikan otoritas. Mengapa kita tiba-tiba mendengar suara lain yang bukan suara-Nya?</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">3</div>
+            <div class="article-step-content">
+              <h4>Hiduplah oleh Roh Setiap Hari</h4>
+              <p>Bukan hanya di saat teduh pagi hari. Sepanjang hari, dalam setiap pilihan — di situlah pertempuran antara keinginan daging dan keinginan roh terjadi.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-closing">
+        <p class="article-closing-verse">"Terbuka mata" — terdengar seperti pencerahan. Tapi bila yang terbuka adalah mata kedagingan, yang terjadi justru kebutaan rohani. Berhati-hatilah terhadap hal-hal yang terlihat mencerahkan namun menjauhkan dari Tuhan."</p>
+        <p class="article-closing-ref">— Kejadian 3:1–10 · Galatia 5:16–17</p>
       </div>
     </div>
   </div>
