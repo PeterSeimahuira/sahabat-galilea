@@ -1470,6 +1470,7 @@ const ARTICLES = [
   { id:160, judul:"Wajar Bersahabat", desc:"Kelimpahan membawa tantangan rohani lebih dalam — pergaulan melebar, godaan mengandalkan diri sendiri membesar. Yosafat spontan setuju perang dengan Ahab tanpa berpikir. Setengah kebenaran sama dengan penyesatan. Menyamar sebagai raja hampir membuat Yosafat mati. Sewajarnyakah bersahabat dengan yang membenci Tuhan? Yosafat bangkit dengan sistem keadilan hal Ketuhanan dan hal Kerajaan.", kategori:[2], trending:false, emoji:"🤝", link:"" },
   { id:161, judul:"Bukit Korban", desc:"Yosafat raja yang benar, tapi bukit-bukit pengorbanan tidak dijauhkan — sinkritisme yang membuat hati tidak bisa menimbang jernih. Pola berulang: hampir mati di Ramot-Gilead, lalu kapal Tarsis pecah karena bersekutu dengan Ahazia. Kesialan adalah tanda kasih, bukan kutuk. Akibat lebih dalam: Yoram menikahi Atalya, salinan Izebel. Kebenaran penuh memerdekakan, setengah kebenaran menyesatkan.", kategori:[2], trending:false, emoji:"⛰️", link:"" },
   { id:162, judul:"Terbuka Mata", desc:"Ular tidak datang dengan kekerasan — datang dengan pertanyaan wajar dan setengah kebenaran. Mata yang terbuka setelah makan buah bukan mata rohani, tapi mata kedagingan. Rangkaian kejatuhan: duduk dengan ular, melihat, menginginkan, mengambil, lalu lari dari Tuhan. Yosafat-Ahab pola yang sama. Ular hari ini datang lewat konten yang kita tonton dan obrolan yang sia-sia.", kategori:[2], trending:false, emoji:"🐍", link:"" },
+  { id:163, judul:"Galatia Bodoh", desc:"Adam dibuat dari debu di luar Taman Eden, lalu diangkat masuk — pengelola, bukan pemilik. Ular bicara, Adam diam — seharusnya ia berotoritas mengusir ular. Yesus sebagai Adam kedua: menang tanpa kegagalan, korban sekaligus Imam. 'Bodoh' di Galatia bukan soal kecerdasan tapi lupa: lupa siapa kita tanpa Kristus, lupa dari mana kita berasal. Semua karena kasih karunia.", kategori:[2], trending:false, emoji:"🌿", link:"" },
 ];
 
 const CATEGORY_NAMES = {
@@ -1665,6 +1666,7 @@ const ARTICLE_COLORS = {
   160: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
   161: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
   162: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
+  163: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
 };
 
 function getCardColor(article) {
@@ -1833,7 +1835,8 @@ const SVG_DESIGNS = {
   159: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><rect x="30" y="30" width="40" height="40" rx="2" stroke="#a855f7" stroke-width="0.7"/><path d="M50,42 L50,58" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><path d="M50,50 L58,42 M50,50 L42,42 M50,50 L58,58 M50,50 L42,58" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/><circle cx="50" cy="20" r="3" fill="#a855f7" opacity="0.3"/></svg>`,
   160: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><circle cx="38" cy="42" r="10" stroke="#a855f7" stroke-width="0.6"/><circle cx="62" cy="42" r="10" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><path d="M25,68 Q38,58 51,68" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M49,68 Q62,58 75,68" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M45,42 L55,42" stroke="#a855f7" stroke-width="0.4" opacity="0.4" stroke-dasharray="2,2"/></svg>`,
   161: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M20,72 L38,42 L50,58 L62,35 L80,72 Z" stroke="#a855f7" stroke-width="0.7"/><rect x="44" y="30" width="12" height="8" rx="1" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M50,30 L50,22" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/><circle cx="50" cy="20" r="2" fill="#a855f7" opacity="0.3"/></svg>`,
-  162: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M25,60 Q35,45 30,35 Q40,42 50,32 Q45,45 60,42 Q52,52 65,55 Q55,60 65,68 Q55,65 58,75 Q48,68 45,78" stroke="#a855f7" stroke-width="0.7"/><circle cx="27" cy="58" r="2" fill="#a855f7" opacity="0.4"/><path d="M30,50 Q35,25 50,20 Q65,25 68,45" stroke="#a855f7" stroke-width="0.4" opacity="0.3" stroke-dasharray="2,3"/></svg>`
+  162: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M25,60 Q35,45 30,35 Q40,42 50,32 Q45,45 60,42 Q52,52 65,55 Q55,60 65,68 Q55,65 58,75 Q48,68 45,78" stroke="#a855f7" stroke-width="0.7"/><circle cx="27" cy="58" r="2" fill="#a855f7" opacity="0.4"/><path d="M30,50 Q35,25 50,20 Q65,25 68,45" stroke="#a855f7" stroke-width="0.4" opacity="0.3" stroke-dasharray="2,3"/></svg>`,
+  163: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,80 L50,45" stroke="#a855f7" stroke-width="0.7"/><path d="M50,50 Q35,45 30,30 M50,50 Q65,45 70,30" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><path d="M50,60 Q40,58 35,48 M50,60 Q60,58 65,48" stroke="#a855f7" stroke-width="0.4" opacity="0.5"/><ellipse cx="50" cy="82" rx="15" ry="4" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/></svg>`
 };
 
 
@@ -1999,7 +2002,7 @@ document.addEventListener('keydown', e => {
 });
 
 function openArticle(id) {
-  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162];
+  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163];
   if (inAppArticles.includes(id)) {
     document.querySelectorAll('.article-content').forEach(el => el.style.display = 'none');
     const target = document.getElementById('article-' + id);
@@ -42108,6 +42111,245 @@ document.addEventListener('keydown', e => {
       <div class="article-closing">
         <p class="article-closing-verse">"Terbuka mata" — terdengar seperti pencerahan. Tapi bila yang terbuka adalah mata kedagingan, yang terjadi justru kebutaan rohani. Berhati-hatilah terhadap hal-hal yang terlihat mencerahkan namun menjauhkan dari Tuhan."</p>
         <p class="article-closing-ref">— Kejadian 3:1–10 · Galatia 5:16–17</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ARTICLE 163 -->
+  <div id="article-163" class="article-content" style="display:none">
+    <div class="article-hero">
+      <div class="article-hero-bg" style="background:linear-gradient(135deg,#1a0a28,#2a1040,#361452);"></div>
+      <div class="article-hero-glow"></div>
+      <span class="article-hero-emoji">🌿</span>
+      <div class="article-hero-content">
+        <div class="article-hero-eyebrow">Memahami Jati Diri · Kejadian 2–3 · Galatia 3 · Ulangan 8</div>
+        <h1 class="article-hero-title">Galatia Bodoh</h1>
+        <div class="article-hero-tags">
+          <span class="article-tag">Kejadian 2–3</span>
+          <span class="article-tag">Galatia 3</span>
+          <span class="article-tag">Ulangan 8</span>
+        </div>
+      </div>
+    </div>
+    <div class="article-body">
+      <div class="article-verse">
+        <p>"Adakah kamu sebodoh itu? Kamu telah mulai dengan Roh, maukah kamu sekarang mengakhirinya di dalam daging?"</p>
+        <cite>— Galatia 3:3</cite>
+      </div>
+      <p class="article-intro">Sebuah renungan tentang identitas, mandat, dan kasih karunia. Kita bukan pemilik — kita adalah pengelola. Dan "bodoh" bukan soal kecerdasan, melainkan soal lupa: lupa siapa kita tanpa Kristus, dan lupa dari mana kita berasal.</p>
+
+      <div class="article-section">
+        <h2>Di Mana Adam Dibuat?</h2>
+        <p>Tuhan Allah membentuk manusia dari debu tanah — di luar Taman Eden. Bumi biasa. Tanah biasa. Tidak ada yang istimewa dari tempat Adam dibuat. Lalu Tuhan menghembuskan nafas hidup ke dalam hidungnya.</p>
+        <div class="article-highlight">
+          <p>Setelah dibuat dari debu tanah di luar, barulah Tuhan mengambil manusia itu dan menempatkannya dalam Taman Eden. Adam bukan lahir di surga. Adam diangkat masuk ke dalam surga di bumi. Itu kasih karunia dari awal.</p>
+        </div>
+        <div class="article-quote">
+          <p>Adam bukan pemilik Taman Eden. Ia adalah pengelola yang ditempatkan oleh Pemiliknya.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Taman Eden: Surga di Bumi</h2>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">☁️</div>
+            <div class="article-step-content">
+              <h4>Iklim Kerajaan Surga</h4>
+              <p>Tuhan Allah berjalan-jalan di taman pada waktu sejuk hari. Hadirat-Nya nyata dan dekat setiap saat.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🍇</div>
+            <div class="article-step-content">
+              <h4>Kelimpahan Sempurna</h4>
+              <p>Berbagai pohon yang menarik dan baik untuk dimakan. Tidak ada kekurangan, tidak ada kelelahan, tidak ada kutuk.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">📜</div>
+            <div class="article-step-content">
+              <h4>Mandat Mulia</h4>
+              <p>Mengusahakan dan memelihara — bukan memiliki. Mandat ini adalah kepercayaan, bukan hak milik.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Ular Bicara, Adam Diam</h2>
+        <p>Inilah salah satu adegan paling tragis dalam seluruh sejarah manusia. Ada ular yang berbicara — dan Adam yang seharusnya memegang mandat dan otoritas atas Taman Eden, diam saja.</p>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">👤</div>
+            <div class="article-step-content">
+              <h4>Siapa Adam Sebenarnya?</h4>
+              <p>Pengusaha dan pemelihara Taman Eden. Pemegang mandat. Ia seharusnya berkata: "Kamu siapa? Kenapa bisa ada di sini? Pergi!" Tapi ia membiarkan percakapan itu berlanjut.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">⚠️</div>
+            <div class="article-step-content">
+              <h4>Jangan Pernah Bermain di Level Jiwa</h4>
+              <p>Iblis adalah penguasa di wilayah jiwa. Begitu kita mulai berdiskusi dengannya, ia sudah lebih unggul. Hawa berbicara dengan ular — dan hasilnya kita semua tahu.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">✦</div>
+            <div class="article-step-content">
+              <h4>Tuhan Tahu Semuanya</h4>
+              <p>Tuhan Mahahadir. Saat ular berbicara dengan Hawa, Tuhan tahu. Tuhan tenang. Tuhan sudah tahu ujungnya — dan Ia sudah punya rencana.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Kejatuhan dan Kutuk</h2>
+        <div class="article-highlight">
+          <p>Begitu manusia jatuh dalam dosa, bukan hanya mereka yang menanggung akibatnya — tanahnya pun terkutuk. "Terkutuklah tanah karena engkau." Berpeluh mencari makan. Semak duri. Kelelahan seumur hidup. Inilah realita di luar Taman Eden: bukan hanya tanpa kelimpahan, tetapi aktif melawan kita.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Adam Kedua: Yesus Memulihkan Segalanya</h2>
+        <p>Semua kegagalan Adam pertama — ditebus oleh Adam kedua. Itulah Yesus.</p>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">✦</div>
+            <div class="article-step-content">
+              <h4>Menang Tanpa Satu Kegagalan</h4>
+              <p>Di padang gurun, Yesus dicobai iblis. Satu kali pun tidak ada kegagalan. Kemenangan sempurna.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🕊️</div>
+            <div class="article-step-content">
+              <h4>Korban Sekaligus Imam</h4>
+              <p>Yesus menggenapi hukum Taurat. Ia menjadi korban domba — sekaligus Imam Besar. Satu kali untuk selama-lamanya.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🚪</div>
+            <div class="article-step-content">
+              <h4>Tabir Terbuka</h4>
+              <p>Salib Yesus membuka jalan masuk ke Ruang Maha Kudus — Takhta Kasih Karunia. Kita diperdamaikan dengan Allah. Bebas dari semua kutuk.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Identitas Dipulihkan: Kembali ke Dalam Taman</h2>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>⚠️ Sebelum Percaya</h4>
+            <ul>
+              <li>Di luar Kristus. Identitas tidak jelas. Mudah diserang iblis.</li>
+              <li>Seperti Adam yang diusir — bekerja keras dengan kekuatan sendiri di tanah yang terkutuk</li>
+              <li>"Yesus aku kenal, Paulus aku tahu — kamu siapa?"</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>✦ Setelah Percaya</h4>
+            <ul>
+              <li>Di dalam Kristus. Anak-anak Allah. Masuk kembali ke Ruang Maha Kudus.</li>
+              <li>Hidup di dunia — tapi bukan berasal dari dunia</li>
+              <li>Seperti Adam di dalam Taman Eden di tengah-tengah bumi</li>
+            </ul>
+          </div>
+        </div>
+        <div class="article-quote">
+          <p>Tuhan menempatkan kita di bumi — bukan agar kita dikuasai dunia, tetapi agar kita hidup dalam sistem kerajaan surga di tengah dunia.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Kita Bukan Pemilik — Kita Pengelola</h2>
+        <p>Dari semula, prinsipnya tidak pernah berubah. Taman Eden milik Tuhan. Adam hanya pengelola. Demikian juga kita hari ini — apapun yang dipercayakan kepada kita: rumah, pelayanan, pekerjaan, keluarga.</p>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">✦</div>
+            <div class="article-step-content">
+              <h4>Tuhan yang Punya</h4>
+              <p>Jangan pernah lupa dari mana kita diambil. Dari debu tanah biasa, Tuhan mengambil dan menempatkan kita di tempat yang jauh lebih baik dari yang bisa kita bayangkan sendiri.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🙌</div>
+            <div class="article-step-content">
+              <h4>Kita yang Bertanggung Jawab</h4>
+              <p>Urus seperti milik sendiri — bukan karena kita punya, tapi karena kita mengasihi Tuhan. Dijaga. Dirawat. Dipelihara.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🛡️</div>
+            <div class="article-step-content">
+              <h4>Tuhan yang Membela</h4>
+              <p>Tidak ada yang kebetulan. Tuhan yang menanam, Tuhan yang menjamin, Tuhan yang memegang kendali. Tugas kita: setia mengelola, jangan biarkan ular masuk.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Hai Orang-Orang Galatia yang Bodoh</h2>
+        <div class="article-verse">
+          <p>"Adakah kamu sebodoh itu? Kamu telah mulai dengan Roh, maukah kamu sekarang mengakhirinya di dalam daging? Sia-siakah semua yang telah kamu alami sebanyak itu?"</p>
+          <cite>— Galatia 3:3–4</cite>
+        </div>
+        <div class="article-highlight">
+          <p>"Bodoh" di sini bukan soal kecerdasan. Ini soal lupa — lupa siapa kita tanpa Kristus, lupa dari mana kita berasal. Kita memulai dengan Roh, lalu terpesona oleh ular, lalu mulai berpikir semua ini hasil usaha kita sendiri. Itulah kebodohan Galatia. Itulah kebodohan Adam dan Hawa.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Tiga Firman yang Mengikat</h2>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">📖</div>
+            <div class="article-step-content">
+              <h4>Ulangan 8:3</h4>
+              <p>Tuhan merendahkan, membiarkan lapar, memberi makan yang tidak dikenal — supaya kita mengerti: manusia hidup bukan dari roti saja, tapi dari setiap firman yang keluar dari mulut Tuhan.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">📖</div>
+            <div class="article-step-content">
+              <h4>Kejadian 3:23</h4>
+              <p>Diusir dari Taman Eden untuk kembali mengusahakan tanah biasa — dari surga di bumi kembali ke debu. Itulah harga kebodohan yang melupakan dari mana kita berasal.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">📖</div>
+            <div class="article-step-content">
+              <h4>Galatia 3:1</h4>
+              <p>Siapakah yang telah mempesona kamu? Bukankah Yesus Kristus yang disalibkan itu telah dilukiskan dengan terang di depanmu? Jangan biarkan perhatian kita bergeser dari Yesus.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-closing">
+        <p class="article-closing-verse">"Semua karena kasih karunia. Bukan kesanggupan kita. Ingat itu terus."</p>
+        <p class="article-closing-ref">— Kejadian 2–3 · Galatia 3 · Ulangan 8</p>
       </div>
     </div>
   </div>
