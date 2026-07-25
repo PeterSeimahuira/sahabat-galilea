@@ -1472,6 +1472,9 @@ const ARTICLES = [
   { id:162, judul:"Terbuka Mata", desc:"Ular tidak datang dengan kekerasan — datang dengan pertanyaan wajar dan setengah kebenaran. Mata yang terbuka setelah makan buah bukan mata rohani, tapi mata kedagingan. Rangkaian kejatuhan: duduk dengan ular, melihat, menginginkan, mengambil, lalu lari dari Tuhan. Yosafat-Ahab pola yang sama. Ular hari ini datang lewat konten yang kita tonton dan obrolan yang sia-sia.", kategori:[2], trending:false, emoji:"🐍", link:"" },
   { id:163, judul:"Galatia Bodoh", desc:"Adam dibuat dari debu di luar Taman Eden, lalu diangkat masuk — pengelola, bukan pemilik. Ular bicara, Adam diam — seharusnya ia berotoritas mengusir ular. Yesus sebagai Adam kedua: menang tanpa kegagalan, korban sekaligus Imam. 'Bodoh' di Galatia bukan soal kecerdasan tapi lupa: lupa siapa kita tanpa Kristus, lupa dari mana kita berasal. Semua karena kasih karunia.", kategori:[2], trending:false, emoji:"🌿", link:"" },
   { id:164, judul:"Usahakan Tanah", desc:"Mandat be fruitful, multiply, replenish, dominion tetap sama meski tanah terkutuk. Hukum kerajaan surga: konversi bukan kreasi — emas tidak bisa dicetak, hanya dikonversi. Mujizat selalu dimulai dari 'apa yang ada padamu': janda Elisa, 5 roti 2 ikan, ikan bermata uang. Orang kaya bodoh yang men-claim berkat untuk diri sendiri. Usahakan tanah — mulai dari yang ada, sekarang juga.", kategori:[2], trending:false, emoji:"🌾", link:"" },
+  { id:165, judul:"Fruitful Bejana", desc:"Hukum kekekalan energi: hanya bisa dikonversi, tidak dicipta dari ketiadaan. Dua tuan: Kerajaan Allah vs Mammon (curi, bunuh, binasakan). Janda dengan satu buli-buli minyak — Elisa tanya 'apa yang ada padamu?'. Bagian yang tidak ditulis (mengumpulkan bejana dari tetangga) justru kunci: itu fruitful natural sang janda. Mujizat berhenti bukan karena Tuhan kurang kuasa, tapi kapasitas bejana habis.", kategori:[2], trending:false, emoji:"🏺", link:"" },
+  { id:166, judul:"Ranting Berbuah", desc:"Mandat Kejadian 1:28: BE dulu baru DO, baru HAVE — tidak bisa dilompati. Kain sukses secara duniawi tapi BE-nya salah sejak awal. Yehezkiel 15: kayu anggur tidak berguna untuk apapun kecuali berbuah. Terputus dari Pokok Anggur = kering seketika, bukan besok. Iblis membalik urutan: menawarkan HAVE tanpa BE tanpa DO. Berbuah adalah keputusan setiap hari, bukan hasil di ujung.", kategori:[2], trending:false, emoji:"🍇", link:"" },
+  { id:167, judul:"Malaikat Penengah", desc:"Allah berbicara dalam mimpi, teguran, dan keheningan — tapi kita terlalu sibuk membela diri untuk mendengar. Saul, Ahitofel, Yudas selesai tanpa penengah. Petrus berbeda: 'Aku sudah berdoa untukmu' — ada Penengah yang berdiri. Malaikat penengah satu di antara seribu: Yesus, yang membayar tebusan lunas. Dua tiga kali Tuhan mengembalikan kita dari liang kubur — kasih karunia yang tak habis.", kategori:[2], trending:false, emoji:"🕊️", link:"" },
 ];
 
 const CATEGORY_NAMES = {
@@ -1669,6 +1672,9 @@ const ARTICLE_COLORS = {
   162: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
   163: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
   164: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
+  165: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
+  166: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
+  167: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
 };
 
 function getCardColor(article) {
@@ -1839,7 +1845,10 @@ const SVG_DESIGNS = {
   161: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M20,72 L38,42 L50,58 L62,35 L80,72 Z" stroke="#a855f7" stroke-width="0.7"/><rect x="44" y="30" width="12" height="8" rx="1" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M50,30 L50,22" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/><circle cx="50" cy="20" r="2" fill="#a855f7" opacity="0.3"/></svg>`,
   162: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M25,60 Q35,45 30,35 Q40,42 50,32 Q45,45 60,42 Q52,52 65,55 Q55,60 65,68 Q55,65 58,75 Q48,68 45,78" stroke="#a855f7" stroke-width="0.7"/><circle cx="27" cy="58" r="2" fill="#a855f7" opacity="0.4"/><path d="M30,50 Q35,25 50,20 Q65,25 68,45" stroke="#a855f7" stroke-width="0.4" opacity="0.3" stroke-dasharray="2,3"/></svg>`,
   163: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,80 L50,45" stroke="#a855f7" stroke-width="0.7"/><path d="M50,50 Q35,45 30,30 M50,50 Q65,45 70,30" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><path d="M50,60 Q40,58 35,48 M50,60 Q60,58 65,48" stroke="#a855f7" stroke-width="0.4" opacity="0.5"/><ellipse cx="50" cy="82" rx="15" ry="4" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/></svg>`,
-  164: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M30,80 L30,55 Q30,45 40,42 Q35,50 40,55 Q30,52 30,80" stroke="#a855f7" stroke-width="0.6"/><path d="M50,80 L50,50 Q50,38 62,35 Q56,45 62,50 Q50,48 50,80" stroke="#a855f7" stroke-width="0.7"/><path d="M70,80 L70,58 Q70,48 78,45 Q74,53 78,58 Q70,55 70,80" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><path d="M20,80 L80,80" stroke="#a855f7" stroke-width="0.5" opacity="0.4"/></svg>`
+  164: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M30,80 L30,55 Q30,45 40,42 Q35,50 40,55 Q30,52 30,80" stroke="#a855f7" stroke-width="0.6"/><path d="M50,80 L50,50 Q50,38 62,35 Q56,45 62,50 Q50,48 50,80" stroke="#a855f7" stroke-width="0.7"/><path d="M70,80 L70,58 Q70,48 78,45 Q74,53 78,58 Q70,55 70,80" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><path d="M20,80 L80,80" stroke="#a855f7" stroke-width="0.5" opacity="0.4"/></svg>`,
+  165: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M40,35 Q40,25 50,25 Q60,25 60,35 L62,50 Q65,70 55,78 L45,78 Q35,70 38,50 Z" stroke="#a855f7" stroke-width="0.7"/><path d="M42,45 L58,45" stroke="#a855f7" stroke-width="0.4" opacity="0.5"/><circle cx="25" cy="65" r="8" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/><circle cx="75" cy="65" r="8" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/></svg>`,
+  166: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,80 L50,30" stroke="#a855f7" stroke-width="0.7"/><circle cx="38" cy="45" r="5" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><circle cx="45" cy="38" r="5" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><circle cx="55" cy="42" r="5" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><circle cx="62" cy="35" r="5" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><path d="M50,30 Q40,25 30,28 M50,30 Q60,25 70,28" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/></svg>`,
+  167: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,25 Q60,25 62,35 Q64,45 55,50 L58,60 L50,55 L42,60 L45,50 Q36,45 38,35 Q40,25 50,25Z" stroke="#a855f7" stroke-width="0.6"/><path d="M35,40 Q30,38 28,32 M65,40 Q70,38 72,32" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M40,72 L60,72" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/></svg>`
 };
 
 
@@ -2005,7 +2014,7 @@ document.addEventListener('keydown', e => {
 });
 
 function openArticle(id) {
-  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164];
+  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167];
   if (inAppArticles.includes(id)) {
     document.querySelectorAll('.article-content').forEach(el => el.style.display = 'none');
     const target = document.getElementById('article-' + id);
@@ -42566,6 +42575,697 @@ document.addEventListener('keydown', e => {
       <div class="article-closing">
         <p class="article-closing-verse">"Usahakan tanah dari mana kamu diambil."</p>
         <p class="article-closing-ref">— Kejadian 3:23 · Kejadian 1:28 · 2 Raja-Raja 4:1–7 · Yohanes 6:7–9 · Lukas 12:19–21</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ARTICLE 165 -->
+  <div id="article-165" class="article-content" style="display:none">
+    <div class="article-hero">
+      <div class="article-hero-bg" style="background:linear-gradient(135deg,#1a0a28,#2a1040,#361452);"></div>
+      <div class="article-hero-glow"></div>
+      <span class="article-hero-emoji">🏺</span>
+      <div class="article-hero-content">
+        <div class="article-hero-eyebrow">Memahami Jati Diri · Lukas 16:13 · 2 Raja-Raja 4:1–7</div>
+        <h1 class="article-hero-title">Fruitful Bejana</h1>
+        <div class="article-hero-tags">
+          <span class="article-tag">Lukas 16:13</span>
+          <span class="article-tag">2 Raja-Raja 4:1–7</span>
+          <span class="article-tag">Mandat Kerajaan</span>
+        </div>
+      </div>
+    </div>
+    <div class="article-body">
+      <div class="article-verse">
+        <p>"Seorang hamba tidak dapat mengabdi kepada dua Tuan... Kamu tidak dapat mengabdi kepada Allah dan kepada Mammon."</p>
+        <cite>— Lukas 16:13</cite>
+      </div>
+      <p class="article-intro">Sebuah perjalanan memahami bagaimana mujizat Tuhan bekerja — bukan dari ketiadaan, melainkan dari apa yang sudah ada pada kita. Dari satu buli-buli minyak kecil, Tuhan mampu mengerjakan hal yang luar biasa, ketika kita memulai dari keputusan untuk menjadi fruitful.</p>
+
+      <div class="article-section">
+        <h2>Hukum Kekekalan Energi &amp; Sistem Keuangan</h2>
+        <p>Energi tidak dapat diciptakan. Energi tidak dapat dimusnahkan. Energi hanya dapat dikonversi. Ini adalah hukum yang diakui seluruh umat manusia — semua tunduk di bawahnya.</p>
+        <div class="article-highlight">
+          <p>Uang dahulu hanya bisa diterbitkan bila ada cadangan emas yang setara. Namun hari ini, uang dicetak tanpa dasar yang kuat — seolah energi bisa diciptakan dari ketiadaan. Hasilnya? Entropi. Chaos. Kekacauan. Mata uang jatuh nilainya adalah indikasi bahwa suatu sistem sedang melanggar hukum semesta.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Dua Tuan, Satu Hamba</h2>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>✦ Kerajaan Allah</h4>
+            <ul>
+              <li>Bekerja dari apa yang ada padamu</li>
+              <li>Tunduk di bawah hukum semesta</li>
+              <li>Berbuah, berkembang, memulihkan</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>⚠️ Sistem Mammon</h4>
+            <ul>
+              <li>Mencuri, membunuh, membinasakan</li>
+              <li>Mengakali hukum</li>
+              <li>Membangun di atas kebohongan — dan pasti ambruk</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Cara Kerja Mammon: Hack Sistem Tuhan</h2>
+        <p>Sejak awal kejatuhan manusia, Iblis tidak pernah menciptakan sesuatu dari ketiadaan — karena memang tidak bisa. Ia mencuri mandat yang Tuhan berikan kepada manusia.</p>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">🗝️</div>
+            <div class="article-step-content">
+              <h4>Curi</h4>
+              <p>Ambil mandat dan otoritas yang bukan miliknya dari tangan manusia yang lengah.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">☠️</div>
+            <div class="article-step-content">
+              <h4>Bunuh</h4>
+              <p>Matikan potensi, harapan, dan kapasitas — supaya manusia tidak bisa bangkit kembali.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">💥</div>
+            <div class="article-step-content">
+              <h4>Binasakan</h4>
+              <p>Hancurkan sistem yang sehat — keuangan, pendidikan, kesehatan, pemerintahan — dengan manipulasi dan kebohongan.</p>
+            </div>
+          </div>
+        </div>
+        <div class="article-quote">
+          <p>Semua yang dibangun di atas sistem kegelapan, entah cepat entah lambat, pasti ambruk. Ini bukan ancaman — ini hukum semesta.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Kisah Janda di 2 Raja-Raja 4</h2>
+        <p>Seorang janda datang kepada Elisa dalam keadaan terhimpit. Suaminya telah meninggal, dan penagih hutang datang hendak mengambil kedua anaknya menjadi budak.</p>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">❓</div>
+            <div class="article-step-content">
+              <h4>Pertanyaan Elisa</h4>
+              <p>"Beritahukanlah kepadaku apa-apa yang kau punya di rumah." Kerajaan Allah selalu mulai dari apa yang ada padamu, bukan dari ketiadaan.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🏺</div>
+            <div class="article-step-content">
+              <h4>Jawaban Janda</h4>
+              <p>"Hambamu ini tidak punya sesuatu apapun di rumah, kecuali sebuah buli-buli berisi minyak." Hanya satu buli-buli kecil. Tapi itu cukup untuk surga bekerja.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">📋</div>
+            <div class="article-step-content">
+              <h4>Instruksi Elisa</h4>
+              <p>Pergi, minta bejana-bejana kosong dari tetangga. Jangan terlalu sedikit. Masuk, tutup pintu, tuangkan minyak ke semua bejana.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Yang Tidak Ditulis — Justru Itulah Kunci</h2>
+        <p>Roh Kudus mengajar kita dengan cara yang luar biasa. Di antara instruksi Elisa dan momen pintu ditutup, tidak ditulis bagaimana janda itu dan anak-anaknya pergi mengetuk pintu tetangga satu per satu, meminta bejana.</p>
+        <div class="article-highlight">
+          <p>Mengapa tidak ditulis? Karena bagi janda itu dan anak-anaknya, hal itu natural. Mudah sekali. Mereka punya hubungan yang sehat dengan para tetangga. Mereka terbiasa menolong. Mereka punya attitude yang baik.</p>
+        </div>
+        <div class="article-quote">
+          <p>Sesuatu yang mengalir dengan natural dari diri kita — tanpa beban, dengan sukacita, dan hasilnya baik — itulah fruitful kita. Itulah talenta kita.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Seberapa Banyak Bejana, Sebesar Itu Multiplikasi</h2>
+        <div class="article-verse">
+          <p>"Ketika bejana-bejana itu sudah penuh, berkatalah perempuan itu kepada anaknya, dekatkanlah kepada aku sebuah bejana lagi. Tetapi jawabnya, tidak ada lagi bejana. Lalu berhentilah minyak itu mengalir."</p>
+        </div>
+        <div class="article-highlight">
+          <p>Mujizat Tuhan tidak berhenti karena Tuhan kurang kuasa. Mujizat berhenti karena kapasitas bejana habis. Seberapa besar kita siapkan kapasitas kita — relasi, karakter, fruitfulness — sebesar itulah mujizat bisa terus mengalir.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Be Fruitful: Awal dari Segalanya</h2>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">❤️</div>
+            <div class="article-step-content">
+              <h4>Karakter yang Menyenangkan</h4>
+              <p>Be fruitful bukan soal pencapaian besar. Ini soal menjadi pribadi yang peduli, suka menolong, dan memiliki attitude yang baik kepada orang-orang di sekitar kita.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">✨</div>
+            <div class="article-step-content">
+              <h4>Talenta yang Mengalir Natural</h4>
+              <p>Temukan di mana kamu fruitful — di mana kamu lakukan sesuatu dengan sukacita, tanpa beban, dan hasilnya baik.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🤝</div>
+            <div class="article-step-content">
+              <h4>Relasi yang Sehat</h4>
+              <p>Janda itu mudah mendapat bejana karena ia sudah menabur relasi yang baik. Fruitfulness membangun modal sosial yang menjadi jalan bagi mujizat.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Hidup dari Kelebihan: Have Dominion</h2>
+        <p>Elisa berkata kepada janda itu: "Pergilah, juallah minyak itu, bayarlah hutangmu, dan hiduplah dari lebihnya engkau serta anak-anakmu."</p>
+        <div class="article-highlight">
+          <p>Ini adalah gambaran indah dari mandat kerajaan sorga yang lengkap. Bukan hanya bertahan hidup. Bukan hanya melunasi hutang. Tapi hidup dari kelebihan — dari sisa yang ada, kita punya have dominion.</p>
+        </div>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">1</div>
+            <div class="article-step-content">
+              <h4>Mulailah dari yang Ada</h4>
+              <p>Satu buli-buli minyak pun cukup untuk Tuhan bekerja. Jangan tunggu sempurna dulu.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">2</div>
+            <div class="article-step-content">
+              <h4>Perluas Kapasitas Bejanamu</h4>
+              <p>Bangun relasi, kembangkan karakter, perbesar kapasitasmu — jangan terlalu sedikit.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">3</div>
+            <div class="article-step-content">
+              <h4>Bertekun dalam Prosesnya</h4>
+              <p>Fruitful → Multiply → Replenish → Subdue → Have Dominion. Setiap tahap ada waktunya.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-closing">
+        <p class="article-closing-verse">"Tuhan mau kita kerjakan mandat kerajaan surga ini — dan kita tidak bisa membawa kabar baik kepada orang lain kalau kita sendiri belum menang dalam hidup kita. Fruitful Bejana."</p>
+        <p class="article-closing-ref">— Lukas 16:13 · 2 Raja-Raja 4:1–7</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ARTICLE 166 -->
+  <div id="article-166" class="article-content" style="display:none">
+    <div class="article-hero">
+      <div class="article-hero-bg" style="background:linear-gradient(135deg,#1a0a28,#2a1040,#361452);"></div>
+      <div class="article-hero-glow"></div>
+      <span class="article-hero-emoji">🍇</span>
+      <div class="article-hero-content">
+        <div class="article-hero-eyebrow">Memahami Jati Diri · Yohanes 15 · Yehezkiel 15 · Yeremia 17</div>
+        <h1 class="article-hero-title">Ranting Berbuah</h1>
+        <div class="article-hero-tags">
+          <span class="article-tag">Yohanes 15:1–6</span>
+          <span class="article-tag">Yehezkiel 15:1–5</span>
+          <span class="article-tag">Yeremia 17:5–8</span>
+        </div>
+      </div>
+    </div>
+    <div class="article-body">
+      <div class="article-verse">
+        <p>"Akulah pokok anggur dan kamulah ranting-rantingnya. Barangsiapa tinggal di dalam Aku dan Aku di dalam dia, ia berbuah banyak — sebab di luar Aku kamu tidak dapat berbuat apa-apa."</p>
+        <cite>— Yohanes 15:5</cite>
+      </div>
+      <p class="article-intro">Berbuah bukan hasil di ujung perjalanan. Berbuah adalah identitas — keputusan di awal setiap hari untuk sepenuhnya bergantung pada Kristus, Pokok Anggur yang Benar. Kita hanyalah ranting lemah yang hanya bisa hidup dan berbuah ketika terhubung kepada-Nya.</p>
+
+      <div class="article-section">
+        <h2>Mandat Ilahi: Urutan yang Tidak Bisa Di-skip</h2>
+        <p>Kejadian 1:28 mencatat mandat Tuhan kepada manusia — sebuah rangkaian yang terurut dan tidak dapat dilompati. Dimulai dari BE — identitas — lalu dilanjutkan dengan tiga tindakan DO, dan barulah berujung pada HAVE.</p>
+        <div class="article-highlight">
+          <p>Tidak ada jalan pintas. Tidak ada lompatan. Hukum Kerajaan Allah berjalan dalam keteraturan ini, dan siapapun yang mencoba membalik urutannya akan menuai entropi dan kehancuran.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>BE Bukan DO: Identitas Mendahului Tindakan</h2>
+        <div class="article-verse">
+          <p>"Terkutuklah orang yang mengandalkan manusia, yang mengandalkan kekuatannya sendiri... Diberkatilah orang yang mengandalkan Tuhan, yang menaruh harapannya pada Tuhan."</p>
+          <cite>— Yeremia 17:5–7</cite>
+        </div>
+        <div class="article-highlight">
+          <p>Kain dan keturunannya hingga Lamekh secara duniawi mencapai hal-hal luar biasa. Namun BE mereka sudah salah sejak awal. Maka seluruh DO mereka — sebesar apapun di mata manusia — tidak memiliki makna di hadapan Tuhan. Salah di BE, seterusnya pasti salah.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Mengapa Tuhan Memilih Pohon Anggur?</h2>
+        <div class="article-verse">
+          <p>"Apa kelebihan kayu anggur dari semua kayu yang lain? Apakah orang mengambil kayunya untuk membuat sesuatu darinya?"</p>
+          <cite>— Yehezkiel 15:2–3</cite>
+        </div>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">🌿</div>
+            <div class="article-step-content">
+              <h4>Ranting Anggur: Apa Adanya</h4>
+              <p>Tipis, lemah, merambat — tidak mampu berdiri sendiri. Kayunya tidak bisa dipakai untuk apapun. Tidak bisa dijadikan gantungan, perkakas, atau bahan bangunan. Begitu terbakar pun, tidak berguna sama sekali.</p>
+            </div>
+          </div>
+        </div>
+        <div class="article-quote">
+          <p>Jawaban Tuhan sendiri: Tidak ada. Ranting anggur tidak memiliki kegunaan lain. Satu-satunya fungsinya adalah menghasilkan buah — dan untuk itu, ia harus melekat pada pokoknya.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Satu Fungsi, Satu Tugas</h2>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">1</div>
+            <div class="article-step-content">
+              <h4>Tidak Bisa Berdiri Sendiri</h4>
+              <p>Ranting anggur merambat dan lemah. Ia membutuhkan pokok untuk menopangnya agar bisa hidup dan menghasilkan buah.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">2</div>
+            <div class="article-step-content">
+              <h4>Tidak Ada Kegunaan Lain</h4>
+              <p>Selain berbuah, ranting anggur tidak memiliki fungsi. Itulah sebabnya ranting yang tidak berbuah langsung dipotong oleh Pengusaha.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">3</div>
+            <div class="article-step-content">
+              <h4>Hanya Menghasilkan Buah</h4>
+              <p>Buah menempel di ranting, bukan di pokok. Ranting yang melekat pada pokok mengalirkan nutrisi — dan buah pun lahir.</p>
+            </div>
+          </div>
+        </div>
+        <div class="article-quote">
+          <p>Itulah kita. Identitas kita bukan ditentukan oleh kecakapan atau kekuatan kita sendiri, melainkan oleh satu hal: apakah kita melekat pada Kristus atau tidak.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Yohanes 15: Tinggallah di Dalam Aku</h2>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">✂️</div>
+            <div class="article-step-content">
+              <h4>Ranting yang Berbuah → Dibersihkan</h4>
+              <p>Bapa tidak membiarkan ranting yang berbuah apa adanya. Ia dibersihkan, didandani, dipersiapkan — supaya lebih banyak lagi berbuah.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">⚠️</div>
+            <div class="article-step-content">
+              <h4>Ranting yang Tidak Berbuah → Dipotong</h4>
+              <p>Bukan karena Tuhan kejam, melainkan karena ranting tanpa buah tidak memiliki fungsi. Selagi masih utuh pun tidak berguna, apalagi setelah kering.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🍂</div>
+            <div class="article-step-content">
+              <h4>Di Luar Kristus → Kering Seketika</h4>
+              <p>Ranting yang terputus dari pokoknya tidak butuh waktu lama untuk mengering. Segera. Tipis, lemah, tidak ada aliran nutrisi.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Kering Seketika: Peringatan bagi Kita Hari Ini</h2>
+        <p>Ranting anggur adalah makhluk yang paling bergantung di antara semua tanaman berbuah. Sekali terputus dari pokoknya, ia tidak punya cadangan. Kering itu segera — bukan besok, bukan minggu depan, hari ini.</p>
+        <div class="article-highlight">
+          <p>Sehari tidak terhubung kepada Pokok Anggur yang Benar — sehari tidak saat teduh, tidak berdoa, tidak merenungkan firman — kita kering. Bukan berarti Tuhan meninggalkan kita. Melainkan kita yang membiarkan aliran nutrisi rohani terhenti karena pilihan kita. Maka pertanyaannya bukan seberapa besar pelayanan kita, melainkan: apakah kita masih melekat?</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Anggur: Lambang yang Kaya Makna</h2>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">🎉</div>
+            <div class="article-step-content">
+              <h4>Sukacita</h4>
+              <p>Anggur hadir di setiap pesta dan perayaan. Mujizat pertama Yesus di Kana mengubah air menjadi anggur — tanda bahwa kehadiran Yesus menghadirkan sukacita yang berkelimpahan.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🌾</div>
+            <div class="article-step-content">
+              <h4>Kelimpahan</h4>
+              <p>Anggur adalah lambang panen yang berlimpah, berkat yang tumpah-ruah. Kehadiran kita sebagai ranting yang melekat kepada Kristus seharusnya membawa kelimpahan damai sejahtera.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🩸</div>
+            <div class="article-step-content">
+              <h4>Perjanjian</h4>
+              <p>"Ini darahku" — Yesus mengangkat cawan anggur sebagai meterai perjanjian kekal. Kita adalah orang-orang yang sudah ditebus oleh darah Anak Domba.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Manipulasi Iblis: Membalik Urutan</h2>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>✦ Cara Kerajaan Allah</h4>
+            <ul>
+              <li>BE Fruitful → DO Multiply → DO Replenish → DO Subdue → HAVE Dominion</li>
+              <li>Keteraturan menghasilkan buah yang kekal dan bermakna</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>⚠️ Cara Iblis: Langsung HAVE</h4>
+            <ul>
+              <li>Dalam pencobaan di padang gurun, Iblis menawarkan semua kerajaan dunia — have tanpa proses</li>
+              <li>Jalan pintas tanpa BE, tanpa DO</li>
+            </ul>
+          </div>
+        </div>
+        <div class="article-quote">
+          <p>Iblis adalah bapak pembohong, pencuri, pembunuh, pembinasa. Caranya selalu sama: balik urutan, rusak proses, tawarkan HAVE tanpa fondasi. Hasilnya? Entropi. Kekacauan. Kehancuran.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Keputusan di Awal Setiap Hari</h2>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">1</div>
+            <div class="article-step-content">
+              <h4>Kunci BE-mu Dulu</h4>
+              <p>Identitasmu sebagai ranting yang melekat kepada Kristus adalah fondasi segalanya. Tanpa BE yang benar, tidak ada DO yang bermakna.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">2</div>
+            <div class="article-step-content">
+              <h4>Tetap Terhubung Setiap Hari</h4>
+              <p>Ranting tidak bisa menyimpan nutrisi untuk seminggu ke depan. Ia butuh aliran setiap hari — saat teduh, doa, firman, persekutuan.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">3</div>
+            <div class="article-step-content">
+              <h4>Jadilah Saluran Sukacita, Kelimpahan, dan Perjanjian</h4>
+              <p>Banyak orang di sekitarmu belum mengenal Yesus. Tugas kita: menjadi ranting yang menghasilkan anggur — membawa mereka kepada Sang Pokok Anggur yang Benar.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-closing">
+        <p class="article-closing-verse">"Be fruitful itulah sejatinya identitas kita. Tanpa Kristus, kita bukan siapa-siapa. Kering seketika."</p>
+        <p class="article-closing-ref">— Yohanes 15:1–6 · Yehezkiel 15:1–5 · Yeremia 17:5–8</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ARTICLE 167 -->
+  <div id="article-167" class="article-content" style="display:none">
+    <div class="article-hero">
+      <div class="article-hero-bg" style="background:linear-gradient(135deg,#1a0a28,#2a1040,#361452);"></div>
+      <div class="article-hero-glow"></div>
+      <span class="article-hero-emoji">🕊️</span>
+      <div class="article-hero-content">
+        <div class="article-hero-eyebrow">Memahami Jati Diri · Ayub 33:14–30</div>
+        <h1 class="article-hero-title">Malaikat Penengah</h1>
+        <div class="article-hero-tags">
+          <span class="article-tag">Ayub 33:14–30</span>
+          <span class="article-tag">Penengah</span>
+          <span class="article-tag">Tebusan</span>
+        </div>
+      </div>
+    </div>
+    <div class="article-body">
+      <div class="article-verse">
+        <p>"Jikalau di sampingnya ada malaikat penengah, satu di antara seribu, untuk menyatakan jalan yang benar kepada manusia — maka Ia akan mengasihaninya dengan berfirman: Lepaskan dia! Uang tebusan telah Kuperoleh."</p>
+        <cite>— Ayub 33:23–24</cite>
+      </div>
+      <p class="article-intro">Sebuah perjalanan dari kesombongan menuju pertobatan, dari pinggir liang kubur menuju cahaya hidup. Inilah kisah tentang bagaimana Allah berbicara, dan bagaimana satu-satunya Penengah membayar semua tebusan kita.</p>
+
+      <div class="article-section">
+        <h2>Allah Berfirman dengan Satu Dua Cara</h2>
+        <p>Ayub 33:14 berkata — "Allah berfirman dengan satu dua cara, tetapi orang tidak memperhatikannya." Allah tidak diam. Justru Ia terus berbicara. Masalahnya ada pada kita yang tidak pernah benar-benar mendengar.</p>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">💤</div>
+            <div class="article-step-content">
+              <h4>Dalam Mimpi</h4>
+              <p>Ketika malam tiba dan tubuh berbaring, Allah membuka telinga rohani kita — satu-satunya waktu kita benar-benar diam.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">⚡</div>
+            <div class="article-step-content">
+              <h4>Dalam Teguran</h4>
+              <p>Allah mengejutkan manusia dengan teguran-teguran untuk menghalangi perbuatan bodoh dan melenyapkan kesombongan.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🤫</div>
+            <div class="article-step-content">
+              <h4>Dalam Keheningan</h4>
+              <p>Bukan telinga jasmani yang mendengar. Allah berbicara di roh kita — begitu jelasnya, begitu dalamnya, bila kita mau diam.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Kenapa Allah Menunggu Kita Tidur?</h2>
+        <p>Karena itu satu-satunya waktu orang diam. Kebanyakan ngomong terus sepanjang hari — bela diri, saya benar, dia salah. Kapan Tuhan bisa bicara kalau kita yang sibuk bicara?</p>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>⚠️ Mulut Banyak Bicara</h4>
+            <ul>
+              <li>Menghasilkan kesombongan</li>
+              <li>Tindakan bodoh</li>
+              <li>Jalan menuju liang kubur sendiri</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>✦ Mulut Ditutup</h4>
+            <ul>
+              <li>Melatih kerendahan hati</li>
+              <li>Memberi ruang bagi Allah untuk berbicara</li>
+              <li>Telinga rohani terbuka kapan saja</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Ranting yang Tidak Melekat</h2>
+        <p>Yohanes 15 mengajarkan: ranting anggur tidak mungkin hidup sendiri. Ia harus melekat pada pokoknya. Tidak melekat — dijamin kering, tidak berdaya, tidak berfungsi.</p>
+        <div class="article-quote">
+          <p>Mau be fruitful, tapi telinganya tertutup. Mau diajar, tapi merasa diri sudah tahu. Itulah yang menghalangi kita menghasilkan buah.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Dari Teguran Menuju Liang Kubur</h2>
+        <div class="article-verse">
+          <p>"Dengan penderitaan ia ditegur di tempat tidurnya, dan berkobar terus-menerus bentrokan dalam tulang-tulangnya."</p>
+          <cite>— Ayub 33:19</cite>
+        </div>
+        <div class="article-highlight">
+          <p>Kisah Saul adalah contoh nyata: ditegur berkali-kali, tapi terus berkeras. Di ujung hidupnya ia mencari petenung — ia sendiri yang membuat peraturan agar para petenung dibunuh. Kebodohan yang ia bangun sendiri, mengantarnya ke pinggir maut.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Saul, Ahitofel, Yudas — Tanpa Penengah</h2>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">👑</div>
+            <div class="article-step-content">
+              <h4>Saul</h4>
+              <p>Diberi kesempatan berulang kali. Lolos berkali-kali. Tapi terus sombong, terus merasa benar. Kebodohannya sendiri yang mengantarnya ke liang kubur.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🧠</div>
+            <div class="article-step-content">
+              <h4>Ahitofel</h4>
+              <p>Dalam kemarahan dan kekecewaan yang elegan — tapi tidak punya malaikat penengah. Selesai di tangannya sendiri.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">💰</div>
+            <div class="article-step-content">
+              <h4>Yudas</h4>
+              <p>Dalam keputusasaan yang dalam, ia menutup pintu bagi pertobatan. Selesai sebelum sempat melihat fajar kasih karunia.</p>
+            </div>
+          </div>
+        </div>
+        <div class="article-quote">
+          <p>Bandingkan dengan Simon Petrus — yang juga jatuh dalam pengkhianatan besar. Namun ada satu perbedaan: "Aku sudah berdoa untuk engkau." Ada malaikat penengah yang berdiri untuknya.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Malaikat Penengah: Satu di Antara Seribu</h2>
+        <p>Satu di antara seribu — ini kiasan yang berarti betapa susahnya dicari. Dan memang, hanya ada satu: Yesus. Nama di atas segala nama. Berdiri sebagai Penengah. Menyatakan jalan yang benar.</p>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">🙏</div>
+            <div class="article-step-content">
+              <h4>Ia Menjadi Penengah</h4>
+              <p>Ketika kita sudah di tepi liang kubur, Ia berdiri di hadapan Allah dan berkata: lepaskan dia.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🩸</div>
+            <div class="article-step-content">
+              <h4>Ia Membayar Tebusan</h4>
+              <p>Utang darah dibayar dengan darah. Utang nyawa dibayar dengan nyawa. Bukan darah sembarang darah — darah yang sempurna, satu kali, lunas selamanya.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">✨</div>
+            <div class="article-step-content">
+              <h4>Ia Memulihkan Seutuhnya</h4>
+              <p>Tubuh mengalami kesegaran pemuda. Doa diterima. Wajah Allah dipandang dengan sorak-sorai. Kebenaran dikembalikan.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Tiga Langkah Orang yang Ditebus</h2>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">01</div>
+            <div class="article-step-content">
+              <h4>Berdoa kepada Allah</h4>
+              <p>Bukan membenarkan diri. Bukan menjelaskan situasi. Tapi datang dengan tangan terbuka — dan Allah berkenan menerimanya.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">02</div>
+            <div class="article-step-content">
+              <h4>Memandang Wajah Allah dengan Sorak-Sorai</h4>
+              <p>Bukan dengan rasa malu yang membekukan, tapi dengan sukacita yang tulus. Allah mengembalikan kebenaran kepada kita.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">03</div>
+            <div class="article-step-content">
+              <h4>Bernyanyi di Depan Orang</h4>
+              <p>"Aku telah berbuat dosa, yang lurus telah kubengkokkan — tetapi hal itu tidak dibalaskan kepadaku." Inilah kesaksian. Inilah buah yang sesungguhnya.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Dua Tiga Kali — Kasih Karunia yang Tak Habis</h2>
+        <div class="article-verse">
+          <p>"Sesungguhnya semuanya ini dilakukan Allah dua tiga kali terhadap manusia — mengembalikan nyawanya dari liang kubur sehingga ia diterangi oleh cahaya hidup."</p>
+          <cite>— Ayub 33:29–30</cite>
+        </div>
+        <div class="article-highlight">
+          <p>Bukan hanya satu kali. Dua, tiga kali. Ini bukan bukti betapa sabarnya Tuhan saja — ini juga cermin betapa bodohnya kita. Kita bisa bikin lagi kebodohan bahkan setelah diselamatkan. Seperti Yosafat — dari satu kebodohan ke kebodohan berikutnya. Bertobat — lalu bikin lagi. Tuhan sabar dan mengembalikan.</p>
+        </div>
+        <div class="article-quote">
+          <p>Proses be fruitful macet bukan karena Tuhan tidak mau — tapi karena kita buta rohani, tidak mau dengar. Tuhan tidak menuduh-nuduh. Ia menarik keluar, membawa kembali, memulihkan — supaya kita mengerti kasih karunia-Nya, bukan kehebatan kita.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Be Fruitful: Inilah Pondasinya</h2>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">👂</div>
+            <div class="article-step-content">
+              <h4>Tutup Mulut, Buka Telinga Rohani</h4>
+              <p>Berhenti membenarkan diri. Beri ruang Allah berbicara — di roh kita, kapan saja.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🍇</div>
+            <div class="article-step-content">
+              <h4>Melekat pada Sang Pokok</h4>
+              <p>Ranting anggur tidak punya pilihan lain. Melekat atau kering. Tidak ada jalan tengah.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🕊️</div>
+            <div class="article-step-content">
+              <h4>Terima Tebusan-Nya</h4>
+              <p>Kita tidak bisa membayar sendiri. Malaikat Penengah kita sudah bayar lunas. Terima itu dengan rendah hati.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">📣</div>
+            <div class="article-step-content">
+              <h4>Ceritakan Kasih Karunia</h4>
+              <p>Be fruitful bukan cerita kehebatan kita. Tapi kesaksian: aku bodoh, Tuhan berbelas kasih.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-closing">
+        <p class="article-closing-verse">"Hidupku akan melihat terang."</p>
+        <p class="article-closing-ref">— Ayub 33:28</p>
       </div>
     </div>
   </div>
