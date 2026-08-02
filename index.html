@@ -1481,6 +1481,7 @@ const ARTICLES = [
   { id:171, judul:"Menahan Sebagian", desc:"Jemaat mula-mula sehati sejiwa, tidak ada yang berkekurangan. Ananias dan Safira menjual tanah, menahan sebagian, tapi berpura-pura memberi semua — dosanya bukan jumlahnya, tapi kebohongan. 'Engkau bukan mendustai manusia, tapi mendustai Allah.' Keduanya mati. Roh Kudus memproteksi kekudusan komunitas kasih dari benih manipulasi iblis. Takut akan Tuhan adalah fondasi kasih yang sejati.", kategori:[2], trending:false, emoji:"⚠️", link:"" },
   { id:172, judul:"Sekalipun Tidak", desc:"Empat sekalipun besar (bahasa roh, nubuat, iman, pengorbanan) — semuanya tanpa gunanya tanpa kasih. Ahitofel: hikmat setara firman Tuhan, tapi tanpa kasih berujung bunuh diri. Ananias-Safira: memberi banyak tapi motifnya bukan kasih. Kasih adalah satu kesatuan utuh, tersambung dengan 'dan' bukan 'atau'. Tiga pertanyaan cermin diri: mencari untung sendiri? menyimpan kesalahan? digerakkan kasih atau emosi?", kategori:[2], trending:false, emoji:"❤️", link:"" },
   { id:173, judul:"Cermin Samar", desc:"Kasih tidak berkesudahan; nubuat, bahasa roh, dan pengetahuan akan berhenti. Cermin di zaman Paulus terbuat dari perunggu — teknologi terbaik pun hanya buram. Muka dengan muka bukan dengan diri sendiri, tapi dengan Yesus. Musa menutup wajahnya karena kemuliaan Taurat; kita mencerminkan kemuliaan tanpa selubung. Bahkan AI tidak bisa memiliki kasih — kasih adalah satu-satunya yang sempurna dan tidak lenyap.", kategori:[2], trending:false, emoji:"🪞", link:"" },
+  { id:174, judul:"Iman Harap", desc:"Iman adalah kaki rohani, pengharapan adalah mata rohani, kasih adalah nyawa yang menggerakkan keduanya. Imam dan Lewi punya iman dan pengharapan tapi tanpa kasih — lewat terus. Orang Samaria: kasih memimpin di depan. Lima gadis bodoh kehabisan minyak — gambaran kasih yang harus terus diisi. Tujuan bukan mengumpulkan definisi, tapi mengenal hati Tuhan hingga kasih mengalir dari dalam.", kategori:[2], trending:false, emoji:"🦶", link:"" },
 ];
 
 const CATEGORY_NAMES = {
@@ -1687,6 +1688,7 @@ const ARTICLE_COLORS = {
   171: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
   172: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
   173: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
+  174: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
 };
 
 function getCardColor(article) {
@@ -1866,7 +1868,8 @@ const SVG_DESIGNS = {
   170: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,75 Q30,60 30,42 Q30,28 42,28 Q50,28 50,38 Q50,28 58,28 Q70,28 70,42 Q70,60 50,75Z" stroke="#a855f7" stroke-width="0.7"/><circle cx="25" cy="25" r="20" stroke="#a855f7" stroke-width="0.3" opacity="0.2" stroke-dasharray="2,3"/></svg>`,
   171: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><rect x="30" y="30" width="40" height="40" rx="2" stroke="#a855f7" stroke-width="0.7"/><path d="M30,55 L70,55" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M45,30 L45,55" stroke="#a855f7" stroke-width="0.4" opacity="0.4" stroke-dasharray="2,2"/><circle cx="57" cy="42" r="4" fill="#a855f7" opacity="0.2"/></svg>`,
   172: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,75 Q28,58 28,40 Q28,25 42,25 Q50,25 50,35 Q50,25 58,25 Q72,25 72,40 Q72,58 50,75Z" stroke="#a855f7" stroke-width="0.7"/></svg>`,
-  173: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><ellipse cx="50" cy="45" rx="22" ry="28" stroke="#a855f7" stroke-width="0.7"/><path d="M50,17 L50,10" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M35,80 L65,80" stroke="#a855f7" stroke-width="0.5" opacity="0.4"/><path d="M50,73 L50,80" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/><path d="M38,40 Q50,30 62,40" stroke="#a855f7" stroke-width="0.3" opacity="0.3" stroke-dasharray="1,2"/></svg>`
+  173: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><ellipse cx="50" cy="45" rx="22" ry="28" stroke="#a855f7" stroke-width="0.7"/><path d="M50,17 L50,10" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M35,80 L65,80" stroke="#a855f7" stroke-width="0.5" opacity="0.4"/><path d="M50,73 L50,80" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/><path d="M38,40 Q50,30 62,40" stroke="#a855f7" stroke-width="0.3" opacity="0.3" stroke-dasharray="1,2"/></svg>`,
+  174: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><ellipse cx="42" cy="70" rx="8" ry="14" stroke="#a855f7" stroke-width="0.6"/><ellipse cx="58" cy="55" rx="8" ry="14" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><ellipse cx="50" cy="30" rx="15" ry="9" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><circle cx="38" cy="27" r="2" fill="#a855f7" opacity="0.3"/></svg>`
 };
 
 
@@ -2032,7 +2035,7 @@ document.addEventListener('keydown', e => {
 });
 
 function openArticle(id) {
-  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173];
+  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174];
   if (inAppArticles.includes(id)) {
     document.querySelectorAll('.article-content').forEach(el => el.style.display = 'none');
     const target = document.getElementById('article-' + id);
@@ -44697,6 +44700,213 @@ document.addEventListener('keydown', e => {
       <div class="article-closing">
         <p class="article-closing-verse">"Jika aku dapat melihat Yesus di dalam saya, pasti dunia dapat melihat kasih di dalam kita. Hari ini mungkin masih samar. Tapi perjalanan ini nyata dan pasti. Satu hari nanti, kita akan bertemu Yesus muka dengan muka."</p>
         <p class="article-closing-ref">— 1 Korintus 13:8–12 · 2 Korintus 3:7–18</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ARTICLE 174 -->
+  <div id="article-174" class="article-content" style="display:none">
+    <div class="article-hero">
+      <div class="article-hero-bg" style="background:linear-gradient(135deg,#1a0a28,#2a1040,#361452);"></div>
+      <div class="article-hero-glow"></div>
+      <span class="article-hero-emoji">🦶</span>
+      <div class="article-hero-content">
+        <div class="article-hero-eyebrow">Memahami Jati Diri · 1 Korintus 13:7,13 · Ibrani 11:1</div>
+        <h1 class="article-hero-title">Iman Harap</h1>
+        <div class="article-hero-tags">
+          <span class="article-tag">1 Korintus 13:7, 13</span>
+          <span class="article-tag">Ibrani 11:1</span>
+          <span class="article-tag">Kasih sebagai Nyawa</span>
+        </div>
+      </div>
+    </div>
+    <div class="article-body">
+      <div class="article-verse">
+        <p>"Demikianlah tinggal ketiga hal ini, yaitu iman, pengharapan dan kasih, dan yang paling besar di antaranya ialah kasih."</p>
+        <cite>— 1 Korintus 13:13</cite>
+      </div>
+      <p class="article-intro">Sebuah renungan mendalam tentang tiga pilar kehidupan rohani — iman, pengharapan, dan kasih — dan bagaimana ketiganya bekerja sebagai satu kesatuan yang utuh.</p>
+
+      <div class="article-section">
+        <h2>Tiga Hal yang Tetap Tinggal</h2>
+        <p>Firman Tuhan menyatakan bahwa di antara semua hal yang ada, hanya tiga yang akan terus bertahan: iman, pengharapan, dan kasih. Bukan sekadar pengetahuan tentang ketiganya, melainkan pemahaman yang hidup — yang menggerakkan kita dari dalam.</p>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">🦶</div>
+            <div class="article-step-content">
+              <h4>Iman</h4>
+              <p>Dasar dari segala sesuatu yang kita harapkan. Cara kita percaya dan melangkah maju.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">👁️</div>
+            <div class="article-step-content">
+              <h4>Pengharapan</h4>
+              <p>Arah yang kita tuju. Pandangan rohani yang menuntun tujuan kita.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">❤️</div>
+            <div class="article-step-content">
+              <h4>Kasih</h4>
+              <p>Yang terbesar. Nyawa yang menggerakkan iman dan pengharapan.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Iman: Kaki Rohani Kita</h2>
+        <div class="article-verse">
+          <p>"Iman adalah dasar dari segala sesuatu yang kita harapkan, dan bukti dari segala sesuatu yang tidak kita lihat."</p>
+          <cite>— Ibrani 11:1</cite>
+        </div>
+        <div class="article-highlight">
+          <p>Iman adalah seperti kaki rohani kita. Kita tidak selalu melihat tujuan dengan jelas — tetapi kita tetap melangkah. Setiap langkah yang diambil dalam iman adalah bukti nyata bahwa kita percaya kepada apa yang belum terlihat.</p>
+        </div>
+        <div class="article-quote">
+          <p>Iman bukan sekadar percaya secara intelektual — bahkan iblis pun percaya bahwa Tuhan berkuasa. Iman yang sejati bergerak, melangkah, dan bertindak.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Pengharapan: Mata Rohani Kita</h2>
+        <p>Pengharapan adalah mata rohani kita — yang melihat ke kejauhan, menangkap gambaran tentang ke mana kita harus pergi. Namun mata saja tidak cukup. Mata bisa melihat destinasi dari jauh, tapi tidak berdaya untuk sampai ke sana tanpa kaki.</p>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>👁️ Pengharapan = Mata Rohani</h4>
+            <ul>
+              <li>Melihat tujuan dari jauh</li>
+              <li>Memberi arah dan orientasi</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>🦶 Iman = Kaki Rohani</h4>
+            <ul>
+              <li>Melangkah menuju apa yang dilihat</li>
+              <li>Walaupun belum tampak jelas</li>
+            </ul>
+          </div>
+        </div>
+        <div class="article-quote">
+          <p>Mata melihat tujuan dan menimbulkan pengharapan. Kaki bergerak — melangkah setiap hari — semakin dekat kepada apa yang dilihat.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Kasih: Nyawa yang Menggerakkan Segalanya</h2>
+        <p>Boleh punya kaki, boleh punya mata — tetapi siapa yang menggerakkan? Kasih. Dialah nyawanya. Tanpa kasih, iman dan pengharapan hanya diam.</p>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">✦</div>
+            <div class="article-step-content">
+              <h4>Kasih Percaya</h4>
+              <p>Kasih percaya segala sesuatu — inilah iman. Dasar dari kepercayaan yang tulus bukan hanya keyakinan mental, melainkan hati yang penuh kasih.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">✦</div>
+            <div class="article-step-content">
+              <h4>Kasih Mengharapkan</h4>
+              <p>Kasih mengharapkan segala sesuatu — inilah pengharapan. Harapan yang lahir dari kasih tidak mudah padam.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">✦</div>
+            <div class="article-step-content">
+              <h4>Kasih Menanggung</h4>
+              <p>Kasih sabar menanggung segala sesuatu. Kasih tidak lari dari beban — ia justru menguatkan langkah iman.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Kisah Orang Samaria yang Baik Hati</h2>
+        <div class="article-quote">
+          <p>"Kasihnya memimpin di depan." — Lukas 10</p>
+        </div>
+        <p>Imam dan orang Lewi juga memiliki iman — mereka baru pulang dari ibadah. Mereka punya kaki rohani, punya mata rohani. Tapi satu yang tidak mereka miliki: kasih.</p>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">⚠️</div>
+            <div class="article-step-content">
+              <h4>Imam &amp; Orang Lewi</h4>
+              <p>Punya iman ✓, punya pengharapan ✓, kasih ✗ → Lewat terus.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">✦</div>
+            <div class="article-step-content">
+              <h4>Orang Samaria</h4>
+              <p>Kasih memimpin ✓, iman bergerak ✓, pengharapan diarahkan ✓ → Menolong.</p>
+            </div>
+          </div>
+        </div>
+        <div class="article-highlight">
+          <p>Ketika mereka melihat orang terluka di tengah jalan, imam dan orang Lewi justru menyeberang dan berlalu. Iman dan pengharapan tanpa kasih hanya membuat mereka terus melangkah — ke arah yang salah.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Lima Gadis Bodoh: Iman Tanpa Kasih</h2>
+        <p>Lima gadis bodoh juga memiliki iman — mereka pergi menunggu mempelai. Mereka juga memiliki pengharapan — mereka bangun tengah malam ketika terdengar kabar mempelai akan datang.</p>
+        <div class="article-highlight">
+          <p>Namun tanpa kasih, iman mereka akhirnya kehabisan "bahan bakar." Minyak dalam pelita itu adalah gambaran kasih yang perlu terus diisi. Tanpa kasih sebagai nyawa, iman pun bisa padam — bukan karena kurang percaya, tapi karena tidak ada kasih yang menggerakkan dan memeliharanya.</p>
+        </div>
+        <div class="article-quote">
+          <p>Iman bisa memindahkan gunung. Pengharapan bisa memberi arah yang jelas. Tapi tanpa kasih — semuanya sia-sia. (1 Korintus 13:2)</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Hukum yang Berlaku bagi Semua Orang</h2>
+        <p>Seperti hukum alam yang bersifat permanen dan kekal, hukum rohani ini pun tidak berubah. Seperti Yosua yang berseru agar matahari berhenti — belum pernah ada yang seperti itu, tapi Tuhan mengabulkan. Mengapa? Karena ia bergerak dalam kasih, bertindak dalam iman, dan memiliki pengharapan yang jelas.</p>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Bukan Sekadar Definisi</h2>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>⚠️ Pengetahuan Saja</h4>
+            <ul>
+              <li>Tahu definisi iman dan pengharapan</li>
+              <li>Bisa menjelaskan panjang lebar</li>
+              <li>Tapi tidak menggerakkan hati, tidak mengubah langkah</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>✦ Pemahaman yang Hidup</h4>
+            <ul>
+              <li>Mengenal hati Tuhan</li>
+              <li>Bercermin: adakah Yesus dalam saya?</li>
+              <li>Tidak mengerti sepenuhnya, tapi tetap melangkah</li>
+            </ul>
+          </div>
+        </div>
+        <div class="article-quote">
+          <p>Tujuan kita bukan mengumpulkan definisi. Tujuan kita adalah mengenal hati Tuhan — hingga kasih itu mengalir dari dalam, menggerakkan iman kita melangkah.</p>
+        </div>
+      </div>
+
+      <div class="article-closing">
+        <p class="article-closing-verse">"Iman adalah dasarnya. Pengharapan adalah arahnya. Dan kasih adalah nyawanya yang menggerakkan semuanya. Iman harap. Iman harap. Yang menggerakkan semuanya — hanya kasih."</p>
+        <p class="article-closing-ref">— 1 Korintus 13:7, 13 · Ibrani 11:1</p>
       </div>
     </div>
   </div>
