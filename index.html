@@ -1483,6 +1483,7 @@ const ARTICLES = [
   { id:173, judul:"Cermin Samar", desc:"Kasih tidak berkesudahan; nubuat, bahasa roh, dan pengetahuan akan berhenti. Cermin di zaman Paulus terbuat dari perunggu — teknologi terbaik pun hanya buram. Muka dengan muka bukan dengan diri sendiri, tapi dengan Yesus. Musa menutup wajahnya karena kemuliaan Taurat; kita mencerminkan kemuliaan tanpa selubung. Bahkan AI tidak bisa memiliki kasih — kasih adalah satu-satunya yang sempurna dan tidak lenyap.", kategori:[2], trending:false, emoji:"🪞", link:"" },
   { id:174, judul:"Iman Harap", desc:"Iman adalah kaki rohani, pengharapan adalah mata rohani, kasih adalah nyawa yang menggerakkan keduanya. Imam dan Lewi punya iman dan pengharapan tapi tanpa kasih — lewat terus. Orang Samaria: kasih memimpin di depan. Lima gadis bodoh kehabisan minyak — gambaran kasih yang harus terus diisi. Tujuan bukan mengumpulkan definisi, tapi mengenal hati Tuhan hingga kasih mengalir dari dalam.", kategori:[2], trending:false, emoji:"🦶", link:"" },
   { id:175, judul:"Nikmat Senang", desc:"Tuhan menanamkan 'olam' (kekekalan) dalam hati manusia sebagai kompas rohani. Tak ada yang lebih baik daripada bersuka-suka dan menikmati kesenangan — itu pemberian Allah, bukan bonus. Meja mewah atau sederhana tidak menentukan sukacita, tapi apa yang kita lihat di atasnya. Zakheus menemukan bahagiannya saat Yesus memanggil namanya. Bersenang-senang adalah bahagian kita di dalam Kristus.", kategori:[2], trending:false, emoji:"😊", link:"" },
+  { id:176, judul:"Kaya Celaka", desc:"Perbedaan Pengkhotbah 5:17-19 vs 5:9-12 bukan jumlah harta, tapi siapa duduk di takhta hati. Nama Tuhan bergeser: Allah (Kejadian 1) menjadi Tuhan Allah (Kejadian 2) lalu kembali jadi Allah saat Hawa bicara dengan ular (Kejadian 3). Yudas panggil Yesus 'Rabi' bukan 'Tuhan' — hatinya sudah pindah. Mammon adalah tuan yang tidak pernah puas dan paling kejam. Kekayaan yang disimpan pemiliknya menjadi kecelakaannya sendiri.", kategori:[2], trending:false, emoji:"💰", link:"" },
 ];
 
 const CATEGORY_NAMES = {
@@ -1691,6 +1692,7 @@ const ARTICLE_COLORS = {
   173: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
   174: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
   175: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
+  176: "linear-gradient(135deg,#1a0a28,#2a1040,#361452)",
 };
 
 function getCardColor(article) {
@@ -1872,7 +1874,8 @@ const SVG_DESIGNS = {
   172: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><path d="M50,75 Q28,58 28,40 Q28,25 42,25 Q50,25 50,35 Q50,25 58,25 Q72,25 72,40 Q72,58 50,75Z" stroke="#a855f7" stroke-width="0.7"/></svg>`,
   173: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><ellipse cx="50" cy="45" rx="22" ry="28" stroke="#a855f7" stroke-width="0.7"/><path d="M50,17 L50,10" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><path d="M35,80 L65,80" stroke="#a855f7" stroke-width="0.5" opacity="0.4"/><path d="M50,73 L50,80" stroke="#a855f7" stroke-width="0.4" opacity="0.4"/><path d="M38,40 Q50,30 62,40" stroke="#a855f7" stroke-width="0.3" opacity="0.3" stroke-dasharray="1,2"/></svg>`,
   174: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><ellipse cx="42" cy="70" rx="8" ry="14" stroke="#a855f7" stroke-width="0.6"/><ellipse cx="58" cy="55" rx="8" ry="14" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><ellipse cx="50" cy="30" rx="15" ry="9" stroke="#a855f7" stroke-width="0.5" opacity="0.5"/><circle cx="38" cy="27" r="2" fill="#a855f7" opacity="0.3"/></svg>`,
-  175: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><circle cx="50" cy="50" r="26" stroke="#a855f7" stroke-width="0.7"/><path d="M38,45 Q40,42 42,45 M58,45 Q60,42 62,45" stroke="#a855f7" stroke-width="0.6" opacity="0.6"/><path d="M36,58 Q50,68 64,58" stroke="#a855f7" stroke-width="0.6" opacity="0.6"/></svg>`
+  175: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><circle cx="50" cy="50" r="26" stroke="#a855f7" stroke-width="0.7"/><path d="M38,45 Q40,42 42,45 M58,45 Q60,42 62,45" stroke="#a855f7" stroke-width="0.6" opacity="0.6"/><path d="M36,58 Q50,68 64,58" stroke="#a855f7" stroke-width="0.6" opacity="0.6"/></svg>`,
+  176: `<svg viewBox="0 0 100 100" fill="none" opacity="0.4"><circle cx="50" cy="45" r="20" stroke="#a855f7" stroke-width="0.7"/><path d="M50,35 L50,55 M43,40 Q50,37 57,40 M43,50 Q50,53 57,50" stroke="#a855f7" stroke-width="0.5" opacity="0.6"/><path d="M35,75 L65,75" stroke="#a855f7" stroke-width="0.5" opacity="0.4"/><path d="M30,80 L70,80" stroke="#a855f7" stroke-width="0.3" opacity="0.3"/></svg>`
 };
 
 
@@ -2038,7 +2041,7 @@ document.addEventListener('keydown', e => {
 });
 
 function openArticle(id) {
-  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175];
+  const inAppArticles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176];
   if (inAppArticles.includes(id)) {
     document.querySelectorAll('.article-content').forEach(el => el.style.display = 'none');
     const target = document.getElementById('article-' + id);
@@ -45099,6 +45102,210 @@ document.addEventListener('keydown', e => {
       <div class="article-closing">
         <p class="article-closing-verse">"Bersenang-senang, menikmati — itulah bahagian kita di dalam Kristus. Bukan sesuatu yang harus diperjuangkan dengan kepalan tangan, melainkan sesuatu yang kita terima dengan tangan terbuka."</p>
         <p class="article-closing-ref">— Pengkhotbah 3:10–13 · 5:17–19</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ARTICLE 176 -->
+  <div id="article-176" class="article-content" style="display:none">
+    <div class="article-hero">
+      <div class="article-hero-bg" style="background:linear-gradient(135deg,#1a0a28,#2a1040,#361452);"></div>
+      <div class="article-hero-glow"></div>
+      <span class="article-hero-emoji">💰</span>
+      <div class="article-hero-content">
+        <div class="article-hero-eyebrow">Memahami Jati Diri · Pengkhotbah 5 · Kejadian 3 · Matius 26</div>
+        <h1 class="article-hero-title">Kaya Celaka</h1>
+        <div class="article-hero-tags">
+          <span class="article-tag">Pengkhotbah 5:9–12</span>
+          <span class="article-tag">Kejadian 3:1–5</span>
+          <span class="article-tag">Matius 26:21–25</span>
+        </div>
+      </div>
+    </div>
+    <div class="article-body">
+      <div class="article-verse">
+        <p>"Kekayaan yang disimpan oleh pemiliknya menjadi kecelakaannya sendiri."</p>
+        <cite>— Pengkhotbah 5:12</cite>
+      </div>
+      <p class="article-intro">Renungan dari Pengkhotbah 5:9–12 — tentang jebakan mencintai uang, siapa sesungguhnya pemilik segala sesuatu, dan mengapa kekayaan bisa menjadi bencana bagi yang menyimpannya.</p>
+
+      <div class="article-section">
+        <h2>Dua Dunia yang Berbeda</h2>
+        <p>Kemarin kita membaca Pengkhotbah 5:17–19 — gambaran orang yang bisa makan, minum, dan bersuka cita dengan tenang. Hari ini kita membaca ayat 9–12. Apa bedanya?</p>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>✦ Ayat 17–19: Si Pengelola</h4>
+            <ul>
+              <li>Makan, minum, bersuka cita dalam jerih payahnya</li>
+              <li>Karunia Allah mengalir. Tidur nyenyak. Hati tenang.</li>
+              <li>Tuhan adalah Tuan</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>⚠️ Ayat 9–12: Si "Pemilik"</h4>
+            <ul>
+              <li>Tak pernah puas. Kekenyangan tidak membiarkan tidur.</li>
+              <li>Kekayaan yang ditimbun jadi bencana</li>
+              <li>Tuhan telah dikeluarkan dari proses</li>
+            </ul>
+          </div>
+        </div>
+        <div class="article-quote">
+          <p>Perbedaannya bukan pada jumlah harta. Perbedaannya ada pada siapa yang duduk di takhta hati kita.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Kenapa Orang Kaya Tidak Bisa Tidur?</h2>
+        <p>Apakah salah menjadi kaya? Tidak. Abraham kaya. Ishak kaya. Yakub kaya. Namun mereka tahu dengan jelas: Tuhan adalah pemilik, mereka adalah pengelola. Ketika Tuhan berkata "berikan anakmu," Abraham langsung menyerahkan — tanpa ragu.</p>
+        <div class="article-highlight">
+          <p>Yang membuat kita tidak bisa tidur bukan kekayaannya — melainkan rasa kepemilikan yang palsu yang kita pegang erat-erat.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Dari Allah ke Tuhan Allah — Sebuah Pergeseran Penting</h2>
+        <p>Di Kejadian 1, berulang kali hanya tertulis: "Allah…" — karena belum ada makhluk hidup. Begitu Kejadian 2 dimulai, namanya berubah: "Tuhan Allah…" — deklarasi relasi Tuan dan hamba.</p>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">1</div>
+            <div class="article-step-content">
+              <h4>Kejadian 1</h4>
+              <p>"Allah…" — Pencipta yang bekerja. Belum ada manusia.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">2</div>
+            <div class="article-step-content">
+              <h4>Kejadian 2</h4>
+              <p>"Tuhan Allah…" — Relasi Tuan dan hamba. Manusia mengelola taman.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">3</div>
+            <div class="article-step-content">
+              <h4>Kejadian 3</h4>
+              <p>"Allah…" — Hawa dan ular. Tuhan digeser dari posisi Tuan.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Ular Membaca Hati Hawa</h2>
+        <p>Di Kejadian 3, ular berkata: "Tentulah Allah berfirman…" — bukan "Tuhan Allah." Dan jawaban Hawa: "Tentang buah pohon yang ada di tengah-tengah taman, Allah berfirman…"</p>
+        <div class="article-highlight">
+          <p>Ular menangkap itu. Dari apa yang keluar dari mulut Hawa, ular membaca isi hatinya. Posisi Tuhan di hati Hawa sudah bergeser — dari Tuhan menjadi sekadar Allah. Dari Tuan menjadi aturan.</p>
+        </div>
+        <div class="article-quote">
+          <p>"Dari mulut berbicara, meluap isi hati." Ular tidak perlu banyak tanya. Ia sudah tahu jawabannya. Maka ular langsung berkata: "Sekali-kali kamu tidak akan mati." Pintu sudah terbuka.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Yudas dan Pertanyaan yang Sama</h2>
+        <p>Di meja perjamuan malam, Yesus berkata: "Sesungguhnya seorang di antara kamu akan menyerahkan Aku." Satu demi satu murid bertanya: "Bukan aku, ya Tuhan?"</p>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>Murid-Murid Lain</h4>
+            <ul>
+              <li>"Bukan aku, ya Tuhan…"</li>
+              <li>Mereka menyebut-Nya Tuan — pengakuan hati yang sungguh</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>Yudas Iskariot</h4>
+            <ul>
+              <li>"Bukan aku, ya Rabi…"</li>
+              <li>Guru — bukan Tuan. Hatinya sudah berpindah kepada tiga puluh keping perak.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Mammon: Tuan yang Paling Kejam</h2>
+        <p>Firman Tuhan berkata: "Tidak seorang pun dapat mengabdi kepada dua tuan." Di balik uang ada roh — namanya Mammon. Dan Mammon tidak pernah memiliki sumber kepuasan.</p>
+        <div class="article-steps">
+          <div class="article-step">
+            <div class="article-step-num">😤</div>
+            <div class="article-step-content">
+              <h4>Tidak Pernah Puas</h4>
+              <p>Makin banyak ditimbun, makin haus. Korupsi, penimbunan, keserakahan — semuanya lahir dari sini.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">🎭</div>
+            <div class="article-step-content">
+              <h4>Kamu Kira Pemilik</h4>
+              <p>Padahal Mammon yang pegang kendali. Kamu bukan pemilik — kamu budak yang tidak sadar diperbudak.</p>
+            </div>
+          </div>
+          <div class="article-step">
+            <div class="article-step-num">⛓️</div>
+            <div class="article-step-content">
+              <h4>Tuan yang Paling Kejam</h4>
+              <p>Mammon tidak memberi karunia. Tidak ada sukacita, tidak ada tidur nyenyak, tidak ada kenikmatan sejati.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Orang Kaya yang Bodoh</h2>
+        <p>Ada seorang kaya yang berkata kepada dirinya sendiri: "Bersenang-senanglah, beristirahatlah, nikmati semua yang kamu miliki." Tetapi Tuhan berkata: "Bodoh! Malam ini juga jiwamu Aku ambil."</p>
+        <div class="article-verse">
+          <p>"Demikianlah jadinya dengan orang yang tidak kaya di hadapan Allah."</p>
+          <cite>— Lukas 12:21</cite>
+        </div>
+        <div class="article-highlight">
+          <p>Ia tidak kaya di hadapan Allah bukan karena ia memiliki banyak — tetapi karena ia telah mengeluarkan Allah dari prosesnya. Ia merasa ia pemilik. Maka Mammon pun menjadi tuannya.</p>
+        </div>
+      </div>
+
+      <div class="article-divider">✦</div>
+
+      <div class="article-section">
+        <h2>Siapa Aku? Siapa Tuhan-ku?</h2>
+        <div class="article-compare">
+          <div class="article-compare-box">
+            <h4>✦ Jika Tuhan adalah Tuan</h4>
+            <ul>
+              <li>Saya adalah pengelola yang disayang</li>
+              <li>Bekerja, memelihara, mengusahakan — Tuhan menjamin</li>
+              <li>Makan enak, tidur nyenyak, bersuka cita</li>
+            </ul>
+          </div>
+          <div class="article-compare-box">
+            <h4>⚠️ Jika Saya Merasa Pemilik</h4>
+            <ul>
+              <li>Tuhan dikeluarkan dari proses</li>
+              <li>Mammon masuk mengambil alih</li>
+              <li>Saya kira saya bebas — padahal budak dari Tuan paling kejam</li>
+            </ul>
+          </div>
+        </div>
+        <div class="article-quote">
+          <p>Dari mulutmu keluar meluap isi hatimu. Siapa Tuhan dalam hidupmu hari ini?</p>
+        </div>
+      </div>
+
+      <div class="article-closing">
+        <p class="article-closing-verse">"Kekayaan yang disimpan oleh pemiliknya menjadi kecelakaannya sendiri."</p>
+        <p class="article-closing-ref">— Pengkhotbah 5:9–12 · Kejadian 3:1–5 · Matius 26:21–25</p>
       </div>
     </div>
   </div>
